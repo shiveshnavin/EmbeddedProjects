@@ -1,0 +1,1715 @@
+
+
+HI-TECH Software PIC LITE Macro Assembler V9.81 build 7503 
+                                                                                               Sun Jun 18 15:31:13 2017
+
+HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
+     1  0000                     opt subtitle "HI-TECH Software Omniscient Code Generator (Lite mode) build 7503"
+     2                           
+     3                           opt pagewidth 120
+     4                           
+     5                           	opt lm
+     6                           
+     7                           	processor	16F887
+     8                           clrc	macro
+     9                           	bcf	3,0
+    10  0000                     	endm
+    11                           clrz	macro
+    12                           	bcf	3,2
+    13  0000                     	endm
+    14                           setc	macro
+    15                           	bsf	3,0
+    16  0000                     	endm
+    17                           setz	macro
+    18                           	bsf	3,2
+    19  0000                     	endm
+    20                           skipc	macro
+    21                           	btfss	3,0
+    22  0000                     	endm
+    23                           skipz	macro
+    24                           	btfss	3,2
+    25  0000                     	endm
+    26                           skipnc	macro
+    27                           	btfsc	3,0
+    28  0000                     	endm
+    29                           skipnz	macro
+    30                           	btfsc	3,2
+    31  0000                     	endm
+    32  0000                     indf	equ	0
+    33  0000                     indf0	equ	0
+    34  0002                     pc	equ	2
+    35  0002                     pcl	equ	2
+    36  0003                     status	equ	3
+    37  0004                     fsr	equ	4
+    38  0004                     fsr0	equ	4
+    39  0001                     c	equ	1
+    40  0000                     z	equ	0
+    41  000A                     pclath	equ	10
+    42                           	FNCALL	_main,_scan
+    43                           	FNCALL	_scan,_resetout
+    44                           	FNROOT	_main
+    45                           	global	main@F1605
+    46                           psect	idataBANK0,class=CODE,space=0,delta=2
+    47                           global __pidataBANK0
+    48  05F8                     __pidataBANK0:
+    49                           	file	"Z:\home\shivesh\Proteus 7.7 Professional\PROJECTS\Training_Project\Code\matrix\ss
+                                 d_matx.c"
+    50                           	line	113
+    51                           
+    52                           ;initializer for main@F1605
+    53  05F8  343F               	retlw	03Fh
+    54  05F9  3400               	retlw	0
+    55                           
+    56  05FA  3406               	retlw	06h
+    57  05FB  3400               	retlw	0
+    58                           
+    59  05FC  345B               	retlw	05Bh
+    60  05FD  3400               	retlw	0
+    61                           
+    62  05FE  344F               	retlw	04Fh
+    63  05FF  3400               	retlw	0
+    64                           
+    65  0600  3466               	retlw	066h
+    66  0601  3400               	retlw	0
+    67                           
+    68  0602  346D               	retlw	06Dh
+    69  0603  3400               	retlw	0
+    70                           
+    71  0604  347D               	retlw	07Dh
+    72  0605  3400               	retlw	0
+    73                           
+    74  0606  3407               	retlw	07h
+    75  0607  3400               	retlw	0
+    76                           
+    77  0608  347F               	retlw	07Fh
+    78  0609  3400               	retlw	0
+    79                           
+    80  060A  346F               	retlw	06Fh
+    81  060B  3400               	retlw	0
+    82                           
+    83  060C  3477               	retlw	077h
+    84  060D  3400               	retlw	0
+    85                           
+    86  060E  347C               	retlw	07Ch
+    87  060F  3400               	retlw	0
+    88                           
+    89  0610  3439               	retlw	039h
+    90  0611  3400               	retlw	0
+    91                           
+    92  0612  345E               	retlw	05Eh
+    93  0613  3400               	retlw	0
+    94                           
+    95  0614  3479               	retlw	079h
+    96  0615  3400               	retlw	0
+    97                           
+    98  0616  3471               	retlw	071h
+    99  0617  3400               	retlw	0
+   100                           
+   101                           	global	_PORTC
+   102  0007                     _PORTC	set	7
+   103                           	global	_RD0
+   104  0040                     _RD0	set	64
+   105                           	global	_RD1
+   106  0041                     _RD1	set	65
+   107                           	global	_RD2
+   108  0042                     _RD2	set	66
+   109                           	global	_RD3
+   110  0043                     _RD3	set	67
+   111                           	global	_RD4
+   112  0044                     _RD4	set	68
+   113                           	global	_RD5
+   114  0045                     _RD5	set	69
+   115                           	global	_RD6
+   116  0046                     _RD6	set	70
+   117                           	global	_RD7
+   118  0047                     _RD7	set	71
+   119                           	global	_TRISC
+   120  0087                     _TRISC	set	135
+   121                           	global	_TRISD
+   122  0088                     _TRISD	set	136
+   123                           	file	"matrix.as"
+   124                           	line	#
+   125                           psect cinit,class=CODE,delta=2
+   126                           global start_initialization
+   127  05E6                     start_initialization:
+   128                           
+   129                           psect	dataBANK0,class=BANK0,space=1
+   130                           global __pdataBANK0
+   131  0044                     __pdataBANK0:
+   132                           	file	"Z:\home\shivesh\Proteus 7.7 Professional\PROJECTS\Training_Project\Code\matrix\ss
+                                 d_matx.c"
+   133  0044                     main@F1605:
+   134  0044                            ds      32
+   135                           
+   136                           global btemp
+   137                           psect inittext,class=CODE,delta=2
+   138                           global init_fetch,btemp
+   139                           ;	Called with low address in FSR and high address in W
+   140  05D5                     init_fetch:
+   141  05D5  087E               	movf btemp,w
+   142  05D6  008A               	movwf pclath
+   143  05D7  087F               	movf btemp+1,w
+   144  05D8  0082               	movwf pc
+   145                           global init_ram
+   146                           ;Called with:
+   147                           ;	high address of idata address in btemp 
+   148                           ;	low address of idata address in btemp+1 
+   149                           ;	low address of data in FSR
+   150                           ;	high address + 1 of data in btemp-1
+   151  05D9                     init_ram:
+   152  05D9  25D5  120A  118A   	fcall init_fetch
+   153  05DC  0080               	movwf indf,f
+   154  05DD  0A84               	incf fsr,f
+   155  05DE  0804               	movf fsr,w
+   156  05DF  067D               	xorwf btemp-1,w
+   157  05E0  1903               	btfsc status,2
+   158  05E1  3400               	retlw 0
+   159  05E2  0AFF               	incf btemp+1,f
+   160  05E3  1903               	btfsc status,2
+   161  05E4  0AFE               	incf btemp,f
+   162  05E5  2DD9               	goto init_ram
+   163                           ; Initialize objects allocated to BANK0
+   164                           psect cinit,class=CODE,delta=2
+   165                           global init_ram, __pidataBANK0
+   166  05E6  1383               	bcf	status, 7	;select IRP bank0
+   167  05E7  3064               	movlw low(__pdataBANK0+32)
+   168  05E8  00FD               	movwf btemp-1,f
+   169  05E9  3005               	movlw high(__pidataBANK0)
+   170  05EA  00FE               	movwf btemp,f
+   171  05EB  30F8               	movlw low(__pidataBANK0)
+   172  05EC  00FF               	movwf btemp+1,f
+   173  05ED  3044               	movlw low(__pdataBANK0)
+   174  05EE  0084               	movwf fsr,f
+   175  05EF  120A  118A  25D9   	fcall init_ram
+              120A  118A         
+   176                           psect cinit,class=CODE,delta=2
+   177                           global end_of_initialization
+   178                           
+   179                           ;End of C runtime variable initialization code
+   180                           
+   181  05F4                     end_of_initialization:
+   182  05F4  0183               clrf status
+   183  05F5  120A  118A  2EF4   ljmp _main	;jump to C main() function
+   184                           psect	cstackCOMMON,class=COMMON,space=1
+   185                           global __pcstackCOMMON
+   186  0070                     __pcstackCOMMON:
+   187                           	global	?_resetout
+   188  0070                     ?_resetout:	; 0 bytes @ 0x0
+   189                           	global	??_resetout
+   190  0070                     ??_resetout:	; 0 bytes @ 0x0
+   191                           	global	?_main
+   192  0070                     ?_main:	; 0 bytes @ 0x0
+   193                           	global	?_scan
+   194  0070                     ?_scan:	; 2 bytes @ 0x0
+   195  0070                     	ds	2
+   196                           	global	??_scan
+   197  0072                     ??_scan:	; 0 bytes @ 0x2
+   198                           	global	??_main
+   199  0072                     ??_main:	; 0 bytes @ 0x2
+   200  0072                     	ds	4
+   201                           psect	cstackBANK0,class=BANK0,space=1
+   202                           global __pcstackBANK0
+   203  0020                     __pcstackBANK0:
+   204                           	global	main@max
+   205  0020                     main@max:	; 32 bytes @ 0x0
+   206  0020                     	ds	32
+   207                           	global	main@op
+   208  0040                     main@op:	; 2 bytes @ 0x20
+   209  0040                     	ds	2
+   210                           	global	main@p
+   211  0042                     main@p:	; 2 bytes @ 0x22
+   212  0042                     	ds	2
+   213 ;;Data sizes: Strings 0, constant 0, data 32, bss 0, persistent 0 stack 0
+   214 ;;Auto spaces:   Size  Autos    Used
+   215 ;; COMMON          14      6       6
+   216 ;; BANK0           80     36      68
+   217 ;; BANK1           80      0       0
+   218 ;; BANK3           96      0       0
+   219 ;; BANK2           96      0       0
+   220                           
+   221 ;;
+   222 ;; Pointer list with targets:
+   223                           
+   224                           
+   225                           
+   226 ;;
+   227 ;; Critical Paths under _main in COMMON
+   228 ;;
+   229 ;;   _main->_scan
+   230 ;;
+   231 ;; Critical Paths under _main in BANK0
+   232 ;;
+   233 ;;   None.
+   234 ;;
+   235 ;; Critical Paths under _main in BANK1
+   236 ;;
+   237 ;;   None.
+   238 ;;
+   239 ;; Critical Paths under _main in BANK3
+   240 ;;
+   241 ;;   None.
+   242 ;;
+   243 ;; Critical Paths under _main in BANK2
+   244 ;;
+   245 ;;   None.
+   246                           
+   247 ;;
+   248 ;;Main: autosize = 0, tempsize = 4, incstack = 0, save=0
+   249 ;;
+   250                           
+   251 ;;
+   252 ;;Call Graph Tables:
+   253 ;;
+   254 ;; ---------------------------------------------------------------------------------
+   255 ;; (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+   256 ;; ---------------------------------------------------------------------------------
+   257 ;; (0) _main                                                42    42      0     437
+   258 ;;                                              2 COMMON     4     4      0
+   259 ;;                                              0 BANK0     36    36      0
+   260 ;;                               _scan
+   261 ;; ---------------------------------------------------------------------------------
+   262 ;; (1) _scan                                                 2     0      2       0
+   263 ;;                                              0 COMMON     2     0      2
+   264 ;;                           _resetout
+   265 ;; ---------------------------------------------------------------------------------
+   266 ;; (2) _resetout                                             0     0      0       0
+   267 ;; ---------------------------------------------------------------------------------
+   268 ;; Estimated maximum stack depth 2
+   269 ;; ---------------------------------------------------------------------------------
+   270                           
+   271 ;; Call Graph Graphs:
+   272                           
+   273 ;; _main (ROOT)
+   274 ;;   _scan
+   275 ;;     _resetout
+   276 ;;
+   277                           
+   278 ;; Address spaces:
+   279                           
+   280 ;;Name               Size   Autos  Total    Cost      Usage
+   281 ;;BANK3               60      0       0       9        0.0%
+   282 ;;BITBANK3            60      0       0       8        0.0%
+   283 ;;SFR3                 0      0       0       4        0.0%
+   284 ;;BITSFR3              0      0       0       4        0.0%
+   285 ;;BANK2               60      0       0      11        0.0%
+   286 ;;BITBANK2            60      0       0      10        0.0%
+   287 ;;SFR2                 0      0       0       5        0.0%
+   288 ;;BITSFR2              0      0       0       5        0.0%
+   289 ;;SFR1                 0      0       0       2        0.0%
+   290 ;;BITSFR1              0      0       0       2        0.0%
+   291 ;;BANK1               50      0       0       7        0.0%
+   292 ;;BITBANK1            50      0       0       6        0.0%
+   293 ;;CODE                 0      0       0       0        0.0%
+   294 ;;DATA                 0      0      4C      12        0.0%
+   295 ;;ABS                  0      0      4A       3        0.0%
+   296 ;;NULL                 0      0       0       0        0.0%
+   297 ;;STACK                0      0       2       2        0.0%
+   298 ;;BANK0               50     24      44       5       85.0%
+   299 ;;BITBANK0            50      0       0       4        0.0%
+   300 ;;SFR0                 0      0       0       1        0.0%
+   301 ;;BITSFR0              0      0       0       1        0.0%
+   302 ;;COMMON               E      6       6       1       42.9%
+   303 ;;BITCOMMON            E      0       0       0        0.0%
+   304 ;;EEDATA             100      0       0       0        0.0%
+   305                           
+   306                           	global	_main
+   307                           psect	maintext,global,class=CODE,delta=2
+   308                           global __pmaintext
+   309  06F4                     __pmaintext:
+   310                           
+   311 ;; *************** function _main *****************
+   312 ;; Defined at:
+   313 ;;		line 111 in file "Z:\home\shivesh\Proteus 7.7 Professional\PROJECTS\Training_Project\Code\matrix\ssd_matx.c"
+   314 ;; Parameters:    Size  Location     Type
+   315 ;;		None
+   316 ;; Auto vars:     Size  Location     Type
+   317 ;;  max            32    0[BANK0 ] int [16]
+   318 ;;  p               2   34[BANK0 ] int 
+   319 ;;  op              2   32[BANK0 ] int 
+   320 ;;  press           2    0        int 
+   321 ;; Return value:  Size  Location     Type
+   322 ;;		None               void
+   323 ;; Registers used:
+   324 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+   325 ;; Tracked objects:
+   326 ;;		On entry : 17F/0
+   327 ;;		On exit  : 0/0
+   328 ;;		Unchanged: 0/0
+   329 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   330 ;;      Params:         0       0       0       0       0
+   331 ;;      Locals:         0      36       0       0       0
+   332 ;;      Temps:          4       0       0       0       0
+   333 ;;      Totals:         4      36       0       0       0
+   334 ;;Total ram usage:       40 bytes
+   335 ;; Hardware stack levels required when called:    2
+   336 ;; This function calls:
+   337 ;;		_scan
+   338 ;; This function is called by:
+   339 ;;		Startup code after reset
+   340 ;; This function uses a non-reentrant model
+   341 ;;
+   342                           psect	maintext
+   343                           	file	"Z:\home\shivesh\Proteus 7.7 Professional\PROJECTS\Training_Project\Code\matrix\ss
+                                 d_matx.c"
+   344                           	line	111
+   345                           	global	__size_of_main
+   346  010C                     	__size_of_main	equ	__end_of_main-_main
+   347                           	
+   348  06F4                     _main:	
+   349                           	opt	stack 6
+   350                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+   351                           	line	131
+   352                           	
+   353  06F4                     l2553:	
+   354                           ;ssd_matx.c: 112: int press;
+   355                           ;ssd_matx.c: 113: int max[]={
+   356                           ;ssd_matx.c: 114: 0b00111111,
+   357                           ;ssd_matx.c: 115: 0b00000110,
+   358                           ;ssd_matx.c: 116: 0b01011011,
+   359                           ;ssd_matx.c: 117: 0b01001111,
+   360                           ;ssd_matx.c: 118: 0b01100110,
+   361                           ;ssd_matx.c: 119: 0b01101101,
+   362                           ;ssd_matx.c: 120: 0b01111101,
+   363                           ;ssd_matx.c: 121: 0b00000111,
+   364                           ;ssd_matx.c: 122: 0b01111111,
+   365                           ;ssd_matx.c: 123: 0b01101111,
+   366                           ;ssd_matx.c: 125: 0b01110111,
+   367                           ;ssd_matx.c: 126: 0b01111100,
+   368                           ;ssd_matx.c: 127: 0b00111001,
+   369                           ;ssd_matx.c: 128: 0b01011110,
+   370                           ;ssd_matx.c: 129: 0b01111001,
+   371                           ;ssd_matx.c: 130: 0b01110001
+   372  06F4  3020               	movlw	(main@max)&0ffh
+   373  06F5  0084               	movwf	fsr0
+   374  06F6  3044               	movlw	low(main@F1605)
+   375  06F7  00F2               	movwf	(??_main+0)+0
+   376  06F8  0804               	movf	fsr0,w
+   377  06F9  00F3               	movwf	((??_main+0)+0+1)
+   378  06FA  3020               	movlw	32
+   379  06FB  00F4               	movwf	((??_main+0)+0+2)
+   380  06FC                     u2650:
+   381  06FC  0872               	movf	(??_main+0)+0,w
+   382  06FD  0084               	movwf	fsr0
+   383  06FE  1383               	bcf	status, 7	;select IRP bank0
+   384                           	
+   385  06FF  0800               	movf	indf,w
+   386  0700  00F5               	movwf	((??_main+0)+0+3)
+   387  0701  0AF2               	incf	(??_main+0)+0,f
+   388  0702  0873               	movf	((??_main+0)+0+1),w
+   389  0703  0084               	movwf	fsr0
+   390                           	
+   391  0704  0875               	movf	((??_main+0)+0+3),w
+   392  0705  0080               	movwf	indf
+   393  0706  0AF3               	incf	((??_main+0)+0+1),f
+   394  0707  0BF4               	decfsz	((??_main+0)+0+2),f
+   395  0708  2EFC               	goto	u2650
+   396                           	line	132
+   397                           	
+   398  0709                     l2555:	
+   399                           ;ssd_matx.c: 132: TRISC=0x00;
+   400  0709  1683               	bsf	status, 5	;RP0=1, select bank1
+   401  070A  1303               	bcf	status, 6	;RP1=0, select bank1
+   402  070B  0187               	clrf	(135)^080h	;volatile
+   403                           	line	133
+   404                           	
+   405  070C                     l2557:	
+   406                           ;ssd_matx.c: 133: TRISD=0x0F;
+   407  070C  300F               	movlw	(0Fh)
+   408  070D  0088               	movwf	(136)^080h	;volatile
+   409                           	line	136
+   410                           	
+   411  070E                     l2559:	
+   412                           ;ssd_matx.c: 134: int p;
+   413                           ;ssd_matx.c: 135: int op;
+   414                           ;ssd_matx.c: 136: PORTC=0x00;
+   415  070E  1283               	bcf	status, 5	;RP0=0, select bank0
+   416  070F  1303               	bcf	status, 6	;RP1=0, select bank0
+   417  0710  0187               	clrf	(7)	;volatile
+   418  0711  2F12               	goto	l2561
+   419                           	line	138
+   420                           ;ssd_matx.c: 138: while(1){
+   421                           	
+   422  0712                     l1067:	
+   423                           	line	139
+   424                           	
+   425  0712                     l2561:	
+   426                           ;ssd_matx.c: 139: p=scan();
+   427  0712  120A  118A  2618   	fcall	_scan
+              120A  118A         
+   428  0717  0871               	movf	(1+(?_scan)),w
+   429  0718  1283               	bcf	status, 5	;RP0=0, select bank0
+   430  0719  1303               	bcf	status, 6	;RP1=0, select bank0
+   431  071A  01C3               	clrf	(main@p+1)
+   432  071B  07C3               	addwf	(main@p+1)
+   433  071C  0870               	movf	(0+(?_scan)),w
+   434  071D  01C2               	clrf	(main@p)
+   435  071E  07C2               	addwf	(main@p)
+   436                           
+   437                           	line	141
+   438                           	
+   439  071F                     l2563:	
+   440                           ;ssd_matx.c: 141: if(p==1)
+   441  071F  3001               	movlw	01h
+   442  0720  0642               	xorwf	(main@p),w
+   443  0721  0443               	iorwf	(main@p+1),w
+   444  0722  1D03               	skipz
+   445  0723  2F25               	goto	u2661
+   446  0724  2F26               	goto	u2660
+   447  0725                     u2661:
+   448  0725  2F2B               	goto	l2567
+   449  0726                     u2660:
+   450                           	line	143
+   451                           	
+   452  0726                     l2565:	
+   453                           ;ssd_matx.c: 142: {
+   454                           ;ssd_matx.c: 143: op=0b10000000;
+   455  0726  3080               	movlw	low(080h)
+   456  0727  00C0               	movwf	(main@op)
+   457  0728  3000               	movlw	high(080h)
+   458  0729  00C1               	movwf	((main@op))+1
+   459                           	line	144
+   460                           ;ssd_matx.c: 144: }
+   461  072A  2FEB               	goto	l1069
+   462                           	line	145
+   463                           	
+   464  072B                     l1068:	
+   465                           	
+   466  072B                     l2567:	
+   467                           ;ssd_matx.c: 145: else if(p==2)
+   468  072B  3002               	movlw	02h
+   469  072C  0642               	xorwf	(main@p),w
+   470  072D  0443               	iorwf	(main@p+1),w
+   471  072E  1D03               	skipz
+   472  072F  2F31               	goto	u2671
+   473  0730  2F32               	goto	u2670
+   474  0731                     u2671:
+   475  0731  2F37               	goto	l2571
+   476  0732                     u2670:
+   477                           	line	147
+   478                           	
+   479  0732                     l2569:	
+   480                           ;ssd_matx.c: 146: {
+   481                           ;ssd_matx.c: 147: op=0b01000000;
+   482  0732  3040               	movlw	low(040h)
+   483  0733  00C0               	movwf	(main@op)
+   484  0734  3000               	movlw	high(040h)
+   485  0735  00C1               	movwf	((main@op))+1
+   486                           	line	148
+   487                           ;ssd_matx.c: 148: }
+   488  0736  2FEB               	goto	l1069
+   489                           	line	149
+   490                           	
+   491  0737                     l1070:	
+   492                           	
+   493  0737                     l2571:	
+   494                           ;ssd_matx.c: 149: else if(p==3)
+   495  0737  3003               	movlw	03h
+   496  0738  0642               	xorwf	(main@p),w
+   497  0739  0443               	iorwf	(main@p+1),w
+   498  073A  1D03               	skipz
+   499  073B  2F3D               	goto	u2681
+   500  073C  2F3E               	goto	u2680
+   501  073D                     u2681:
+   502  073D  2F43               	goto	l2575
+   503  073E                     u2680:
+   504                           	line	151
+   505                           	
+   506  073E                     l2573:	
+   507                           ;ssd_matx.c: 150: {
+   508                           ;ssd_matx.c: 151: op=0b00100000;
+   509  073E  3020               	movlw	low(020h)
+   510  073F  00C0               	movwf	(main@op)
+   511  0740  3000               	movlw	high(020h)
+   512  0741  00C1               	movwf	((main@op))+1
+   513                           	line	152
+   514                           ;ssd_matx.c: 152: }
+   515  0742  2FEB               	goto	l1069
+   516                           	line	153
+   517                           	
+   518  0743                     l1072:	
+   519                           	
+   520  0743                     l2575:	
+   521                           ;ssd_matx.c: 153: else if(p==4)
+   522  0743  3004               	movlw	04h
+   523  0744  0642               	xorwf	(main@p),w
+   524  0745  0443               	iorwf	(main@p+1),w
+   525  0746  1D03               	skipz
+   526  0747  2F49               	goto	u2691
+   527  0748  2F4A               	goto	u2690
+   528  0749                     u2691:
+   529  0749  2F4F               	goto	l2579
+   530  074A                     u2690:
+   531                           	line	155
+   532                           	
+   533  074A                     l2577:	
+   534                           ;ssd_matx.c: 154: {
+   535                           ;ssd_matx.c: 155: op=0b00010000;
+   536  074A  3010               	movlw	low(010h)
+   537  074B  00C0               	movwf	(main@op)
+   538  074C  3000               	movlw	high(010h)
+   539  074D  00C1               	movwf	((main@op))+1
+   540                           	line	156
+   541                           ;ssd_matx.c: 156: }
+   542  074E  2FEB               	goto	l1069
+   543                           	line	157
+   544                           	
+   545  074F                     l1074:	
+   546                           	
+   547  074F                     l2579:	
+   548                           ;ssd_matx.c: 157: else if(p==5)
+   549  074F  3005               	movlw	05h
+   550  0750  0642               	xorwf	(main@p),w
+   551  0751  0443               	iorwf	(main@p+1),w
+   552  0752  1D03               	skipz
+   553  0753  2F55               	goto	u2701
+   554  0754  2F56               	goto	u2700
+   555  0755                     u2701:
+   556  0755  2F5B               	goto	l2583
+   557  0756                     u2700:
+   558                           	line	159
+   559                           	
+   560  0756                     l2581:	
+   561                           ;ssd_matx.c: 158: {
+   562                           ;ssd_matx.c: 159: op=0b00001000;
+   563  0756  3008               	movlw	low(08h)
+   564  0757  00C0               	movwf	(main@op)
+   565  0758  3000               	movlw	high(08h)
+   566  0759  00C1               	movwf	((main@op))+1
+   567                           	line	160
+   568                           ;ssd_matx.c: 160: }
+   569  075A  2FEB               	goto	l1069
+   570                           	line	161
+   571                           	
+   572  075B                     l1076:	
+   573                           	
+   574  075B                     l2583:	
+   575                           ;ssd_matx.c: 161: else if(p==6)
+   576  075B  3006               	movlw	06h
+   577  075C  0642               	xorwf	(main@p),w
+   578  075D  0443               	iorwf	(main@p+1),w
+   579  075E  1D03               	skipz
+   580  075F  2F61               	goto	u2711
+   581  0760  2F62               	goto	u2710
+   582  0761                     u2711:
+   583  0761  2F67               	goto	l2587
+   584  0762                     u2710:
+   585                           	line	163
+   586                           	
+   587  0762                     l2585:	
+   588                           ;ssd_matx.c: 162: {
+   589                           ;ssd_matx.c: 163: op=0b00000100;
+   590  0762  3004               	movlw	low(04h)
+   591  0763  00C0               	movwf	(main@op)
+   592  0764  3000               	movlw	high(04h)
+   593  0765  00C1               	movwf	((main@op))+1
+   594                           	line	164
+   595                           ;ssd_matx.c: 164: }
+   596  0766  2FEB               	goto	l1069
+   597                           	line	165
+   598                           	
+   599  0767                     l1078:	
+   600                           	
+   601  0767                     l2587:	
+   602                           ;ssd_matx.c: 165: else if(p==7)
+   603  0767  3007               	movlw	07h
+   604  0768  0642               	xorwf	(main@p),w
+   605  0769  0443               	iorwf	(main@p+1),w
+   606  076A  1D03               	skipz
+   607  076B  2F6D               	goto	u2721
+   608  076C  2F6E               	goto	u2720
+   609  076D                     u2721:
+   610  076D  2F73               	goto	l2591
+   611  076E                     u2720:
+   612                           	line	167
+   613                           	
+   614  076E                     l2589:	
+   615                           ;ssd_matx.c: 166: {
+   616                           ;ssd_matx.c: 167: op=0b00000010;
+   617  076E  3002               	movlw	low(02h)
+   618  076F  00C0               	movwf	(main@op)
+   619  0770  3000               	movlw	high(02h)
+   620  0771  00C1               	movwf	((main@op))+1
+   621                           	line	168
+   622                           ;ssd_matx.c: 168: }
+   623  0772  2FEB               	goto	l1069
+   624                           	line	169
+   625                           	
+   626  0773                     l1080:	
+   627                           	
+   628  0773                     l2591:	
+   629                           ;ssd_matx.c: 169: else if(p==8)
+   630  0773  3008               	movlw	08h
+   631  0774  0642               	xorwf	(main@p),w
+   632  0775  0443               	iorwf	(main@p+1),w
+   633  0776  1D03               	skipz
+   634  0777  2F79               	goto	u2731
+   635  0778  2F7A               	goto	u2730
+   636  0779                     u2731:
+   637  0779  2F7F               	goto	l2595
+   638  077A                     u2730:
+   639                           	line	171
+   640                           	
+   641  077A                     l2593:	
+   642                           ;ssd_matx.c: 170: {
+   643                           ;ssd_matx.c: 171: op=0b00000001;
+   644  077A  3001               	movlw	low(01h)
+   645  077B  00C0               	movwf	(main@op)
+   646  077C  3000               	movlw	high(01h)
+   647  077D  00C1               	movwf	((main@op))+1
+   648                           	line	172
+   649                           ;ssd_matx.c: 172: }
+   650  077E  2FEB               	goto	l1069
+   651                           	line	173
+   652                           	
+   653  077F                     l1082:	
+   654                           	
+   655  077F                     l2595:	
+   656                           ;ssd_matx.c: 173: else if(p==9)
+   657  077F  3009               	movlw	09h
+   658  0780  0642               	xorwf	(main@p),w
+   659  0781  0443               	iorwf	(main@p+1),w
+   660  0782  1D03               	skipz
+   661  0783  2F85               	goto	u2741
+   662  0784  2F86               	goto	u2740
+   663  0785                     u2741:
+   664  0785  2F8B               	goto	l2599
+   665  0786                     u2740:
+   666                           	line	175
+   667                           	
+   668  0786                     l2597:	
+   669                           ;ssd_matx.c: 174: {
+   670                           ;ssd_matx.c: 175: op=0b11000000;
+   671  0786  30C0               	movlw	low(0C0h)
+   672  0787  00C0               	movwf	(main@op)
+   673  0788  3000               	movlw	high(0C0h)
+   674  0789  00C1               	movwf	((main@op))+1
+   675                           	line	176
+   676                           ;ssd_matx.c: 176: }
+   677  078A  2FEB               	goto	l1069
+   678                           	line	177
+   679                           	
+   680  078B                     l1084:	
+   681                           	
+   682  078B                     l2599:	
+   683                           ;ssd_matx.c: 177: else if(p==10)
+   684  078B  300A               	movlw	0Ah
+   685  078C  0642               	xorwf	(main@p),w
+   686  078D  0443               	iorwf	(main@p+1),w
+   687  078E  1D03               	skipz
+   688  078F  2F91               	goto	u2751
+   689  0790  2F92               	goto	u2750
+   690  0791                     u2751:
+   691  0791  2F97               	goto	l2603
+   692  0792                     u2750:
+   693                           	line	179
+   694                           	
+   695  0792                     l2601:	
+   696                           ;ssd_matx.c: 178: {
+   697                           ;ssd_matx.c: 179: op=0b00110000;
+   698  0792  3030               	movlw	low(030h)
+   699  0793  00C0               	movwf	(main@op)
+   700  0794  3000               	movlw	high(030h)
+   701  0795  00C1               	movwf	((main@op))+1
+   702                           	line	180
+   703                           ;ssd_matx.c: 180: }
+   704  0796  2FEB               	goto	l1069
+   705                           	line	181
+   706                           	
+   707  0797                     l1086:	
+   708                           	
+   709  0797                     l2603:	
+   710                           ;ssd_matx.c: 181: else if(p==11)
+   711  0797  300B               	movlw	0Bh
+   712  0798  0642               	xorwf	(main@p),w
+   713  0799  0443               	iorwf	(main@p+1),w
+   714  079A  1D03               	skipz
+   715  079B  2F9D               	goto	u2761
+   716  079C  2F9E               	goto	u2760
+   717  079D                     u2761:
+   718  079D  2FA3               	goto	l2607
+   719  079E                     u2760:
+   720                           	line	183
+   721                           	
+   722  079E                     l2605:	
+   723                           ;ssd_matx.c: 182: {
+   724                           ;ssd_matx.c: 183: op=0b00001100;
+   725  079E  300C               	movlw	low(0Ch)
+   726  079F  00C0               	movwf	(main@op)
+   727  07A0  3000               	movlw	high(0Ch)
+   728  07A1  00C1               	movwf	((main@op))+1
+   729                           	line	184
+   730                           ;ssd_matx.c: 184: }
+   731  07A2  2FEB               	goto	l1069
+   732                           	line	185
+   733                           	
+   734  07A3                     l1088:	
+   735                           	
+   736  07A3                     l2607:	
+   737                           ;ssd_matx.c: 185: else if(p==12)
+   738  07A3  300C               	movlw	0Ch
+   739  07A4  0642               	xorwf	(main@p),w
+   740  07A5  0443               	iorwf	(main@p+1),w
+   741  07A6  1D03               	skipz
+   742  07A7  2FA9               	goto	u2771
+   743  07A8  2FAA               	goto	u2770
+   744  07A9                     u2771:
+   745  07A9  2FAF               	goto	l2611
+   746  07AA                     u2770:
+   747                           	line	187
+   748                           	
+   749  07AA                     l2609:	
+   750                           ;ssd_matx.c: 186: {
+   751                           ;ssd_matx.c: 187: op=0b00000011;
+   752  07AA  3003               	movlw	low(03h)
+   753  07AB  00C0               	movwf	(main@op)
+   754  07AC  3000               	movlw	high(03h)
+   755  07AD  00C1               	movwf	((main@op))+1
+   756                           	line	188
+   757                           ;ssd_matx.c: 188: }
+   758  07AE  2FEB               	goto	l1069
+   759                           	line	189
+   760                           	
+   761  07AF                     l1090:	
+   762                           	
+   763  07AF                     l2611:	
+   764                           ;ssd_matx.c: 189: else if(p==13)
+   765  07AF  300D               	movlw	0Dh
+   766  07B0  0642               	xorwf	(main@p),w
+   767  07B1  0443               	iorwf	(main@p+1),w
+   768  07B2  1D03               	skipz
+   769  07B3  2FB5               	goto	u2781
+   770  07B4  2FB6               	goto	u2780
+   771  07B5                     u2781:
+   772  07B5  2FBB               	goto	l2615
+   773  07B6                     u2780:
+   774                           	line	191
+   775                           	
+   776  07B6                     l2613:	
+   777                           ;ssd_matx.c: 190: {
+   778                           ;ssd_matx.c: 191: op=0b11100000;
+   779  07B6  30E0               	movlw	low(0E0h)
+   780  07B7  00C0               	movwf	(main@op)
+   781  07B8  3000               	movlw	high(0E0h)
+   782  07B9  00C1               	movwf	((main@op))+1
+   783                           	line	192
+   784                           ;ssd_matx.c: 192: }
+   785  07BA  2FEB               	goto	l1069
+   786                           	line	193
+   787                           	
+   788  07BB                     l1092:	
+   789                           	
+   790  07BB                     l2615:	
+   791                           ;ssd_matx.c: 193: else if(p==14)
+   792  07BB  300E               	movlw	0Eh
+   793  07BC  0642               	xorwf	(main@p),w
+   794  07BD  0443               	iorwf	(main@p+1),w
+   795  07BE  1D03               	skipz
+   796  07BF  2FC1               	goto	u2791
+   797  07C0  2FC2               	goto	u2790
+   798  07C1                     u2791:
+   799  07C1  2FC7               	goto	l2619
+   800  07C2                     u2790:
+   801                           	line	195
+   802                           	
+   803  07C2                     l2617:	
+   804                           ;ssd_matx.c: 194: {
+   805                           ;ssd_matx.c: 195: op=0b00011100;
+   806  07C2  301C               	movlw	low(01Ch)
+   807  07C3  00C0               	movwf	(main@op)
+   808  07C4  3000               	movlw	high(01Ch)
+   809  07C5  00C1               	movwf	((main@op))+1
+   810                           	line	196
+   811                           ;ssd_matx.c: 196: }
+   812  07C6  2FEB               	goto	l1069
+   813                           	line	197
+   814                           	
+   815  07C7                     l1094:	
+   816                           	
+   817  07C7                     l2619:	
+   818                           ;ssd_matx.c: 197: else if(p==15)
+   819  07C7  300F               	movlw	0Fh
+   820  07C8  0642               	xorwf	(main@p),w
+   821  07C9  0443               	iorwf	(main@p+1),w
+   822  07CA  1D03               	skipz
+   823  07CB  2FCD               	goto	u2801
+   824  07CC  2FCE               	goto	u2800
+   825  07CD                     u2801:
+   826  07CD  2FD1               	goto	l2623
+   827  07CE                     u2800:
+   828                           	line	199
+   829                           	
+   830  07CE                     l2621:	
+   831                           ;ssd_matx.c: 198: {
+   832                           ;ssd_matx.c: 199: op=0b00000000;
+   833  07CE  01C0               	clrf	(main@op)
+   834  07CF  01C1               	clrf	(main@op+1)
+   835                           	line	200
+   836                           ;ssd_matx.c: 200: }
+   837  07D0  2FEB               	goto	l1069
+   838                           	line	201
+   839                           	
+   840  07D1                     l1096:	
+   841                           	
+   842  07D1                     l2623:	
+   843                           ;ssd_matx.c: 201: else if(p==16)
+   844  07D1  3010               	movlw	010h
+   845  07D2  0642               	xorwf	(main@p),w
+   846  07D3  0443               	iorwf	(main@p+1),w
+   847  07D4  1D03               	skipz
+   848  07D5  2FD7               	goto	u2811
+   849  07D6  2FD8               	goto	u2810
+   850  07D7                     u2811:
+   851  07D7  2FEB               	goto	l1069
+   852  07D8                     u2810:
+   853                           	line	203
+   854                           	
+   855  07D8                     l2625:	
+   856                           ;ssd_matx.c: 202: {
+   857                           ;ssd_matx.c: 203: op=0b11111111;
+   858  07D8  30FF               	movlw	low(0FFh)
+   859  07D9  00C0               	movwf	(main@op)
+   860  07DA  3000               	movlw	high(0FFh)
+   861  07DB  00C1               	movwf	((main@op))+1
+   862  07DC  2FEB               	goto	l1069
+   863                           	line	204
+   864                           	
+   865  07DD                     l1098:	
+   866  07DD  2FEB               	goto	l1069
+   867                           	line	207
+   868                           	
+   869  07DE                     l1097:	
+   870  07DE  2FEB               	goto	l1069
+   871                           	
+   872  07DF                     l1095:	
+   873  07DF  2FEB               	goto	l1069
+   874                           	
+   875  07E0                     l1093:	
+   876  07E0  2FEB               	goto	l1069
+   877                           	
+   878  07E1                     l1091:	
+   879  07E1  2FEB               	goto	l1069
+   880                           	
+   881  07E2                     l1089:	
+   882  07E2  2FEB               	goto	l1069
+   883                           	
+   884  07E3                     l1087:	
+   885  07E3  2FEB               	goto	l1069
+   886                           	
+   887  07E4                     l1085:	
+   888  07E4  2FEB               	goto	l1069
+   889                           	
+   890  07E5                     l1083:	
+   891  07E5  2FEB               	goto	l1069
+   892                           	
+   893  07E6                     l1081:	
+   894  07E6  2FEB               	goto	l1069
+   895                           	
+   896  07E7                     l1079:	
+   897  07E7  2FEB               	goto	l1069
+   898                           	
+   899  07E8                     l1077:	
+   900  07E8  2FEB               	goto	l1069
+   901                           	
+   902  07E9                     l1075:	
+   903  07E9  2FEB               	goto	l1069
+   904                           	
+   905  07EA                     l1073:	
+   906  07EA  2FEB               	goto	l1069
+   907                           	
+   908  07EB                     l1071:	
+   909                           	
+   910  07EB                     l1069:	
+   911                           ;ssd_matx.c: 204: }
+   912                           ;ssd_matx.c: 207: if(p!=0)
+   913  07EB  0843               	movf	(main@p+1),w
+   914  07EC  0442               	iorwf	(main@p),w
+   915  07ED  1903               	skipnz
+   916  07EE  2FF0               	goto	u2821
+   917  07EF  2FF1               	goto	u2820
+   918  07F0                     u2821:
+   919  07F0  2F12               	goto	l2561
+   920  07F1                     u2820:
+   921                           	line	208
+   922                           	
+   923  07F1                     l2627:	
+   924                           ;ssd_matx.c: 208: PORTC=max[p-1];;
+   925  07F1  0842               	movf	(main@p),w
+   926  07F2  00F2               	movwf	(??_main+0)+0
+   927  07F3  0772               	addwf	(??_main+0)+0,w
+   928  07F4  3EFE               	addlw	0FEh
+   929  07F5  3E20               	addlw	main@max&0ffh
+   930  07F6  0084               	movwf	fsr0
+   931  07F7  1383               	bcf	status, 7	;select IRP bank0
+   932  07F8  0800               	movf	indf,w
+   933  07F9  0087               	movwf	(7)	;volatile
+   934  07FA  2F12               	goto	l2561
+   935                           	
+   936  07FB                     l1099:	
+   937  07FB  2F12               	goto	l2561
+   938                           	line	209
+   939                           	
+   940  07FC                     l1100:	
+   941                           	line	138
+   942  07FC  2F12               	goto	l2561
+   943                           	
+   944  07FD                     l1101:	
+   945                           	line	211
+   946                           	
+   947  07FD                     l1102:	
+   948                           	global	start
+   949  07FD  120A  118A  2800   	ljmp	start
+   950                           	opt stack 0
+   951                           GLOBAL	__end_of_main
+   952  0800                     	__end_of_main:
+   953 ;; =============== function _main ends ============
+   954                           
+   955                           	signat	_main,88
+   956                           	global	_scan
+   957                           psect	text110,local,class=CODE,delta=2
+   958                           global __ptext110
+   959  0618                     __ptext110:
+   960                           
+   961 ;; *************** function _scan *****************
+   962 ;; Defined at:
+   963 ;;		line 14 in file "Z:\home\shivesh\Proteus 7.7 Professional\PROJECTS\Training_Project\Code\matrix\ssd_matx.c"
+   964 ;; Parameters:    Size  Location     Type
+   965 ;;		None
+   966 ;; Auto vars:     Size  Location     Type
+   967 ;;		None
+   968 ;; Return value:  Size  Location     Type
+   969 ;;                  2    0[COMMON] int 
+   970 ;; Registers used:
+   971 ;;		wreg, status,2, status,0, pclath, cstack
+   972 ;; Tracked objects:
+   973 ;;		On entry : 0/0
+   974 ;;		On exit  : 0/0
+   975 ;;		Unchanged: 0/0
+   976 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   977 ;;      Params:         2       0       0       0       0
+   978 ;;      Locals:         0       0       0       0       0
+   979 ;;      Temps:          0       0       0       0       0
+   980 ;;      Totals:         2       0       0       0       0
+   981 ;;Total ram usage:        2 bytes
+   982 ;; Hardware stack levels used:    1
+   983 ;; Hardware stack levels required when called:    1
+   984 ;; This function calls:
+   985 ;;		_resetout
+   986 ;; This function is called by:
+   987 ;;		_main
+   988 ;; This function uses a non-reentrant model
+   989 ;;
+   990                           psect	text110
+   991                           	file	"Z:\home\shivesh\Proteus 7.7 Professional\PROJECTS\Training_Project\Code\matrix\ss
+                                 d_matx.c"
+   992                           	line	14
+   993                           	global	__size_of_scan
+   994  00DC                     	__size_of_scan	equ	__end_of_scan-_scan
+   995                           	
+   996  0618                     _scan:	
+   997                           	opt	stack 6
+   998                           ; Regs used in _scan: [wreg+status,2+status,0+pclath+cstack]
+   999                           	line	16
+  1000                           	
+  1001  0618                     l2437:	
+  1002                           ;ssd_matx.c: 16: resetout();
+  1003  0618  120A  118A  25CE   	fcall	_resetout
+              120A  118A         
+  1004                           	line	18
+  1005                           	
+  1006  061D                     l2439:	
+  1007                           ;ssd_matx.c: 18: RD4=1;;
+  1008  061D  1283               	bcf	status, 5	;RP0=0, select bank0
+  1009  061E  1303               	bcf	status, 6	;RP1=0, select bank0
+  1010  061F  1608               	bsf	(68/8),(68)&7
+  1011                           	line	20
+  1012                           	
+  1013  0620                     l2441:	
+  1014                           ;ssd_matx.c: 20: if(RD0==1)
+  1015  0620  1C08               	btfss	(64/8),(64)&7
+  1016  0621  2E23               	goto	u2491
+  1017  0622  2E24               	goto	u2490
+  1018  0623                     u2491:
+  1019  0623  2E2B               	goto	l1034
+  1020  0624                     u2490:
+  1021                           	line	22
+  1022                           	
+  1023  0624                     l2443:	
+  1024                           ;ssd_matx.c: 21: {
+  1025                           ;ssd_matx.c: 22: return 1;
+  1026  0624  3001               	movlw	low(01h)
+  1027  0625  00F0               	movwf	(?_scan)
+  1028  0626  3000               	movlw	high(01h)
+  1029  0627  00F1               	movwf	((?_scan))+1
+  1030  0628  2EF3               	goto	l1035
+  1031                           	
+  1032  0629                     l2445:	
+  1033  0629  2EF3               	goto	l1035
+  1034                           	line	23
+  1035                           	
+  1036  062A                     l2447:	
+  1037                           ;ssd_matx.c: 23: }
+  1038  062A  2E4E               	goto	l2465
+  1039                           	line	24
+  1040                           	
+  1041  062B                     l1034:	
+  1042                           ;ssd_matx.c: 24: else if(RD1==1)
+  1043  062B  1C88               	btfss	(65/8),(65)&7
+  1044  062C  2E2E               	goto	u2501
+  1045  062D  2E2F               	goto	u2500
+  1046  062E                     u2501:
+  1047  062E  2E36               	goto	l1037
+  1048  062F                     u2500:
+  1049                           	line	26
+  1050                           	
+  1051  062F                     l2449:	
+  1052                           ;ssd_matx.c: 25: {
+  1053                           ;ssd_matx.c: 26: return 2;
+  1054  062F  3002               	movlw	low(02h)
+  1055  0630  00F0               	movwf	(?_scan)
+  1056  0631  3000               	movlw	high(02h)
+  1057  0632  00F1               	movwf	((?_scan))+1
+  1058  0633  2EF3               	goto	l1035
+  1059                           	
+  1060  0634                     l2451:	
+  1061  0634  2EF3               	goto	l1035
+  1062                           	line	27
+  1063                           	
+  1064  0635                     l2453:	
+  1065                           ;ssd_matx.c: 27: }
+  1066  0635  2E4E               	goto	l2465
+  1067                           	line	28
+  1068                           	
+  1069  0636                     l1037:	
+  1070                           ;ssd_matx.c: 28: else if(RD2==1)
+  1071  0636  1D08               	btfss	(66/8),(66)&7
+  1072  0637  2E39               	goto	u2511
+  1073  0638  2E3A               	goto	u2510
+  1074  0639                     u2511:
+  1075  0639  2E41               	goto	l1039
+  1076  063A                     u2510:
+  1077                           	line	30
+  1078                           	
+  1079  063A                     l2455:	
+  1080                           ;ssd_matx.c: 29: {
+  1081                           ;ssd_matx.c: 30: return 3;
+  1082  063A  3003               	movlw	low(03h)
+  1083  063B  00F0               	movwf	(?_scan)
+  1084  063C  3000               	movlw	high(03h)
+  1085  063D  00F1               	movwf	((?_scan))+1
+  1086  063E  2EF3               	goto	l1035
+  1087                           	
+  1088  063F                     l2457:	
+  1089  063F  2EF3               	goto	l1035
+  1090                           	line	31
+  1091                           	
+  1092  0640                     l2459:	
+  1093                           ;ssd_matx.c: 31: }
+  1094  0640  2E4E               	goto	l2465
+  1095                           	line	32
+  1096                           	
+  1097  0641                     l1039:	
+  1098                           ;ssd_matx.c: 32: else if(RD3==1)
+  1099  0641  1D88               	btfss	(67/8),(67)&7
+  1100  0642  2E44               	goto	u2521
+  1101  0643  2E45               	goto	u2520
+  1102  0644                     u2521:
+  1103  0644  2E4E               	goto	l2465
+  1104  0645                     u2520:
+  1105                           	line	34
+  1106                           	
+  1107  0645                     l2461:	
+  1108                           ;ssd_matx.c: 33: {
+  1109                           ;ssd_matx.c: 34: return 4;
+  1110  0645  3004               	movlw	low(04h)
+  1111  0646  00F0               	movwf	(?_scan)
+  1112  0647  3000               	movlw	high(04h)
+  1113  0648  00F1               	movwf	((?_scan))+1
+  1114  0649  2EF3               	goto	l1035
+  1115                           	
+  1116  064A                     l2463:	
+  1117  064A  2EF3               	goto	l1035
+  1118                           	line	35
+  1119                           	
+  1120  064B                     l1041:	
+  1121  064B  2E4E               	goto	l2465
+  1122                           	line	39
+  1123                           	
+  1124  064C                     l1040:	
+  1125  064C  2E4E               	goto	l2465
+  1126                           	
+  1127  064D                     l1038:	
+  1128  064D  2E4E               	goto	l2465
+  1129                           	
+  1130  064E                     l1036:	
+  1131                           	
+  1132  064E                     l2465:	
+  1133                           ;ssd_matx.c: 35: }
+  1134                           ;ssd_matx.c: 39: resetout();
+  1135  064E  120A  118A  25CE   	fcall	_resetout
+              120A  118A         
+  1136                           	line	41
+  1137                           	
+  1138  0653                     l2467:	
+  1139                           ;ssd_matx.c: 41: RD5=1;;
+  1140  0653  1283               	bcf	status, 5	;RP0=0, select bank0
+  1141  0654  1303               	bcf	status, 6	;RP1=0, select bank0
+  1142  0655  1688               	bsf	(69/8),(69)&7
+  1143                           	line	43
+  1144                           	
+  1145  0656                     l2469:	
+  1146                           ;ssd_matx.c: 43: if(RD0==1)
+  1147  0656  1C08               	btfss	(64/8),(64)&7
+  1148  0657  2E59               	goto	u2531
+  1149  0658  2E5A               	goto	u2530
+  1150  0659                     u2531:
+  1151  0659  2E61               	goto	l1042
+  1152  065A                     u2530:
+  1153                           	line	45
+  1154                           	
+  1155  065A                     l2471:	
+  1156                           ;ssd_matx.c: 44: {
+  1157                           ;ssd_matx.c: 45: return 5;
+  1158  065A  3005               	movlw	low(05h)
+  1159  065B  00F0               	movwf	(?_scan)
+  1160  065C  3000               	movlw	high(05h)
+  1161  065D  00F1               	movwf	((?_scan))+1
+  1162  065E  2EF3               	goto	l1035
+  1163                           	
+  1164  065F                     l2473:	
+  1165  065F  2EF3               	goto	l1035
+  1166                           	line	46
+  1167                           	
+  1168  0660                     l2475:	
+  1169                           ;ssd_matx.c: 46: }
+  1170  0660  2E84               	goto	l2493
+  1171                           	line	47
+  1172                           	
+  1173  0661                     l1042:	
+  1174                           ;ssd_matx.c: 47: else if(RD1==1)
+  1175  0661  1C88               	btfss	(65/8),(65)&7
+  1176  0662  2E64               	goto	u2541
+  1177  0663  2E65               	goto	u2540
+  1178  0664                     u2541:
+  1179  0664  2E6C               	goto	l1044
+  1180  0665                     u2540:
+  1181                           	line	49
+  1182                           	
+  1183  0665                     l2477:	
+  1184                           ;ssd_matx.c: 48: {
+  1185                           ;ssd_matx.c: 49: return 6;
+  1186  0665  3006               	movlw	low(06h)
+  1187  0666  00F0               	movwf	(?_scan)
+  1188  0667  3000               	movlw	high(06h)
+  1189  0668  00F1               	movwf	((?_scan))+1
+  1190  0669  2EF3               	goto	l1035
+  1191                           	
+  1192  066A                     l2479:	
+  1193  066A  2EF3               	goto	l1035
+  1194                           	line	50
+  1195                           	
+  1196  066B                     l2481:	
+  1197                           ;ssd_matx.c: 50: }
+  1198  066B  2E84               	goto	l2493
+  1199                           	line	51
+  1200                           	
+  1201  066C                     l1044:	
+  1202                           ;ssd_matx.c: 51: else if(RD2==1)
+  1203  066C  1D08               	btfss	(66/8),(66)&7
+  1204  066D  2E6F               	goto	u2551
+  1205  066E  2E70               	goto	u2550
+  1206  066F                     u2551:
+  1207  066F  2E77               	goto	l1046
+  1208  0670                     u2550:
+  1209                           	line	53
+  1210                           	
+  1211  0670                     l2483:	
+  1212                           ;ssd_matx.c: 52: {
+  1213                           ;ssd_matx.c: 53: return 7;
+  1214  0670  3007               	movlw	low(07h)
+  1215  0671  00F0               	movwf	(?_scan)
+  1216  0672  3000               	movlw	high(07h)
+  1217  0673  00F1               	movwf	((?_scan))+1
+  1218  0674  2EF3               	goto	l1035
+  1219                           	
+  1220  0675                     l2485:	
+  1221  0675  2EF3               	goto	l1035
+  1222                           	line	54
+  1223                           	
+  1224  0676                     l2487:	
+  1225                           ;ssd_matx.c: 54: }
+  1226  0676  2E84               	goto	l2493
+  1227                           	line	55
+  1228                           	
+  1229  0677                     l1046:	
+  1230                           ;ssd_matx.c: 55: else if(RD3==1)
+  1231  0677  1D88               	btfss	(67/8),(67)&7
+  1232  0678  2E7A               	goto	u2561
+  1233  0679  2E7B               	goto	u2560
+  1234  067A                     u2561:
+  1235  067A  2E84               	goto	l2493
+  1236  067B                     u2560:
+  1237                           	line	57
+  1238                           	
+  1239  067B                     l2489:	
+  1240                           ;ssd_matx.c: 56: {
+  1241                           ;ssd_matx.c: 57: return 8;
+  1242  067B  3008               	movlw	low(08h)
+  1243  067C  00F0               	movwf	(?_scan)
+  1244  067D  3000               	movlw	high(08h)
+  1245  067E  00F1               	movwf	((?_scan))+1
+  1246  067F  2EF3               	goto	l1035
+  1247                           	
+  1248  0680                     l2491:	
+  1249  0680  2EF3               	goto	l1035
+  1250                           	line	58
+  1251                           	
+  1252  0681                     l1048:	
+  1253  0681  2E84               	goto	l2493
+  1254                           	line	62
+  1255                           	
+  1256  0682                     l1047:	
+  1257  0682  2E84               	goto	l2493
+  1258                           	
+  1259  0683                     l1045:	
+  1260  0683  2E84               	goto	l2493
+  1261                           	
+  1262  0684                     l1043:	
+  1263                           	
+  1264  0684                     l2493:	
+  1265                           ;ssd_matx.c: 58: }
+  1266                           ;ssd_matx.c: 62: resetout();
+  1267  0684  120A  118A  25CE   	fcall	_resetout
+              120A  118A         
+  1268                           	line	64
+  1269                           	
+  1270  0689                     l2495:	
+  1271                           ;ssd_matx.c: 64: RD6=1;;
+  1272  0689  1283               	bcf	status, 5	;RP0=0, select bank0
+  1273  068A  1303               	bcf	status, 6	;RP1=0, select bank0
+  1274  068B  1708               	bsf	(70/8),(70)&7
+  1275                           	line	66
+  1276                           	
+  1277  068C                     l2497:	
+  1278                           ;ssd_matx.c: 66: if(RD0==1)
+  1279  068C  1C08               	btfss	(64/8),(64)&7
+  1280  068D  2E8F               	goto	u2571
+  1281  068E  2E90               	goto	u2570
+  1282  068F                     u2571:
+  1283  068F  2E97               	goto	l1049
+  1284  0690                     u2570:
+  1285                           	line	68
+  1286                           	
+  1287  0690                     l2499:	
+  1288                           ;ssd_matx.c: 67: {
+  1289                           ;ssd_matx.c: 68: return 9;
+  1290  0690  3009               	movlw	low(09h)
+  1291  0691  00F0               	movwf	(?_scan)
+  1292  0692  3000               	movlw	high(09h)
+  1293  0693  00F1               	movwf	((?_scan))+1
+  1294  0694  2EF3               	goto	l1035
+  1295                           	
+  1296  0695                     l2501:	
+  1297  0695  2EF3               	goto	l1035
+  1298                           	line	69
+  1299                           	
+  1300  0696                     l2503:	
+  1301                           ;ssd_matx.c: 69: }
+  1302  0696  2EBA               	goto	l2521
+  1303                           	line	70
+  1304                           	
+  1305  0697                     l1049:	
+  1306                           ;ssd_matx.c: 70: else if(RD1==1)
+  1307  0697  1C88               	btfss	(65/8),(65)&7
+  1308  0698  2E9A               	goto	u2581
+  1309  0699  2E9B               	goto	u2580
+  1310  069A                     u2581:
+  1311  069A  2EA2               	goto	l1051
+  1312  069B                     u2580:
+  1313                           	line	72
+  1314                           	
+  1315  069B                     l2505:	
+  1316                           ;ssd_matx.c: 71: {
+  1317                           ;ssd_matx.c: 72: return 10;
+  1318  069B  300A               	movlw	low(0Ah)
+  1319  069C  00F0               	movwf	(?_scan)
+  1320  069D  3000               	movlw	high(0Ah)
+  1321  069E  00F1               	movwf	((?_scan))+1
+  1322  069F  2EF3               	goto	l1035
+  1323                           	
+  1324  06A0                     l2507:	
+  1325  06A0  2EF3               	goto	l1035
+  1326                           	line	73
+  1327                           	
+  1328  06A1                     l2509:	
+  1329                           ;ssd_matx.c: 73: }
+  1330  06A1  2EBA               	goto	l2521
+  1331                           	line	74
+  1332                           	
+  1333  06A2                     l1051:	
+  1334                           ;ssd_matx.c: 74: else if(RD2==1)
+  1335  06A2  1D08               	btfss	(66/8),(66)&7
+  1336  06A3  2EA5               	goto	u2591
+  1337  06A4  2EA6               	goto	u2590
+  1338  06A5                     u2591:
+  1339  06A5  2EAD               	goto	l1053
+  1340  06A6                     u2590:
+  1341                           	line	76
+  1342                           	
+  1343  06A6                     l2511:	
+  1344                           ;ssd_matx.c: 75: {
+  1345                           ;ssd_matx.c: 76: return 11;
+  1346  06A6  300B               	movlw	low(0Bh)
+  1347  06A7  00F0               	movwf	(?_scan)
+  1348  06A8  3000               	movlw	high(0Bh)
+  1349  06A9  00F1               	movwf	((?_scan))+1
+  1350  06AA  2EF3               	goto	l1035
+  1351                           	
+  1352  06AB                     l2513:	
+  1353  06AB  2EF3               	goto	l1035
+  1354                           	line	77
+  1355                           	
+  1356  06AC                     l2515:	
+  1357                           ;ssd_matx.c: 77: }
+  1358  06AC  2EBA               	goto	l2521
+  1359                           	line	78
+  1360                           	
+  1361  06AD                     l1053:	
+  1362                           ;ssd_matx.c: 78: else if(RD3==1)
+  1363  06AD  1D88               	btfss	(67/8),(67)&7
+  1364  06AE  2EB0               	goto	u2601
+  1365  06AF  2EB1               	goto	u2600
+  1366  06B0                     u2601:
+  1367  06B0  2EBA               	goto	l2521
+  1368  06B1                     u2600:
+  1369                           	line	80
+  1370                           	
+  1371  06B1                     l2517:	
+  1372                           ;ssd_matx.c: 79: {
+  1373                           ;ssd_matx.c: 80: return 12;
+  1374  06B1  300C               	movlw	low(0Ch)
+  1375  06B2  00F0               	movwf	(?_scan)
+  1376  06B3  3000               	movlw	high(0Ch)
+  1377  06B4  00F1               	movwf	((?_scan))+1
+  1378  06B5  2EF3               	goto	l1035
+  1379                           	
+  1380  06B6                     l2519:	
+  1381  06B6  2EF3               	goto	l1035
+  1382                           	line	81
+  1383                           	
+  1384  06B7                     l1055:	
+  1385  06B7  2EBA               	goto	l2521
+  1386                           	line	85
+  1387                           	
+  1388  06B8                     l1054:	
+  1389  06B8  2EBA               	goto	l2521
+  1390                           	
+  1391  06B9                     l1052:	
+  1392  06B9  2EBA               	goto	l2521
+  1393                           	
+  1394  06BA                     l1050:	
+  1395                           	
+  1396  06BA                     l2521:	
+  1397                           ;ssd_matx.c: 81: }
+  1398                           ;ssd_matx.c: 85: resetout();
+  1399  06BA  120A  118A  25CE   	fcall	_resetout
+              120A  118A         
+  1400                           	line	87
+  1401                           	
+  1402  06BF                     l2523:	
+  1403                           ;ssd_matx.c: 87: RD7=1;;
+  1404  06BF  1283               	bcf	status, 5	;RP0=0, select bank0
+  1405  06C0  1303               	bcf	status, 6	;RP1=0, select bank0
+  1406  06C1  1788               	bsf	(71/8),(71)&7
+  1407                           	line	89
+  1408                           	
+  1409  06C2                     l2525:	
+  1410                           ;ssd_matx.c: 89: if(RD0==1)
+  1411  06C2  1C08               	btfss	(64/8),(64)&7
+  1412  06C3  2EC5               	goto	u2611
+  1413  06C4  2EC6               	goto	u2610
+  1414  06C5                     u2611:
+  1415  06C5  2ECD               	goto	l1056
+  1416  06C6                     u2610:
+  1417                           	line	91
+  1418                           	
+  1419  06C6                     l2527:	
+  1420                           ;ssd_matx.c: 90: {
+  1421                           ;ssd_matx.c: 91: return 13;
+  1422  06C6  300D               	movlw	low(0Dh)
+  1423  06C7  00F0               	movwf	(?_scan)
+  1424  06C8  3000               	movlw	high(0Dh)
+  1425  06C9  00F1               	movwf	((?_scan))+1
+  1426  06CA  2EF3               	goto	l1035
+  1427                           	
+  1428  06CB                     l2529:	
+  1429  06CB  2EF3               	goto	l1035
+  1430                           	line	92
+  1431                           	
+  1432  06CC                     l2531:	
+  1433                           ;ssd_matx.c: 92: }
+  1434  06CC  2EF0               	goto	l2549
+  1435                           	line	93
+  1436                           	
+  1437  06CD                     l1056:	
+  1438                           ;ssd_matx.c: 93: else if(RD1==1)
+  1439  06CD  1C88               	btfss	(65/8),(65)&7
+  1440  06CE  2ED0               	goto	u2621
+  1441  06CF  2ED1               	goto	u2620
+  1442  06D0                     u2621:
+  1443  06D0  2ED8               	goto	l1058
+  1444  06D1                     u2620:
+  1445                           	line	95
+  1446                           	
+  1447  06D1                     l2533:	
+  1448                           ;ssd_matx.c: 94: {
+  1449                           ;ssd_matx.c: 95: return 14;
+  1450  06D1  300E               	movlw	low(0Eh)
+  1451  06D2  00F0               	movwf	(?_scan)
+  1452  06D3  3000               	movlw	high(0Eh)
+  1453  06D4  00F1               	movwf	((?_scan))+1
+  1454  06D5  2EF3               	goto	l1035
+  1455                           	
+  1456  06D6                     l2535:	
+  1457  06D6  2EF3               	goto	l1035
+  1458                           	line	96
+  1459                           	
+  1460  06D7                     l2537:	
+  1461                           ;ssd_matx.c: 96: }
+  1462  06D7  2EF0               	goto	l2549
+  1463                           	line	97
+  1464                           	
+  1465  06D8                     l1058:	
+  1466                           ;ssd_matx.c: 97: else if(RD2==1)
+  1467  06D8  1D08               	btfss	(66/8),(66)&7
+  1468  06D9  2EDB               	goto	u2631
+  1469  06DA  2EDC               	goto	u2630
+  1470  06DB                     u2631:
+  1471  06DB  2EE3               	goto	l1060
+  1472  06DC                     u2630:
+  1473                           	line	99
+  1474                           	
+  1475  06DC                     l2539:	
+  1476                           ;ssd_matx.c: 98: {
+  1477                           ;ssd_matx.c: 99: return 15;
+  1478  06DC  300F               	movlw	low(0Fh)
+  1479  06DD  00F0               	movwf	(?_scan)
+  1480  06DE  3000               	movlw	high(0Fh)
+  1481  06DF  00F1               	movwf	((?_scan))+1
+  1482  06E0  2EF3               	goto	l1035
+  1483                           	
+  1484  06E1                     l2541:	
+  1485  06E1  2EF3               	goto	l1035
+  1486                           	line	100
+  1487                           	
+  1488  06E2                     l2543:	
+  1489                           ;ssd_matx.c: 100: }
+  1490  06E2  2EF0               	goto	l2549
+  1491                           	line	101
+  1492                           	
+  1493  06E3                     l1060:	
+  1494                           ;ssd_matx.c: 101: else if(RD3==1)
+  1495  06E3  1D88               	btfss	(67/8),(67)&7
+  1496  06E4  2EE6               	goto	u2641
+  1497  06E5  2EE7               	goto	u2640
+  1498  06E6                     u2641:
+  1499  06E6  2EF0               	goto	l2549
+  1500  06E7                     u2640:
+  1501                           	line	103
+  1502                           	
+  1503  06E7                     l2545:	
+  1504                           ;ssd_matx.c: 102: {
+  1505                           ;ssd_matx.c: 103: return 16;
+  1506  06E7  3010               	movlw	low(010h)
+  1507  06E8  00F0               	movwf	(?_scan)
+  1508  06E9  3000               	movlw	high(010h)
+  1509  06EA  00F1               	movwf	((?_scan))+1
+  1510  06EB  2EF3               	goto	l1035
+  1511                           	
+  1512  06EC                     l2547:	
+  1513  06EC  2EF3               	goto	l1035
+  1514                           	line	104
+  1515                           	
+  1516  06ED                     l1062:	
+  1517  06ED  2EF0               	goto	l2549
+  1518                           	line	107
+  1519                           	
+  1520  06EE                     l1061:	
+  1521  06EE  2EF0               	goto	l2549
+  1522                           	
+  1523  06EF                     l1059:	
+  1524  06EF  2EF0               	goto	l2549
+  1525                           	
+  1526  06F0                     l1057:	
+  1527                           	
+  1528  06F0                     l2549:	
+  1529                           ;ssd_matx.c: 104: }
+  1530                           ;ssd_matx.c: 107: return 0;
+  1531  06F0  01F0               	clrf	(?_scan)
+  1532  06F1  01F1               	clrf	(?_scan+1)
+  1533  06F2  2EF3               	goto	l1035
+  1534                           	
+  1535  06F3                     l2551:	
+  1536                           	line	109
+  1537                           	
+  1538  06F3                     l1035:	
+  1539  06F3  0008               	return
+  1540                           	opt stack 0
+  1541                           GLOBAL	__end_of_scan
+  1542  06F4                     	__end_of_scan:
+  1543 ;; =============== function _scan ends ============
+  1544                           
+  1545                           	signat	_scan,90
+  1546                           	global	_resetout
+  1547                           psect	text111,local,class=CODE,delta=2
+  1548                           global __ptext111
+  1549  05CE                     __ptext111:
+  1550                           
+  1551 ;; *************** function _resetout *****************
+  1552 ;; Defined at:
+  1553 ;;		line 7 in file "Z:\home\shivesh\Proteus 7.7 Professional\PROJECTS\Training_Project\Code\matrix\ssd_matx.c"
+  1554 ;; Parameters:    Size  Location     Type
+  1555 ;;		None
+  1556 ;; Auto vars:     Size  Location     Type
+  1557 ;;		None
+  1558 ;; Return value:  Size  Location     Type
+  1559 ;;		None               void
+  1560 ;; Registers used:
+  1561 ;;		None
+  1562 ;; Tracked objects:
+  1563 ;;		On entry : 0/0
+  1564 ;;		On exit  : 0/0
+  1565 ;;		Unchanged: 0/0
+  1566 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1567 ;;      Params:         0       0       0       0       0
+  1568 ;;      Locals:         0       0       0       0       0
+  1569 ;;      Temps:          0       0       0       0       0
+  1570 ;;      Totals:         0       0       0       0       0
+  1571 ;;Total ram usage:        0 bytes
+  1572 ;; Hardware stack levels used:    1
+  1573 ;; This function calls:
+  1574 ;;		Nothing
+  1575 ;; This function is called by:
+  1576 ;;		_scan
+  1577 ;; This function uses a non-reentrant model
+  1578 ;;
+  1579                           psect	text111
+  1580                           	file	"Z:\home\shivesh\Proteus 7.7 Professional\PROJECTS\Training_Project\Code\matrix\ss
+                                 d_matx.c"
+  1581                           	line	7
+  1582                           	global	__size_of_resetout
+  1583  0007                     	__size_of_resetout	equ	__end_of_resetout-_resetout
+  1584                           	
+  1585  05CE                     _resetout:	
+  1586                           	opt	stack 6
+  1587                           ; Regs used in _resetout: []
+  1588                           	line	8
+  1589                           	
+  1590  05CE                     l2435:	
+  1591                           ;ssd_matx.c: 8: RD4=0;
+  1592  05CE  1283               	bcf	status, 5	;RP0=0, select bank0
+  1593  05CF  1303               	bcf	status, 6	;RP1=0, select bank0
+  1594  05D0  1208               	bcf	(68/8),(68)&7
+  1595                           	line	9
+  1596                           ;ssd_matx.c: 9: RD5=0;
+  1597  05D1  1288               	bcf	(69/8),(69)&7
+  1598                           	line	10
+  1599                           ;ssd_matx.c: 10: RD6=0;
+  1600  05D2  1308               	bcf	(70/8),(70)&7
+  1601                           	line	11
+  1602                           ;ssd_matx.c: 11: RD7=0;
+  1603  05D3  1388               	bcf	(71/8),(71)&7
+  1604                           	line	12
+  1605                           	
+  1606  05D4                     l1031:	
+  1607  05D4  0008               	return
+  1608                           	opt stack 0
+  1609                           GLOBAL	__end_of_resetout
+  1610  05D5                     	__end_of_resetout:
+  1611 ;; =============== function _resetout ends ============
+  1612                           
+  1613                           	signat	_resetout,88
+  1614                           psect	text112,local,class=CODE,delta=2
+  1615                           global __ptext112
+  1616  0000                     __ptext112:
+  1617                           	global	btemp
+  1618  007E                     	btemp set 07Eh
+  1619                           
+  1620                           	DABS	1,126,2	;btemp
+  1621                           	global	wtemp0
+  1622  007E                     	wtemp0 set btemp
+
+
+HI-TECH Software PICC Macro Assembler V9.81 build 7503 
+Symbol Table                                                                                   Sun Jun 18 15:31:13 2017
+
+                   pc 0002                    fsr 0004                   _RD0 0040                   _RD1 0041  
+                 _RD2 0042                   _RD3 0043                   _RD4 0044                   _RD5 0045  
+                 _RD6 0046                   _RD7 0047                   fsr0 0004                   indf 0000  
+                l1100 07FC                  l1101 07FD                  l1102 07FD                  l1031 05D4  
+                l1040 064C                  l1041 064B                  l1050 06BA                  l1042 0661  
+                l1034 062B                  l1051 06A2                  l1043 0684                  l1035 06F3  
+                l1060 06E3                  l1052 06B9                  l1044 066C                  l1036 064E  
+                l1061 06EE                  l1053 06AD                  l1045 0683                  l1037 0636  
+                l1062 06ED                  l1054 06B8                  l1046 0677                  l1038 064D  
+                l1070 0737                  l1055 06B7                  l1047 0682                  l1039 0641  
+                l1071 07EB                  l1056 06CD                  l1048 0681                  l1080 0773  
+                l1072 0743                  l1057 06F0                  l1049 0697                  l1073 07EA  
+                l1081 07E6                  l1058 06D8                  l1090 07AF                  l1082 077F  
+                l1074 074F                  l1059 06EF                  l1075 07E9                  l1083 07E5  
+                l1091 07E1                  l1067 0712                  l1092 07BB                  l1084 078B  
+                l1076 075B                  l1068 072B                  l1077 07E8                  l1085 07E4  
+                l1093 07E0                  l1069 07EB                  l1094 07C7                  l1086 0797  
+                l1078 0767                  l1079 07E7                  l1087 07E3                  l1095 07DF  
+                l1096 07D1                  l1088 07A3                  l1089 07E2                  l1097 07DE  
+                l1098 07DD                  l1099 07FB                  l2501 0695                  l2511 06A6  
+                l2503 0696                  l2513 06AB                  l2505 069B                  l2521 06BA  
+                l2441 0620                  l2601 0792                  l2435 05CE                  l2531 06CC  
+                l2523 06BF                  l2515 06AC                  l2507 06A0                  l2451 0634  
+                l2443 0624                  l2611 07AF                  l2603 0797                  l2541 06E1  
+                l2533 06D1                  l2525 06C2                  l2517 06B1                  l2509 06A1  
+                l2461 0645                  l2453 0635                  l2445 0629                  l2437 0618  
+                l2621 07CE                  l2613 07B6                  l2605 079E                  l2551 06F3  
+                l2543 06E2                  l2535 06D6                  l2527 06C6                  l2519 06B6  
+                l2471 065A                  l2463 064A                  l2455 063A                  l2447 062A  
+                l2439 061D                  l2623 07D1                  l2615 07BB                  l2607 07A3  
+                l2545 06E7                  l2537 06D7                  l2529 06CB                  l2481 066B  
+                l2473 065F                  l2457 063F                  l2449 062F                  l2465 064E  
+                l2625 07D8                  l2617 07C2                  l2609 07AA                  l2561 0712  
+                l2553 06F4                  l2547 06EC                  l2539 06DC                  l2491 0680  
+                l2483 0670                  l2475 0660                  l2467 0653                  l2459 0640  
+                l2627 07F1                  l2619 07C7                  l2571 0737                  l2563 071F  
+                l2555 0709                  l2549 06F0                  l2485 0675                  l2477 0665  
+                l2493 0684                  l2469 0656                  l2581 0756                  l2573 073E  
+                l2565 0726                  l2557 070C                  l2495 0689                  l2487 0676  
+                l2479 066A                  l2591 0773                  l2583 075B                  l2575 0743  
+                l2567 072B                  l2559 070E                  l2497 068C                  l2489 067B  
+                l2593 077A                  l2585 0762                  l2577 074A                  l2569 0732  
+                l2499 0690                  l2595 077F                  l2587 0767                  l2579 074F  
+                l2597 0786                  l2589 076E                  l2599 078B                  u2500 062F  
+                u2501 062E                  u2510 063A                  u2511 0639                  u2600 06B1  
+                u2520 0645                  u2601 06B0                  u2521 0644                  u2610 06C6  
+                u2530 065A                  u2611 06C5                  u2531 0659                  u2620 06D1  
+                u2540 0665                  u2700 0756                  u2621 06D0                  u2541 0664  
+                u2701 0755                  u2630 06DC                  u2550 0670                  u2710 0762  
+                u2631 06DB                  u2551 066F                  u2711 0761                  u2640 06E7  
+                u2560 067B                  u2800 07CE                  u2720 076E                  u2641 06E6  
+                u2561 067A                  u2801 07CD                  u2721 076D                  u2570 0690  
+                u2490 0624                  u2810 07D8                  u2730 077A                  u2650 06FC  
+                u2571 068F                  u2491 0623                  u2811 07D7                  u2731 0779  
+                u2580 069B                  u2820 07F1                  u2740 0786                  u2660 0726  
+                u2581 069A                  u2821 07F0                  u2741 0785                  u2661 0725  
+                u2590 06A6                  u2750 0792                  u2670 0732                  u2591 06A5  
+                u2751 0791                  u2671 0731                  u2760 079E                  u2680 073E  
+                u2761 079D                  u2681 073D                  u2770 07AA                  u2690 074A  
+                u2771 07A9                  u2691 0749                  u2780 07B6                  u2781 07B5  
+                u2790 07C2                  u2791 07C1                  _main 06F4                  _scan 0618  
+                btemp 007E                  start 0000                 ?_main 0070                 ?_scan 0070  
+               _PORTC 0007                 _TRISC 0087                 _TRISD 0088                 main@p 0042  
+               pclath 000A                 status 0003                 wtemp0 007E          __end_of_main 0800  
+        __end_of_scan 06F4                ??_main 0072                ??_scan 0072                main@op 0040  
+    __end_of_resetout 05D5        __pcstackCOMMON 0070          __pidataBANK0 05F8            __pmaintext 06F4  
+           ?_resetout 0070               main@max 0020  end_of_initialization 05F4               init_ram 05D9  
+          ??_resetout 0070   start_initialization 05E6           __pdataBANK0 0044         __pcstackBANK0 0020  
+           __ptext110 0618             __ptext111 05CE             __ptext112 0000     __size_of_resetout 0007  
+           main@F1605 0044             init_fetch 05D5         __size_of_main 010C         __size_of_scan 00DC  
+            _resetout 05CE  
