@@ -2,13 +2,32 @@
 #include <stdlib.h>
 
 
-/*   utils [   **************************************************** */
+
+/****KEYPAD  ******/
+#define TRISKEY TRISB
+#define KD0 RB0
+#define KD1 RB1
+#define KD2 RB2
+#define KD3 RB3
+#define KD4 RC2
+#define KD5 RC3
+#define KD6 RB6
+#define KD7 RB7 
+
+void initkeypad();
+void actrow(int n);
+int scan();
+void resetout();
+ 
+
+/*   utils ***** */
  
 void delay(unsigned int);
 
 int itoaa(int value,char *ptr);
+ 
+ 
 
-/*   ]utils   **************************************************** */
 /* LCD [ *********** */
 #define DEL1 20
 #define DEL2  20
@@ -34,22 +53,32 @@ void setLCD(int number);void write(char * str);
 void scroll(char * str);
 void clearlcd();
 
-/* ] LCD  ***********  */
+/* ******                    MAIN          *****  */
 
 int  main()
 { 
 	char str[]="Welcome to Emtech Foundation This is line 2 ";	char str2[]="Welcome to Emtech Foundation ";
- 	initlcd();
+ 	initlcd();	
+	initkeypad();
  
 
- float num = 321.01;
+ int num = 321 ;
 char snum[10]="AA";
 
 // convert 123 to string [buf]
 itoaa(num, snum );
 
   write( snum);  
+while(1)
+{	
+  num=scan();
+if(num!=99){
 
+  itoaa(num, snum );
+
+  write( snum);  
+}
+}
   //	scroll(str);	
  	while(1);
 
@@ -101,13 +130,12 @@ int itoaa(int value,char *ptr)
             count++;
         }
         return count;
-     }
-/*   ]utils   **************************************************** */
+     } 
 /*   LCD [   **************************************************** */
 void initlcd()
 {
 
- 	TRISC=0x00;
+ 	TRISC=0b00001100;
 	TRISLCD=0x00;
 
 	cmd(0x38); 
@@ -132,8 +160,8 @@ void cmd(unsigned int Command)
 	EN=1; 
 	delay(DEL1);
 	EN=0;
-	delay(DEL2);
-
+	delay(DEL2);
+
 }
 void dat(unsigned int Command)
 {	setLCD(Command);
@@ -243,4 +271,100 @@ goto START;
 
 
 
-/* ] LCD ****************************************************   */
+/******************************************************/
+
+
+/****KEYPAD*******************************/
+
+void initkeypad()
+{ 
+ 	PORTB = 0;  
+	TRISKEY = 0b11000000;
+	RB4=1;
+}
+ 
+int scan()
+{
+ 	actrow(1) ;
+			if(	KD4==1)
+				return 1;
+			else if(KD5==1)
+				return 2;
+			else if(KD6==1)
+				return 3;
+			else if(KD7==1)
+				return 4;
+		
+	actrow(2) ;	 
+ 
+			if(	KD4==1)
+				return 5;
+			else if(KD5==1)
+				return 6;
+			else if(KD6==1)
+				return 7;
+			else if(KD7==1)
+				return 8;
+		
+	actrow(3) ;	
+ 
+			if(	KD4==1)
+				return 9;
+			else if(KD5==1)
+				return 10;
+			else if(KD6==1)
+				return 11;
+			else if(KD7==1)
+				return 12;
+		
+	
+	actrow(4) ;	 
+
+			if(	KD4==1)
+				return 13;
+			else if(KD5==1)
+				return 14;
+			else if(KD6==1)
+				return 15;
+			else if(KD7==1)
+				return 16;
+
+
+
+ 				return 99;
+	 
+
+
+}
+
+
+void resetout()
+{
+KD4=0;KD5=0;KD6=0;KD7=0;
+}
+void actrow(int n)
+{
+resetout();
+
+ if(n==1)
+	{
+		KD0=1;  
+	}
+ else if(n==2)
+	{
+		KD1=1; 
+	}
+ else if(n==3)
+	{
+		KD2=1; 
+	}
+ else if(n==4)
+	{
+		KD3=1;
+	}
+ delay(200); 
+
+
+}
+ 
+/*******************************/
