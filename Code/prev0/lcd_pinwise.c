@@ -1,24 +1,32 @@
 #include<pic.h>#include<string.h>
+#include <stdlib.h>
 
-#define D0 RD0
-#define D1 RD1
-#define D2 RD2
-#define D3 RD3
-#define D4 RD4
-#define D5 RD5
-#define D6 RD6
-#define D7 RD7
+
+/*   utils [   **************************************************** */
+ 
+void delay(unsigned int);
+
+int itoaa(int value,char *ptr);
+
+/*   ]utils   **************************************************** */
+/* LCD [ *********** */
+#define DEL1 20
+#define DEL2  20
 
 #define TRISLCD TRISD
 #define LCD PORTD
-#define RS  RC0
-#define EN RC1
-#define DEL1 20
-#define DEL2  20
+#define RS  RC0
+#define EN RC1
 
-void delay(unsigned int);
+#define LD0 RD0
+#define LD1 RD1
+#define LD2 RD2
+#define LD3 RD3
+#define LD4 RD4
+#define LD5 RD5
+#define LD6 RD6
+#define LD7 RD7
 
-/* LCD [  */
 void initlcd();
 void cmd(unsigned int Command);
 void dat(unsigned int Command);
@@ -26,7 +34,7 @@ void setLCD(int number);void write(char * str);
 void scroll(char * str);
 void clearlcd();
 
-/* ] LCD    */
+/* ] LCD  ***********  */
 
 int  main()
 { 
@@ -34,11 +42,15 @@ int  main()
  	initlcd();
  
 
- 
- //	write(str); 
-  
- 
-  	scroll(str);	
+ float num = 321.01;
+char snum[10]="AA";
+
+// convert 123 to string [buf]
+itoaa(num, snum );
+
+  write( snum +str2);  
+
+  //	scroll(str);	
  	while(1);
 
 
@@ -64,6 +76,32 @@ char * substr32(char * str,int offset)
 
 }
 
+int itoaa(int value,char *ptr)
+     {
+        int count=0,temp;
+        if(ptr==NULL)
+            return 0;   
+        if(value==0)
+        {   
+            *ptr='0';
+            return 1;
+        }
+
+        if(value<0)
+        {
+            value*=(-1);    
+            *ptr++='-';
+            count++;
+        }
+        for(temp=value;temp>0;temp/=10,ptr++);
+        *ptr='\0';
+        for(temp=value;temp>0;temp/=10)
+        {
+            *--ptr=temp%10+'0';
+            count++;
+        }
+        return count;
+     }
 /*   ]utils   **************************************************** */
 /*   LCD [   **************************************************** */
 void initlcd()
@@ -119,14 +157,14 @@ void setLCD(int number)
             vbool[i] = number<<i < 0;    
         }  
 					  
-			D0=vbool[size-1];
-			D1=vbool[size-2];
-			D2=vbool[size-3];
-			D3=vbool[size-4];
-			D4=vbool[size-5];
-			D5=vbool[size-6];
-			D6=vbool[size-7];
-			D7=vbool[size-8];
+			LD0=vbool[size-1];
+			LD1=vbool[size-2];
+			LD2=vbool[size-3];
+			LD3=vbool[size-4];
+			LD4=vbool[size-5];
+			LD5=vbool[size-6];
+			LD6=vbool[size-7];
+			LD7=vbool[size-8];
 
 //	LCD=s;
 
@@ -202,4 +240,7 @@ goto START;
 
 
 }
+
+
+
 /* ] LCD ****************************************************   */
