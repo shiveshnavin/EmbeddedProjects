@@ -12,8 +12,8 @@
 #define LCD PORTD
 #define RS  RC0
 #define EN RC1
-#define DEL1 50
-#define DEL2 50 
+#define DEL1 1
+#define DEL2 1 
 
 void delay(unsigned int);
 
@@ -23,23 +23,23 @@ void cmd(unsigned int Command);
 void dat(unsigned int Command);
 void setLCD(int number);void write(char * str);
 void scroll(char * str);
+void clearlcd();
 
 /* ] LCD    */
 
 int  main()
 { 
-	char str[]="Welcome to Emtech Foundation This is line 2";
+	char str[]="Welcome to Emtech Foundation This is line 2 ";	char str2[]="Welcome to Emtech Foundation ";
 
 	TRISC=0x00;
-	TRISD=0x00; initlcd();
+	TRISD=0x00; 	initlcd();
  
 
  
- 	write(str); 
+ //	write(str); 
+  
  
-
-
- //	scroll(str);	
+  	scroll(str);	
  	while(1);
 
 
@@ -50,6 +50,22 @@ void delay(unsigned int x)
 	while(x-->0);
 
 }
+
+/*   utils [   **************************************************** */
+
+char * substr32(char * str,int offset)
+{
+	char sub[];
+	for(int i= 0;i< 32;i++)
+		{
+			sub[i]=str[offset+i];
+		}
+	return sub;
+	
+
+}
+
+/*   ]utils   **************************************************** */
 /*   LCD [   **************************************************** */
 void initlcd()
 {
@@ -65,6 +81,10 @@ void initlcd()
 
  	cmd(0x0f);
 
+}
+void clearlcd()
+{
+cmd(0x01);
 }
 void cmd(unsigned int Command)
 {
@@ -111,7 +131,7 @@ void setLCD(int number)
 
 }void write(char * str)
 {
-
+	clearlcd();
 	int i=0;
 	while(str[i]!='\0')
 		{
@@ -123,7 +143,7 @@ dat(str[i]);
 					
 				 
 					
-					cmd(0xC0);
+				//	cmd(0xC0);
 				}
 	i++;
 		}
@@ -133,41 +153,62 @@ dat(str[i]);
 
 
 void scroll(char * str)
-{
+{	
+
+	write(str);
 	int i;
 	int len=0;;
 	int st=0;
-	int en;
-
+	int en; 
 	while(str[i]!='\0')
+	{	i++;
 		len++;
-	en=len-1;
-
+	}	
+en=len-1;
+	 
 	if(len>32)
+	{	
+		 
+		char  dest [32] ;
+		int startat=0;
+		int endat=31;
+START:
+		while(endat<en)
 		{
+			       for(int i= 0;i< 32;i++)
+						{
+							dest[i]=str[	startat+i];
+						}
 
-			char  dest [32] ;
-	for(int i=0;i<32;i++)
-	{
-		dest[i]=str[st+i];
-	}
-	write(dest);
-while(st<en&&0){
-		
-			char  * dest ;
-			
-			for(int i=0;i<32;i++)
-	{
-		dest[i]=str[st+i];
-	}
- 			
-		write(st);			
-st++;
-delay(1000);			
-}			
+				cmd(0x1E);
+			//	write(dest);
+				startat++;		
+				endat++;
+				delay(1000);
+				
+
 		}
+ 		
+
+	while(endat<en)
+		{
+			       for(int i= 0;i< 32;i++)
+						{
+							dest[i]=str[	startat+i];
+						}
+
+				cmd(0x18);
+			//	write(dest);
+				startat++;		
+				endat++;
+				delay(1000);
+				
+
+		}
+goto START;
+	}
 	else
-		write(str);
+    	write(str);
 
 		
 
