@@ -172,7 +172,7 @@ en=len-1;
 		char  dest [32] ;
 		int startat=0;
 		int endat=31;
-START:
+START: 
 		while(endat<en)
 		{
 			       for(int i= 0;i< 32;i++)
