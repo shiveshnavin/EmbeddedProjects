@@ -16,60 +16,122 @@
 #define DEL2 50 
 
 void delay(unsigned int);
-void cmd();
-void dat();
 
-void setLCD(int s)
-{	
+/* LCD [  */
+void initlcd();
+void cmd(unsigned int Command);
+void dat(unsigned int Command);
+void setLCD(int number);void write(char * str);
+void scroll(char * str);
 
-	 
-    int number = s; /* signed */
+/* ] LCD    */
+
+int  main()
+{ 
+	char str[]="Welcome to Emtech Foundation This is line 2";
+
+	TRISC=0x00;
+	TRISD=0x00; initlcd();
+ 
+
+ 
+ 	write(str); 
+ 
+
+
+ //	scroll(str);	
+ 	while(1);
+
+
+}
+void delay(unsigned int x)
+{
+
+	while(x-->0);
+
+}
+/*   LCD [   **************************************************** */
+void initlcd()
+{
+
+
+	cmd(0x38); 
+
+	cmd(0x0C); 
+
+	cmd(0x01);
+ 
+	cmd(0x80);
+
+ 	cmd(0x0f);
+
+}
+void cmd(unsigned int Command)
+{
+	setLCD(Command);
+	RS=0;
+	EN=1; 
+	delay(DEL1);
+	EN=0;
+	delay(DEL2);
+
+}
+void dat(unsigned int Command)
+{	setLCD(Command);
+	
+	RS=1;
+	EN=1;
+	delay(DEL1);
+	EN=0;
+	delay(DEL2);
+
+
+}
+void setLCD(int number)
+{	  
 	const int size=8*sizeof(int);
     int vbool[8*sizeof(int)];
-    int i;; /* signed */  
-
-
-
+    int i;; 
+ 
         for (i = 0; i <size; i++)
         {
             vbool[i] = number<<i < 0;    
         }  
-		
- int z=vbool[0];
-
-D0=vbool[size-1];
-D1=vbool[size-2];
-D2=vbool[size-3];
-D3=vbool[size-4];
-D4=vbool[size-5];
-D5=vbool[size-6];
-D6=vbool[size-7];
-D7=vbool[size-8];
+					  
+			D0=vbool[size-1];
+			D1=vbool[size-2];
+			D2=vbool[size-3];
+			D3=vbool[size-4];
+			D4=vbool[size-5];
+			D5=vbool[size-6];
+			D6=vbool[size-7];
+			D7=vbool[size-8];
 
 //	LCD=s;
 
-}
-void write(char * str)
+}void write(char * str)
 {
 
 	int i=0;
 	while(str[i]!='\0')
 		{
 
-			setLCD(str[i++]);	
-			dat();
+dat(str[i]);
 
 			if(i==15)
 				{
 					
-					setLCD(0xC0);
+				 
 					
-						cmd();
+					cmd(0xC0);
 				}
+	i++;
 		}
 
 
 }
+
+
 void scroll(char * str)
 {
 	int i;
@@ -111,64 +173,4 @@ delay(1000);
 
 
 }
-int  main()
-{ 
-	char str[]="welcome to EMTECH FOUNDATION CH FOUNDATION CH FOUNDATION";
-
-	TRISC=0x00;
-	TRISD=0x00;
-	setLCD(0x38);
-	cmd();
-	setLCD(0x0C);
-	cmd();
-	setLCD(0x01);
-	cmd();
-	setLCD(0x80);
-	
-	setLCD(0b10000000);
-	
-	cmd();
-
-
-
-	char  dest [32] ;
-	int st=1;
-	for(int i=0;i<25;i++)
-	{
-		dest[i]=str[st+i];
-	}
-//	write(dest);
-setLCD('a');
-dat();
-
-
-//	scroll(str);	
- 	while(1);
-
-
-}
-void delay(unsigned int x)
-{
-
-	while(x-->0);
-
-}
-void cmd()
-{
-	RS=0;
-	EN=1; 
-	delay(DEL1);
-	EN=0;
-	delay(DEL2);
-
-}
-void dat()
-{
-	RS=1;
-	EN=1;
-	delay(DEL1);
-	EN=0;
-	delay(DEL2);
-
-
-}
+/* ] LCD ****************************************************   */
