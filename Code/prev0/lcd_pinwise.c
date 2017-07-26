@@ -9,11 +9,12 @@
 #define D6 RD6
 #define D7 RD7
 
+#define TRISLCD TRISD
 #define LCD PORTD
 #define RS  RC0
 #define EN RC1
-#define DEL1 1
-#define DEL2 1 
+#define DEL1 20
+#define DEL2  20
 
 void delay(unsigned int);
 
@@ -30,9 +31,7 @@ void clearlcd();
 int  main()
 { 
 	char str[]="Welcome to Emtech Foundation This is line 2 ";	char str2[]="Welcome to Emtech Foundation ";
-
-	TRISC=0x00;
-	TRISD=0x00; 	initlcd();
+ 	initlcd();
  
 
  
@@ -70,6 +69,8 @@ char * substr32(char * str,int offset)
 void initlcd()
 {
 
+ 	TRISC=0x00;
+	TRISLCD=0x00;
 
 	cmd(0x38); 
 
@@ -173,35 +174,22 @@ en=len-1;
 		int startat=0;
 		int endat=31;
 START: 
-		while(endat<en)
+		i=0;
+		while(i++<32)
 		{
-			       for(int i= 0;i< 32;i++)
-						{
-							dest[i]=str[	startat+i];
-						}
-
-				cmd(0x1E);
-			//	write(dest);
-				startat++;		
-				endat++;
-				delay(1000);
+			    
+				delay(3000);
+				cmd(0x1E); 
 				
 
 		}
  		
+		i=0;
+		while(i++<32)
+		{ 
 
-	while(endat<en)
-		{
-			       for(int i= 0;i< 32;i++)
-						{
-							dest[i]=str[	startat+i];
-						}
-
-				cmd(0x18);
-			//	write(dest);
-				startat++;		
-				endat++;
-				delay(1000);
+				delay(3000);
+				cmd(0x18); 
 				
 
 		}
