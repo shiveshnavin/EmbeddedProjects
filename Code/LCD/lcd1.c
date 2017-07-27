@@ -7,6 +7,7 @@
 /******functions******/
 
 void getlogicseq();
+void startswitch();
 
 
 /****KEYPAD  ******/
@@ -27,23 +28,25 @@ void resetout();
  
 
 /*   utils ***** */
- 
+
+int parselogic(char * log);
 void delay(unsigned int); 
 int itoaa(int value,char *ptr);
  
 
 /******SESORS AND DEVICES******/
 
-#define SR0 RE0;
-#define SR1 RE1;
-#define SR2 RE2;
-#define SR3 RE4;
+#define SR0 RC4
+#define SR1 RC5
+#define SR2 RC6
+#define SR3 RC7
 
-#define DV0 RC3;
-#define DV1 RC4;
-#define DV3 RC5;
-#define DV4 RC6;
-
+#define DV0 RA0
+#define DV1 RA1
+#define DV2 RA2
+#define DV3 RA3
+#define DPORT PORTA
+#define TRISDP TRISA
  
 
 /* LCD [ *********** */
@@ -87,6 +90,7 @@ int  main()
  
 
  	while(1){
+				startswitch();
 				getlogicseq();	
 			}
 
@@ -97,16 +101,38 @@ int  main()
 }
 
 /*  funstions [  ************  FUNCTION  ***************  FUNCTION  ****************  FUNCTION  ********* */
+
 #define HIGH 1
 #define LOW 0
 #define NEXT 2
 #define REPEAT 2
-void getlogicseq()
-{
+
 		char logic_d1[5]="1001";
 		char logic_d2[5]="1011";
 		char logic_d3[5]="1111";
 		char logic_d4[5]="1010";
+void startswitch()
+{
+
+	TRISDP=0x0;
+	
+	
+	char lo[5]="";
+	itoaa(parselogic("0011"),lo);
+	write(lo,1,1);
+	DPORT=parselogic(lo);	
+	while(1);
+	
+		
+	
+	
+
+
+}
+
+
+void getlogicseq()
+{
 
 
 	    scroll("WELCOME ! TO PROGRAMABLE HOME AUTMATN",0);
@@ -280,13 +306,32 @@ START_SEQ:
 			nf=0;
 		}
 	}
-		
+			startswitch();;
 	goto START_SEQ;
 
 }
 
 
 /*   utils [   **************************************************** */
+int parselogic(char * log)
+{
+	int dat=0b0000;
+	if(log[0]=='1')
+		dat=dat|0b0001;	
+	
+	if(log[0]=='1')
+		dat=dat|0b0010;
+
+	if(log[0]=='1')
+		dat=dat|0b0100;
+
+	if(log[0]=='1')
+		dat=dat|0b1000;
+
+	return dat;	
+
+
+}
 void delay(unsigned int x)
 {
 	while(x-->0);
@@ -319,11 +364,11 @@ int itoaa(int value,char *ptr)
         }
         return count;
      } 
-/*   LCD [   **************************************************** */
+/*       LCD [   **************************************************** */
 void initlcd()
 {
 
- 	TRISC=0b00001100;
+ 	TRISC=0b11111100;
 
 	TRISLCD=0x00;
 
