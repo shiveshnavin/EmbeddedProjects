@@ -427,35 +427,39 @@
 [u S1136 . 1 `S1129 1 . 1 0 ]
 "10 ../../common/strcat.c
 [v _strcat `(*uc  1 e 1 0 ]
-"79 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
+"82 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
 [v _main `(i  1 e 2 0 ]
-"105
+"116
+[v _startswitch `(v  1 e 0 0 ]
+"154
 [v _getlogicseq `(v  1 e 0 0 ]
-"291
+"336
+[v _parselogic `(i  1 e 2 0 ]
+"391
 [v _delay `(v  1 e 0 0 ]
-"297
+"397
 [v _itoaa `(i  1 e 2 0 ]
-"324
+"424
 [v _initlcd `(v  1 e 0 0 ]
-"342
+"442
 [v _clearlcd `(v  1 e 0 0 ]
-"346
+"446
 [v _cmd `(v  1 e 0 0 ]
-"357
+"457
 [v _dat `(v  1 e 0 0 ]
-"376
+"476
 [v _setLCD `(v  1 e 0 0 ]
-"399
+"499
 [v _write `(v  1 e 0 0 ]
-"420
+"520
 [v _scroll `(v  1 e 0 0 ]
-"474
+"574
 [v _initkeypad `(v  1 e 0 0 ]
-"481
+"581
 [v _scan `(i  1 e 2 0 ]
-"536
+"636
 [v _resetout `(v  1 e 0 0 ]
-"540
+"640
 [v _actrow `(v  1 e 0 0 ]
 "5 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\abdiv.c
 [v ___abdiv `(c  1 e 1 0 ]
@@ -525,12 +529,24 @@
 [v ___lwmod `(ui  1 e 2 0 ]
 "29 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\lwtoft.c
 [v ___lwtoft `(f  1 e 3 0 ]
+"34 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\strcmp.c
+[v _strcmp `(i  1 e 2 0 ]
 "10 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\strcpy.c
 [v _strcpy `(*uc  1 e 1 0 ]
 "3 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\tmul.c
 [v ___tmul `(um  1 e 3 0 ]
 "3 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\wmul.c
 [v ___wmul `(ui  1 e 2 0 ]
+"110 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
+[v _logic_d1 `[5]uc  1 e 5 0 ]
+"111
+[v _logic_d2 `[5]uc  1 e 5 0 ]
+"112
+[v _logic_d3 `[5]uc  1 e 5 0 ]
+"113
+[v _logic_d4 `[5]uc  1 e 5 0 ]
+"114
+[v _lo `[5]uc  1 e 5 0 ]
 "82 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\pic16f877.h
 [v _INDF `Vuc  1 e 1 @0 ]
 "86
@@ -1169,125 +1185,116 @@
 [v _EECON1bits `VS1136  1 e 1 @396 ]
 "1104
 [v _EECON2 `Vuc  1 e 1 @397 ]
-"79 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
+"82 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
 [v _main `(i  1 e 2 0 ]
 {
-"97
+"101
 } 0
-"105
+"154
 [v _getlogicseq `(v  1 e 0 0 ]
 {
-"122
+"167
 [v getlogicseq@str `[32]uc  1 a 32 0 ]
-"117
+"162
 [v getlogicseq@snum `[16]uc  1 a 16 34 ]
-"109
-[v getlogicseq@logic_d4 `[5]uc  1 a 5 65 ]
-"108
-[v getlogicseq@logic_d3 `[5]uc  1 a 5 60 ]
-"107
-[v getlogicseq@logic_d2 `[5]uc  1 a 5 55 ]
-"106
-[v getlogicseq@logic_d1 `[5]uc  1 a 5 50 ]
-"116
-[v getlogicseq@num `i  1 a 2 76 ]
-"121
-[v getlogicseq@ccount `i  1 a 2 74 ]
-"118
-[v getlogicseq@wf `i  1 a 2 72 ]
-"119
-[v getlogicseq@nf `i  1 a 2 70 ]
-"120
+"161
+[v getlogicseq@num `i  1 a 2 56 ]
+"166
+[v getlogicseq@ccount `i  1 a 2 54 ]
+"163
+[v getlogicseq@wf `i  1 a 2 52 ]
+"164
+[v getlogicseq@nf `i  1 a 2 50 ]
+"165
 [v getlogicseq@bf `i  1 a 2 32 ]
-"106
-[v getlogicseq@F1246 `[5]uc  1 s 5 F1246 ]
-"107
-[v getlogicseq@F1248 `[5]uc  1 s 5 F1248 ]
-"108
-[v getlogicseq@F1250 `[5]uc  1 s 5 F1250 ]
-"109
-[v getlogicseq@F1252 `[5]uc  1 s 5 F1252 ]
-"117
-[v getlogicseq@F1255 `[16]uc  1 s 16 F1255 ]
-"286
+"162
+[v getlogicseq@F1256 `[16]uc  1 s 16 F1256 ]
+"331
 } 0
-"420
+"520
 [v _scroll `(v  1 e 0 0 ]
 {
 [v scroll@str `*.cuc  1 a 1 wreg ]
-"439
+"539
 [v scroll@endat `i  1 a 2 51 ]
-"438
+"538
 [v scroll@startat `i  1 a 2 49 ]
-"424
+"524
 [v scroll@i `i  1 a 2 58 ]
-"425
+"525
 [v scroll@len `i  1 a 2 56 ]
-"423
+"523
 [v scroll@loopn `i  1 a 2 53 ]
-"427
+"527
 [v scroll@en `i  1 a 2 47 ]
-"426
+"526
 [v scroll@st `i  1 a 2 45 ]
-"420
+"520
 [v scroll@str `*.cuc  1 a 1 wreg ]
 [v scroll@loops `i  1 p 2 40 ]
-"467
+"567
 } 0
-"399
+"499
 [v _write `(v  1 e 0 0 ]
 {
-"408
+"508
 [v write@i `i  1 a 2 12 ]
-"399
+"499
 [v write@str `*.muc  1 p 2 34 ]
 [v write@line `i  1 p 2 36 ]
 [v write@erase `i  1 p 2 38 ]
-"416
+"516
 } 0
-"342
+"442
 [v _clearlcd `(v  1 e 0 0 ]
 {
-"344
+"444
 } 0
-"481
+"581
 [v _scan `(i  1 e 2 0 ]
 {
-"532
+"632
 } 0
-"324
+"424
 [v _initlcd `(v  1 e 0 0 ]
 {
-"340
+"440
 } 0
-"540
+"640
 [v _actrow `(v  1 e 0 0 ]
 {
 [v actrow@n `i  1 p 2 2 ]
-"562
+"662
 } 0
-"357
+"457
 [v _dat `(v  1 e 0 0 ]
 {
 [v dat@Command `ui  1 p 2 8 ]
-"374
+"474
 } 0
-"346
+"446
 [v _cmd `(v  1 e 0 0 ]
 {
 [v cmd@Command `ui  1 p 2 8 ]
-"354
+"454
 } 0
-"297
+"397
 [v _itoaa `(i  1 e 2 0 ]
 {
-"298
+"398
 [v itoaa@temp `i  1 a 2 2 ]
 [v itoaa@count `i  1 a 2 0 ]
-"297
+"397
 [v itoaa@value `i  1 p 2 9 ]
 [v itoaa@ptr `*.0uc  1 p 1 11 ]
-"321
+"421
+} 0
+"116
+[v _startswitch `(v  1 e 0 0 ]
+{
+"132
+[v startswitch@dev `i  1 a 2 9 ]
+"150
 } 0
 "5 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\awmod.c
 [v ___awmod `(i  1 e 2 0 ]
@@ -1323,29 +1330,29 @@
 [v ___wmul@multiplicand `ui  1 p 2 2 ]
 "13
 } 0
-"536 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
+"636 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
 [v _resetout `(v  1 e 0 0 ]
 {
-"538
+"638
 } 0
-"376
+"476
 [v _setLCD `(v  1 e 0 0 ]
 {
-"378
+"478
 [v setLCD@vbool `[16]i  1 a 32 0 ]
-"379
+"479
 [v setLCD@i `i  1 a 2 32 ]
-"376
+"476
 [v setLCD@number `i  1 p 2 0 ]
-"377
+"477
 [v setLCD@size `DCi  1 s 2 size ]
-"397
+"497
 } 0
-"291
+"391
 [v _delay `(v  1 e 0 0 ]
 {
 [v delay@x `ui  1 p 2 0 ]
-"293
+"393
 } 0
 "10 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\strcat.c
 [v _strcat `(*uc  1 e 1 0 ]
@@ -1369,8 +1376,19 @@
 [v strcpy@from `*.cDCuc  1 p 1 0 ]
 "22
 } 0
-"474 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
+"34 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\strcmp.c
+[v _strcmp `(i  1 e 2 0 ]
+{
+[v strcmp@s1 `*.0DCuc  1 a 1 wreg ]
+"35
+[v strcmp@r `c  1 a 1 6 ]
+"34
+[v strcmp@s1 `*.0DCuc  1 a 1 wreg ]
+[v strcmp@s2 `*.mDCuc  1 p 2 0 ]
+"40
+} 0
+"574 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
 [v _initkeypad `(v  1 e 0 0 ]
 {
-"478
+"578
 } 0

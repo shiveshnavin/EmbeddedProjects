@@ -38,7 +38,7 @@ int itoaa(int value,char *ptr);
 
 #define SR0 RC4
 #define SR1 RC5
-#define SR2 RC6
+#define SR2 RA5
 #define SR3 RC7
 
 #define DV0 RA0
@@ -90,7 +90,7 @@ int  main()
  
 
  	while(1){
-				startswitch();
+		 //	startswitch();
 				getlogicseq();	
 			}
 
@@ -110,22 +110,41 @@ int  main()
 		char logic_d1[5]="1001";
 		char logic_d2[5]="1011";
 		char logic_d3[5]="1111";
-		char logic_d4[5]="1010";
+		char logic_d4[5]="1000";
+		char lo[5]="0000"; 
 void startswitch()
 {
 
-	TRISDP=0x0;
+	TRISA=0b110000;
+	DPORT=0x0;
 	
 	
-	char lo[5]="";
-	itoaa(parselogic("0011"),lo);
-	write(lo,1,1);
-	DPORT=parselogic(lo);	
+
+	if(SR0==1)
+		lo[0]='1';	
+	if(SR1==1)
+		lo[1]='1';	
+	if(SR2==1)
+		lo[2]='1';	
+	if(SR3==1)
+		lo[4]='1';
+ 
+	int dev=0b0000;
+	if(strcmp(lo,logic_d1)==0)
+		dev=dev|0b0001;
+	
+	if(strcmp(lo,logic_d2)==0)
+		dev=dev|0b0010;
+
+	if(strcmp(lo,logic_d3)==0)
+		dev=dev|0b0100;
+
+	if(strcmp(lo,logic_d4)==0)
+		dev=dev|0b1000;
+	
+	DPORT=dev;
+
 	while(1);
-	
-		
-	
-	
 
 
 }
@@ -307,7 +326,7 @@ START_SEQ:
 		}
 	}
 			startswitch();;
-	goto START_SEQ;
+//	goto START_SEQ;
 
 }
 
@@ -316,17 +335,53 @@ START_SEQ:
 int parselogic(char * log)
 {
 	int dat=0b0000;
-	if(log[0]=='1')
-		dat=dat|0b0001;	
-	
-	if(log[0]=='1')
-		dat=dat|0b0010;
 
-	if(log[0]=='1')
-		dat=dat|0b0100;
+	if(strcmp(log,"0000")==0)
+		dat=0b0000;
+	else if(strcmp(log,"0001")==0)
+		dat=0b0001;	 
+	else if(strcmp(log,"0010")==0)
+		dat=0b0010;	 
 
-	if(log[0]=='1')
-		dat=dat|0b1000;
+	else if(strcmp(log,"0011")==0)
+		dat=0b0011;	 
+
+	else if(strcmp(log,"0100")==0)
+		dat=0b0100;	 
+
+	else if(strcmp(log,"0101")==0)
+		dat=0b0101;	 
+
+	else if(strcmp(log,"0110")==0)
+		dat=0b0110;	 
+
+	else if(strcmp(log,"0111")==0)
+		dat=0b0111;	 
+
+	else if(strcmp(log,"1000")==0)
+		dat=0b1000;	 
+
+	else if(strcmp(log,"1001")==0)
+		dat=0b1001;	 
+
+	else if(strcmp(log,"1010")==0)
+		dat=0b1010;	 
+
+	else if(strcmp(log,"1011")==0)
+		dat=0b1011;	 
+
+	else if(strcmp(log,"1100")==0)
+		dat=0b1101;	 
+
+	else if(strcmp(log,"1101")==0)
+		dat=0b1000;	 
+
+	else if(strcmp(log,"1110")==0)
+		dat=0b1110;	 
+
+	else if(strcmp(log,"1111")==0)
+		dat=0b1111;	 
+
 
 	return dat;	
 
