@@ -53,7 +53,7 @@ int itoaa(int value,char *ptr);
 #define TRISLCD TRISD
 #define LCD PORTD
 
-#define RS  RC0
+#define RS RC0
 #define EN RC1
 
 #define LD0 RD0
@@ -98,8 +98,8 @@ int  main()
 
 /*  funstions [  ************  FUNCTION  ***************  FUNCTION  ****************  FUNCTION  ********* */
 #define HIGH 1
-#define LOW 2
-#define NEXT 3
+#define LOW 0
+#define NEXT 2
 #define REPEAT 2
 void getlogicseq()
 {
@@ -109,7 +109,7 @@ void getlogicseq()
 		char logic_d4[5]="1010";
 
 
-	    //scroll("WELCOME ! TO PROGRAMABLE HOME AUTMATN",0);
+	    scroll("WELCOME ! TO PROGRAMABLE HOME AUTMATN",0);
 		
 		 
 
@@ -133,7 +133,7 @@ START_SEQ:
 				if(num==HIGH||num==LOW){
 					if(wf==0)
 						{	  
-								
+							  if(ccount==0)	
                               strcpy(logic_d1,"");	
 							  write("----",2,0);
 							  itoaa(num, snum);
@@ -173,7 +173,8 @@ START_SEQ:
 		  num=scan();
 				if(num==HIGH||num==LOW){
 					if(wf==0)
-						{		strcpy(logic_d2,"");
+						{	  if(ccount==0)
+                              strcpy(logic_d2,"");
 							  write("----",2,0);
 							  itoaa(num, snum);
 							  strcat(logic_d2,snum);	
@@ -211,7 +212,8 @@ START_SEQ:
 		  num=scan();
 				if(num==HIGH||num==LOW){
 					if(wf==0)
-						{	strcpy(logic_d3,"");
+						{	  if(ccount==0)
+							  strcpy(logic_d3,"");
 							  write("----",2,0);
 							  itoaa(num, snum);
 							  strcat(logic_d3,snum);	
@@ -250,7 +252,9 @@ START_SEQ:
 		  num=scan();
 				if(num==HIGH||num==LOW){
 					if(wf==0)
-						{		strcpy(logic_d4,"");
+						{	  
+							  if(ccount==0)
+						      strcpy(logic_d4,"");
 							  write("----",2,0);
 							  itoaa(num, snum);
 							  strcat(logic_d4,snum);	
@@ -477,11 +481,11 @@ int scan()
 {
  	actrow(1) ;
 			if(	KY4==1)
-				return 1;
+				return 0;
 			else if(KY5==1)
-				return 2;
+				return 1;
 			else if(KY6==1)
-				return 3;
+				return 2;
 			else if(KY7==1)
 				return 4;
 		

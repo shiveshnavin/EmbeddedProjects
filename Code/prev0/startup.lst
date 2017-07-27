@@ -1,7 +1,7 @@
 
 
 HI-TECH Software PIC Macro Assembler V9.81 build 7503 
-                                                                                                           Sat Jul 22 22:36:50 2017
+                                                                                                           Thu Jul 27 11:24:00 2017
 
 
      1                           
@@ -67,12 +67,12 @@ HI-TECH Software PIC Macro Assembler V9.81 build 7503
     61  0000                     _exit
     62                           	psect	end_init
     63                           	global start_initialization
-    64  0000  120A  118A  2EE6   	ljmp start_initialization	;jump to C runtime clear & initialization
+    64  0000  120A  158A  2D08   	ljmp start_initialization	;jump to C runtime clear & initialization
 
 
 HI-TECH Software PICC Macro Assembler V9.81 build 7503 
-Symbol Table                                                                                               Sat Jul 22 22:36:50 2017
+Symbol Table                                                                                               Thu Jul 27 11:24:00 2017
 
-               _main 0779                 _exit 0000                 start 0000  start_initialization 06E6  
+               _main 0C89                 _exit 0000                 start 0000  start_initialization 0D08  
            intlevel0 0000             intlevel1 0000             intlevel2 0000             intlevel3 0000  
            intlevel4 0000             intlevel5 0000             reset_vec 0000  

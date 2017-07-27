@@ -1065,129 +1065,563 @@ extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 
+# 27 "C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\stdlib.h"
+typedef struct {
+int rem;
+int quot;
+} div_t;
+typedef struct {
+unsigned rem;
+unsigned quot;
+} udiv_t;
+typedef struct {
+long quot;
+long rem;
+} ldiv_t;
+typedef struct {
+unsigned long quot;
+unsigned long rem;
+} uldiv_t;
+
+# 65
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+# 106
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+
+# 122
+extern void abort(void);
+extern void exit(int);
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+# 145
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
 # 9 "C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c"
+void getlogicseq();
+
+# 23
+void initkeypad();
+void actrow(int n);
+int scan();
+void resetout();
+
+
+
+
 void delay(unsigned int);
-void cmd();
-void dat();void write(char * str)
+int itoaa(int value,char *ptr);
+
+# 68
+void initlcd();
+void cmd(unsigned int Command);
+void dat(unsigned int Command);
+void setLCD(int number);
+void write(char * str,int line,int erase);
+void scroll(char * str,int loops);
+void clearlcd();
+
+
+
+int main()
 {
+
+
+
+
+initlcd();
+initkeypad();
+
+
+
+while(1){
+getlogicseq();
+}
+
+# 97
+}
+
+# 104
+void getlogicseq()
+{
+char logic_d1[5]="1001";
+char logic_d2[5]="1011";
+char logic_d3[5]="1111";
+char logic_d4[5]="1010";
+
+
+scroll("WELCOME ! TO PROGRAMABLE HOME AUTMATN",0);
+
+
+
+int num ;
+char snum[16]="";
+int wf=0;
+int nf=0;
+int bf=0;
+int ccount=0;
+char str[32];
+START_SEQ:
+
+wf=0;ccount=0;
+strcpy(str,"Enter Logic DEV1:  ");
+write(str,1,1);
+write(logic_d1,2,0);
+
+while(1)
+{
+num=scan();
+if(num==1||num==0){
+if(wf==0)
+{
+if(ccount==0)
+strcpy(logic_d1,"");
+write("----",2,0);
+itoaa(num, snum);
+strcat(logic_d1,snum);
+write( logic_d1,2,0); ;
+wf=1;
+ccount++;
+}
+}
+else{
+wf=0;
+}
+if(ccount>3)
+break;
+
+
+if(num==2)
+{
+if(nf==0){
+nf=1;
+break;
+}
+}
+else if(num==99){
+nf=0;
+}
+}
+
+
+wf=0;ccount=0;
+strcpy(str,"Enter Logic DEV2:  ");
+write(str,1,1);
+write(logic_d2,2,0);
+
+while(1)
+{
+num=scan();
+if(num==1||num==0){
+if(wf==0)
+{ if(ccount==0)
+strcpy(logic_d2,"");
+write("----",2,0);
+itoaa(num, snum);
+strcat(logic_d2,snum);
+write( logic_d2,2,0); ;
+wf=1;
+ccount++;
+}
+}
+else{
+wf=0;
+}
+if(ccount>3)
+break;
+
+if(num==2)
+{
+if(nf==0){
+nf=1;
+break;
+}
+}
+else if(num==99){
+nf=0;
+}
+}
+
+
+wf=0;ccount=0;
+strcpy(str,"Enter Logic DEV3:  ");
+write(str,1,1);
+write(logic_d3,2,0);
+
+while(1)
+{
+num=scan();
+if(num==1||num==0){
+if(wf==0)
+{ if(ccount==0)
+strcpy(logic_d3,"");
+write("----",2,0);
+itoaa(num, snum);
+strcat(logic_d3,snum);
+write( logic_d3,2,0); ;
+wf=1;
+ccount++;
+}
+}
+else{
+wf=0;
+}
+if(ccount>3)
+break;
+
+if(num==2)
+{
+if(nf==0){
+nf=1;
+break;
+}
+}
+else if(num==99){
+nf=0;
+}
+}
+
+
+
+wf=0;ccount=0;
+strcpy(str,"Enter Logic DEV4:  ");
+write(str,1,1);
+write(logic_d4,2,0);
+
+while(1)
+{
+num=scan();
+if(num==1||num==0){
+if(wf==0)
+{
+if(ccount==0)
+strcpy(logic_d4,"");
+write("----",2,0);
+itoaa(num, snum);
+strcat(logic_d4,snum);
+write( logic_d4,2,0); ;
+wf=1;
+ccount++;
+}
+}
+else{
+wf=0;
+}
+if(ccount>3)
+break;
+
+if(num==2)
+{
+if(nf==0){
+nf=1;
+break;
+}
+}
+else if(num==99){
+nf=0;
+}
+}
+
+goto START_SEQ;
+
+}
+
+
+
+void delay(unsigned int x)
+{
+while(x-->0);
+}
+
+
+int itoaa(int value,char *ptr)
+{
+int count=0,temp;
+if(ptr==(0))
+return 0;
+if(value==0)
+{
+*ptr='0';
+return 1;
+}
+
+if(value<0)
+{
+value*=(-1);
+*ptr++='-';
+count++;
+}
+for(temp=value;temp>0;temp/=10,ptr++);
+*ptr='\0';
+for(temp=value;temp>0;temp/=10)
+{
+*--ptr=temp%10+'0';
+count++;
+}
+return count;
+}
+
+void initlcd()
+{
+
+TRISC=0b00001100;
+
+TRISD=0x00;
+
+cmd(0x38);
+
+cmd(0x0C);
+
+cmd(0x01);
+
+cmd(0x80);
+
+cmd(0x0f);
+
+}
+void clearlcd()
+{
+cmd(0x01);
+}
+void cmd(unsigned int Command)
+{
+setLCD(Command);
+RC0=0;
+RC1=1;
+delay(20);
+RC1=0;
+delay(20);
+
+}
+
+void dat(unsigned int Command)
+{
+setLCD(Command);
+
+RC0=1;
+
+RC1=1;
+
+delay(20);
+
+RC1=0;
+
+delay(20);
+
+# 374
+}
+void setLCD(int number)
+{
+const int size=8*sizeof(int);
+int vbool[8*sizeof(int)];
+int i;;
+
+for (i = 0; i <size; i++)
+{
+vbool[i] = number<<i < 0;
+}
+
+RD0=vbool[size-1];
+RD1=vbool[size-2];
+RD2=vbool[size-3];
+RD3=vbool[size-4];
+RD4=vbool[size-5];
+RD5=vbool[size-6];
+RD6=vbool[size-7];
+RD7=vbool[size-8];
+
+
+
+}
+void write(char * str,int line,int erase)
+{
+if(erase==1)
+clearlcd();
+
+if(line==2)
+cmd(0xC0);
+else
+cmd(0x2);
 
 int i=0;
 while(str[i]!='\0')
 {
+dat(str[i]);
+i++;
+}
 
-PORTC=str[i++];
-dat();
 
-if(i==15)
+}
+
+
+void scroll(char * str,int loops)
 {
 
-PORTC=0xC0;
-
-cmd();
-}
-}
-
-
-}
-void scroll(char * str)
-{
+write(str,1,0); ;
+int loopn=0;
 int i;
 int len=0;;
 int st=0;
 int en;
-
 while(str[i]!='\0')
+{ i++;
 len++;
+}
 en=len-1;
 
 if(len>32)
 {
 
 char dest [32] ;
-for(int i=0;i<32;i++)
-{
-dest[i]=str[st+i];
-}
-write(dest);
-while(st<en&&0){
-
-char * dest ;
-
-for(int i=0;i<32;i++)
-{
-dest[i]=str[st+i];
-}
-
-write(st);
-st++;
-delay(1000);
-}
-}
-else
-write(str);
-
-
-
-
-}
-int main()
-{
-char str[]="welcome to EMTECH FOUNDATION CH FOUNDATION CH FOUNDATION";
-
-TRISC=0x00;
-TRISD=0x00;
-PORTC=0x38;
-cmd();
-PORTC=0x0C;
-cmd();
-PORTC=0x01;
-cmd();
-PORTC=0x80;
-
-PORTC=0b10000000;
-
-cmd();
-
-
-
-char dest [32] ;
-int st=1;
-for(int i=0;i<25;i++)
-{
-dest[i]=str[st+i];
-}
-
-PORTC='a';
-dat();
-
-
-
-while(1);
-
-
-}
-void delay(unsigned int x)
+int startat=0;
+int endat=31;
+START:
+i=0;
+while(i++<32)
 {
 
-while(x-->0);
+delay(3000);
+cmd(0x1E);
+
 
 }
-void cmd()
+
+i=0;
+while(i++<32)
 {
-RD0=0;
-RD1=1;
-delay(50);
-RD1=0;
-delay(50);
+
+delay(3000);
+cmd(0x18);
+
 
 }
-void dat()
+if(loopn++<loops)
+goto START;
+}
+
+
+
+
+}
+
+# 473
+void initkeypad()
 {
-RD0=1;
-RD1=1;
-delay(50);
-RD1=0;
-delay(50);
+PORTB = 0;
+TRISB = 0b11000000;
+
+}
+
+int scan()
+{
+actrow(1) ;
+if( RC2==1)
+return 0;
+else if(RC3==1)
+return 1;
+else if(RB6==1)
+return 3;
+else if(RB7==1)
+return 4;
+
+actrow(2) ;
+
+if( RC2==1)
+return 5;
+else if(RC3==1)
+return 6;
+else if(RB6==1)
+return 7;
+else if(RB7==1)
+return 8;
+
+actrow(3) ;
+
+if( RC2==1)
+return 9;
+else if(RC3==1)
+return 10;
+else if(RB6==1)
+return 11;
+else if(RB7==1)
+return 12;
+
+
+actrow(4) ;
+
+if( RC2==1)
+return 13;
+else if(RC3==1)
+return 14;
+else if(RB6==1)
+return 15;
+else if(RB7==1)
+return 16;
+
+
+
+return 99;
+
 
 
 }
+
+
+void resetout()
+{
+RC2=0;RC3=0;RB6=0;RB7=0;
+}
+void actrow(int n)
+{
+resetout();
+
+if(n==1)
+{
+RB0=1;
+}
+else if(n==2)
+{
+RB1=1;
+}
+else if(n==3)
+{
+RB2=1;
+}
+else if(n==4)
+{
+RB3=1;
+}
+delay(200);
+
+
+}
+
