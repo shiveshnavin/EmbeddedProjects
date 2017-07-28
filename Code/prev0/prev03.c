@@ -116,7 +116,7 @@ int  main()
      	int dev=0b0000;
     	int pdev=0b0000;
 void setdevice(int d1,int d2,int d3,int d4)
-{
+{/*
 	if(d1==1)
 		DV1=1;
 	if(d2==1)
@@ -124,18 +124,28 @@ void setdevice(int d1,int d2,int d3,int d4)
 	if(d3==1)
 		DV3=1;
 	if(d4==1)
-		DV4=1;
+		DV4=1;*/
 
 }
-void startswitch()
+int done_init=0;
+void init_fun()
 {
+	if(done_init==0)
+		{
+					
+			TRISA=0b110000;
+			DPORT=0x0;
+			done_init=1;
+		}
+}
+void startswitch()
+{	
+	init_fun();
 	int d1=0;
 	int d2=0;
 	int d3=0;	
 	int d4=0;
 
-	TRISA=0b110000;
-	DPORT=0x0;
 	
 	
 	strcpy(plo,lo);
@@ -173,8 +183,11 @@ write(lo,1,1);
     	DPORT=dev;
  		}	
 
-	DPORT=0xF;
-	while(1);
+	if(strcmp(lo,"1000")==0)
+		DPORT=0xF;
+	else
+		DPORT=0x0;
+	 
 }
 
 
