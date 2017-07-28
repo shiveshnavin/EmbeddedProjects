@@ -1031,18 +1031,10 @@ void main()
 
 
 
-TRISC=0x00;
-TRISA=0xFF;
-
 TXEN=0;
-PORTA=0xF;
-
+TRISC=0b11000000;
 while(1)
-{
-if(RC5==1)
-PORTC=0x0;
-else
-PORTC=0xF;
+if(PORTB==(PORTB|0b01000000))
+RC5=1;
 
-}
 }

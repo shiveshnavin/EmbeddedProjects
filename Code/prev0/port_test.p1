@@ -1611,46 +1611,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;port_test.c: 4: {
 [e :U _main ]
 [f ]
-[; ;port_test.c: 8: TRISC=0x00;
+[; ;port_test.c: 8: TXEN=0;
 "8
-[e = _TRISC -> -> 0 `i `uc ]
-[; ;port_test.c: 9: TRISA=0xFF;
-"9
-[e = _TRISA -> -> 255 `i `uc ]
-[; ;port_test.c: 11: TXEN=0;
-"11
 [e = _TXEN -> -> 0 `i `b ]
-[; ;port_test.c: 12: PORTA=0xF;
-"12
-[e = _PORTA -> -> 15 `i `uc ]
-[; ;port_test.c: 14: while(1)
-"14
+[; ;port_test.c: 9: TRISC=0b11000000;
+"9
+[e = _TRISC -> -> 192 `i `uc ]
+[; ;port_test.c: 10: while(1)
+"10
 [e :U 98 ]
-[; ;port_test.c: 15: {
-"15
-{
-[; ;port_test.c: 16: if(RC5==1)
-"16
-[e $ ! == -> _RC5 `i -> 1 `i 100  ]
-[; ;port_test.c: 17: PORTC=0x0;
-"17
-[e = _PORTC -> -> 0 `i `uc ]
-[e $U 101  ]
-"18
+[; ;port_test.c: 11: if(PORTB==(PORTB|0b01000000))
+"11
+[e $ ! == -> _PORTB `i | -> _PORTB `i -> 64 `i 100  ]
+[; ;port_test.c: 12: RC5=1;
+"12
+[e = _RC5 -> -> 1 `i `b ]
 [e :U 100 ]
-[; ;port_test.c: 18: else
-[; ;port_test.c: 19: PORTC=0xF;
-"19
-[e = _PORTC -> -> 15 `i `uc ]
-[e :U 101 ]
-"21
-}
-[e :U 97 ]
 "14
+[e :U 97 ]
+"10
 [e $U 98  ]
 [e :U 99 ]
-[; ;port_test.c: 21: }
-[; ;port_test.c: 22: }
-"22
+[; ;port_test.c: 14: }
+"14
 [e :UE 96 ]
 }

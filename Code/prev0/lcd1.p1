@@ -832,8 +832,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _initlcd `(v 0 ef ]
 "24 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
 [v _initkeypad `(v 0 ef ]
-"9 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
-[v _getlogicseq `(v 0 ef ]
+"10 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
+[v _startswitch `(v 0 ef ]
 "110 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
 [v _logic_d1 `uc -> 5 `i e ]
 "111 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
@@ -844,14 +844,20 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _logic_d4 `uc -> 5 `i e ]
 "114 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
 [v _lo `uc -> 5 `i e ]
-"44 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\string.h
-[v _strcmp `(i 0 ef2`*Cuc`*Cuc ]
-"76 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
-[v _scroll `(v 0 ef2`*uc`i ]
+"115 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
+[v _plo `uc -> 5 `i e ]
+"116 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
+[v _dev `i 1 e ]
+"117 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
+[v _pdev `i 1 e ]
 "36 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\string.h
 [v _strcpy `(*uc 0 ef2`*uc`*Cuc ]
+"44 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\string.h
+[v _strcmp `(i 0 ef2`*Cuc`*Cuc ]
 "75 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
 [v _write `(v 0 ef3`*uc`i`i ]
+"76 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
+[v _scroll `(v 0 ef2`*uc`i ]
 "26 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
 [v _scan `(i 0 ef ]
 "34 C:\PIC\PROJECTS\Training_Project\Code\LCD\lcd1.c
@@ -1753,9 +1759,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "92
 [e :U 102 ]
 {
-[; ;lcd1.c: 94: getlogicseq();
-"94
-[e ( _getlogicseq ..  ]
+[; ;lcd1.c: 93: startswitch();
+"93
+[e ( _startswitch ..  ]
 "95
 }
 [e :U 101 ]
@@ -1792,14 +1798,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 "112
 [i _logic_d3
 :U ..
+-> 48 `c
 -> 49 `c
 -> 49 `c
--> 49 `c
--> 49 `c
+-> 48 `c
 -> 0 `c
 ..
 ]
-[; ;lcd1.c: 112: char logic_d3[5]="1111";
+[; ;lcd1.c: 112: char logic_d3[5]="0110";
 "113
 [i _logic_d4
 :U ..
@@ -1822,1616 +1828,1663 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ]
 [; ;lcd1.c: 114: char lo[5]="0000";
+"115
+[i _plo
+:U ..
+-> 48 `c
+-> 48 `c
+-> 48 `c
+-> 48 `c
+-> 0 `c
+..
+]
+[; ;lcd1.c: 115: char plo[5]="0000";
 "116
+[i _dev
+-> 0 `i
+]
+[; ;lcd1.c: 116: int dev=0b0000;
+"117
+[i _pdev
+-> 0 `i
+]
+[; ;lcd1.c: 117: int pdev=0b0000;
+"119
 [v _startswitch `(v 1 ef ]
 {
-[; ;lcd1.c: 115: void startswitch()
-[; ;lcd1.c: 116: {
+[; ;lcd1.c: 118: void startswitch()
+[; ;lcd1.c: 119: {
 [e :U _startswitch ]
 [f ]
-[; ;lcd1.c: 118: TRISA=0b110000;
-"118
+[; ;lcd1.c: 121: TRISA=0b110000;
+"121
 [e = _TRISA -> -> 48 `i `uc ]
-[; ;lcd1.c: 119: PORTA=0x0;
-"119
+[; ;lcd1.c: 122: PORTA=0x0;
+"122
 [e = _PORTA -> -> 0 `i `uc ]
-[; ;lcd1.c: 123: if(RC4==1)
-"123
+[; ;lcd1.c: 125: strcpy(plo,lo);
+"125
+[e ( _strcpy (2 , &U _plo -> &U _lo `*Cuc ]
+[; ;lcd1.c: 126: strcpy(lo,"0000");;
+"126
+[e ( _strcpy (2 , &U _lo :s 1C ]
+[; ;lcd1.c: 127: if(RC4==1)
+"127
 [e $ ! == -> _RC4 `i -> 1 `i 105  ]
-[; ;lcd1.c: 124: lo[0]='1';
-"124
+[; ;lcd1.c: 128: lo[0]='1';
+"128
 [e = *U + &U _lo * -> -> -> 0 `i `ui `ux -> -> # *U &U _lo `ui `ux -> -> 49 `ui `uc ]
 [e :U 105 ]
-[; ;lcd1.c: 125: if(RC5==1)
-"125
+[; ;lcd1.c: 129: if(RC5==1)
+"129
 [e $ ! == -> _RC5 `i -> 1 `i 106  ]
-[; ;lcd1.c: 126: lo[1]='1';
-"126
+[; ;lcd1.c: 130: lo[1]='1';
+"130
 [e = *U + &U _lo * -> -> -> 1 `i `ui `ux -> -> # *U &U _lo `ui `ux -> -> 49 `ui `uc ]
 [e :U 106 ]
-[; ;lcd1.c: 127: if(RA5==1)
-"127
-[e $ ! == -> _RA5 `i -> 1 `i 107  ]
-[; ;lcd1.c: 128: lo[2]='1';
-"128
+[; ;lcd1.c: 131: if(RC6==1)
+"131
+[e $ ! == -> _RC6 `i -> 1 `i 107  ]
+[; ;lcd1.c: 132: lo[2]='1';
+"132
 [e = *U + &U _lo * -> -> -> 2 `i `ui `ux -> -> # *U &U _lo `ui `ux -> -> 49 `ui `uc ]
 [e :U 107 ]
-[; ;lcd1.c: 129: if(RC7==1)
-"129
+[; ;lcd1.c: 133: if(RC7==1)
+"133
 [e $ ! == -> _RC7 `i -> 1 `i 108  ]
-[; ;lcd1.c: 130: lo[4]='1';
-"130
+[; ;lcd1.c: 134: lo[4]='1';
+"134
 [e = *U + &U _lo * -> -> -> 4 `i `ui `ux -> -> # *U &U _lo `ui `ux -> -> 49 `ui `uc ]
 [e :U 108 ]
-"132
-[v _dev `i 1 a ]
-[; ;lcd1.c: 132: int dev=0b0000;
-[e = _dev -> 0 `i ]
-[; ;lcd1.c: 133: if(strcmp(lo,logic_d1)==0)
-"133
-[e $ ! == ( _strcmp (2 , -> &U _lo `*Cuc -> &U _logic_d1 `*Cuc -> 0 `i 109  ]
-[; ;lcd1.c: 134: dev=dev|0b0001;
-"134
-[e = _dev | _dev -> 1 `i ]
-[e :U 109 ]
-[; ;lcd1.c: 136: if(strcmp(lo,logic_d2)==0)
+[; ;lcd1.c: 136: pdev=dev;
 "136
-[e $ ! == ( _strcmp (2 , -> &U _lo `*Cuc -> &U _logic_d2 `*Cuc -> 0 `i 110  ]
-[; ;lcd1.c: 137: dev=dev|0b0010;
+[e = _pdev _dev ]
+[; ;lcd1.c: 137: dev=0b0000;
 "137
+[e = _dev -> 0 `i ]
+[; ;lcd1.c: 139: if(strcmp(lo,logic_d1)==0)
+"139
+[e $ ! == ( _strcmp (2 , -> &U _lo `*Cuc -> &U _logic_d1 `*Cuc -> 0 `i 109  ]
+[; ;lcd1.c: 140: dev=0b0001;
+"140
+[e = _dev -> 1 `i ]
+[e :U 109 ]
+[; ;lcd1.c: 142: if(strcmp(lo,logic_d2)==0)
+"142
+[e $ ! == ( _strcmp (2 , -> &U _lo `*Cuc -> &U _logic_d2 `*Cuc -> 0 `i 110  ]
+[; ;lcd1.c: 143: dev=dev|0b0010;
+"143
 [e = _dev | _dev -> 2 `i ]
 [e :U 110 ]
-[; ;lcd1.c: 139: if(strcmp(lo,logic_d3)==0)
-"139
+[; ;lcd1.c: 145: if(strcmp(lo,logic_d3)==0)
+"145
 [e $ ! == ( _strcmp (2 , -> &U _lo `*Cuc -> &U _logic_d3 `*Cuc -> 0 `i 111  ]
-[; ;lcd1.c: 140: dev=dev|0b0100;
-"140
+[; ;lcd1.c: 146: dev=dev|0b0100;
+"146
 [e = _dev | _dev -> 4 `i ]
 [e :U 111 ]
-[; ;lcd1.c: 142: if(strcmp(lo,logic_d4)==0)
-"142
+[; ;lcd1.c: 148: if(strcmp(lo,logic_d4)==0)
+"148
 [e $ ! == ( _strcmp (2 , -> &U _lo `*Cuc -> &U _logic_d4 `*Cuc -> 0 `i 112  ]
-[; ;lcd1.c: 143: dev=dev|0b1000;
-"143
+[; ;lcd1.c: 149: dev=dev|0b1000;
+"149
 [e = _dev | _dev -> 8 `i ]
 [e :U 112 ]
-[; ;lcd1.c: 145: PORTA=dev;
-"145
-[e = _PORTA -> _dev `uc ]
-[; ;lcd1.c: 147: while(1);
-"147
-[e :U 114 ]
-[e :U 113 ]
-[e $U 114  ]
-[e :U 115 ]
-[; ;lcd1.c: 150: }
+[; ;lcd1.c: 150: write(lo,1,1);
 "150
+[e ( _write (3 , , &U _lo -> 1 `i -> 1 `i ]
+[; ;lcd1.c: 151: if(strcmp(lo,plo)!=0&&strcmp(lo,"0000")!=0)
+"151
+[e $ ! && != ( _strcmp (2 , -> &U _lo `*Cuc -> &U _plo `*Cuc -> 0 `i != ( _strcmp (2 , -> &U _lo `*Cuc :s 2C -> 0 `i 113  ]
+[; ;lcd1.c: 152: ;
+"152
+[e :U 113 ]
+[; ;lcd1.c: 154: if(pdev!=dev)
+"154
+[e $ ! != _pdev _dev 114  ]
+[; ;lcd1.c: 155: {
+"155
+{
+[; ;lcd1.c: 156: write(lo,1,1);
+"156
+[e ( _write (3 , , &U _lo -> 1 `i -> 1 `i ]
+[; ;lcd1.c: 157: PORTA=dev;
+"157
+[e = _PORTA -> _dev `uc ]
+"158
+}
+[e :U 114 ]
+[; ;lcd1.c: 158: }
+[; ;lcd1.c: 161: }
+"161
 [e :UE 104 ]
 }
-"154
+"165
 [v _getlogicseq `(v 1 ef ]
 {
-[; ;lcd1.c: 153: void getlogicseq()
-[; ;lcd1.c: 154: {
+[; ;lcd1.c: 164: void getlogicseq()
+[; ;lcd1.c: 165: {
 [e :U _getlogicseq ]
 [f ]
-[; ;lcd1.c: 157: scroll("WELCOME ! TO PROGRAMABLE HOME AUTMATN",0);
-"157
-[e ( _scroll (2 , -> :s 1C `*uc -> 0 `i ]
-"161
+[; ;lcd1.c: 168: scroll("WELCOME ! TO PROGRAMABLE HOME AUTMATN",0);
+"168
+[e ( _scroll (2 , -> :s 3C `*uc -> 0 `i ]
+"172
 [v _num `i 1 a ]
-"162
-[v F1256 `uc -> 16 `i s ]
-[i F1256
+"173
+[v F1258 `uc -> 16 `i s ]
+[i F1258
 :U ..
 -> 0 `c
 ..
 ]
 [v _snum `uc -> 16 `i a ]
-[; ;lcd1.c: 161: int num ;
-[; ;lcd1.c: 162: char snum[16]="";
-[e = _snum F1256 ]
-"163
+[; ;lcd1.c: 172: int num ;
+[; ;lcd1.c: 173: char snum[16]="";
+[e = _snum F1258 ]
+"174
 [v _wf `i 1 a ]
-[; ;lcd1.c: 163: int wf=0;
+[; ;lcd1.c: 174: int wf=0;
 [e = _wf -> 0 `i ]
-"164
-[v _nf `i 1 a ]
-[; ;lcd1.c: 164: int nf=0;
-[e = _nf -> 0 `i ]
-"165
-[v _bf `i 1 a ]
-[; ;lcd1.c: 165: int bf=0;
-[e = _bf -> 0 `i ]
-"166
-[v _ccount `i 1 a ]
-[; ;lcd1.c: 166: int ccount=0;
-[e = _ccount -> 0 `i ]
-"167
-[v _str `uc -> 32 `i a ]
-[; ;lcd1.c: 167: char str[32];
-[; ;lcd1.c: 168: START_SEQ:
-"168
-[e :U 117 ]
-[; ;lcd1.c: 170: wf=0;ccount=0;
-"170
-[e = _wf -> 0 `i ]
-[e = _ccount -> 0 `i ]
-[; ;lcd1.c: 171: strcpy(str,"Enter Logic DEV1:  ");
-"171
-[e ( _strcpy (2 , &U _str :s 2C ]
-[; ;lcd1.c: 172: write(str,1,1);
-"172
-[e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
-[; ;lcd1.c: 173: write(logic_d1,2,0);
-"173
-[e ( _write (3 , , &U _logic_d1 -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 175: while(1)
 "175
-[e :U 119 ]
-[; ;lcd1.c: 176: {
+[v _nf `i 1 a ]
+[; ;lcd1.c: 175: int nf=0;
+[e = _nf -> 0 `i ]
 "176
-{
-[; ;lcd1.c: 177: num=scan();
+[v _bf `i 1 a ]
+[; ;lcd1.c: 176: int bf=0;
+[e = _bf -> 0 `i ]
 "177
-[e = _num ( _scan ..  ]
-[; ;lcd1.c: 178: if(num==1||num==0){
+[v _ccount `i 1 a ]
+[; ;lcd1.c: 177: int ccount=0;
+[e = _ccount -> 0 `i ]
 "178
-[e $ ! || == _num -> 1 `i == _num -> 0 `i 121  ]
-{
-[; ;lcd1.c: 179: if(wf==0)
+[v _str `uc -> 32 `i a ]
+[; ;lcd1.c: 178: char str[32];
+[; ;lcd1.c: 179: START_SEQ:
 "179
-[e $ ! == _wf -> 0 `i 122  ]
-[; ;lcd1.c: 180: {
-"180
-{
-[; ;lcd1.c: 181: if(ccount==0)
+[e :U 116 ]
+[; ;lcd1.c: 181: wf=0;ccount=0;
 "181
-[e $ ! == _ccount -> 0 `i 123  ]
-[; ;lcd1.c: 182: strcpy(logic_d1,"");
-"182
-[e ( _strcpy (2 , &U _logic_d1 :s 3C ]
-[e :U 123 ]
-[; ;lcd1.c: 183: write("----",2,0);
-"183
-[e ( _write (3 , , -> :s 4C `*uc -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 184: itoaa(num, snum);
-"184
-[e ( _itoaa (2 , _num &U _snum ]
-[; ;lcd1.c: 185: strcat(logic_d1,snum);
-"185
-[e ( _strcat (2 , &U _logic_d1 -> &U _snum `*Cuc ]
-[; ;lcd1.c: 186: write( logic_d1,2,0); ;
-"186
-[e ( _write (3 , , &U _logic_d1 -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 187: wf=1;
-"187
-[e = _wf -> 1 `i ]
-[; ;lcd1.c: 188: ccount++;
-"188
-[e ++ _ccount -> 1 `i ]
-"189
-}
-[e :U 122 ]
-"190
-}
-[; ;lcd1.c: 189: }
-[; ;lcd1.c: 190: }
-[e $U 124  ]
-"191
-[e :U 121 ]
-[; ;lcd1.c: 191: else{
-{
-[; ;lcd1.c: 192: wf=0;
-"192
 [e = _wf -> 0 `i ]
+[e = _ccount -> 0 `i ]
+[; ;lcd1.c: 182: strcpy(str,"Enter Logic DEV1:  ");
+"182
+[e ( _strcpy (2 , &U _str :s 4C ]
+[; ;lcd1.c: 183: write(str,1,1);
+"183
+[e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
+[; ;lcd1.c: 184: write(logic_d1,2,0);
+"184
+[e ( _write (3 , , &U _logic_d1 -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 186: while(1)
+"186
+[e :U 118 ]
+[; ;lcd1.c: 187: {
+"187
+{
+[; ;lcd1.c: 188: num=scan();
+"188
+[e = _num ( _scan ..  ]
+[; ;lcd1.c: 189: if(num==1||num==0){
+"189
+[e $ ! || == _num -> 1 `i == _num -> 0 `i 120  ]
+{
+[; ;lcd1.c: 190: if(wf==0)
+"190
+[e $ ! == _wf -> 0 `i 121  ]
+[; ;lcd1.c: 191: {
+"191
+{
+[; ;lcd1.c: 192: if(ccount==0)
+"192
+[e $ ! == _ccount -> 0 `i 122  ]
+[; ;lcd1.c: 193: strcpy(logic_d1,"");
 "193
-}
-[e :U 124 ]
-[; ;lcd1.c: 193: }
-[; ;lcd1.c: 194: if(ccount>3)
+[e ( _strcpy (2 , &U _logic_d1 :s 5C ]
+[e :U 122 ]
+[; ;lcd1.c: 194: write("----",2,0);
 "194
-[e $ ! > _ccount -> 3 `i 125  ]
-[; ;lcd1.c: 195: break;
+[e ( _write (3 , , -> :s 6C `*uc -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 195: itoaa(num, snum);
 "195
-[e $U 120  ]
-[e :U 125 ]
-[; ;lcd1.c: 198: if(num==2)
+[e ( _itoaa (2 , _num &U _snum ]
+[; ;lcd1.c: 196: strcat(logic_d1,snum);
+"196
+[e ( _strcat (2 , &U _logic_d1 -> &U _snum `*Cuc ]
+[; ;lcd1.c: 197: write( logic_d1,2,0); ;
+"197
+[e ( _write (3 , , &U _logic_d1 -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 198: wf=1;
 "198
-[e $ ! == _num -> 2 `i 126  ]
-[; ;lcd1.c: 199: {
+[e = _wf -> 1 `i ]
+[; ;lcd1.c: 199: ccount++;
 "199
-{
-[; ;lcd1.c: 200: if(nf==0){
+[e ++ _ccount -> 1 `i ]
 "200
-[e $ ! == _nf -> 0 `i 127  ]
-{
-[; ;lcd1.c: 201: nf=1;
-"201
-[e = _nf -> 1 `i ]
-[; ;lcd1.c: 202: break;
-"202
-[e $U 120  ]
-"203
 }
-[e :U 127 ]
+[e :U 121 ]
+"201
+}
+[; ;lcd1.c: 200: }
+[; ;lcd1.c: 201: }
+[e $U 123  ]
+"202
+[e :U 120 ]
+[; ;lcd1.c: 202: else{
+{
+[; ;lcd1.c: 203: wf=0;
+"203
+[e = _wf -> 0 `i ]
 "204
 }
-[; ;lcd1.c: 203: }
+[e :U 123 ]
 [; ;lcd1.c: 204: }
-[e $U 128  ]
+[; ;lcd1.c: 205: if(ccount>3)
 "205
-[e :U 126 ]
-[; ;lcd1.c: 205: else if(num==99){
-[e $ ! == _num -> 99 `i 129  ]
-{
-[; ;lcd1.c: 206: nf=0;
+[e $ ! > _ccount -> 3 `i 124  ]
+[; ;lcd1.c: 206: break;
 "206
+[e $U 119  ]
+[e :U 124 ]
+[; ;lcd1.c: 209: if(num==2)
+"209
+[e $ ! == _num -> 2 `i 125  ]
+[; ;lcd1.c: 210: {
+"210
+{
+[; ;lcd1.c: 211: if(nf==0){
+"211
+[e $ ! == _nf -> 0 `i 126  ]
+{
+[; ;lcd1.c: 212: nf=1;
+"212
+[e = _nf -> 1 `i ]
+[; ;lcd1.c: 213: break;
+"213
+[e $U 119  ]
+"214
+}
+[e :U 126 ]
+"215
+}
+[; ;lcd1.c: 214: }
+[; ;lcd1.c: 215: }
+[e $U 127  ]
+"216
+[e :U 125 ]
+[; ;lcd1.c: 216: else if(num==99){
+[e $ ! == _num -> 99 `i 128  ]
+{
+[; ;lcd1.c: 217: nf=0;
+"217
 [e = _nf -> 0 `i ]
-"207
+"218
+}
+[e :U 128 ]
+"219
+[e :U 127 ]
+}
+[e :U 117 ]
+"186
+[e $U 118  ]
+[e :U 119 ]
+[; ;lcd1.c: 218: }
+[; ;lcd1.c: 219: }
+[; ;lcd1.c: 222: wf=0;ccount=0;
+"222
+[e = _wf -> 0 `i ]
+[e = _ccount -> 0 `i ]
+[; ;lcd1.c: 223: strcpy(str,"Enter Logic DEV2:  ");
+"223
+[e ( _strcpy (2 , &U _str :s 7C ]
+[; ;lcd1.c: 224: write(str,1,1);
+"224
+[e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
+[; ;lcd1.c: 225: write(logic_d2,2,0);
+"225
+[e ( _write (3 , , &U _logic_d2 -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 227: while(1)
+"227
+[e :U 130 ]
+[; ;lcd1.c: 228: {
+"228
+{
+[; ;lcd1.c: 229: num=scan();
+"229
+[e = _num ( _scan ..  ]
+[; ;lcd1.c: 230: if(num==1||num==0){
+"230
+[e $ ! || == _num -> 1 `i == _num -> 0 `i 132  ]
+{
+[; ;lcd1.c: 231: if(wf==0)
+"231
+[e $ ! == _wf -> 0 `i 133  ]
+[; ;lcd1.c: 232: { if(ccount==0)
+"232
+{
+[e $ ! == _ccount -> 0 `i 134  ]
+[; ;lcd1.c: 233: strcpy(logic_d2,"");
+"233
+[e ( _strcpy (2 , &U _logic_d2 :s 8C ]
+[e :U 134 ]
+[; ;lcd1.c: 234: write("----",2,0);
+"234
+[e ( _write (3 , , -> :s 9C `*uc -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 235: itoaa(num, snum);
+"235
+[e ( _itoaa (2 , _num &U _snum ]
+[; ;lcd1.c: 236: strcat(logic_d2,snum);
+"236
+[e ( _strcat (2 , &U _logic_d2 -> &U _snum `*Cuc ]
+[; ;lcd1.c: 237: write( logic_d2,2,0); ;
+"237
+[e ( _write (3 , , &U _logic_d2 -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 238: wf=1;
+"238
+[e = _wf -> 1 `i ]
+[; ;lcd1.c: 239: ccount++;
+"239
+[e ++ _ccount -> 1 `i ]
+"240
+}
+[e :U 133 ]
+"241
+}
+[; ;lcd1.c: 240: }
+[; ;lcd1.c: 241: }
+[e $U 135  ]
+"242
+[e :U 132 ]
+[; ;lcd1.c: 242: else{
+{
+[; ;lcd1.c: 243: wf=0;
+"243
+[e = _wf -> 0 `i ]
+"244
+}
+[e :U 135 ]
+[; ;lcd1.c: 244: }
+[; ;lcd1.c: 245: if(ccount>3)
+"245
+[e $ ! > _ccount -> 3 `i 136  ]
+[; ;lcd1.c: 246: break;
+"246
+[e $U 131  ]
+[e :U 136 ]
+[; ;lcd1.c: 248: if(num==2)
+"248
+[e $ ! == _num -> 2 `i 137  ]
+[; ;lcd1.c: 249: {
+"249
+{
+[; ;lcd1.c: 250: if(nf==0){
+"250
+[e $ ! == _nf -> 0 `i 138  ]
+{
+[; ;lcd1.c: 251: nf=1;
+"251
+[e = _nf -> 1 `i ]
+[; ;lcd1.c: 252: break;
+"252
+[e $U 131  ]
+"253
+}
+[e :U 138 ]
+"254
+}
+[; ;lcd1.c: 253: }
+[; ;lcd1.c: 254: }
+[e $U 139  ]
+"255
+[e :U 137 ]
+[; ;lcd1.c: 255: else if(num==99){
+[e $ ! == _num -> 99 `i 140  ]
+{
+[; ;lcd1.c: 256: nf=0;
+"256
+[e = _nf -> 0 `i ]
+"257
+}
+[e :U 140 ]
+"258
+[e :U 139 ]
 }
 [e :U 129 ]
-"208
-[e :U 128 ]
-}
-[e :U 118 ]
-"175
-[e $U 119  ]
-[e :U 120 ]
-[; ;lcd1.c: 207: }
-[; ;lcd1.c: 208: }
-[; ;lcd1.c: 211: wf=0;ccount=0;
-"211
+"227
+[e $U 130  ]
+[e :U 131 ]
+[; ;lcd1.c: 257: }
+[; ;lcd1.c: 258: }
+[; ;lcd1.c: 261: wf=0;ccount=0;
+"261
 [e = _wf -> 0 `i ]
 [e = _ccount -> 0 `i ]
-[; ;lcd1.c: 212: strcpy(str,"Enter Logic DEV2:  ");
-"212
-[e ( _strcpy (2 , &U _str :s 5C ]
-[; ;lcd1.c: 213: write(str,1,1);
-"213
+[; ;lcd1.c: 262: strcpy(str,"Enter Logic DEV3:  ");
+"262
+[e ( _strcpy (2 , &U _str :s 10C ]
+[; ;lcd1.c: 263: write(str,1,1);
+"263
 [e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
-[; ;lcd1.c: 214: write(logic_d2,2,0);
-"214
-[e ( _write (3 , , &U _logic_d2 -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 216: while(1)
-"216
-[e :U 131 ]
-[; ;lcd1.c: 217: {
-"217
+[; ;lcd1.c: 264: write(logic_d3,2,0);
+"264
+[e ( _write (3 , , &U _logic_d3 -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 266: while(1)
+"266
+[e :U 142 ]
+[; ;lcd1.c: 267: {
+"267
 {
-[; ;lcd1.c: 218: num=scan();
-"218
+[; ;lcd1.c: 268: num=scan();
+"268
 [e = _num ( _scan ..  ]
-[; ;lcd1.c: 219: if(num==1||num==0){
-"219
-[e $ ! || == _num -> 1 `i == _num -> 0 `i 133  ]
+[; ;lcd1.c: 269: if(num==1||num==0){
+"269
+[e $ ! || == _num -> 1 `i == _num -> 0 `i 144  ]
 {
-[; ;lcd1.c: 220: if(wf==0)
-"220
-[e $ ! == _wf -> 0 `i 134  ]
-[; ;lcd1.c: 221: { if(ccount==0)
-"221
+[; ;lcd1.c: 270: if(wf==0)
+"270
+[e $ ! == _wf -> 0 `i 145  ]
+[; ;lcd1.c: 271: { if(ccount==0)
+"271
 {
-[e $ ! == _ccount -> 0 `i 135  ]
-[; ;lcd1.c: 222: strcpy(logic_d2,"");
-"222
-[e ( _strcpy (2 , &U _logic_d2 :s 6C ]
-[e :U 135 ]
-[; ;lcd1.c: 223: write("----",2,0);
-"223
-[e ( _write (3 , , -> :s 7C `*uc -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 224: itoaa(num, snum);
-"224
+[e $ ! == _ccount -> 0 `i 146  ]
+[; ;lcd1.c: 272: strcpy(logic_d3,"");
+"272
+[e ( _strcpy (2 , &U _logic_d3 :s 11C ]
+[e :U 146 ]
+[; ;lcd1.c: 273: write("----",2,0);
+"273
+[e ( _write (3 , , -> :s 12C `*uc -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 274: itoaa(num, snum);
+"274
 [e ( _itoaa (2 , _num &U _snum ]
-[; ;lcd1.c: 225: strcat(logic_d2,snum);
-"225
-[e ( _strcat (2 , &U _logic_d2 -> &U _snum `*Cuc ]
-[; ;lcd1.c: 226: write( logic_d2,2,0); ;
-"226
-[e ( _write (3 , , &U _logic_d2 -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 227: wf=1;
-"227
+[; ;lcd1.c: 275: strcat(logic_d3,snum);
+"275
+[e ( _strcat (2 , &U _logic_d3 -> &U _snum `*Cuc ]
+[; ;lcd1.c: 276: write( logic_d3,2,0); ;
+"276
+[e ( _write (3 , , &U _logic_d3 -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 277: wf=1;
+"277
 [e = _wf -> 1 `i ]
-[; ;lcd1.c: 228: ccount++;
-"228
+[; ;lcd1.c: 278: ccount++;
+"278
 [e ++ _ccount -> 1 `i ]
-"229
+"279
 }
-[e :U 134 ]
-"230
+[e :U 145 ]
+"280
 }
-[; ;lcd1.c: 229: }
-[; ;lcd1.c: 230: }
-[e $U 136  ]
-"231
-[e :U 133 ]
-[; ;lcd1.c: 231: else{
+[; ;lcd1.c: 279: }
+[; ;lcd1.c: 280: }
+[e $U 147  ]
+"281
+[e :U 144 ]
+[; ;lcd1.c: 281: else{
 {
-[; ;lcd1.c: 232: wf=0;
-"232
+[; ;lcd1.c: 282: wf=0;
+"282
 [e = _wf -> 0 `i ]
-"233
+"283
 }
-[e :U 136 ]
-[; ;lcd1.c: 233: }
-[; ;lcd1.c: 234: if(ccount>3)
-"234
-[e $ ! > _ccount -> 3 `i 137  ]
-[; ;lcd1.c: 235: break;
-"235
-[e $U 132  ]
-[e :U 137 ]
-[; ;lcd1.c: 237: if(num==2)
-"237
-[e $ ! == _num -> 2 `i 138  ]
-[; ;lcd1.c: 238: {
-"238
+[e :U 147 ]
+[; ;lcd1.c: 283: }
+[; ;lcd1.c: 284: if(ccount>3)
+"284
+[e $ ! > _ccount -> 3 `i 148  ]
+[; ;lcd1.c: 285: break;
+"285
+[e $U 143  ]
+[e :U 148 ]
+[; ;lcd1.c: 287: if(num==2)
+"287
+[e $ ! == _num -> 2 `i 149  ]
+[; ;lcd1.c: 288: {
+"288
 {
-[; ;lcd1.c: 239: if(nf==0){
-"239
-[e $ ! == _nf -> 0 `i 139  ]
+[; ;lcd1.c: 289: if(nf==0){
+"289
+[e $ ! == _nf -> 0 `i 150  ]
 {
-[; ;lcd1.c: 240: nf=1;
-"240
+[; ;lcd1.c: 290: nf=1;
+"290
 [e = _nf -> 1 `i ]
-[; ;lcd1.c: 241: break;
-"241
-[e $U 132  ]
-"242
+[; ;lcd1.c: 291: break;
+"291
+[e $U 143  ]
+"292
 }
-[e :U 139 ]
-"243
+[e :U 150 ]
+"293
 }
-[; ;lcd1.c: 242: }
-[; ;lcd1.c: 243: }
-[e $U 140  ]
-"244
-[e :U 138 ]
-[; ;lcd1.c: 244: else if(num==99){
-[e $ ! == _num -> 99 `i 141  ]
+[; ;lcd1.c: 292: }
+[; ;lcd1.c: 293: }
+[e $U 151  ]
+"294
+[e :U 149 ]
+[; ;lcd1.c: 294: else if(num==99){
+[e $ ! == _num -> 99 `i 152  ]
 {
-[; ;lcd1.c: 245: nf=0;
-"245
+[; ;lcd1.c: 295: nf=0;
+"295
 [e = _nf -> 0 `i ]
-"246
+"296
+}
+[e :U 152 ]
+"297
+[e :U 151 ]
 }
 [e :U 141 ]
-"247
-[e :U 140 ]
-}
-[e :U 130 ]
-"216
-[e $U 131  ]
-[e :U 132 ]
-[; ;lcd1.c: 246: }
-[; ;lcd1.c: 247: }
-[; ;lcd1.c: 250: wf=0;ccount=0;
-"250
+"266
+[e $U 142  ]
+[e :U 143 ]
+[; ;lcd1.c: 296: }
+[; ;lcd1.c: 297: }
+[; ;lcd1.c: 301: wf=0;ccount=0;
+"301
 [e = _wf -> 0 `i ]
 [e = _ccount -> 0 `i ]
-[; ;lcd1.c: 251: strcpy(str,"Enter Logic DEV3:  ");
-"251
-[e ( _strcpy (2 , &U _str :s 8C ]
-[; ;lcd1.c: 252: write(str,1,1);
-"252
+[; ;lcd1.c: 302: strcpy(str,"Enter Logic DEV4:  ");
+"302
+[e ( _strcpy (2 , &U _str :s 13C ]
+[; ;lcd1.c: 303: write(str,1,1);
+"303
 [e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
-[; ;lcd1.c: 253: write(logic_d3,2,0);
-"253
-[e ( _write (3 , , &U _logic_d3 -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 255: while(1)
-"255
-[e :U 143 ]
-[; ;lcd1.c: 256: {
-"256
+[; ;lcd1.c: 304: write(logic_d4,2,0);
+"304
+[e ( _write (3 , , &U _logic_d4 -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 306: while(1)
+"306
+[e :U 154 ]
+[; ;lcd1.c: 307: {
+"307
 {
-[; ;lcd1.c: 257: num=scan();
-"257
+[; ;lcd1.c: 308: num=scan();
+"308
 [e = _num ( _scan ..  ]
-[; ;lcd1.c: 258: if(num==1||num==0){
-"258
-[e $ ! || == _num -> 1 `i == _num -> 0 `i 145  ]
+[; ;lcd1.c: 309: if(num==1||num==0){
+"309
+[e $ ! || == _num -> 1 `i == _num -> 0 `i 156  ]
 {
-[; ;lcd1.c: 259: if(wf==0)
-"259
-[e $ ! == _wf -> 0 `i 146  ]
-[; ;lcd1.c: 260: { if(ccount==0)
-"260
+[; ;lcd1.c: 310: if(wf==0)
+"310
+[e $ ! == _wf -> 0 `i 157  ]
+[; ;lcd1.c: 311: {
+"311
 {
-[e $ ! == _ccount -> 0 `i 147  ]
-[; ;lcd1.c: 261: strcpy(logic_d3,"");
-"261
-[e ( _strcpy (2 , &U _logic_d3 :s 9C ]
-[e :U 147 ]
-[; ;lcd1.c: 262: write("----",2,0);
-"262
-[e ( _write (3 , , -> :s 10C `*uc -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 263: itoaa(num, snum);
-"263
+[; ;lcd1.c: 312: if(ccount==0)
+"312
+[e $ ! == _ccount -> 0 `i 158  ]
+[; ;lcd1.c: 313: strcpy(logic_d4,"");
+"313
+[e ( _strcpy (2 , &U _logic_d4 :s 14C ]
+[e :U 158 ]
+[; ;lcd1.c: 314: write("----",2,0);
+"314
+[e ( _write (3 , , -> :s 15C `*uc -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 315: itoaa(num, snum);
+"315
 [e ( _itoaa (2 , _num &U _snum ]
-[; ;lcd1.c: 264: strcat(logic_d3,snum);
-"264
-[e ( _strcat (2 , &U _logic_d3 -> &U _snum `*Cuc ]
-[; ;lcd1.c: 265: write( logic_d3,2,0); ;
-"265
-[e ( _write (3 , , &U _logic_d3 -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 266: wf=1;
-"266
+[; ;lcd1.c: 316: strcat(logic_d4,snum);
+"316
+[e ( _strcat (2 , &U _logic_d4 -> &U _snum `*Cuc ]
+[; ;lcd1.c: 317: write( logic_d4,2,0); ;
+"317
+[e ( _write (3 , , &U _logic_d4 -> 2 `i -> 0 `i ]
+[; ;lcd1.c: 318: wf=1;
+"318
 [e = _wf -> 1 `i ]
-[; ;lcd1.c: 267: ccount++;
-"267
+[; ;lcd1.c: 319: ccount++;
+"319
 [e ++ _ccount -> 1 `i ]
-"268
+"320
 }
-[e :U 146 ]
-"269
+[e :U 157 ]
+"321
 }
-[; ;lcd1.c: 268: }
-[; ;lcd1.c: 269: }
-[e $U 148  ]
-"270
-[e :U 145 ]
-[; ;lcd1.c: 270: else{
+[; ;lcd1.c: 320: }
+[; ;lcd1.c: 321: }
+[e $U 159  ]
+"322
+[e :U 156 ]
+[; ;lcd1.c: 322: else{
 {
-[; ;lcd1.c: 271: wf=0;
-"271
+[; ;lcd1.c: 323: wf=0;
+"323
 [e = _wf -> 0 `i ]
-"272
+"324
 }
-[e :U 148 ]
-[; ;lcd1.c: 272: }
-[; ;lcd1.c: 273: if(ccount>3)
-"273
-[e $ ! > _ccount -> 3 `i 149  ]
-[; ;lcd1.c: 274: break;
-"274
-[e $U 144  ]
-[e :U 149 ]
-[; ;lcd1.c: 276: if(num==2)
-"276
-[e $ ! == _num -> 2 `i 150  ]
-[; ;lcd1.c: 277: {
-"277
+[e :U 159 ]
+[; ;lcd1.c: 324: }
+[; ;lcd1.c: 325: if(ccount>3)
+"325
+[e $ ! > _ccount -> 3 `i 160  ]
+[; ;lcd1.c: 326: break;
+"326
+[e $U 155  ]
+[e :U 160 ]
+[; ;lcd1.c: 328: if(num==2)
+"328
+[e $ ! == _num -> 2 `i 161  ]
+[; ;lcd1.c: 329: {
+"329
 {
-[; ;lcd1.c: 278: if(nf==0){
-"278
-[e $ ! == _nf -> 0 `i 151  ]
+[; ;lcd1.c: 330: if(nf==0){
+"330
+[e $ ! == _nf -> 0 `i 162  ]
 {
-[; ;lcd1.c: 279: nf=1;
-"279
+[; ;lcd1.c: 331: nf=1;
+"331
 [e = _nf -> 1 `i ]
-[; ;lcd1.c: 280: break;
-"280
-[e $U 144  ]
-"281
+[; ;lcd1.c: 332: break;
+"332
+[e $U 155  ]
+"333
 }
-[e :U 151 ]
-"282
+[e :U 162 ]
+"334
 }
-[; ;lcd1.c: 281: }
-[; ;lcd1.c: 282: }
-[e $U 152  ]
-"283
-[e :U 150 ]
-[; ;lcd1.c: 283: else if(num==99){
-[e $ ! == _num -> 99 `i 153  ]
+[; ;lcd1.c: 333: }
+[; ;lcd1.c: 334: }
+[e $U 163  ]
+"335
+[e :U 161 ]
+[; ;lcd1.c: 335: else if(num==99){
+[e $ ! == _num -> 99 `i 164  ]
 {
-[; ;lcd1.c: 284: nf=0;
-"284
+[; ;lcd1.c: 336: nf=0;
+"336
 [e = _nf -> 0 `i ]
-"285
+"337
+}
+[e :U 164 ]
+"338
+[e :U 163 ]
 }
 [e :U 153 ]
-"286
-[e :U 152 ]
-}
-[e :U 142 ]
-"255
-[e $U 143  ]
-[e :U 144 ]
-[; ;lcd1.c: 285: }
-[; ;lcd1.c: 286: }
-[; ;lcd1.c: 290: wf=0;ccount=0;
-"290
-[e = _wf -> 0 `i ]
-[e = _ccount -> 0 `i ]
-[; ;lcd1.c: 291: strcpy(str,"Enter Logic DEV4:  ");
-"291
-[e ( _strcpy (2 , &U _str :s 11C ]
-[; ;lcd1.c: 292: write(str,1,1);
-"292
-[e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
-[; ;lcd1.c: 293: write(logic_d4,2,0);
-"293
-[e ( _write (3 , , &U _logic_d4 -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 295: while(1)
-"295
-[e :U 155 ]
-[; ;lcd1.c: 296: {
-"296
-{
-[; ;lcd1.c: 297: num=scan();
-"297
-[e = _num ( _scan ..  ]
-[; ;lcd1.c: 298: if(num==1||num==0){
-"298
-[e $ ! || == _num -> 1 `i == _num -> 0 `i 157  ]
-{
-[; ;lcd1.c: 299: if(wf==0)
-"299
-[e $ ! == _wf -> 0 `i 158  ]
-[; ;lcd1.c: 300: {
-"300
-{
-[; ;lcd1.c: 301: if(ccount==0)
-"301
-[e $ ! == _ccount -> 0 `i 159  ]
-[; ;lcd1.c: 302: strcpy(logic_d4,"");
-"302
-[e ( _strcpy (2 , &U _logic_d4 :s 12C ]
-[e :U 159 ]
-[; ;lcd1.c: 303: write("----",2,0);
-"303
-[e ( _write (3 , , -> :s 13C `*uc -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 304: itoaa(num, snum);
-"304
-[e ( _itoaa (2 , _num &U _snum ]
-[; ;lcd1.c: 305: strcat(logic_d4,snum);
-"305
-[e ( _strcat (2 , &U _logic_d4 -> &U _snum `*Cuc ]
-[; ;lcd1.c: 306: write( logic_d4,2,0); ;
 "306
-[e ( _write (3 , , &U _logic_d4 -> 2 `i -> 0 `i ]
-[; ;lcd1.c: 307: wf=1;
-"307
-[e = _wf -> 1 `i ]
-[; ;lcd1.c: 308: ccount++;
-"308
-[e ++ _ccount -> 1 `i ]
-"309
-}
-[e :U 158 ]
-"310
-}
-[; ;lcd1.c: 309: }
-[; ;lcd1.c: 310: }
-[e $U 160  ]
-"311
-[e :U 157 ]
-[; ;lcd1.c: 311: else{
-{
-[; ;lcd1.c: 312: wf=0;
-"312
-[e = _wf -> 0 `i ]
-"313
-}
-[e :U 160 ]
-[; ;lcd1.c: 313: }
-[; ;lcd1.c: 314: if(ccount>3)
-"314
-[e $ ! > _ccount -> 3 `i 161  ]
-[; ;lcd1.c: 315: break;
-"315
-[e $U 156  ]
-[e :U 161 ]
-[; ;lcd1.c: 317: if(num==2)
-"317
-[e $ ! == _num -> 2 `i 162  ]
-[; ;lcd1.c: 318: {
-"318
-{
-[; ;lcd1.c: 319: if(nf==0){
-"319
-[e $ ! == _nf -> 0 `i 163  ]
-{
-[; ;lcd1.c: 320: nf=1;
-"320
-[e = _nf -> 1 `i ]
-[; ;lcd1.c: 321: break;
-"321
-[e $U 156  ]
-"322
-}
-[e :U 163 ]
-"323
-}
-[; ;lcd1.c: 322: }
-[; ;lcd1.c: 323: }
-[e $U 164  ]
-"324
-[e :U 162 ]
-[; ;lcd1.c: 324: else if(num==99){
-[e $ ! == _num -> 99 `i 165  ]
-{
-[; ;lcd1.c: 325: nf=0;
-"325
-[e = _nf -> 0 `i ]
-"326
-}
-[e :U 165 ]
-"327
-[e :U 164 ]
-}
-[e :U 154 ]
-"295
-[e $U 155  ]
-[e :U 156 ]
-[; ;lcd1.c: 326: }
-[; ;lcd1.c: 327: }
-[; ;lcd1.c: 328: startswitch();;
-"328
+[e $U 154  ]
+[e :U 155 ]
+[; ;lcd1.c: 337: }
+[; ;lcd1.c: 338: }
+[; ;lcd1.c: 339: startswitch();;
+"339
 [e ( _startswitch ..  ]
-[; ;lcd1.c: 331: }
-"331
-[e :UE 116 ]
+[; ;lcd1.c: 342: }
+"342
+[e :UE 115 ]
 }
-"336
+"347
 [v _parselogic `(i 1 ef1`*uc ]
 {
-[; ;lcd1.c: 335: int parselogic(char * log)
-[; ;lcd1.c: 336: {
+[; ;lcd1.c: 346: int parselogic(char * log)
+[; ;lcd1.c: 347: {
 [e :U _parselogic ]
 [v _log `*uc 1 r1 ]
 [f ]
-"337
+"348
 [v _dat `i 1 a ]
-[; ;lcd1.c: 337: int dat=0b0000;
+[; ;lcd1.c: 348: int dat=0b0000;
 [e = _dat -> 0 `i ]
-[; ;lcd1.c: 339: if(strcmp(log,"0000")==0)
-"339
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 14C -> 0 `i 167  ]
-[; ;lcd1.c: 340: dat=0b0000;
-"340
-[e = _dat -> 0 `i ]
-[e $U 168  ]
-"341
-[e :U 167 ]
-[; ;lcd1.c: 341: else if(strcmp(log,"0001")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 15C -> 0 `i 169  ]
-[; ;lcd1.c: 342: dat=0b0001;
-"342
-[e = _dat -> 1 `i ]
-[e $U 170  ]
-"343
-[e :U 169 ]
-[; ;lcd1.c: 343: else if(strcmp(log,"0010")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 16C -> 0 `i 171  ]
-[; ;lcd1.c: 344: dat=0b0010;
-"344
-[e = _dat -> 2 `i ]
-[e $U 172  ]
-"346
-[e :U 171 ]
-[; ;lcd1.c: 346: else if(strcmp(log,"0011")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 17C -> 0 `i 173  ]
-[; ;lcd1.c: 347: dat=0b0011;
-"347
-[e = _dat -> 3 `i ]
-[e $U 174  ]
-"349
-[e :U 173 ]
-[; ;lcd1.c: 349: else if(strcmp(log,"0100")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 18C -> 0 `i 175  ]
-[; ;lcd1.c: 350: dat=0b0100;
+[; ;lcd1.c: 350: if(strcmp(log,"0000")==0)
 "350
-[e = _dat -> 4 `i ]
-[e $U 176  ]
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 16C -> 0 `i 166  ]
+[; ;lcd1.c: 351: dat=0b0000;
+"351
+[e = _dat -> 0 `i ]
+[e $U 167  ]
 "352
-[e :U 175 ]
-[; ;lcd1.c: 352: else if(strcmp(log,"0101")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 19C -> 0 `i 177  ]
-[; ;lcd1.c: 353: dat=0b0101;
+[e :U 166 ]
+[; ;lcd1.c: 352: else if(strcmp(log,"0001")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 17C -> 0 `i 168  ]
+[; ;lcd1.c: 353: dat=0b0001;
 "353
-[e = _dat -> 5 `i ]
-[e $U 178  ]
-"355
-[e :U 177 ]
-[; ;lcd1.c: 355: else if(strcmp(log,"0110")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 20C -> 0 `i 179  ]
-[; ;lcd1.c: 356: dat=0b0110;
-"356
-[e = _dat -> 6 `i ]
-[e $U 180  ]
-"358
-[e :U 179 ]
-[; ;lcd1.c: 358: else if(strcmp(log,"0111")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 21C -> 0 `i 181  ]
-[; ;lcd1.c: 359: dat=0b0111;
-"359
-[e = _dat -> 7 `i ]
-[e $U 182  ]
-"361
-[e :U 181 ]
-[; ;lcd1.c: 361: else if(strcmp(log,"1000")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 22C -> 0 `i 183  ]
-[; ;lcd1.c: 362: dat=0b1000;
-"362
-[e = _dat -> 8 `i ]
-[e $U 184  ]
-"364
-[e :U 183 ]
-[; ;lcd1.c: 364: else if(strcmp(log,"1001")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 23C -> 0 `i 185  ]
-[; ;lcd1.c: 365: dat=0b1001;
-"365
-[e = _dat -> 9 `i ]
-[e $U 186  ]
-"367
-[e :U 185 ]
-[; ;lcd1.c: 367: else if(strcmp(log,"1010")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 24C -> 0 `i 187  ]
-[; ;lcd1.c: 368: dat=0b1010;
-"368
-[e = _dat -> 10 `i ]
-[e $U 188  ]
-"370
-[e :U 187 ]
-[; ;lcd1.c: 370: else if(strcmp(log,"1011")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 25C -> 0 `i 189  ]
-[; ;lcd1.c: 371: dat=0b1011;
-"371
-[e = _dat -> 11 `i ]
-[e $U 190  ]
-"373
-[e :U 189 ]
-[; ;lcd1.c: 373: else if(strcmp(log,"1100")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 26C -> 0 `i 191  ]
-[; ;lcd1.c: 374: dat=0b1101;
-"374
-[e = _dat -> 13 `i ]
-[e $U 192  ]
-"376
-[e :U 191 ]
-[; ;lcd1.c: 376: else if(strcmp(log,"1101")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 27C -> 0 `i 193  ]
-[; ;lcd1.c: 377: dat=0b1000;
-"377
-[e = _dat -> 8 `i ]
-[e $U 194  ]
-"379
-[e :U 193 ]
-[; ;lcd1.c: 379: else if(strcmp(log,"1110")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 28C -> 0 `i 195  ]
-[; ;lcd1.c: 380: dat=0b1110;
-"380
-[e = _dat -> 14 `i ]
-[e $U 196  ]
-"382
-[e :U 195 ]
-[; ;lcd1.c: 382: else if(strcmp(log,"1111")==0)
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 29C -> 0 `i 197  ]
-[; ;lcd1.c: 383: dat=0b1111;
-"383
-[e = _dat -> 15 `i ]
-[e :U 197 ]
-"386
-[e :U 196 ]
-[e :U 194 ]
-[e :U 192 ]
-[e :U 190 ]
-[e :U 188 ]
-[e :U 186 ]
-[e :U 184 ]
-[e :U 182 ]
-[e :U 180 ]
-[e :U 178 ]
-[e :U 176 ]
-[e :U 174 ]
-[e :U 172 ]
-[e :U 170 ]
+[e = _dat -> 1 `i ]
+[e $U 169  ]
+"354
 [e :U 168 ]
-[; ;lcd1.c: 386: return dat;
-[e ) _dat ]
-[e $UE 166  ]
-[; ;lcd1.c: 389: }
-"389
-[e :UE 166 ]
-}
+[; ;lcd1.c: 354: else if(strcmp(log,"0010")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 18C -> 0 `i 170  ]
+[; ;lcd1.c: 355: dat=0b0010;
+"355
+[e = _dat -> 2 `i ]
+[e $U 171  ]
+"357
+[e :U 170 ]
+[; ;lcd1.c: 357: else if(strcmp(log,"0011")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 19C -> 0 `i 172  ]
+[; ;lcd1.c: 358: dat=0b0011;
+"358
+[e = _dat -> 3 `i ]
+[e $U 173  ]
+"360
+[e :U 172 ]
+[; ;lcd1.c: 360: else if(strcmp(log,"0100")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 20C -> 0 `i 174  ]
+[; ;lcd1.c: 361: dat=0b0100;
+"361
+[e = _dat -> 4 `i ]
+[e $U 175  ]
+"363
+[e :U 174 ]
+[; ;lcd1.c: 363: else if(strcmp(log,"0101")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 21C -> 0 `i 176  ]
+[; ;lcd1.c: 364: dat=0b0101;
+"364
+[e = _dat -> 5 `i ]
+[e $U 177  ]
+"366
+[e :U 176 ]
+[; ;lcd1.c: 366: else if(strcmp(log,"0110")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 22C -> 0 `i 178  ]
+[; ;lcd1.c: 367: dat=0b0110;
+"367
+[e = _dat -> 6 `i ]
+[e $U 179  ]
+"369
+[e :U 178 ]
+[; ;lcd1.c: 369: else if(strcmp(log,"0111")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 23C -> 0 `i 180  ]
+[; ;lcd1.c: 370: dat=0b0111;
+"370
+[e = _dat -> 7 `i ]
+[e $U 181  ]
+"372
+[e :U 180 ]
+[; ;lcd1.c: 372: else if(strcmp(log,"1000")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 24C -> 0 `i 182  ]
+[; ;lcd1.c: 373: dat=0b1000;
+"373
+[e = _dat -> 8 `i ]
+[e $U 183  ]
+"375
+[e :U 182 ]
+[; ;lcd1.c: 375: else if(strcmp(log,"1001")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 25C -> 0 `i 184  ]
+[; ;lcd1.c: 376: dat=0b1001;
+"376
+[e = _dat -> 9 `i ]
+[e $U 185  ]
+"378
+[e :U 184 ]
+[; ;lcd1.c: 378: else if(strcmp(log,"1010")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 26C -> 0 `i 186  ]
+[; ;lcd1.c: 379: dat=0b1010;
+"379
+[e = _dat -> 10 `i ]
+[e $U 187  ]
+"381
+[e :U 186 ]
+[; ;lcd1.c: 381: else if(strcmp(log,"1011")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 27C -> 0 `i 188  ]
+[; ;lcd1.c: 382: dat=0b1011;
+"382
+[e = _dat -> 11 `i ]
+[e $U 189  ]
+"384
+[e :U 188 ]
+[; ;lcd1.c: 384: else if(strcmp(log,"1100")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 28C -> 0 `i 190  ]
+[; ;lcd1.c: 385: dat=0b1101;
+"385
+[e = _dat -> 13 `i ]
+[e $U 191  ]
+"387
+[e :U 190 ]
+[; ;lcd1.c: 387: else if(strcmp(log,"1101")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 29C -> 0 `i 192  ]
+[; ;lcd1.c: 388: dat=0b1000;
+"388
+[e = _dat -> 8 `i ]
+[e $U 193  ]
+"390
+[e :U 192 ]
+[; ;lcd1.c: 390: else if(strcmp(log,"1110")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 30C -> 0 `i 194  ]
+[; ;lcd1.c: 391: dat=0b1110;
 "391
+[e = _dat -> 14 `i ]
+[e $U 195  ]
+"393
+[e :U 194 ]
+[; ;lcd1.c: 393: else if(strcmp(log,"1111")==0)
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 31C -> 0 `i 196  ]
+[; ;lcd1.c: 394: dat=0b1111;
+"394
+[e = _dat -> 15 `i ]
+[e :U 196 ]
+"397
+[e :U 195 ]
+[e :U 193 ]
+[e :U 191 ]
+[e :U 189 ]
+[e :U 187 ]
+[e :U 185 ]
+[e :U 183 ]
+[e :U 181 ]
+[e :U 179 ]
+[e :U 177 ]
+[e :U 175 ]
+[e :U 173 ]
+[e :U 171 ]
+[e :U 169 ]
+[e :U 167 ]
+[; ;lcd1.c: 397: return dat;
+[e ) _dat ]
+[e $UE 165  ]
+[; ;lcd1.c: 400: }
+"400
+[e :UE 165 ]
+}
+"402
 [v _delay `(v 1 ef1`ui ]
 {
-[; ;lcd1.c: 390: void delay(unsigned int x)
-[; ;lcd1.c: 391: {
+[; ;lcd1.c: 401: void delay(unsigned int x)
+[; ;lcd1.c: 402: {
 [e :U _delay ]
 [v _x `ui 1 r1 ]
 [f ]
-[; ;lcd1.c: 392: while(x-->0);
-"392
-[e $U 199  ]
-[e :U 200 ]
+[; ;lcd1.c: 403: while(x-->0);
+"403
+[e $U 198  ]
 [e :U 199 ]
-[e $ > -- _x -> -> 1 `i `ui -> -> 0 `i `ui 200  ]
-[e :U 201 ]
-[; ;lcd1.c: 393: }
-"393
-[e :UE 198 ]
+[e :U 198 ]
+[e $ > -- _x -> -> 1 `i `ui -> -> 0 `i `ui 199  ]
+[e :U 200 ]
+[; ;lcd1.c: 404: }
+"404
+[e :UE 197 ]
 }
-"397
+"408
 [v _itoaa `(i 1 ef2`i`*uc ]
 {
-[; ;lcd1.c: 396: int itoaa(int value,char *ptr)
-[; ;lcd1.c: 397: {
+[; ;lcd1.c: 407: int itoaa(int value,char *ptr)
+[; ;lcd1.c: 408: {
 [e :U _itoaa ]
 [v _value `i 1 r1 ]
 [v _ptr `*uc 1 r2 ]
 [f ]
-"398
+"409
 [v _count `i 1 a ]
-[; ;lcd1.c: 398: int count=0,temp;
+[; ;lcd1.c: 409: int count=0,temp;
 [e = _count -> 0 `i ]
 [v _temp `i 1 a ]
-[; ;lcd1.c: 399: if(ptr==(0))
-"399
-[e $ ! == _ptr -> -> 0 `i `*uc 203  ]
-[; ;lcd1.c: 400: return 0;
-"400
-[e ) -> 0 `i ]
-[e $UE 202  ]
-[e :U 203 ]
-[; ;lcd1.c: 401: if(value==0)
-"401
-[e $ ! == _value -> 0 `i 204  ]
-[; ;lcd1.c: 402: {
-"402
-{
-[; ;lcd1.c: 403: *ptr='0';
-"403
-[e = *U _ptr -> -> 48 `ui `uc ]
-[; ;lcd1.c: 404: return 1;
-"404
-[e ) -> 1 `i ]
-[e $UE 202  ]
-"405
-}
-[e :U 204 ]
-[; ;lcd1.c: 405: }
-[; ;lcd1.c: 407: if(value<0)
-"407
-[e $ ! < _value -> 0 `i 205  ]
-[; ;lcd1.c: 408: {
-"408
-{
-[; ;lcd1.c: 409: value*=(-1);
-"409
-[e =* _value -U -> 1 `i ]
-[; ;lcd1.c: 410: *ptr++='-';
+[; ;lcd1.c: 410: if(ptr==(0))
 "410
-[e = *U ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x -> -> 45 `ui `uc ]
-[; ;lcd1.c: 411: count++;
+[e $ ! == _ptr -> -> 0 `i `*uc 202  ]
+[; ;lcd1.c: 411: return 0;
 "411
-[e ++ _count -> 1 `i ]
+[e ) -> 0 `i ]
+[e $UE 201  ]
+[e :U 202 ]
+[; ;lcd1.c: 412: if(value==0)
 "412
-}
-[e :U 205 ]
-[; ;lcd1.c: 412: }
-[; ;lcd1.c: 413: for(temp=value;temp>0;temp/=10,ptr++);
+[e $ ! == _value -> 0 `i 203  ]
+[; ;lcd1.c: 413: {
 "413
 {
-[e = _temp _value ]
-[e $ > _temp -> 0 `i 206  ]
-[e $U 207  ]
-[e :U 206 ]
-[e ; =/ _temp -> -> 10 `uc `i ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x ]
-[e $ > _temp -> 0 `i 206  ]
-[e :U 207 ]
-}
-[; ;lcd1.c: 414: *ptr='\0';
+[; ;lcd1.c: 414: *ptr='0';
 "414
-[e = *U _ptr -> -> 0 `ui `uc ]
-[; ;lcd1.c: 415: for(temp=value;temp>0;temp/=10)
+[e = *U _ptr -> -> 48 `ui `uc ]
+[; ;lcd1.c: 415: return 1;
 "415
+[e ) -> 1 `i ]
+[e $UE 201  ]
+"416
+}
+[e :U 203 ]
+[; ;lcd1.c: 416: }
+[; ;lcd1.c: 418: if(value<0)
+"418
+[e $ ! < _value -> 0 `i 204  ]
+[; ;lcd1.c: 419: {
+"419
+{
+[; ;lcd1.c: 420: value*=(-1);
+"420
+[e =* _value -U -> 1 `i ]
+[; ;lcd1.c: 421: *ptr++='-';
+"421
+[e = *U ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x -> -> 45 `ui `uc ]
+[; ;lcd1.c: 422: count++;
+"422
+[e ++ _count -> 1 `i ]
+"423
+}
+[e :U 204 ]
+[; ;lcd1.c: 423: }
+[; ;lcd1.c: 424: for(temp=value;temp>0;temp/=10,ptr++);
+"424
 {
 [e = _temp _value ]
-[e $ > _temp -> 0 `i 209  ]
-[e $U 210  ]
-"416
-[e :U 209 ]
-[; ;lcd1.c: 416: {
+[e $ > _temp -> 0 `i 205  ]
+[e $U 206  ]
+[e :U 205 ]
+[e ; =/ _temp -> -> 10 `uc `i ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x ]
+[e $ > _temp -> 0 `i 205  ]
+[e :U 206 ]
+}
+[; ;lcd1.c: 425: *ptr='\0';
+"425
+[e = *U _ptr -> -> 0 `ui `uc ]
+[; ;lcd1.c: 426: for(temp=value;temp>0;temp/=10)
+"426
 {
-[; ;lcd1.c: 417: *--ptr=temp%10+'0';
-"417
+[e = _temp _value ]
+[e $ > _temp -> 0 `i 208  ]
+[e $U 209  ]
+"427
+[e :U 208 ]
+[; ;lcd1.c: 427: {
+{
+[; ;lcd1.c: 428: *--ptr=temp%10+'0';
+"428
 [e = *U =- _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x -> + -> % _temp -> 10 `i `ui -> 48 `ui `uc ]
-[; ;lcd1.c: 418: count++;
-"418
+[; ;lcd1.c: 429: count++;
+"429
 [e ++ _count -> 1 `i ]
-"419
+"430
 }
-"415
+"426
 [e =/ _temp -> -> 10 `uc `i ]
-[e $ > _temp -> 0 `i 209  ]
-[e :U 210 ]
-"419
+[e $ > _temp -> 0 `i 208  ]
+[e :U 209 ]
+"430
 }
-[; ;lcd1.c: 419: }
-[; ;lcd1.c: 420: return count;
-"420
+[; ;lcd1.c: 430: }
+[; ;lcd1.c: 431: return count;
+"431
 [e ) _count ]
-[e $UE 202  ]
-[; ;lcd1.c: 421: }
-"421
-[e :UE 202 ]
+[e $UE 201  ]
+[; ;lcd1.c: 432: }
+"432
+[e :UE 201 ]
 }
-"424
+"435
 [v _initlcd `(v 1 ef ]
 {
-[; ;lcd1.c: 423: void initlcd()
-[; ;lcd1.c: 424: {
+[; ;lcd1.c: 434: void initlcd()
+[; ;lcd1.c: 435: {
 [e :U _initlcd ]
 [f ]
-[; ;lcd1.c: 426: TRISC=0b11111100;
-"426
+[; ;lcd1.c: 437: TRISC=0b11111100;
+"437
 [e = _TRISC -> -> 252 `i `uc ]
-[; ;lcd1.c: 428: TRISD=0x00;
-"428
+[; ;lcd1.c: 439: TRISD=0x00;
+"439
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;lcd1.c: 430: cmd(0x38);
-"430
+[; ;lcd1.c: 441: cmd(0x38);
+"441
 [e ( _cmd (1 -> -> 56 `i `ui ]
-[; ;lcd1.c: 432: cmd(0x0C);
-"432
+[; ;lcd1.c: 443: cmd(0x0C);
+"443
 [e ( _cmd (1 -> -> 12 `i `ui ]
-[; ;lcd1.c: 434: cmd(0x01);
-"434
+[; ;lcd1.c: 445: cmd(0x01);
+"445
 [e ( _cmd (1 -> -> 1 `i `ui ]
-[; ;lcd1.c: 436: cmd(0x80);
-"436
+[; ;lcd1.c: 447: cmd(0x80);
+"447
 [e ( _cmd (1 -> -> 128 `i `ui ]
-[; ;lcd1.c: 438: cmd(0x0f);
-"438
+[; ;lcd1.c: 449: cmd(0x0f);
+"449
 [e ( _cmd (1 -> -> 15 `i `ui ]
-[; ;lcd1.c: 440: }
-"440
-[e :UE 212 ]
+[; ;lcd1.c: 451: }
+"451
+[e :UE 211 ]
 }
-"442
+"453
 [v _clearlcd `(v 1 ef ]
 {
-[; ;lcd1.c: 441: void clearlcd()
-[; ;lcd1.c: 442: {
+[; ;lcd1.c: 452: void clearlcd()
+[; ;lcd1.c: 453: {
 [e :U _clearlcd ]
 [f ]
-[; ;lcd1.c: 443: cmd(0x01);
-"443
-[e ( _cmd (1 -> -> 1 `i `ui ]
-[; ;lcd1.c: 444: }
-"444
-[e :UE 213 ]
-}
-"446
-[v _cmd `(v 1 ef1`ui ]
-{
-[; ;lcd1.c: 445: void cmd(unsigned int Command)
-[; ;lcd1.c: 446: {
-[e :U _cmd ]
-[v _Command `ui 1 r1 ]
-[f ]
-[; ;lcd1.c: 447: setLCD(Command);
-"447
-[e ( _setLCD (1 -> _Command `i ]
-[; ;lcd1.c: 448: RC0=0;
-"448
-[e = _RC0 -> -> 0 `i `b ]
-[; ;lcd1.c: 449: RC1=1;
-"449
-[e = _RC1 -> -> 1 `i `b ]
-[; ;lcd1.c: 450: delay(20);
-"450
-[e ( _delay (1 -> -> 20 `i `ui ]
-[; ;lcd1.c: 451: RC1=0;
-"451
-[e = _RC1 -> -> 0 `i `b ]
-[; ;lcd1.c: 452: delay(20);
-"452
-[e ( _delay (1 -> -> 20 `i `ui ]
-[; ;lcd1.c: 454: }
+[; ;lcd1.c: 454: cmd(0x01);
 "454
-[e :UE 214 ]
+[e ( _cmd (1 -> -> 1 `i `ui ]
+[; ;lcd1.c: 455: }
+"455
+[e :UE 212 ]
 }
 "457
-[v _dat `(v 1 ef1`ui ]
+[v _cmd `(v 1 ef1`ui ]
 {
-[; ;lcd1.c: 456: void dat(unsigned int Command)
+[; ;lcd1.c: 456: void cmd(unsigned int Command)
 [; ;lcd1.c: 457: {
-[e :U _dat ]
+[e :U _cmd ]
 [v _Command `ui 1 r1 ]
 [f ]
 [; ;lcd1.c: 458: setLCD(Command);
 "458
 [e ( _setLCD (1 -> _Command `i ]
-[; ;lcd1.c: 460: RC0=1;
+[; ;lcd1.c: 459: RC0=0;
+"459
+[e = _RC0 -> -> 0 `i `b ]
+[; ;lcd1.c: 460: RC1=1;
 "460
-[e = _RC0 -> -> 1 `i `b ]
-[; ;lcd1.c: 462: RC1=1;
-"462
 [e = _RC1 -> -> 1 `i `b ]
-[; ;lcd1.c: 464: delay(20);
-"464
+[; ;lcd1.c: 461: delay(20);
+"461
 [e ( _delay (1 -> -> 20 `i `ui ]
-[; ;lcd1.c: 466: RC1=0;
-"466
+[; ;lcd1.c: 462: RC1=0;
+"462
 [e = _RC1 -> -> 0 `i `b ]
-[; ;lcd1.c: 468: delay(20);
-"468
+[; ;lcd1.c: 463: delay(20);
+"463
 [e ( _delay (1 -> -> 20 `i `ui ]
-[; ;lcd1.c: 474: }
-"474
-[e :UE 215 ]
+[; ;lcd1.c: 465: }
+"465
+[e :UE 213 ]
 }
-"476
+"468
+[v _dat `(v 1 ef1`ui ]
+{
+[; ;lcd1.c: 467: void dat(unsigned int Command)
+[; ;lcd1.c: 468: {
+[e :U _dat ]
+[v _Command `ui 1 r1 ]
+[f ]
+[; ;lcd1.c: 469: setLCD(Command);
+"469
+[e ( _setLCD (1 -> _Command `i ]
+[; ;lcd1.c: 471: RC0=1;
+"471
+[e = _RC0 -> -> 1 `i `b ]
+[; ;lcd1.c: 473: RC1=1;
+"473
+[e = _RC1 -> -> 1 `i `b ]
+[; ;lcd1.c: 475: delay(20);
+"475
+[e ( _delay (1 -> -> 20 `i `ui ]
+[; ;lcd1.c: 477: RC1=0;
+"477
+[e = _RC1 -> -> 0 `i `b ]
+[; ;lcd1.c: 479: delay(20);
+"479
+[e ( _delay (1 -> -> 20 `i `ui ]
+[; ;lcd1.c: 485: }
+"485
+[e :UE 214 ]
+}
+"487
 [v _setLCD `(v 1 ef1`i ]
 {
-[; ;lcd1.c: 475: void setLCD(int number)
-[; ;lcd1.c: 476: {
+[; ;lcd1.c: 486: void setLCD(int number)
+[; ;lcd1.c: 487: {
 [e :U _setLCD ]
 [v _number `i 1 r1 ]
 [f ]
-"477
-[v F1274 `Ci 1 s size ]
-[i F1274
+"488
+[v F1276 `Ci 1 s size ]
+[i F1276
 -> * -> -> 8 `i `ui -> # `i `ui `i
 ]
-"478
+"489
 [v _vbool `i * -> -> 8 `i `ui -> # `i `ui a ]
-"479
+"490
 [v _i `i 1 a ]
-[; ;lcd1.c: 477: const int size=8*sizeof(int);
-[; ;lcd1.c: 478: int vbool[8*sizeof(int)];
-[; ;lcd1.c: 479: int i;;
-[; ;lcd1.c: 481: for (i = 0; i <size; i++)
-"481
+[; ;lcd1.c: 488: const int size=8*sizeof(int);
+[; ;lcd1.c: 489: int vbool[8*sizeof(int)];
+[; ;lcd1.c: 490: int i;;
+[; ;lcd1.c: 492: for (i = 0; i <size; i++)
+"492
 {
 [e = _i -> 0 `i ]
-[e $ < _i F1274 217  ]
-[e $U 218  ]
-"482
-[e :U 217 ]
-[; ;lcd1.c: 482: {
-{
-[; ;lcd1.c: 483: vbool[i] = number<<i < 0;
-"483
-[e = *U + &U _vbool * -> -> _i `ui `ux -> -> # *U &U _vbool `ui `ux -> < << _number _i -> 0 `i `i ]
-"484
-}
-"481
-[e ++ _i -> 1 `i ]
-[e $ < _i F1274 217  ]
-[e :U 218 ]
-"484
-}
-[; ;lcd1.c: 484: }
-[; ;lcd1.c: 486: RD0=vbool[size-1];
-"486
-[e = _RD0 -> *U + &U _vbool * -> -> - F1274 -> 1 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;lcd1.c: 487: RD1=vbool[size-2];
-"487
-[e = _RD1 -> *U + &U _vbool * -> -> - F1274 -> 2 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;lcd1.c: 488: RD2=vbool[size-3];
-"488
-[e = _RD2 -> *U + &U _vbool * -> -> - F1274 -> 3 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;lcd1.c: 489: RD3=vbool[size-4];
-"489
-[e = _RD3 -> *U + &U _vbool * -> -> - F1274 -> 4 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;lcd1.c: 490: RD4=vbool[size-5];
-"490
-[e = _RD4 -> *U + &U _vbool * -> -> - F1274 -> 5 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;lcd1.c: 491: RD5=vbool[size-6];
-"491
-[e = _RD5 -> *U + &U _vbool * -> -> - F1274 -> 6 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;lcd1.c: 492: RD6=vbool[size-7];
-"492
-[e = _RD6 -> *U + &U _vbool * -> -> - F1274 -> 7 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;lcd1.c: 493: RD7=vbool[size-8];
+[e $ < _i F1276 216  ]
+[e $U 217  ]
 "493
-[e = _RD7 -> *U + &U _vbool * -> -> - F1274 -> 8 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;lcd1.c: 497: }
-"497
-[e :UE 216 ]
+[e :U 216 ]
+[; ;lcd1.c: 493: {
+{
+[; ;lcd1.c: 494: vbool[i] = number<<i < 0;
+"494
+[e = *U + &U _vbool * -> -> _i `ui `ux -> -> # *U &U _vbool `ui `ux -> < << _number _i -> 0 `i `i ]
+"495
 }
+"492
+[e ++ _i -> 1 `i ]
+[e $ < _i F1276 216  ]
+[e :U 217 ]
+"495
+}
+[; ;lcd1.c: 495: }
+[; ;lcd1.c: 497: RD0=vbool[size-1];
+"497
+[e = _RD0 -> *U + &U _vbool * -> -> - F1276 -> 1 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;lcd1.c: 498: RD1=vbool[size-2];
+"498
+[e = _RD1 -> *U + &U _vbool * -> -> - F1276 -> 2 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;lcd1.c: 499: RD2=vbool[size-3];
 "499
+[e = _RD2 -> *U + &U _vbool * -> -> - F1276 -> 3 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;lcd1.c: 500: RD3=vbool[size-4];
+"500
+[e = _RD3 -> *U + &U _vbool * -> -> - F1276 -> 4 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;lcd1.c: 501: RD4=vbool[size-5];
+"501
+[e = _RD4 -> *U + &U _vbool * -> -> - F1276 -> 5 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;lcd1.c: 502: RD5=vbool[size-6];
+"502
+[e = _RD5 -> *U + &U _vbool * -> -> - F1276 -> 6 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;lcd1.c: 503: RD6=vbool[size-7];
+"503
+[e = _RD6 -> *U + &U _vbool * -> -> - F1276 -> 7 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;lcd1.c: 504: RD7=vbool[size-8];
+"504
+[e = _RD7 -> *U + &U _vbool * -> -> - F1276 -> 8 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;lcd1.c: 508: }
+"508
+[e :UE 215 ]
+}
+"510
 [v _write `(v 1 ef3`*uc`i`i ]
 {
-[; ;lcd1.c: 498: void write(char * str,int line,int erase)
-[; ;lcd1.c: 499: {
+[; ;lcd1.c: 509: void write(char * str,int line,int erase)
+[; ;lcd1.c: 510: {
 [e :U _write ]
 [v _str `*uc 1 r1 ]
 [v _line `i 1 r2 ]
 [v _erase `i 1 r3 ]
 [f ]
-[; ;lcd1.c: 500: if(erase==1)
-"500
-[e $ ! == _erase -> 1 `i 221  ]
-[; ;lcd1.c: 501: clearlcd();
-"501
-[e ( _clearlcd ..  ]
-[e :U 221 ]
-[; ;lcd1.c: 503: if(line==2)
-"503
-[e $ ! == _line -> 2 `i 222  ]
-[; ;lcd1.c: 504: cmd(0xC0);
-"504
-[e ( _cmd (1 -> -> 192 `i `ui ]
-[e $U 223  ]
-"505
-[e :U 222 ]
-[; ;lcd1.c: 505: else
-[; ;lcd1.c: 506: cmd(0x2);
-"506
-[e ( _cmd (1 -> -> 2 `i `ui ]
-[e :U 223 ]
-"508
-[v _i `i 1 a ]
-[; ;lcd1.c: 508: int i=0;
-[e = _i -> 0 `i ]
-[; ;lcd1.c: 509: while(str[i]!='\0')
-"509
-[e $U 224  ]
-[e :U 225 ]
-[; ;lcd1.c: 510: {
-"510
-{
-[; ;lcd1.c: 511: dat(str[i]);
+[; ;lcd1.c: 511: if(erase==1)
 "511
-[e ( _dat (1 -> *U + _str * -> _i `x -> -> # *U _str `i `x `ui ]
-[; ;lcd1.c: 512: i++;
+[e $ ! == _erase -> 1 `i 220  ]
+[; ;lcd1.c: 512: clearlcd();
 "512
-[e ++ _i -> 1 `i ]
-"513
-}
-[e :U 224 ]
-"509
-[e $ != -> *U + _str * -> _i `x -> -> # *U _str `i `x `ui -> 0 `ui 225  ]
-[e :U 226 ]
-[; ;lcd1.c: 513: }
-[; ;lcd1.c: 516: }
+[e ( _clearlcd ..  ]
+[e :U 220 ]
+[; ;lcd1.c: 514: if(line==2)
+"514
+[e $ ! == _line -> 2 `i 221  ]
+[; ;lcd1.c: 515: cmd(0xC0);
+"515
+[e ( _cmd (1 -> -> 192 `i `ui ]
+[e $U 222  ]
 "516
-[e :UE 220 ]
-}
+[e :U 221 ]
+[; ;lcd1.c: 516: else
+[; ;lcd1.c: 517: cmd(0x2);
+"517
+[e ( _cmd (1 -> -> 2 `i `ui ]
+[e :U 222 ]
+"519
+[v _i `i 1 a ]
+[; ;lcd1.c: 519: int i=0;
+[e = _i -> 0 `i ]
+[; ;lcd1.c: 520: while(str[i]!='\0')
 "520
+[e $U 223  ]
+[e :U 224 ]
+[; ;lcd1.c: 521: {
+"521
+{
+[; ;lcd1.c: 522: dat(str[i]);
+"522
+[e ( _dat (1 -> *U + _str * -> _i `x -> -> # *U _str `i `x `ui ]
+[; ;lcd1.c: 523: i++;
+"523
+[e ++ _i -> 1 `i ]
+"524
+}
+[e :U 223 ]
+"520
+[e $ != -> *U + _str * -> _i `x -> -> # *U _str `i `x `ui -> 0 `ui 224  ]
+[e :U 225 ]
+[; ;lcd1.c: 524: }
+[; ;lcd1.c: 527: }
+"527
+[e :UE 219 ]
+}
+"531
 [v _scroll `(v 1 ef2`*uc`i ]
 {
-[; ;lcd1.c: 519: void scroll(char * str,int loops)
-[; ;lcd1.c: 520: {
+[; ;lcd1.c: 530: void scroll(char * str,int loops)
+[; ;lcd1.c: 531: {
 [e :U _scroll ]
 [v _str `*uc 1 r1 ]
 [v _loops `i 1 r2 ]
 [f ]
-[; ;lcd1.c: 522: write(str,1,0); ;
-"522
+[; ;lcd1.c: 533: write(str,1,0); ;
+"533
 [e ( _write (3 , , _str -> 1 `i -> 0 `i ]
-"523
+"534
 [v _loopn `i 1 a ]
-[; ;lcd1.c: 523: int loopn=0;
+[; ;lcd1.c: 534: int loopn=0;
 [e = _loopn -> 0 `i ]
-"524
+"535
 [v _i `i 1 a ]
-"525
+"536
 [v _len `i 1 a ]
-[; ;lcd1.c: 524: int i;
-[; ;lcd1.c: 525: int len=0;;
+[; ;lcd1.c: 535: int i;
+[; ;lcd1.c: 536: int len=0;;
 [e = _len -> 0 `i ]
-"526
+"537
 [v _st `i 1 a ]
-[; ;lcd1.c: 526: int st=0;
+[; ;lcd1.c: 537: int st=0;
 [e = _st -> 0 `i ]
-"527
+"538
 [v _en `i 1 a ]
-[; ;lcd1.c: 527: int en;
-[; ;lcd1.c: 528: while(str[i]!='\0')
-"528
-[e $U 228  ]
-[e :U 229 ]
-[; ;lcd1.c: 529: { i++;
-"529
+[; ;lcd1.c: 538: int en;
+[; ;lcd1.c: 539: while(str[i]!='\0')
+"539
+[e $U 227  ]
+[e :U 228 ]
+[; ;lcd1.c: 540: { i++;
+"540
 {
 [e ++ _i -> 1 `i ]
-[; ;lcd1.c: 530: len++;
-"530
-[e ++ _len -> 1 `i ]
-"531
-}
-[e :U 228 ]
-"528
-[e $ != -> *U + _str * -> _i `x -> -> # *U _str `i `x `ui -> 0 `ui 229  ]
-[e :U 230 ]
-[; ;lcd1.c: 531: }
-[; ;lcd1.c: 532: en=len-1;
-"532
-[e = _en - _len -> 1 `i ]
-[; ;lcd1.c: 534: if(len>32)
-"534
-[e $ ! > _len -> 32 `i 231  ]
-[; ;lcd1.c: 535: {
-"535
-{
-"537
-[v _dest `uc -> 32 `i a ]
-"538
-[v _startat `i 1 a ]
-[; ;lcd1.c: 537: char dest [32] ;
-[; ;lcd1.c: 538: int startat=0;
-[e = _startat -> 0 `i ]
-"539
-[v _endat `i 1 a ]
-[; ;lcd1.c: 539: int endat=31;
-[e = _endat -> 31 `i ]
-[; ;lcd1.c: 540: START:
-"540
-[e :U 232 ]
-[; ;lcd1.c: 541: i=0;
+[; ;lcd1.c: 541: len++;
 "541
-[e = _i -> 0 `i ]
-[; ;lcd1.c: 542: while(i++<32)
+[e ++ _len -> 1 `i ]
 "542
-[e $U 233  ]
-[e :U 234 ]
-[; ;lcd1.c: 543: {
+}
+[e :U 227 ]
+"539
+[e $ != -> *U + _str * -> _i `x -> -> # *U _str `i `x `ui -> 0 `ui 228  ]
+[e :U 229 ]
+[; ;lcd1.c: 542: }
+[; ;lcd1.c: 543: en=len-1;
 "543
-{
-[; ;lcd1.c: 545: delay(3000);
+[e = _en - _len -> 1 `i ]
+[; ;lcd1.c: 545: if(len>32)
 "545
-[e ( _delay (1 -> -> 3000 `i `ui ]
-[; ;lcd1.c: 546: cmd(0x1E);
+[e $ ! > _len -> 32 `i 230  ]
+[; ;lcd1.c: 546: {
 "546
-[e ( _cmd (1 -> -> 30 `i `ui ]
+{
+"548
+[v _dest `uc -> 32 `i a ]
 "549
-}
-[e :U 233 ]
-"542
-[e $ < ++ _i -> 1 `i -> 32 `i 234  ]
-[e :U 235 ]
-[; ;lcd1.c: 549: }
-[; ;lcd1.c: 551: i=0;
+[v _startat `i 1 a ]
+[; ;lcd1.c: 548: char dest [32] ;
+[; ;lcd1.c: 549: int startat=0;
+[e = _startat -> 0 `i ]
+"550
+[v _endat `i 1 a ]
+[; ;lcd1.c: 550: int endat=31;
+[e = _endat -> 31 `i ]
+[; ;lcd1.c: 551: START:
 "551
-[e = _i -> 0 `i ]
-[; ;lcd1.c: 552: while(i++<32)
-"552
-[e $U 236  ]
-[e :U 237 ]
-[; ;lcd1.c: 553: {
-"553
-{
-[; ;lcd1.c: 555: delay(3000);
-"555
-[e ( _delay (1 -> -> 3000 `i `ui ]
-[; ;lcd1.c: 556: cmd(0x18);
-"556
-[e ( _cmd (1 -> -> 24 `i `ui ]
-"559
-}
-[e :U 236 ]
-"552
-[e $ < ++ _i -> 1 `i -> 32 `i 237  ]
-[e :U 238 ]
-[; ;lcd1.c: 559: }
-[; ;lcd1.c: 560: if(loopn++<loops)
-"560
-[e $ ! < ++ _loopn -> 1 `i _loops 239  ]
-[; ;lcd1.c: 561: goto START;
-"561
-[e $U 232  ]
-[e :U 239 ]
-"562
-}
 [e :U 231 ]
-[; ;lcd1.c: 562: }
-[; ;lcd1.c: 567: }
-"567
-[e :UE 227 ]
-}
-"574
-[v _initkeypad `(v 1 ef ]
+[; ;lcd1.c: 552: i=0;
+"552
+[e = _i -> 0 `i ]
+[; ;lcd1.c: 553: while(i++<32)
+"553
+[e $U 232  ]
+[e :U 233 ]
+[; ;lcd1.c: 554: {
+"554
 {
-[; ;lcd1.c: 573: void initkeypad()
-[; ;lcd1.c: 574: {
-[e :U _initkeypad ]
-[f ]
-[; ;lcd1.c: 575: PORTB = 0;
-"575
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;lcd1.c: 576: TRISB = 0b11000000;
-"576
-[e = _TRISB -> -> 192 `i `uc ]
+[; ;lcd1.c: 556: delay(3000);
+"556
+[e ( _delay (1 -> -> 3000 `i `ui ]
+[; ;lcd1.c: 557: cmd(0x1E);
+"557
+[e ( _cmd (1 -> -> 30 `i `ui ]
+"560
+}
+[e :U 232 ]
+"553
+[e $ < ++ _i -> 1 `i -> 32 `i 233  ]
+[e :U 234 ]
+[; ;lcd1.c: 560: }
+[; ;lcd1.c: 562: i=0;
+"562
+[e = _i -> 0 `i ]
+[; ;lcd1.c: 563: while(i++<32)
+"563
+[e $U 235  ]
+[e :U 236 ]
+[; ;lcd1.c: 564: {
+"564
+{
+[; ;lcd1.c: 566: delay(3000);
+"566
+[e ( _delay (1 -> -> 3000 `i `ui ]
+[; ;lcd1.c: 567: cmd(0x18);
+"567
+[e ( _cmd (1 -> -> 24 `i `ui ]
+"570
+}
+[e :U 235 ]
+"563
+[e $ < ++ _i -> 1 `i -> 32 `i 236  ]
+[e :U 237 ]
+[; ;lcd1.c: 570: }
+[; ;lcd1.c: 571: if(loopn++<loops)
+"571
+[e $ ! < ++ _loopn -> 1 `i _loops 238  ]
+[; ;lcd1.c: 572: goto START;
+"572
+[e $U 231  ]
+[e :U 238 ]
+"573
+}
+[e :U 230 ]
+[; ;lcd1.c: 573: }
 [; ;lcd1.c: 578: }
 "578
-[e :UE 240 ]
+[e :UE 226 ]
 }
-"581
+"585
+[v _initkeypad `(v 1 ef ]
+{
+[; ;lcd1.c: 584: void initkeypad()
+[; ;lcd1.c: 585: {
+[e :U _initkeypad ]
+[f ]
+[; ;lcd1.c: 586: PORTB = 0;
+"586
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;lcd1.c: 587: TRISB = 0b11000000;
+"587
+[e = _TRISB -> -> 192 `i `uc ]
+[; ;lcd1.c: 589: }
+"589
+[e :UE 239 ]
+}
+"592
 [v _scan `(i 1 ef ]
 {
-[; ;lcd1.c: 580: int scan()
-[; ;lcd1.c: 581: {
+[; ;lcd1.c: 591: int scan()
+[; ;lcd1.c: 592: {
 [e :U _scan ]
 [f ]
-[; ;lcd1.c: 582: actrow(1) ;
-"582
+[; ;lcd1.c: 593: actrow(1) ;
+"593
 [e ( _actrow (1 -> 1 `i ]
-[; ;lcd1.c: 583: if( RC2==1)
-"583
-[e $ ! == -> _RC2 `i -> 1 `i 242  ]
-[; ;lcd1.c: 584: return 0;
-"584
-[e ) -> 0 `i ]
-[e $UE 241  ]
-[e $U 243  ]
-"585
-[e :U 242 ]
-[; ;lcd1.c: 585: else if(RC3==1)
-[e $ ! == -> _RC3 `i -> 1 `i 244  ]
-[; ;lcd1.c: 586: return 1;
-"586
-[e ) -> 1 `i ]
-[e $UE 241  ]
-[e $U 245  ]
-"587
-[e :U 244 ]
-[; ;lcd1.c: 587: else if(RB6==1)
-[e $ ! == -> _RB6 `i -> 1 `i 246  ]
-[; ;lcd1.c: 588: return 2;
-"588
-[e ) -> 2 `i ]
-[e $UE 241  ]
-[e $U 247  ]
-"589
-[e :U 246 ]
-[; ;lcd1.c: 589: else if(RB7==1)
-[e $ ! == -> _RB7 `i -> 1 `i 248  ]
-[; ;lcd1.c: 590: return 4;
-"590
-[e ) -> 4 `i ]
-[e $UE 241  ]
-[e :U 248 ]
-"592
-[e :U 247 ]
-[e :U 245 ]
-[e :U 243 ]
-[; ;lcd1.c: 592: actrow(2) ;
-[e ( _actrow (1 -> 2 `i ]
 [; ;lcd1.c: 594: if( RC2==1)
 "594
-[e $ ! == -> _RC2 `i -> 1 `i 249  ]
-[; ;lcd1.c: 595: return 5;
+[e $ ! == -> _RC2 `i -> 1 `i 241  ]
+[; ;lcd1.c: 595: return 0;
 "595
-[e ) -> 5 `i ]
-[e $UE 241  ]
-[e $U 250  ]
+[e ) -> 0 `i ]
+[e $UE 240  ]
+[e $U 242  ]
 "596
-[e :U 249 ]
+[e :U 241 ]
 [; ;lcd1.c: 596: else if(RC3==1)
-[e $ ! == -> _RC3 `i -> 1 `i 251  ]
-[; ;lcd1.c: 597: return 6;
+[e $ ! == -> _RC3 `i -> 1 `i 243  ]
+[; ;lcd1.c: 597: return 1;
 "597
-[e ) -> 6 `i ]
-[e $UE 241  ]
-[e $U 252  ]
+[e ) -> 1 `i ]
+[e $UE 240  ]
+[e $U 244  ]
 "598
-[e :U 251 ]
+[e :U 243 ]
 [; ;lcd1.c: 598: else if(RB6==1)
-[e $ ! == -> _RB6 `i -> 1 `i 253  ]
-[; ;lcd1.c: 599: return 7;
+[e $ ! == -> _RB6 `i -> 1 `i 245  ]
+[; ;lcd1.c: 599: return 2;
 "599
-[e ) -> 7 `i ]
-[e $UE 241  ]
-[e $U 254  ]
+[e ) -> 2 `i ]
+[e $UE 240  ]
+[e $U 246  ]
 "600
-[e :U 253 ]
+[e :U 245 ]
 [; ;lcd1.c: 600: else if(RB7==1)
-[e $ ! == -> _RB7 `i -> 1 `i 255  ]
-[; ;lcd1.c: 601: return 8;
+[e $ ! == -> _RB7 `i -> 1 `i 247  ]
+[; ;lcd1.c: 601: return 4;
 "601
-[e ) -> 8 `i ]
-[e $UE 241  ]
-[e :U 255 ]
+[e ) -> 4 `i ]
+[e $UE 240  ]
+[e :U 247 ]
 "603
-[e :U 254 ]
-[e :U 252 ]
-[e :U 250 ]
-[; ;lcd1.c: 603: actrow(3) ;
-[e ( _actrow (1 -> 3 `i ]
+[e :U 246 ]
+[e :U 244 ]
+[e :U 242 ]
+[; ;lcd1.c: 603: actrow(2) ;
+[e ( _actrow (1 -> 2 `i ]
 [; ;lcd1.c: 605: if( RC2==1)
 "605
-[e $ ! == -> _RC2 `i -> 1 `i 256  ]
-[; ;lcd1.c: 606: return 9;
+[e $ ! == -> _RC2 `i -> 1 `i 248  ]
+[; ;lcd1.c: 606: return 5;
 "606
-[e ) -> 9 `i ]
-[e $UE 241  ]
-[e $U 257  ]
+[e ) -> 5 `i ]
+[e $UE 240  ]
+[e $U 249  ]
 "607
-[e :U 256 ]
+[e :U 248 ]
 [; ;lcd1.c: 607: else if(RC3==1)
-[e $ ! == -> _RC3 `i -> 1 `i 258  ]
-[; ;lcd1.c: 608: return 10;
+[e $ ! == -> _RC3 `i -> 1 `i 250  ]
+[; ;lcd1.c: 608: return 6;
 "608
-[e ) -> 10 `i ]
-[e $UE 241  ]
-[e $U 259  ]
+[e ) -> 6 `i ]
+[e $UE 240  ]
+[e $U 251  ]
 "609
-[e :U 258 ]
+[e :U 250 ]
 [; ;lcd1.c: 609: else if(RB6==1)
-[e $ ! == -> _RB6 `i -> 1 `i 260  ]
-[; ;lcd1.c: 610: return 11;
+[e $ ! == -> _RB6 `i -> 1 `i 252  ]
+[; ;lcd1.c: 610: return 7;
 "610
-[e ) -> 11 `i ]
-[e $UE 241  ]
-[e $U 261  ]
+[e ) -> 7 `i ]
+[e $UE 240  ]
+[e $U 253  ]
 "611
-[e :U 260 ]
+[e :U 252 ]
 [; ;lcd1.c: 611: else if(RB7==1)
-[e $ ! == -> _RB7 `i -> 1 `i 262  ]
-[; ;lcd1.c: 612: return 12;
+[e $ ! == -> _RB7 `i -> 1 `i 254  ]
+[; ;lcd1.c: 612: return 8;
 "612
-[e ) -> 12 `i ]
-[e $UE 241  ]
-[e :U 262 ]
-"615
-[e :U 261 ]
-[e :U 259 ]
-[e :U 257 ]
-[; ;lcd1.c: 615: actrow(4) ;
-[e ( _actrow (1 -> 4 `i ]
-[; ;lcd1.c: 617: if( RC2==1)
+[e ) -> 8 `i ]
+[e $UE 240  ]
+[e :U 254 ]
+"614
+[e :U 253 ]
+[e :U 251 ]
+[e :U 249 ]
+[; ;lcd1.c: 614: actrow(3) ;
+[e ( _actrow (1 -> 3 `i ]
+[; ;lcd1.c: 616: if( RC2==1)
+"616
+[e $ ! == -> _RC2 `i -> 1 `i 255  ]
+[; ;lcd1.c: 617: return 9;
 "617
-[e $ ! == -> _RC2 `i -> 1 `i 263  ]
-[; ;lcd1.c: 618: return 13;
+[e ) -> 9 `i ]
+[e $UE 240  ]
+[e $U 256  ]
 "618
-[e ) -> 13 `i ]
-[e $UE 241  ]
-[e $U 264  ]
+[e :U 255 ]
+[; ;lcd1.c: 618: else if(RC3==1)
+[e $ ! == -> _RC3 `i -> 1 `i 257  ]
+[; ;lcd1.c: 619: return 10;
 "619
-[e :U 263 ]
-[; ;lcd1.c: 619: else if(RC3==1)
-[e $ ! == -> _RC3 `i -> 1 `i 265  ]
-[; ;lcd1.c: 620: return 14;
+[e ) -> 10 `i ]
+[e $UE 240  ]
+[e $U 258  ]
 "620
-[e ) -> 14 `i ]
-[e $UE 241  ]
-[e $U 266  ]
+[e :U 257 ]
+[; ;lcd1.c: 620: else if(RB6==1)
+[e $ ! == -> _RB6 `i -> 1 `i 259  ]
+[; ;lcd1.c: 621: return 11;
 "621
-[e :U 265 ]
-[; ;lcd1.c: 621: else if(RB6==1)
-[e $ ! == -> _RB6 `i -> 1 `i 267  ]
-[; ;lcd1.c: 622: return 15;
+[e ) -> 11 `i ]
+[e $UE 240  ]
+[e $U 260  ]
 "622
-[e ) -> 15 `i ]
-[e $UE 241  ]
-[e $U 268  ]
+[e :U 259 ]
+[; ;lcd1.c: 622: else if(RB7==1)
+[e $ ! == -> _RB7 `i -> 1 `i 261  ]
+[; ;lcd1.c: 623: return 12;
 "623
-[e :U 267 ]
-[; ;lcd1.c: 623: else if(RB7==1)
-[e $ ! == -> _RB7 `i -> 1 `i 269  ]
-[; ;lcd1.c: 624: return 16;
-"624
-[e ) -> 16 `i ]
-[e $UE 241  ]
-[e :U 269 ]
+[e ) -> 12 `i ]
+[e $UE 240  ]
+[e :U 261 ]
+"626
+[e :U 260 ]
+[e :U 258 ]
+[e :U 256 ]
+[; ;lcd1.c: 626: actrow(4) ;
+[e ( _actrow (1 -> 4 `i ]
+[; ;lcd1.c: 628: if( RC2==1)
 "628
-[e :U 268 ]
-[e :U 266 ]
-[e :U 264 ]
-[; ;lcd1.c: 628: return 99;
-[e ) -> 99 `i ]
-[e $UE 241  ]
-[; ;lcd1.c: 632: }
+[e $ ! == -> _RC2 `i -> 1 `i 262  ]
+[; ;lcd1.c: 629: return 13;
+"629
+[e ) -> 13 `i ]
+[e $UE 240  ]
+[e $U 263  ]
+"630
+[e :U 262 ]
+[; ;lcd1.c: 630: else if(RC3==1)
+[e $ ! == -> _RC3 `i -> 1 `i 264  ]
+[; ;lcd1.c: 631: return 14;
+"631
+[e ) -> 14 `i ]
+[e $UE 240  ]
+[e $U 265  ]
 "632
-[e :UE 241 ]
+[e :U 264 ]
+[; ;lcd1.c: 632: else if(RB6==1)
+[e $ ! == -> _RB6 `i -> 1 `i 266  ]
+[; ;lcd1.c: 633: return 15;
+"633
+[e ) -> 15 `i ]
+[e $UE 240  ]
+[e $U 267  ]
+"634
+[e :U 266 ]
+[; ;lcd1.c: 634: else if(RB7==1)
+[e $ ! == -> _RB7 `i -> 1 `i 268  ]
+[; ;lcd1.c: 635: return 16;
+"635
+[e ) -> 16 `i ]
+[e $UE 240  ]
+[e :U 268 ]
+"639
+[e :U 267 ]
+[e :U 265 ]
+[e :U 263 ]
+[; ;lcd1.c: 639: return 99;
+[e ) -> 99 `i ]
+[e $UE 240  ]
+[; ;lcd1.c: 643: }
+"643
+[e :UE 240 ]
 }
-"636
+"647
 [v _resetout `(v 1 ef ]
 {
-[; ;lcd1.c: 635: void resetout()
-[; ;lcd1.c: 636: {
+[; ;lcd1.c: 646: void resetout()
+[; ;lcd1.c: 647: {
 [e :U _resetout ]
 [f ]
-[; ;lcd1.c: 637: RC2=0;RC3=0;RB6=0;RB7=0;
-"637
+[; ;lcd1.c: 648: RC2=0;RC3=0;RB6=0;RB7=0;
+"648
 [e = _RC2 -> -> 0 `i `b ]
 [e = _RC3 -> -> 0 `i `b ]
 [e = _RB6 -> -> 0 `i `b ]
 [e = _RB7 -> -> 0 `i `b ]
-[; ;lcd1.c: 638: }
-"638
-[e :UE 270 ]
+[; ;lcd1.c: 649: }
+"649
+[e :UE 269 ]
 }
-"640
+"651
 [v _actrow `(v 1 ef1`i ]
 {
-[; ;lcd1.c: 639: void actrow(int n)
-[; ;lcd1.c: 640: {
+[; ;lcd1.c: 650: void actrow(int n)
+[; ;lcd1.c: 651: {
 [e :U _actrow ]
 [v _n `i 1 r1 ]
 [f ]
-[; ;lcd1.c: 641: resetout();
-"641
-[e ( _resetout ..  ]
-[; ;lcd1.c: 643: if(n==1)
-"643
-[e $ ! == _n -> 1 `i 272  ]
-[; ;lcd1.c: 644: {
-"644
-{
-[; ;lcd1.c: 645: RB0=1;
-"645
-[e = _RB0 -> -> 1 `i `b ]
-"646
-}
-[; ;lcd1.c: 646: }
-[e $U 273  ]
-"647
-[e :U 272 ]
-[; ;lcd1.c: 647: else if(n==2)
-[e $ ! == _n -> 2 `i 274  ]
-[; ;lcd1.c: 648: {
-"648
-{
-[; ;lcd1.c: 649: RB1=1;
-"649
-[e = _RB1 -> -> 1 `i `b ]
-"650
-}
-[; ;lcd1.c: 650: }
-[e $U 275  ]
-"651
-[e :U 274 ]
-[; ;lcd1.c: 651: else if(n==3)
-[e $ ! == _n -> 3 `i 276  ]
-[; ;lcd1.c: 652: {
+[; ;lcd1.c: 652: resetout();
 "652
-{
-[; ;lcd1.c: 653: RB2=1;
-"653
-[e = _RB2 -> -> 1 `i `b ]
+[e ( _resetout ..  ]
+[; ;lcd1.c: 654: if(n==1)
 "654
-}
-[; ;lcd1.c: 654: }
-[e $U 277  ]
+[e $ ! == _n -> 1 `i 271  ]
+[; ;lcd1.c: 655: {
 "655
-[e :U 276 ]
-[; ;lcd1.c: 655: else if(n==4)
-[e $ ! == _n -> 4 `i 278  ]
-[; ;lcd1.c: 656: {
-"656
 {
-[; ;lcd1.c: 657: RB3=1;
+[; ;lcd1.c: 656: RB0=1;
+"656
+[e = _RB0 -> -> 1 `i `b ]
 "657
-[e = _RB3 -> -> 1 `i `b ]
+}
+[; ;lcd1.c: 657: }
+[e $U 272  ]
 "658
-}
-[e :U 278 ]
+[e :U 271 ]
+[; ;lcd1.c: 658: else if(n==2)
+[e $ ! == _n -> 2 `i 273  ]
+[; ;lcd1.c: 659: {
 "659
-[e :U 277 ]
-[e :U 275 ]
-[e :U 273 ]
-[; ;lcd1.c: 658: }
-[; ;lcd1.c: 659: delay(200);
-[e ( _delay (1 -> -> 200 `i `ui ]
-[; ;lcd1.c: 662: }
-"662
-[e :UE 271 ]
+{
+[; ;lcd1.c: 660: RB1=1;
+"660
+[e = _RB1 -> -> 1 `i `b ]
+"661
 }
-[a 1C 87 69 76 67 79 77 69 32 33 32 84 79 32 80 82 79 71 82 65 77 65 66 76 69 32 72 79 77 69 32 65 85 84 77 65 84 78 0 ]
-[a 29C 49 49 49 49 0 ]
-[a 21C 48 49 49 49 0 ]
-[a 25C 49 48 49 49 0 ]
-[a 17C 48 48 49 49 0 ]
-[a 27C 49 49 48 49 0 ]
-[a 19C 48 49 48 49 0 ]
-[a 23C 49 48 48 49 0 ]
-[a 15C 48 48 48 49 0 ]
-[a 28C 49 49 49 48 0 ]
-[a 20C 48 49 49 48 0 ]
-[a 24C 49 48 49 48 0 ]
-[a 16C 48 48 49 48 0 ]
-[a 26C 49 49 48 48 0 ]
-[a 18C 48 49 48 48 0 ]
-[a 22C 49 48 48 48 0 ]
-[a 14C 48 48 48 48 0 ]
-[a 4C 45 45 45 45 0 ]
-[a 7C 45 45 45 45 0 ]
-[a 10C 45 45 45 45 0 ]
-[a 13C 45 45 45 45 0 ]
-[a 11C 69 110 116 101 114 32 76 111 103 105 99 32 68 69 86 52 58 32 32 0 ]
-[a 8C 69 110 116 101 114 32 76 111 103 105 99 32 68 69 86 51 58 32 32 0 ]
-[a 5C 69 110 116 101 114 32 76 111 103 105 99 32 68 69 86 50 58 32 32 0 ]
-[a 2C 69 110 116 101 114 32 76 111 103 105 99 32 68 69 86 49 58 32 32 0 ]
-[a 3C 0 ]
-[a 6C 0 ]
-[a 9C 0 ]
-[a 12C 0 ]
+[; ;lcd1.c: 661: }
+[e $U 274  ]
+"662
+[e :U 273 ]
+[; ;lcd1.c: 662: else if(n==3)
+[e $ ! == _n -> 3 `i 275  ]
+[; ;lcd1.c: 663: {
+"663
+{
+[; ;lcd1.c: 664: RB2=1;
+"664
+[e = _RB2 -> -> 1 `i `b ]
+"665
+}
+[; ;lcd1.c: 665: }
+[e $U 276  ]
+"666
+[e :U 275 ]
+[; ;lcd1.c: 666: else if(n==4)
+[e $ ! == _n -> 4 `i 277  ]
+[; ;lcd1.c: 667: {
+"667
+{
+[; ;lcd1.c: 668: RB3=1;
+"668
+[e = _RB3 -> -> 1 `i `b ]
+"669
+}
+[e :U 277 ]
+"670
+[e :U 276 ]
+[e :U 274 ]
+[e :U 272 ]
+[; ;lcd1.c: 669: }
+[; ;lcd1.c: 670: delay(200);
+[e ( _delay (1 -> -> 200 `i `ui ]
+[; ;lcd1.c: 673: }
+"673
+[e :UE 270 ]
+}
+[a 3C 87 69 76 67 79 77 69 32 33 32 84 79 32 80 82 79 71 82 65 77 65 66 76 69 32 72 79 77 69 32 65 85 84 77 65 84 78 0 ]
+[a 31C 49 49 49 49 0 ]
+[a 23C 48 49 49 49 0 ]
+[a 27C 49 48 49 49 0 ]
+[a 19C 48 48 49 49 0 ]
+[a 29C 49 49 48 49 0 ]
+[a 21C 48 49 48 49 0 ]
+[a 25C 49 48 48 49 0 ]
+[a 17C 48 48 48 49 0 ]
+[a 30C 49 49 49 48 0 ]
+[a 22C 48 49 49 48 0 ]
+[a 26C 49 48 49 48 0 ]
+[a 18C 48 48 49 48 0 ]
+[a 28C 49 49 48 48 0 ]
+[a 20C 48 49 48 48 0 ]
+[a 24C 49 48 48 48 0 ]
+[a 1C 48 48 48 48 0 ]
+[a 2C 48 48 48 48 0 ]
+[a 16C 48 48 48 48 0 ]
+[a 6C 45 45 45 45 0 ]
+[a 9C 45 45 45 45 0 ]
+[a 12C 45 45 45 45 0 ]
+[a 15C 45 45 45 45 0 ]
+[a 13C 69 110 116 101 114 32 76 111 103 105 99 32 68 69 86 52 58 32 32 0 ]
+[a 10C 69 110 116 101 114 32 76 111 103 105 99 32 68 69 86 51 58 32 32 0 ]
+[a 7C 69 110 116 101 114 32 76 111 103 105 99 32 68 69 86 50 58 32 32 0 ]
+[a 4C 69 110 116 101 114 32 76 111 103 105 99 32 68 69 86 49 58 32 32 0 ]
+[a 5C 0 ]
+[a 8C 0 ]
+[a 11C 0 ]
+[a 14C 0 ]

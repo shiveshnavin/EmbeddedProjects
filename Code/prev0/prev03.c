@@ -6,6 +6,8 @@
 
 /******functions******/
 
+int check(char * input,char * logic);
+void init_fun();
 void getlogicseq();
 void startswitch();
 
@@ -39,7 +41,7 @@ int itoaa(int value,char *ptr);
 #define SR0 RC4
 #define SR1 RC5
 #define SR2 RC6
-#define SR3 RC7
+#define SR3 RC0
 
 #define DV0 RA0
 #define DV1 RA1
@@ -56,8 +58,8 @@ int itoaa(int value,char *ptr);
 #define TRISLCD TRISD
 #define LCD PORTD
 
-#define RS RC0
-#define EN RC1
+#define RS RC1
+#define EN RB5
 
 #define LD0 RD0
 #define LD1 RD1
@@ -82,16 +84,22 @@ int  main()
 { 
 
 
-
  
 	initlcd();	
 	initkeypad();
- 	
+	init_fun();
  
-
+	/* 
+	if(SR3==1)
+		write("YEAHH",1,1);
+	else
+		write("Uh..",1,1);
+	return; 	
+  */
+ 
  	while(1){
-		 startswitch();
-			//	getlogicseq();	
+		 // startswitch();
+		 	getlogicseq();	
 			}
 
 
@@ -115,41 +123,15 @@ int  main()
 		char plo[5]="0000"; 
      	int dev=0b0000;
     	int pdev=0b0000;
-void setdevice(int d1,int d2,int d3,int d4)
-{/*
-	if(d1==1)
-		DV1=1;
-	if(d2==1)
-		DV2=1;
-	if(d3==1)
-		DV3=1;
-	if(d4==1)
-		DV4=1;*/
-
-}
+ 
 int done_init=0;
-void init_fun()
-{
-	if(done_init==0)
-		{
-					
-			TRISA=0b110000;
-			DPORT=0x0;
-			done_init=1;
-		}
-}
 void startswitch()
-{	
-	init_fun();
-	int d1=0;
-	int d2=0;
-	int d3=0;	
-	int d4=0;
-
-	
-	
+{	 
+	 
+  
 	strcpy(plo,lo);
 	strcpy(lo,"0000");;
+ 
 	if(SR0==1)
 		lo[0]='1';	
 	if(SR1==1)
@@ -158,9 +140,44 @@ void startswitch()
 		lo[2]='1';	
 	if(SR3==1)
 		lo[4]='1';
- 
+  
+	
    pdev=dev;	
    dev=0b0000;
+	
+		if(strcmp(lo,plo)!=0&&strcmp(lo,"0000")!=0)
+			{
+	 
+			//	write(lo,1,1);
+			 
+
+				if(check(lo,logic_d1))
+					dev=dev|0b0001;	
+				else
+					dev=dev&0b1110;
+
+				if(check(lo,logic_d2))
+					dev=dev|0b0010;	
+				else
+					dev=dev&0b1101;
+					
+
+				if(check(lo,logic_d3))
+					dev=dev|0b0100;	
+				else
+					dev=dev&0b1011;
+					
+
+				if(check(lo,logic_d4))
+					dev=dev|0b1000;	
+				else
+					dev=dev&0b0111;
+					
+					
+				DPORT=dev;
+			}
+   return;
+
 	
 	if(strcmp(lo,logic_d1)==0)
 		dev=0b0001;
@@ -174,8 +191,6 @@ void startswitch()
 	if(strcmp(lo,logic_d4)==0)
 		dev=dev|0b1000;
 write(lo,1,1);
-	if(strcmp(lo,plo)!=0&&strcmp(lo,"0000")!=0)
-		;//write(lo,1,1);
 
 	if(pdev!=dev)
 		{
@@ -372,6 +387,31 @@ START_SEQ:
 }
 
 
+void init_fun()
+{	
+	if(done_init==0)
+		{
+					
+			TRISA=0b110000;
+			DPORT=0x0;	
+			RCEN=0;
+			TXEN=0;
+			done_init=1;
+		}
+}
+
+int check(char * input,char * logic)
+{
+ 
+	int i=0;
+
+    for(i=0;i<4;i++)
+		{
+			if(input[i]=='0'&&logic[i]=='1')
+				return 0;
+		}
+	return 1;
+}
 /*   utils [   **************************************************** */
 int parselogic(char * log)
 {
@@ -464,7 +504,7 @@ int itoaa(int value,char *ptr)
 void initlcd()
 {
 
- 	TRISC=0b11111100;
+ 	TRISC=0b11111101;
 
 	TRISLCD=0x00;
 
@@ -613,7 +653,7 @@ if(loopn++<loops)
 
 void initkeypad()
 { 
- 	PORTB = 0;  
+ 	PORTB = 0x0;  
 	TRISKEY = 0b11000000;
  
 }

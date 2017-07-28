@@ -1166,8 +1166,8 @@ initkeypad();
 
 
 while(1){
+startswitch();
 
-getlogicseq();
 }
 
 # 101
@@ -1176,9 +1176,12 @@ getlogicseq();
 # 110
 char logic_d1[5]="1001";
 char logic_d2[5]="1011";
-char logic_d3[5]="1111";
+char logic_d3[5]="0110";
 char logic_d4[5]="1000";
 char lo[5]="0000";
+char plo[5]="0000";
+int dev=0b0000;
+int pdev=0b0000;
 void startswitch()
 {
 
@@ -1186,19 +1189,22 @@ TRISA=0b110000;
 PORTA=0x0;
 
 
-
+strcpy(plo,lo);
+strcpy(lo,"0000");;
 if(RC4==1)
 lo[0]='1';
 if(RC5==1)
 lo[1]='1';
-if(RA5==1)
+if(RC6==1)
 lo[2]='1';
 if(RC7==1)
 lo[4]='1';
 
-int dev=0b0000;
+pdev=dev;
+dev=0b0000;
+
 if(strcmp(lo,logic_d1)==0)
-dev=dev|0b0001;
+dev=0b0001;
 
 if(strcmp(lo,logic_d2)==0)
 dev=dev|0b0010;
@@ -1208,10 +1214,15 @@ dev=dev|0b0100;
 
 if(strcmp(lo,logic_d4)==0)
 dev=dev|0b1000;
+write(lo,1,1);
+if(strcmp(lo,plo)!=0&&strcmp(lo,"0000")!=0)
+;
 
+if(pdev!=dev)
+{
+write(lo,1,1);
 PORTA=dev;
-
-while(1);
+}
 
 
 }
@@ -1534,7 +1545,7 @@ RC1=0;
 
 delay(20);
 
-# 474
+# 485
 }
 void setLCD(int number)
 {
@@ -1630,7 +1641,7 @@ goto START;
 
 }
 
-# 573
+# 584
 void initkeypad()
 {
 PORTB = 0;
