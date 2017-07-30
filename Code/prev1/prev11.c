@@ -20,14 +20,15 @@ void write_eep(unsigned char a,unsigned char d);
 
 /****KEYPAD  ******/
 #define TRISKEY TRISB
-#define KY0 RB0
-#define KY1 RB1
-#define KY2 RB2
-#define KY3 RB3
-#define KY4 RC2
-#define KY5 RC3
-#define KY6 RB6
-#define KY7 RB7 
+#define KY0 RB0 //OUTPUT
+#define KY1 RB1 //OUTPUT
+#define KY2 RB2 //OUTPUT
+#define KY3 RB3 //OUTPUT
+
+#define KY4 RD6 //INPUT
+#define KY5 RD7 //INPUT
+#define KY6 RB6 //INPUT
+#define KY7 RB7 //INPUT
 
 void initkeypad();
 void actrow(int n);
@@ -44,9 +45,9 @@ int itoaa(int value,char *ptr);
 
 /******SESORS AND DEVICES******/
 
-#define SR0 RC4
-#define SR1 RC5
-#define SR2 RC1
+#define SR0 RC3
+#define SR1 RC4
+#define SR2 RC5
 #define SR3 RC7
 
 #define DV0 RA0
@@ -73,8 +74,8 @@ int itoaa(int value,char *ptr);
 #define LD3 RD3
 #define LD4 RD4
 #define LD5 RD5
-#define LD6 RD6
-#define LD7 RD7
+#define LD6 RC1
+#define LD7 RC2
 
 void initlcd();
 void cmd(unsigned int Command);
@@ -96,14 +97,17 @@ int  main()
  
 	initlcd();	
 	initkeypad();
- 	
- 
+ 	/*
+ 	if(scan()==0)
+		write("WWW",1,1);
+	else
+		write("Ops",1,1);*/
  	while(1){
 				
-	 getlogicseq();	
+  getlogicseq();	
 			}
 
-
+ 
  
 
 
@@ -525,9 +529,9 @@ int itoaa(int value,char *ptr)
 void initlcd()
 {
 
- 	TRISC=0b111110;
+ 	TRISC=0b111000;
 
-	TRISLCD=0x00;
+	TRISLCD=0b11000000;
 
 	cmd(0x38); 
 
@@ -676,7 +680,7 @@ if(loopn++<loops)
 void initkeypad()
 { 
  	PORTB = 0;  
-	TRISKEY = 0b11000000;
+	TRISKEY = 0b11010000;
  
 }
  
