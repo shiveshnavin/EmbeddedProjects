@@ -427,43 +427,43 @@
 [u S1136 . 1 `S1129 1 . 1 0 ]
 "10 ../../common/strcat.c
 [v _strcat `(*uc  1 e 1 0 ]
-"82 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev11.c
+"83 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev11.c
 [v _main `(i  1 e 2 0 ]
-"120
+"121
 [v _check `(i  1 e 2 0 ]
-"133
+"134
 [v _init_fun `(v  1 e 0 0 ]
-"144
+"145
 [v _startswitch `(v  1 e 0 0 ]
-"194
+"198
 [v _getlogicseq `(v  1 e 0 0 ]
-"415
+"430
 [v _parselogic `(i  1 e 2 0 ]
-"470
+"485
 [v _delay `(v  1 e 0 0 ]
-"476
+"491
 [v _itoaa `(i  1 e 2 0 ]
-"503
+"518
 [v _initlcd `(v  1 e 0 0 ]
-"521
-[v _clearlcd `(v  1 e 0 0 ]
-"525
-[v _cmd `(v  1 e 0 0 ]
 "536
+[v _clearlcd `(v  1 e 0 0 ]
+"540
+[v _cmd `(v  1 e 0 0 ]
+"552
 [v _dat `(v  1 e 0 0 ]
-"555
+"571
 [v _setLCD `(v  1 e 0 0 ]
-"578
+"594
 [v _write `(v  1 e 0 0 ]
-"599
+"615
 [v _scroll `(v  1 e 0 0 ]
-"653
+"669
 [v _initkeypad `(v  1 e 0 0 ]
-"660
+"676
 [v _scan `(i  1 e 2 0 ]
-"715
+"731
 [v _resetout `(v  1 e 0 0 ]
-"719
+"735
 [v _actrow `(v  1 e 0 0 ]
 "5 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\abdiv.c
 [v ___abdiv `(c  1 e 1 0 ]
@@ -541,24 +541,30 @@
 [v ___tmul `(um  1 e 3 0 ]
 "3 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\wmul.c
 [v ___wmul `(ui  1 e 2 0 ]
-"110 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev11.c
-[v _logic_d1 `[5]uc  1 e 5 0 ]
+"81 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev11.c
+[v _retm `i  1 e 2 0 ]
 "111
-[v _logic_d2 `[5]uc  1 e 5 0 ]
+[v _logic_d1 `[5]uc  1 e 5 0 ]
 "112
-[v _logic_d3 `[5]uc  1 e 5 0 ]
+[v _logic_d2 `[5]uc  1 e 5 0 ]
 "113
-[v _logic_d4 `[5]uc  1 e 5 0 ]
+[v _logic_d3 `[5]uc  1 e 5 0 ]
 "114
-[v _lo `[5]uc  1 e 5 0 ]
+[v _logic_d4 `[5]uc  1 e 5 0 ]
 "115
-[v _plo `[5]uc  1 e 5 0 ]
+[v _lo `[5]uc  1 e 5 0 ]
 "116
-[v _dev `i  1 e 2 0 ]
+[v _plo `[5]uc  1 e 5 0 ]
 "117
+[v _dev `i  1 e 2 0 ]
+"118
 [v _pdev `i  1 e 2 0 ]
-"131
+"132
 [v _done_init `i  1 e 2 0 ]
+"196
+[v _f1 `i  1 e 2 0 ]
+[v _f2 `i  1 e 2 0 ]
+[v _f3 `i  1 e 2 0 ]
 "82 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\pic16f877.h
 [v _INDF `Vuc  1 e 1 @0 ]
 "86
@@ -1197,123 +1203,118 @@
 [v _EECON1bits `VS1136  1 e 1 @396 ]
 "1104
 [v _EECON2 `Vuc  1 e 1 @397 ]
-"82 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev11.c
+"83 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev11.c
 [v _main `(i  1 e 2 0 ]
 {
-"101
+"102
 } 0
-"194
+"198
 [v _getlogicseq `(v  1 e 0 0 ]
 {
-"207
+"211
 [v getlogicseq@str `[32]uc  1 a 32 0 ]
-"202
-[v getlogicseq@snum `[16]uc  1 a 16 34 ]
-"201
-[v getlogicseq@num `i  1 a 2 62 ]
 "206
-[v getlogicseq@ccount `i  1 a 2 60 ]
-"203
-[v getlogicseq@wf `i  1 a 2 58 ]
-"204
-[v getlogicseq@nf `i  1 a 2 56 ]
-"212
-[v getlogicseq@f3 `i  1 a 2 54 ]
-[v getlogicseq@f2 `i  1 a 2 52 ]
-[v getlogicseq@f1 `i  1 a 2 50 ]
+[v getlogicseq@snum `[16]uc  1 a 16 34 ]
 "205
+[v getlogicseq@num `i  1 a 2 56 ]
+"210
+[v getlogicseq@ccount `i  1 a 2 54 ]
+"207
+[v getlogicseq@wf `i  1 a 2 52 ]
+"208
+[v getlogicseq@nf `i  1 a 2 50 ]
+"209
 [v getlogicseq@bf `i  1 a 2 32 ]
-"202
-[v getlogicseq@F1264 `[16]uc  1 s 16 F1264 ]
-"410
+"206
+[v getlogicseq@F1268 `[16]uc  1 s 16 F1268 ]
+"425
 } 0
-"144
+"145
 [v _startswitch `(v  1 e 0 0 ]
 {
-"190
+"193
 } 0
-"599
+"615
 [v _scroll `(v  1 e 0 0 ]
 {
-[v scroll@str `*.cuc  1 a 1 wreg ]
+"634
+[v scroll@endat `i  1 a 2 53 ]
+"633
+[v scroll@startat `i  1 a 2 51 ]
+"619
+[v scroll@i `i  1 a 2 59 ]
+"620
+[v scroll@len `i  1 a 2 57 ]
 "618
-[v scroll@endat `i  1 a 2 51 ]
-"617
-[v scroll@startat `i  1 a 2 49 ]
-"603
-[v scroll@i `i  1 a 2 58 ]
-"604
-[v scroll@len `i  1 a 2 56 ]
-"602
-[v scroll@loopn `i  1 a 2 53 ]
-"606
-[v scroll@en `i  1 a 2 47 ]
-"605
-[v scroll@st `i  1 a 2 45 ]
-"599
-[v scroll@str `*.cuc  1 a 1 wreg ]
-[v scroll@loops `i  1 p 2 40 ]
-"646
+[v scroll@loopn `i  1 a 2 55 ]
+"622
+[v scroll@en `i  1 a 2 49 ]
+"621
+[v scroll@st `i  1 a 2 47 ]
+"615
+[v scroll@str `*.duc  1 p 2 40 ]
+[v scroll@loops `i  1 p 2 42 ]
+"662
 } 0
-"133
+"134
 [v _init_fun `(v  1 e 0 0 ]
 {
-"142
+"143
 } 0
-"578
+"594
 [v _write `(v  1 e 0 0 ]
 {
-"587
+"603
 [v write@i `i  1 a 2 12 ]
-"578
-[v write@str `*.muc  1 p 2 34 ]
+"594
+[v write@str `*uc  1 p 2 34 ]
 [v write@line `i  1 p 2 36 ]
 [v write@erase `i  1 p 2 38 ]
-"595
+"611
 } 0
-"521
+"536
 [v _clearlcd `(v  1 e 0 0 ]
 {
-"523
+"538
 } 0
-"660
+"676
 [v _scan `(i  1 e 2 0 ]
 {
-"711
+"727
 } 0
-"503
+"518
 [v _initlcd `(v  1 e 0 0 ]
 {
-"519
+"534
 } 0
-"719
+"735
 [v _actrow `(v  1 e 0 0 ]
 {
 [v actrow@n `i  1 p 2 2 ]
-"741
+"757
 } 0
-"536
+"552
 [v _dat `(v  1 e 0 0 ]
 {
 [v dat@Command `ui  1 p 2 8 ]
-"553
+"569
 } 0
-"525
+"540
 [v _cmd `(v  1 e 0 0 ]
 {
 [v cmd@Command `ui  1 p 2 8 ]
-"533
+"549
 } 0
-"476
+"491
 [v _itoaa `(i  1 e 2 0 ]
 {
-"477
+"492
 [v itoaa@temp `i  1 a 2 2 ]
 [v itoaa@count `i  1 a 2 0 ]
-"476
+"491
 [v itoaa@value `i  1 p 2 9 ]
 [v itoaa@ptr `*.0uc  1 p 1 11 ]
-"500
+"515
 } 0
 "5 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\awmod.c
 [v ___awmod `(i  1 e 2 0 ]
@@ -1349,40 +1350,39 @@
 [v ___wmul@multiplicand `ui  1 p 2 2 ]
 "13
 } 0
-"715 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev11.c
+"731 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev11.c
 [v _resetout `(v  1 e 0 0 ]
 {
-"717
+"733
 } 0
-"555
+"571
 [v _setLCD `(v  1 e 0 0 ]
 {
-"557
+"573
 [v setLCD@vbool `[16]i  1 a 32 0 ]
-"558
+"574
 [v setLCD@i `i  1 a 2 32 ]
-"555
+"571
 [v setLCD@number `i  1 p 2 0 ]
-"556
+"572
 [v setLCD@size `DCi  1 s 2 size ]
-"576
-} 0
-"470
-[v _delay `(v  1 e 0 0 ]
-{
-[v delay@x `ui  1 p 2 0 ]
-"472
+"592
 } 0
 "10 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\strcat.c
 [v _strcat `(*uc  1 e 1 0 ]
 {
-[v strcat@to `*.0uc  1 a 1 wreg ]
 "15
-[v strcat@cp `*.0uc  1 a 1 3 ]
+[v strcat@cp `*uc  1 a 2 6 ]
 "10
-[v strcat@to `*.0uc  1 a 1 wreg ]
-[v strcat@from `*.0DCuc  1 p 1 0 ]
+[v strcat@to `*uc  1 p 2 0 ]
+[v strcat@from `*.0DCuc  1 p 1 2 ]
 "24
+} 0
+"485 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev11.c
+[v _delay `(v  1 e 0 0 ]
+{
+[v delay@x `ui  1 p 2 0 ]
+"487
 } 0
 "34 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\strcmp.c
 [v _strcmp `(i  1 e 2 0 ]
@@ -1398,27 +1398,26 @@
 "10 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\sources\strcpy.c
 [v _strcpy `(*uc  1 e 1 0 ]
 {
-[v strcpy@to `*.0uc  1 a 1 wreg ]
 "15
-[v strcpy@cp `*.0uc  1 a 1 6 ]
+[v strcpy@cp `*uc  1 a 2 9 ]
 "10
-[v strcpy@to `*.0uc  1 a 1 wreg ]
-[v strcpy@from `*.mDCuc  1 p 2 0 ]
+[v strcpy@to `*uc  1 p 2 0 ]
+[v strcpy@from `*.mDCuc  1 p 2 2 ]
 "22
 } 0
-"120 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev11.c
+"121 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev11.c
 [v _check `(i  1 e 2 0 ]
 {
 [v check@input `*.0uc  1 a 1 wreg ]
-"122
-[v check@i `i  1 a 2 4 ]
-"120
+"123
+[v check@i `i  1 a 2 6 ]
+"121
 [v check@input `*.0uc  1 a 1 wreg ]
-[v check@logic `*.0uc  1 p 1 0 ]
-"130
+[v check@logic `*uc  1 p 2 0 ]
+"131
 } 0
-"653
+"669
 [v _initkeypad `(v  1 e 0 0 ]
 {
-"657
+"673
 } 0

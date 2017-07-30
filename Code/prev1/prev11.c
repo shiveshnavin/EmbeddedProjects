@@ -38,7 +38,7 @@ int itoaa(int value,char *ptr);
 
 #define SR0 RC4
 #define SR1 RC5
-#define SR2 RC6
+#define SR2 RC1
 #define SR3 RC7
 
 #define DV0 RA0
@@ -57,7 +57,7 @@ int itoaa(int value,char *ptr);
 #define LCD PORTD
 
 #define RS RC0
-#define EN RC1
+#define EN RB5
 
 #define LD0 RD0
 #define LD1 RD1
@@ -78,24 +78,25 @@ void clearlcd();
 
 /* ****** *****        MAIN    **************       MAIN        *****************       MAIN        *****  */
 
+int retm=0;
 int  main()
 { 
 
 
-
+	
+	TRISKEY = 0b00001111;
  
 	initlcd();	
 	initkeypad();
  	
  
-
  	while(1){
 			
 	 	getlogicseq();	
 			}
 
 
-
+ 
 
 
 }
@@ -156,12 +157,14 @@ void startswitch()
   
  
    pdev=dev;	
-   dev=0b0000;
-
-		if(strcmp(lo,plo)!=0&&strcmp(lo,"000")!=0)
+   dev=0b0000;	
+	write("Press 2 to REPRG",2,0);
+	//if(strcmp(lo,"000")!=0)
+		if(strcmp(lo,plo)!=0)
 			{
 	 
 		 	write(lo,1,1);
+		
 			 
 
 				if(check(lo,logic_d1))
@@ -190,10 +193,11 @@ void startswitch()
 }
 
 
+int f1=0, f2=0, f3=0;
 void getlogicseq()
 {
 
-
+		
 	    scroll("WELCOME ! TO PROGRAMABLE HOME AUTMATN",0);
 		
 		 
@@ -209,10 +213,15 @@ void getlogicseq()
 
 	write("1.SWT  2.REPRG",1,1);
 	write("3.RESET",2,0);
-	int f1=0, f2=0, f3=0;
 	while(1)
 		{	
-			
+				if(retm==1)
+					{
+						
+						retm=0;
+						f1=0; f2=0; f3=0;
+						return;
+					}
 		  num=scan();
 			if(num==1)
 			{
@@ -231,19 +240,25 @@ void getlogicseq()
 			     f1=0;
 				 f2=0;
 				 f3=1;
+				 retm=1;  	
 			}
 			
-	if(f1)
+	if(f1){ 
 		startswitch();
-	else if(f2)
+	}
+	else if(f2){	f1=0; f2=0; f3=0;
 		goto START_SEQ;
-	else if(f3)
-		return;
-
+	}
+	else if(f3){	f1=0; f2=0; f3=0;
+		retm=1;
+	 
+}
 		}
 
 
 START_SEQ:
+write("Press 2. - Skip for Device",1,1);
+delay(5000);
 //////////////////////DEVICE1
 		wf=0;ccount=0;
 	    strcpy(str,"Enter Logic DEV1:  "); 
@@ -410,7 +425,7 @@ START_SEQ:
 }
 
 
-/*   utils [   **************************************************** */
+/*   ***********************   utils [   **************************************************** */
 int parselogic(char * log)
 {
 	int dat=0b0000;
@@ -498,11 +513,11 @@ int itoaa(int value,char *ptr)
         }
         return count;
      } 
-/*       LCD [   **************************************************** */
+/*   *****************************    LCD [   **************************************************** */
 void initlcd()
 {
 
- 	TRISC=0b11111100;
+ 	TRISC=0b111110;
 
 	TRISLCD=0x00;
 
@@ -514,15 +529,16 @@ void initlcd()
  
 	cmd(0x80);
 
- 	cmd(0x0f);
+ 	//cmd(0x0f);
 
 }
 void clearlcd()
 {
-cmd(0x01);
+	cmd(0x01);
 }
 void cmd(unsigned int Command)
 {
+	
 	setLCD(Command);
 	RS=0;
 	EN=1; 
