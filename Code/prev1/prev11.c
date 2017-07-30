@@ -45,17 +45,15 @@ int itoaa(int value,char *ptr);
 
 /******SESORS AND DEVICES******/
 
-#define SR0 RC3
-#define SR1 RC4
-#define SR2 RC5
+#define SR0 RA0
+#define SR1 RA1
+#define SR2 RA2
 #define SR3 RC7
 
-#define DV0 RA0
-#define DV1 RA1
-#define DV2 RA2
-#define DV3 RA3
-#define DPORT PORTA
-#define TRISDP TRISA
+#define DV0 RC4
+#define DV1 RC5
+#define DV2 RC6
+#define DV3 RA3 
  
 
 /* LCD [ *********** */
@@ -66,7 +64,7 @@ int itoaa(int value,char *ptr);
 #define LCD PORTD
 
 #define RS RC0
-#define EN RB5
+#define EN RC3
 
 #define LD0 RD0
 #define LD1 RD1
@@ -101,10 +99,15 @@ int  main()
  	if(scan()==0)
 		write("WWW",1,1);
 	else
-		write("Ops",1,1);*/
+		write("Ops",1,1);
+
+	if(RA0==1)
+		write("AA",1,1);
+	else
+		write("BB",1,1); */
  	while(1){
-				
-  getlogicseq();	
+	 
+  getlogicseq();
 			}
 
  
@@ -147,8 +150,8 @@ void init_fun()
 	if(done_init==0)
 		{
 					
-			TRISA=0b110000;
-			DPORT=0x0;
+			TRISA=0x0F;
+			ANSEL=0x0;
 			done_init=1;
 		    write("Sensing...",1,1);
 		}
@@ -198,7 +201,9 @@ void startswitch()
  
 					
 					
-				DPORT=dev;
+			 DV0=dev&0b0001;
+			 DV1=(dev>>1)&0b0001;
+			 DV2=(dev>>2)&0b0001;
 			}
    return;
 	 
@@ -529,7 +534,7 @@ int itoaa(int value,char *ptr)
 void initlcd()
 {
 
- 	TRISC=0b111000;
+ 	TRISC=0b0000000;
 
 	TRISLCD=0b11000000;
 
