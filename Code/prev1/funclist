@@ -1,25 +1,12 @@
-_clearlcd: CODE, 2906 0 10
-___awdiv: CODE, 3769 0 116
-_actrow: CODE, 3352 0 62
-_scan: CODE, 243 0 232
-_strcpy: CODE, 3189 0 50
-_delay: CODE, 2948 0 20
-_startswitch: CODE, 17 0 226
-_dat: CODE, 3030 0 37
-___awmod: CODE, 3667 0 102
-_main: CODE, 2968 0 25
-_getlogicseq: CODE, 1056 0 992
-_initkeypad: CODE, 2890 0 8
-_initlcd: CODE, 3147 0 42
-_strcmp: CODE, 3295 0 57
-_itoaa: CODE, 475 0 235
-_scroll: CODE, 3885 0 211
-_check: CODE, 3482 0 85
-_write: CODE, 3567 0 100
-_resetout: CODE, 2883 0 7
-_cmd: CODE, 2993 0 37
-_strcat: CODE, 3239 0 56
-___wmul: CODE, 3105 0 42
-_setLCD: CODE, 710 0 346
-_init_fun: CODE, 3067 0 38
-Total: 3136
+_clearlcd: CODE, 1155 0 10
+_delay: CODE, 1192 0 20
+_dat: CODE, 1262 0 37
+_main: CODE, 1564 0 138
+_initkeypad: CODE, 1139 0 8
+_initlcd: CODE, 1375 0 42
+_write: CODE, 1464 0 100
+_cmd: CODE, 1299 0 37
+_read_eep: CODE, 1232 0 30
+_write_eep: CODE, 1336 0 39
+_setLCD: CODE, 1702 0 346
+Total: 807

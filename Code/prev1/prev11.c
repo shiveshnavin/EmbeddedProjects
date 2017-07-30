@@ -9,6 +9,14 @@
 void getlogicseq();
 void startswitch();
 
+/******EEPROM********/
+
+
+const char adr[]={0x00,0x04,0x08,0x0C,0x0F};
+char * read_log(int devno);
+char read_eep(unsigned char a);
+void write_log(int devno,char * logic);
+void write_eep(unsigned char a,unsigned char d);
 
 /****KEYPAD  ******/
 #define TRISKEY TRISB
@@ -91,8 +99,8 @@ int  main()
  	
  
  	while(1){
-			
-	 	getlogicseq();	
+				
+	 getlogicseq();	
 			}
 
 
@@ -756,4 +764,58 @@ void actrow(int n)
 
 }
  
-/*******************************/
+/***************     EEPROM           ****************/
+
+char * read_log(int devno)
+{
+	char logic[]="";
+	
+	
+	return logic;
+}
+
+char read_eep(unsigned char a)
+{
+	
+	char d;
+	EEPGD=0;
+	EEADR=a;
+	WREN=0;
+	RD=1;
+	while(RD==1)
+		d=EEDAT;
+	
+	return d;
+
+}
+
+
+void write_log(int devno,char * logic)
+{
+	
+	
+	
+	
+
+}
+void write_eep(unsigned char a,unsigned char d)
+{
+
+	EEPGD=0;
+	EEADR=a;
+	EEDAT=d;
+
+	WREN=1;
+	WRERR=0; 
+	//EECON1=0b00000100;
+
+	EECON2=0x55;
+	EECON2=0xAA;
+	//EECON1=0b00000110;
+	WR=1;
+	while(WR==1)
+		WREN=0;
+
+	if(WRERR==1)
+		write_eep(a,d);
+}
