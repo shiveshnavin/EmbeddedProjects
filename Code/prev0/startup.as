@@ -7,7 +7,7 @@
 	;
 	; Compiler options:
 	;
-	; -oprev0.cof -mprev0.map --summary=default --output=default lcd1.p1 \
+	; -oprev0.cof -mprev0.map --summary=default --output=default prev04.p1 \
 	; --chip=16F877 -P --runtime=default --opt=default -D__DEBUG=1 -g \
 	; --asmlist --errformat=Error   [%n] %f; %l.%c %s \
 	; --msgformat=Advisory[%n] %s --warnformat=Warning [%n] %f; %l.%c %s
