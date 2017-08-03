@@ -5205,15 +5205,15 @@ l3542:
 	line	572
 	
 l3544:	
-;prev11.c: 572: RC0=1;
+;prev11.c: 572: RD5=1;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bsf	(56/8),(56)&7
+	bsf	(69/8),(69)&7
 	line	574
 	
 l3546:	
-;prev11.c: 574: RC3=1;
-	bsf	(59/8),(59)&7
+;prev11.c: 574: RD4=1;
+	bsf	(68/8),(68)&7
 	line	576
 	
 l3548:	
@@ -5226,10 +5226,10 @@ l3548:
 	line	578
 	
 l3550:	
-;prev11.c: 578: RC3=0;
+;prev11.c: 578: RD4=0;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bcf	(59/8),(59)&7
+	bcf	(68/8),(68)&7
 	line	580
 	
 l3552:	
@@ -5311,15 +5311,15 @@ l3530:
 	line	560
 	
 l3532:	
-;prev11.c: 560: RC0=0;
+;prev11.c: 560: RD5=0;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bcf	(56/8),(56)&7
+	bcf	(69/8),(69)&7
 	line	561
 	
 l3534:	
-;prev11.c: 561: RC3=1;
-	bsf	(59/8),(59)&7
+;prev11.c: 561: RD4=1;
+	bsf	(68/8),(68)&7
 	line	562
 	
 l3536:	
@@ -5332,10 +5332,10 @@ l3536:
 	line	563
 	
 l3538:	
-;prev11.c: 563: RC3=0;
+;prev11.c: 563: RD4=0;
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bcf	(59/8),(59)&7
+	bcf	(68/8),(68)&7
 	line	564
 	
 l3540:	
@@ -6661,7 +6661,7 @@ l1235:
 	
 l3388:	
 ;prev11.c: 596: }
-;prev11.c: 598: RD0=vbool[size-1];
+;prev11.c: 598: RD3=vbool[size-1];
 	movlw	low(setLCD@size|8000h)
 	movwf	fsr0
 	movlw	high(setLCD@size|8000h)
@@ -6687,15 +6687,15 @@ l3388:
 u3751:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bsf	(64/8),(64)&7
+	bsf	(67/8),(67)&7
 	goto	u3764
 u3750:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bcf	(64/8),(64)&7
+	bcf	(67/8),(67)&7
 u3764:
 	line	599
-;prev11.c: 599: RD1=vbool[size-2];
+;prev11.c: 599: RD2=vbool[size-2];
 	movlw	low(setLCD@size|8000h)
 	movwf	fsr0
 	movlw	high(setLCD@size|8000h)
@@ -6719,15 +6719,15 @@ u3764:
 u3771:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bsf	(65/8),(65)&7
+	bsf	(66/8),(66)&7
 	goto	u3784
 u3770:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bcf	(65/8),(65)&7
+	bcf	(66/8),(66)&7
 u3784:
 	line	600
-;prev11.c: 600: RD2=vbool[size-3];
+;prev11.c: 600: RD1=vbool[size-3];
 	movlw	low(setLCD@size|8000h)
 	movwf	fsr0
 	movlw	high(setLCD@size|8000h)
@@ -6751,15 +6751,15 @@ u3784:
 u3791:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bsf	(66/8),(66)&7
+	bsf	(65/8),(65)&7
 	goto	u3804
 u3790:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bcf	(66/8),(66)&7
+	bcf	(65/8),(65)&7
 u3804:
 	line	601
-;prev11.c: 601: RD3=vbool[size-4];
+;prev11.c: 601: RD0=vbool[size-4];
 	movlw	low(setLCD@size|8000h)
 	movwf	fsr0
 	movlw	high(setLCD@size|8000h)
@@ -6783,15 +6783,15 @@ u3804:
 u3811:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bsf	(67/8),(67)&7
+	bsf	(64/8),(64)&7
 	goto	u3824
 u3810:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bcf	(67/8),(67)&7
+	bcf	(64/8),(64)&7
 u3824:
 	line	602
-;prev11.c: 602: RD4=vbool[size-5];
+;prev11.c: 602: RC3=vbool[size-5];
 	movlw	low(setLCD@size|8000h)
 	movwf	fsr0
 	movlw	high(setLCD@size|8000h)
@@ -6815,15 +6815,15 @@ u3824:
 u3831:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bsf	(68/8),(68)&7
+	bsf	(59/8),(59)&7
 	goto	u3844
 u3830:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bcf	(68/8),(68)&7
+	bcf	(59/8),(59)&7
 u3844:
 	line	603
-;prev11.c: 603: RD5=vbool[size-6];
+;prev11.c: 603: RC2=vbool[size-6];
 	movlw	low(setLCD@size|8000h)
 	movwf	fsr0
 	movlw	high(setLCD@size|8000h)
@@ -6847,12 +6847,12 @@ u3844:
 u3851:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bsf	(69/8),(69)&7
+	bsf	(58/8),(58)&7
 	goto	u3864
 u3850:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bcf	(69/8),(69)&7
+	bcf	(58/8),(58)&7
 u3864:
 	line	604
 ;prev11.c: 604: RC1=vbool[size-7];
@@ -6887,7 +6887,7 @@ u3870:
 	bcf	(57/8),(57)&7
 u3884:
 	line	605
-;prev11.c: 605: RC2=vbool[size-8];
+;prev11.c: 605: RC0=vbool[size-8];
 	movlw	low(setLCD@size|8000h)
 	movwf	fsr0
 	movlw	high(setLCD@size|8000h)
@@ -6911,12 +6911,12 @@ u3884:
 u3891:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bsf	(58/8),(58)&7
+	bsf	(56/8),(56)&7
 	goto	u3904
 u3890:
 	bcf	status, 5	;RP0=0, select bank0
 	bcf	status, 6	;RP1=0, select bank0
-	bcf	(58/8),(58)&7
+	bcf	(56/8),(56)&7
 u3904:
 	line	609
 	

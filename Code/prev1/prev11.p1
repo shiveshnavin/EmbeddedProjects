@@ -3922,18 +3922,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;prev11.c: 559: setLCD(Command);
 "559
 [e ( _setLCD (1 -> _Command `i ]
-[; ;prev11.c: 560: RC0=0;
+[; ;prev11.c: 560: RD5=0;
 "560
-[e = _RC0 -> -> 0 `i `b ]
-[; ;prev11.c: 561: RC3=1;
+[e = _RD5 -> -> 0 `i `b ]
+[; ;prev11.c: 561: RD4=1;
 "561
-[e = _RC3 -> -> 1 `i `b ]
+[e = _RD4 -> -> 1 `i `b ]
 [; ;prev11.c: 562: delay(20);
 "562
 [e ( _delay (1 -> -> 20 `i `ui ]
-[; ;prev11.c: 563: RC3=0;
+[; ;prev11.c: 563: RD4=0;
 "563
-[e = _RC3 -> -> 0 `i `b ]
+[e = _RD4 -> -> 0 `i `b ]
 [; ;prev11.c: 564: delay(20);
 "564
 [e ( _delay (1 -> -> 20 `i `ui ]
@@ -3952,18 +3952,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;prev11.c: 570: setLCD(Command);
 "570
 [e ( _setLCD (1 -> _Command `i ]
-[; ;prev11.c: 572: RC0=1;
+[; ;prev11.c: 572: RD5=1;
 "572
-[e = _RC0 -> -> 1 `i `b ]
-[; ;prev11.c: 574: RC3=1;
+[e = _RD5 -> -> 1 `i `b ]
+[; ;prev11.c: 574: RD4=1;
 "574
-[e = _RC3 -> -> 1 `i `b ]
+[e = _RD4 -> -> 1 `i `b ]
 [; ;prev11.c: 576: delay(20);
 "576
 [e ( _delay (1 -> -> 20 `i `ui ]
-[; ;prev11.c: 578: RC3=0;
+[; ;prev11.c: 578: RD4=0;
 "578
-[e = _RC3 -> -> 0 `i `b ]
+[e = _RD4 -> -> 0 `i `b ]
 [; ;prev11.c: 580: delay(20);
 "580
 [e ( _delay (1 -> -> 20 `i `ui ]
@@ -4013,30 +4013,30 @@ Version 3.2 HI-TECH Software Intermediate Code
 "596
 }
 [; ;prev11.c: 596: }
-[; ;prev11.c: 598: RD0=vbool[size-1];
+[; ;prev11.c: 598: RD3=vbool[size-1];
 "598
-[e = _RD0 -> *U + &U _vbool * -> -> - F1885 -> 1 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;prev11.c: 599: RD1=vbool[size-2];
+[e = _RD3 -> *U + &U _vbool * -> -> - F1885 -> 1 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;prev11.c: 599: RD2=vbool[size-2];
 "599
-[e = _RD1 -> *U + &U _vbool * -> -> - F1885 -> 2 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;prev11.c: 600: RD2=vbool[size-3];
+[e = _RD2 -> *U + &U _vbool * -> -> - F1885 -> 2 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;prev11.c: 600: RD1=vbool[size-3];
 "600
-[e = _RD2 -> *U + &U _vbool * -> -> - F1885 -> 3 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;prev11.c: 601: RD3=vbool[size-4];
+[e = _RD1 -> *U + &U _vbool * -> -> - F1885 -> 3 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;prev11.c: 601: RD0=vbool[size-4];
 "601
-[e = _RD3 -> *U + &U _vbool * -> -> - F1885 -> 4 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;prev11.c: 602: RD4=vbool[size-5];
+[e = _RD0 -> *U + &U _vbool * -> -> - F1885 -> 4 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;prev11.c: 602: RC3=vbool[size-5];
 "602
-[e = _RD4 -> *U + &U _vbool * -> -> - F1885 -> 5 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;prev11.c: 603: RD5=vbool[size-6];
+[e = _RC3 -> *U + &U _vbool * -> -> - F1885 -> 5 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;prev11.c: 603: RC2=vbool[size-6];
 "603
-[e = _RD5 -> *U + &U _vbool * -> -> - F1885 -> 6 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[e = _RC2 -> *U + &U _vbool * -> -> - F1885 -> 6 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
 [; ;prev11.c: 604: RC1=vbool[size-7];
 "604
 [e = _RC1 -> *U + &U _vbool * -> -> - F1885 -> 7 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
-[; ;prev11.c: 605: RC2=vbool[size-8];
+[; ;prev11.c: 605: RC0=vbool[size-8];
 "605
-[e = _RC2 -> *U + &U _vbool * -> -> - F1885 -> 8 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[e = _RC0 -> *U + &U _vbool * -> -> - F1885 -> 8 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
 [; ;prev11.c: 609: }
 "609
 [e :UE 267 ]

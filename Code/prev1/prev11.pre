@@ -2101,10 +2101,10 @@ void cmd(unsigned int Command)
 {
 
 setLCD(Command);
-RC0=0;
-RC3=1;
+RD5=0;
+RD4=1;
 delay(20);
-RC3=0;
+RD4=0;
 delay(20);
 
 }
@@ -2113,13 +2113,13 @@ void dat(unsigned int Command)
 {
 setLCD(Command);
 
-RC0=1;
+RD5=1;
 
-RC3=1;
+RD4=1;
 
 delay(20);
 
-RC3=0;
+RD4=0;
 
 delay(20);
 
@@ -2136,14 +2136,14 @@ for (i = 0; i <size; i++)
 vbool[i] = number<<i < 0;
 }
 
-RD0=vbool[size-1];
-RD1=vbool[size-2];
-RD2=vbool[size-3];
-RD3=vbool[size-4];
-RD4=vbool[size-5];
-RD5=vbool[size-6];
+RD3=vbool[size-1];
+RD2=vbool[size-2];
+RD1=vbool[size-3];
+RD0=vbool[size-4];
+RC3=vbool[size-5];
+RC2=vbool[size-6];
 RC1=vbool[size-7];
-RC2=vbool[size-8];
+RC0=vbool[size-8];
 
 
 

@@ -63,17 +63,17 @@ int itoaa(int value,char *ptr);
 #define TRISLCD TRISD
 #define LCD PORTD
 
-#define RS RC0
-#define EN RC3
+#define RS RD5
+#define EN RD4
 
-#define LD0 RD0
-#define LD1 RD1
-#define LD2 RD2
-#define LD3 RD3
-#define LD4 RD4
-#define LD5 RD5
+#define LD0 RD3
+#define LD1 RD2
+#define LD2 RD1
+#define LD3 RD0
+#define LD4 RC3
+#define LD5 RC2
 #define LD6 RC1
-#define LD7 RC2
+#define LD7 RC0
 
 void initlcd();
 void cmd(unsigned int Command);

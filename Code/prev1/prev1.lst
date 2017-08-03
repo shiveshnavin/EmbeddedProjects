@@ -1,7 +1,7 @@
 
 
 HI-TECH Software PIC LITE Macro Assembler V9.81 build 7503 
-                                                                                               Tue Aug 01 20:18:50 2017
+                                                                                               Thu Aug 03 17:37:40 2017
 
 HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
      1  0000                     opt subtitle "HI-TECH Software Omniscient Code Generator (Lite mode) build 7503"
@@ -5287,15 +5287,15 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   5205                           	line	572
   5206                           	
   5207  0BAF                     l3544:	
-  5208                           ;prev11.c: 572: RC0=1;
+  5208                           ;prev11.c: 572: RD5=1;
   5209  0BAF  1283               	bcf	status, 5	;RP0=0, select bank0
   5210  0BB0  1303               	bcf	status, 6	;RP1=0, select bank0
-  5211  0BB1  1407               	bsf	(56/8),(56)&7
+  5211  0BB1  1688               	bsf	(69/8),(69)&7
   5212                           	line	574
   5213                           	
   5214  0BB2                     l3546:	
-  5215                           ;prev11.c: 574: RC3=1;
-  5216  0BB2  1587               	bsf	(59/8),(59)&7
+  5215                           ;prev11.c: 574: RD4=1;
+  5216  0BB2  1608               	bsf	(68/8),(68)&7
   5217                           	line	576
   5218                           	
   5219  0BB3                     l3548:	
@@ -5309,10 +5309,10 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   5226                           	line	578
   5227                           	
   5228  0BBC                     l3550:	
-  5229                           ;prev11.c: 578: RC3=0;
+  5229                           ;prev11.c: 578: RD4=0;
   5230  0BBC  1283               	bcf	status, 5	;RP0=0, select bank0
   5231  0BBD  1303               	bcf	status, 6	;RP1=0, select bank0
-  5232  0BBE  1187               	bcf	(59/8),(59)&7
+  5232  0BBE  1208               	bcf	(68/8),(68)&7
   5233                           	line	580
   5234                           	
   5235  0BBF                     l3552:	
@@ -5396,15 +5396,15 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   5311                           	line	560
   5312                           	
   5313  0B8A                     l3532:	
-  5314                           ;prev11.c: 560: RC0=0;
+  5314                           ;prev11.c: 560: RD5=0;
   5315  0B8A  1283               	bcf	status, 5	;RP0=0, select bank0
   5316  0B8B  1303               	bcf	status, 6	;RP1=0, select bank0
-  5317  0B8C  1007               	bcf	(56/8),(56)&7
+  5317  0B8C  1288               	bcf	(69/8),(69)&7
   5318                           	line	561
   5319                           	
   5320  0B8D                     l3534:	
-  5321                           ;prev11.c: 561: RC3=1;
-  5322  0B8D  1587               	bsf	(59/8),(59)&7
+  5321                           ;prev11.c: 561: RD4=1;
+  5322  0B8D  1608               	bsf	(68/8),(68)&7
   5323                           	line	562
   5324                           	
   5325  0B8E                     l3536:	
@@ -5418,10 +5418,10 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   5332                           	line	563
   5333                           	
   5334  0B97                     l3538:	
-  5335                           ;prev11.c: 563: RC3=0;
+  5335                           ;prev11.c: 563: RD4=0;
   5336  0B97  1283               	bcf	status, 5	;RP0=0, select bank0
   5337  0B98  1303               	bcf	status, 6	;RP1=0, select bank0
-  5338  0B99  1187               	bcf	(59/8),(59)&7
+  5338  0B99  1208               	bcf	(68/8),(68)&7
   5339                           	line	564
   5340                           	
   5341  0B9A                     l3540:	
@@ -6756,7 +6756,7 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   6661                           	
   6662  032D                     l3388:	
   6663                           ;prev11.c: 596: }
-  6664                           ;prev11.c: 598: RD0=vbool[size-1];
+  6664                           ;prev11.c: 598: RD3=vbool[size-1];
   6665  032D  3017               	movlw	low(setLCD@size|8000h)
   6666  032E  0084               	movwf	fsr0
   6667  032F  3088               	movlw	high(setLCD@size|8000h)
@@ -6783,15 +6783,15 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   6687  0346                     u3751:
   6688  0346  1283               	bcf	status, 5	;RP0=0, select bank0
   6689  0347  1303               	bcf	status, 6	;RP1=0, select bank0
-  6690  0348  1408               	bsf	(64/8),(64)&7
+  6690  0348  1588               	bsf	(67/8),(67)&7
   6691  0349  2B4D               	goto	u3764
   6692  034A                     u3750:
   6693  034A  1283               	bcf	status, 5	;RP0=0, select bank0
   6694  034B  1303               	bcf	status, 6	;RP1=0, select bank0
-  6695  034C  1008               	bcf	(64/8),(64)&7
+  6695  034C  1188               	bcf	(67/8),(67)&7
   6696  034D                     u3764:
   6697                           	line	599
-  6698                           ;prev11.c: 599: RD1=vbool[size-2];
+  6698                           ;prev11.c: 599: RD2=vbool[size-2];
   6699  034D  3017               	movlw	low(setLCD@size|8000h)
   6700  034E  0084               	movwf	fsr0
   6701  034F  3088               	movlw	high(setLCD@size|8000h)
@@ -6816,15 +6816,15 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   6719  0364                     u3771:
   6720  0364  1283               	bcf	status, 5	;RP0=0, select bank0
   6721  0365  1303               	bcf	status, 6	;RP1=0, select bank0
-  6722  0366  1488               	bsf	(65/8),(65)&7
+  6722  0366  1508               	bsf	(66/8),(66)&7
   6723  0367  2B6B               	goto	u3784
   6724  0368                     u3770:
   6725  0368  1283               	bcf	status, 5	;RP0=0, select bank0
   6726  0369  1303               	bcf	status, 6	;RP1=0, select bank0
-  6727  036A  1088               	bcf	(65/8),(65)&7
+  6727  036A  1108               	bcf	(66/8),(66)&7
   6728  036B                     u3784:
   6729                           	line	600
-  6730                           ;prev11.c: 600: RD2=vbool[size-3];
+  6730                           ;prev11.c: 600: RD1=vbool[size-3];
   6731  036B  3017               	movlw	low(setLCD@size|8000h)
   6732  036C  0084               	movwf	fsr0
   6733  036D  3088               	movlw	high(setLCD@size|8000h)
@@ -6849,15 +6849,15 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   6751  0382                     u3791:
   6752  0382  1283               	bcf	status, 5	;RP0=0, select bank0
   6753  0383  1303               	bcf	status, 6	;RP1=0, select bank0
-  6754  0384  1508               	bsf	(66/8),(66)&7
+  6754  0384  1488               	bsf	(65/8),(65)&7
   6755  0385  2B89               	goto	u3804
   6756  0386                     u3790:
   6757  0386  1283               	bcf	status, 5	;RP0=0, select bank0
   6758  0387  1303               	bcf	status, 6	;RP1=0, select bank0
-  6759  0388  1108               	bcf	(66/8),(66)&7
+  6759  0388  1088               	bcf	(65/8),(65)&7
   6760  0389                     u3804:
   6761                           	line	601
-  6762                           ;prev11.c: 601: RD3=vbool[size-4];
+  6762                           ;prev11.c: 601: RD0=vbool[size-4];
   6763  0389  3017               	movlw	low(setLCD@size|8000h)
   6764  038A  0084               	movwf	fsr0
   6765  038B  3088               	movlw	high(setLCD@size|8000h)
@@ -6882,15 +6882,15 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   6783  03A0                     u3811:
   6784  03A0  1283               	bcf	status, 5	;RP0=0, select bank0
   6785  03A1  1303               	bcf	status, 6	;RP1=0, select bank0
-  6786  03A2  1588               	bsf	(67/8),(67)&7
+  6786  03A2  1408               	bsf	(64/8),(64)&7
   6787  03A3  2BA7               	goto	u3824
   6788  03A4                     u3810:
   6789  03A4  1283               	bcf	status, 5	;RP0=0, select bank0
   6790  03A5  1303               	bcf	status, 6	;RP1=0, select bank0
-  6791  03A6  1188               	bcf	(67/8),(67)&7
+  6791  03A6  1008               	bcf	(64/8),(64)&7
   6792  03A7                     u3824:
   6793                           	line	602
-  6794                           ;prev11.c: 602: RD4=vbool[size-5];
+  6794                           ;prev11.c: 602: RC3=vbool[size-5];
   6795  03A7  3017               	movlw	low(setLCD@size|8000h)
   6796  03A8  0084               	movwf	fsr0
   6797  03A9  3088               	movlw	high(setLCD@size|8000h)
@@ -6915,15 +6915,15 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   6815  03BE                     u3831:
   6816  03BE  1283               	bcf	status, 5	;RP0=0, select bank0
   6817  03BF  1303               	bcf	status, 6	;RP1=0, select bank0
-  6818  03C0  1608               	bsf	(68/8),(68)&7
+  6818  03C0  1587               	bsf	(59/8),(59)&7
   6819  03C1  2BC5               	goto	u3844
   6820  03C2                     u3830:
   6821  03C2  1283               	bcf	status, 5	;RP0=0, select bank0
   6822  03C3  1303               	bcf	status, 6	;RP1=0, select bank0
-  6823  03C4  1208               	bcf	(68/8),(68)&7
+  6823  03C4  1187               	bcf	(59/8),(59)&7
   6824  03C5                     u3844:
   6825                           	line	603
-  6826                           ;prev11.c: 603: RD5=vbool[size-6];
+  6826                           ;prev11.c: 603: RC2=vbool[size-6];
   6827  03C5  3017               	movlw	low(setLCD@size|8000h)
   6828  03C6  0084               	movwf	fsr0
   6829  03C7  3088               	movlw	high(setLCD@size|8000h)
@@ -6948,12 +6948,12 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   6847  03DC                     u3851:
   6848  03DC  1283               	bcf	status, 5	;RP0=0, select bank0
   6849  03DD  1303               	bcf	status, 6	;RP1=0, select bank0
-  6850  03DE  1688               	bsf	(69/8),(69)&7
+  6850  03DE  1507               	bsf	(58/8),(58)&7
   6851  03DF  2BE3               	goto	u3864
   6852  03E0                     u3850:
   6853  03E0  1283               	bcf	status, 5	;RP0=0, select bank0
   6854  03E1  1303               	bcf	status, 6	;RP1=0, select bank0
-  6855  03E2  1288               	bcf	(69/8),(69)&7
+  6855  03E2  1107               	bcf	(58/8),(58)&7
   6856  03E3                     u3864:
   6857                           	line	604
   6858                           ;prev11.c: 604: RC1=vbool[size-7];
@@ -6989,7 +6989,7 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   6887  0400  1087               	bcf	(57/8),(57)&7
   6888  0401                     u3884:
   6889                           	line	605
-  6890                           ;prev11.c: 605: RC2=vbool[size-8];
+  6890                           ;prev11.c: 605: RC0=vbool[size-8];
   6891  0401  3017               	movlw	low(setLCD@size|8000h)
   6892  0402  0084               	movwf	fsr0
   6893  0403  3088               	movlw	high(setLCD@size|8000h)
@@ -7014,12 +7014,12 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
   6911  0418                     u3891:
   6912  0418  1283               	bcf	status, 5	;RP0=0, select bank0
   6913  0419  1303               	bcf	status, 6	;RP1=0, select bank0
-  6914  041A  1507               	bsf	(58/8),(58)&7
+  6914  041A  1407               	bsf	(56/8),(56)&7
   6915  041B  2C1F               	goto	u3904
   6916  041C                     u3890:
   6917  041C  1283               	bcf	status, 5	;RP0=0, select bank0
   6918  041D  1303               	bcf	status, 6	;RP1=0, select bank0
-  6919  041E  1107               	bcf	(58/8),(58)&7
+  6919  041E  1007               	bcf	(56/8),(56)&7
   6920  041F                     u3904:
   6921                           	line	609
   6922                           	
@@ -7808,7 +7808,7 @@ HI-TECH Software Omniscient Code Generator (Lite mode) build 7503
 
 
 HI-TECH Software PICC Macro Assembler V9.81 build 7503 
-Symbol Table                                                                                   Tue Aug 01 20:18:50 2017
+Symbol Table                                                                                   Thu Aug 03 17:37:40 2017
 
                    pc 0002                    _RD 0C60                    _f1 00E4                    _f2 00E6  
                   _f3 00E8                    _WR 0C61          ___awdiv@sign 0076                    _lo 0068  
