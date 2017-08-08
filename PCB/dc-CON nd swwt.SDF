@@ -1,0 +1,41 @@
+ISIS SCHEMATIC DESCRIPTION FORMAT 6.1
+=====================================
+Design:   C:\PIC\PROJECTS\Training_Project\PCB\dc-CON nd swwt.DSN
+Doc. no.: <NONE>
+Revision: <NONE>
+Author:   <NONE>
+Created:  22/07/17
+Modified: 08/05/17
+
+*PROPERTIES,0    
+
+*MODELDEFS,0    
+
+*PARTLIST,2    
+DJ1,_DCJACK,_DCJACK,EID=1,PACKAGE=_DC_CONN
+PB1,_PUSHBUTTON,_PUSHBUTTON,EID=2,PACKAGE=_PUSHBUTTON
+
+*NETLIST,7    
+#00000,1
+DJ1,PS,1
+
+#00001,1
+DJ1,PS,2
+
+#00002,1
+DJ1,PS,3
+
+#00003,1
+PB1,PS,2
+
+#00004,1
+PB1,PS,4
+
+#00005,1
+PB1,PS,1
+
+#00006,1
+PB1,PS,3
+
+*GATES,0    
+
