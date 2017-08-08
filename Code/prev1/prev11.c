@@ -30,10 +30,19 @@ void write_eep(unsigned char a,unsigned char d);
 #define KY6 RB6 //INPUT
 #define KY7 RB7 //INPUT
 
+#define BZ RB5 //OUTPUT
+
 void initkeypad();
 void actrow(int n);
 int scan();
 void resetout();
+void buzz(int val)
+{
+	if(val!=99)
+	    BZ=1;
+	else
+		BZ=0;
+}
  
 
 /*   utils ***** */
@@ -240,6 +249,7 @@ void getlogicseq()
 						return;
 					}
 		  num=scan();
+		  buzz(num);
 			if(num==1)
 			{
 			     f1=1;
@@ -691,6 +701,7 @@ void initkeypad()
  
 int scan()
 {
+	
  	actrow(1) ;
 			if(	KY4==1)
 				return 0;
@@ -742,6 +753,7 @@ int scan()
 
 
 }
+
 
 
 void resetout()

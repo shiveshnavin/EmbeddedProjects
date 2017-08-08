@@ -1665,11 +1665,18 @@ char read_eep(unsigned char a);
 void write_log(int devno,char * logic);
 void write_eep(unsigned char a,unsigned char d);
 
-# 33
+# 35
 void initkeypad();
 void actrow(int n);
 int scan();
 void resetout();
+void buzz(int val)
+{
+if(val!=99)
+RB5=1;
+else
+RB5=0;
+}
 
 
 
@@ -1678,7 +1685,7 @@ int parselogic(char * log);
 void delay(unsigned int);
 int itoaa(int value,char *ptr);
 
-# 78
+# 87
 void initlcd();
 void cmd(unsigned int Command);
 void dat(unsigned int Command);
@@ -1700,16 +1707,16 @@ TRISB = 0b00001111;
 initlcd();
 initkeypad();
 
-# 108
+# 117
 while(1){
 
 getlogicseq();
 }
 
-# 117
+# 126
 }
 
-# 126
+# 135
 char logic_d1[5]="100";
 char logic_d2[5]="010";
 char logic_d3[5]="010";
@@ -1827,6 +1834,7 @@ f1=0; f2=0; f3=0;
 return;
 }
 num=scan();
+buzz(num);
 if(num==1)
 {
 f1=1;
@@ -1982,7 +1990,7 @@ nf=0;
 }
 }
 
-# 442
+# 452
 }
 
 
@@ -2123,7 +2131,7 @@ RD4=0;
 
 delay(20);
 
-# 586
+# 596
 }
 void setLCD(int number)
 {
@@ -2219,7 +2227,7 @@ goto START;
 
 }
 
-# 685
+# 695
 void initkeypad()
 {
 PORTB = 0;
@@ -2229,6 +2237,7 @@ TRISB = 0b11010000;
 
 int scan()
 {
+
 actrow(1) ;
 if( RD6==1)
 return 0;
@@ -2280,6 +2289,7 @@ return 99;
 
 
 }
+
 
 
 void resetout()
@@ -2340,7 +2350,7 @@ return d;
 void write_log(int devno,char * logic)
 {
 
-# 809
+# 821
 }
 void write_eep(unsigned char a,unsigned char d)
 {
