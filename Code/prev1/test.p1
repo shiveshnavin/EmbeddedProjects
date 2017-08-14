@@ -1302,6 +1302,12 @@ Version 3.2 HI-TECH Software Intermediate Code
 "1666 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\pic16f887.h
 [v _EECON2 `Vuc 1 e@397 ]
 [p mainexit ]
+"26 C:\PIC\PROJECTS\Training_Project\Code\prev1\test.c
+[v _cmd `(v 0 ef1`ui ]
+"28 C:\PIC\PROJECTS\Training_Project\Code\prev1\test.c
+[v _setLCD `(v 0 ef1`i ]
+"71 C:\PIC\PROJECTS\Training_Project\Code\prev1\test.c
+[v _delay `(i 0 ef ]
 [; ;pic16f887.h: 118: volatile unsigned char INDF @ 0x000;
 [; ;pic16f887.h: 122: volatile unsigned char TMR0 @ 0x001;
 [; ;pic16f887.h: 126: volatile unsigned char PCL @ 0x002;
@@ -2512,30 +2518,471 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;eeprom_routines.h: 41: extern void eeprom_write(unsigned char addr, unsigned char value);
 [; ;eeprom_routines.h: 42: extern unsigned char eeprom_read(unsigned char addr);
 [; ;pic.h: 148: extern void _delay(unsigned long);
-"3 C:\PIC\PROJECTS\Training_Project\Code\prev1\test.c
+[; ;string.h: 4: typedef int ptrdiff_t;
+[; ;string.h: 5: typedef unsigned size_t;
+[; ;string.h: 6: typedef unsigned short wchar_t;
+[; ;string.h: 9: extern int errno;
+[; ;string.h: 22: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 23: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 24: extern void * memset(void *, int, size_t);
+[; ;string.h: 35: extern char * strcat(char *, const char *);
+[; ;string.h: 36: extern char * strcpy(char *, const char *);
+[; ;string.h: 37: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 38: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 39: extern char * strdup(const char *);
+[; ;string.h: 40: extern char * strtok(char *, const char *);
+[; ;string.h: 43: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 44: extern int strcmp(const char *, const char *);
+[; ;string.h: 45: extern int stricmp(const char *, const char *);
+[; ;string.h: 46: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 47: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 48: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 49: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 50: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 51: extern size_t strspn(const char *, const char *);
+[; ;string.h: 52: extern char * strstr(const char *, const char *);
+[; ;string.h: 53: extern char * stristr(const char *, const char *);
+[; ;string.h: 54: extern char * strerror(int);
+[; ;string.h: 55: extern size_t strlen(const char *);
+[; ;string.h: 56: extern char * strchr(const char *, int);
+[; ;string.h: 57: extern char * strichr(const char *, int);
+[; ;string.h: 58: extern char * strrchr(const char *, int);
+[; ;string.h: 59: extern char * strrichr(const char *, int);
+[; ;stdlib.h: 27: typedef struct {
+[; ;stdlib.h: 28: int rem;
+[; ;stdlib.h: 29: int quot;
+[; ;stdlib.h: 30: } div_t;
+[; ;stdlib.h: 31: typedef struct {
+[; ;stdlib.h: 32: unsigned rem;
+[; ;stdlib.h: 33: unsigned quot;
+[; ;stdlib.h: 34: } udiv_t;
+[; ;stdlib.h: 35: typedef struct {
+[; ;stdlib.h: 36: long quot;
+[; ;stdlib.h: 37: long rem;
+[; ;stdlib.h: 38: } ldiv_t;
+[; ;stdlib.h: 39: typedef struct {
+[; ;stdlib.h: 40: unsigned long quot;
+[; ;stdlib.h: 41: unsigned long rem;
+[; ;stdlib.h: 42: } uldiv_t;
+[; ;stdlib.h: 65: extern double atof(const char *);
+[; ;stdlib.h: 66: extern double strtod(const char *, const char **);
+[; ;stdlib.h: 67: extern int atoi(const char *);
+[; ;stdlib.h: 68: extern unsigned xtoi(const char *);
+[; ;stdlib.h: 69: extern long atol(const char *);
+[; ;stdlib.h: 70: extern long strtol(const char *, char **, int);
+[; ;stdlib.h: 72: extern int rand(void);
+[; ;stdlib.h: 73: extern void srand(unsigned int);
+[; ;stdlib.h: 74: extern void * calloc(size_t, size_t);
+[; ;stdlib.h: 75: extern div_t div(int numer, int denom);
+[; ;stdlib.h: 76: extern udiv_t udiv(unsigned numer, unsigned denom);
+[; ;stdlib.h: 77: extern ldiv_t ldiv(long numer, long denom);
+[; ;stdlib.h: 78: extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+[; ;stdlib.h: 79: extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 80: extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+[; ;stdlib.h: 81: extern unsigned int _rotl(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 82: extern unsigned int _rotr(unsigned int value, unsigned int shift);
+[; ;stdlib.h: 106: extern void * malloc(size_t);
+[; ;stdlib.h: 107: extern void free(void *);
+[; ;stdlib.h: 108: extern void * realloc(void *, size_t);
+[; ;stdlib.h: 122: extern void abort(void);
+[; ;stdlib.h: 123: extern void exit(int);
+[; ;stdlib.h: 124: extern int atexit(void (*)(void));
+[; ;stdlib.h: 125: extern char * getenv(const char *);
+[; ;stdlib.h: 126: extern char ** environ;
+[; ;stdlib.h: 127: extern int system(char *);
+[; ;stdlib.h: 128: extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+[; ;stdlib.h: 129: extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+[; ;stdlib.h: 130: extern int abs(int);
+[; ;stdlib.h: 131: extern long labs(long);
+[; ;stdlib.h: 145: extern char * itoa(char * buf, int val, int base);
+[; ;stdlib.h: 146: extern char * utoa(char * buf, unsigned val, int base);
+[; ;stdlib.h: 147: extern char * ltoa(char * buf, long val, int base);
+[; ;stdlib.h: 148: extern char * ultoa(char * buf, unsigned long val, int base);
+[; ;test.c: 25: void initlcd();
+[; ;test.c: 26: void cmd(unsigned int Command);
+[; ;test.c: 27: void dat(unsigned int Command);
+[; ;test.c: 28: void setLCD(int number);
+[; ;test.c: 29: void write(char * str,int line,int erase);
+[; ;test.c: 30: void scroll(char * str,int loops);
+[; ;test.c: 31: void clearlcd();
+"34 C:\PIC\PROJECTS\Training_Project\Code\prev1\test.c
 [v _main `(v 1 ef ]
 {
-[; ;test.c: 2: void main()
-[; ;test.c: 3: {
+[; ;test.c: 33: void main()
+[; ;test.c: 34: {
 [e :U _main ]
 [f ]
-[; ;test.c: 5: TRISC=0b00011111;
-"5
-[e = _TRISC -> -> 31 `i `uc ]
-[; ;test.c: 7: PORTC=0x00;
-"7
-[e = _PORTC -> -> 0 `i `uc ]
-[; ;test.c: 8: while(1)
-"8
-[e :U 143 ]
-[; ;test.c: 9: RC6=1;
-"9
-[e = _RC6 -> -> 1 `i `b ]
-[e :U 142 ]
-"8
-[e $U 143  ]
-[e :U 144 ]
-[; ;test.c: 11: }
-"11
-[e :UE 141 ]
+[; ;test.c: 35: TRISB=0x00;
+"35
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;test.c: 36: PORTB=0xFF;
+"36
+[e = _PORTB -> -> 255 `i `uc ]
+[; ;test.c: 38: }
+"38
+[e :UE 145 ]
+}
+"44
+[v _initlcd `(v 1 ef ]
+{
+[; ;test.c: 43: void initlcd()
+[; ;test.c: 44: {
+[e :U _initlcd ]
+[f ]
+[; ;test.c: 46: TRISC=0b0000000;
+"46
+[e = _TRISC -> -> 0 `i `uc ]
+[; ;test.c: 48: TRISD=0b11000000;
+"48
+[e = _TRISD -> -> 192 `i `uc ]
+[; ;test.c: 50: cmd(0x38);
+"50
+[e ( _cmd (1 -> -> 56 `i `ui ]
+[; ;test.c: 52: cmd(0x0C);
+"52
+[e ( _cmd (1 -> -> 12 `i `ui ]
+[; ;test.c: 54: cmd(0x01);
+"54
+[e ( _cmd (1 -> -> 1 `i `ui ]
+[; ;test.c: 56: cmd(0x80);
+"56
+[e ( _cmd (1 -> -> 128 `i `ui ]
+[; ;test.c: 60: }
+"60
+[e :UE 146 ]
+}
+"62
+[v _clearlcd `(v 1 ef ]
+{
+[; ;test.c: 61: void clearlcd()
+[; ;test.c: 62: {
+[e :U _clearlcd ]
+[f ]
+[; ;test.c: 63: cmd(0x01);
+"63
+[e ( _cmd (1 -> -> 1 `i `ui ]
+[; ;test.c: 64: }
+"64
+[e :UE 147 ]
+}
+"66
+[v _cmd `(v 1 ef1`ui ]
+{
+[; ;test.c: 65: void cmd(unsigned int Command)
+[; ;test.c: 66: {
+[e :U _cmd ]
+[v _Command `ui 1 r1 ]
+[f ]
+[; ;test.c: 68: setLCD(Command);
+"68
+[e ( _setLCD (1 -> _Command `i ]
+[; ;test.c: 69: RD5=0;
+"69
+[e = _RD5 -> -> 0 `i `b ]
+[; ;test.c: 70: RD4=1;
+"70
+[e = _RD4 -> -> 1 `i `b ]
+[; ;test.c: 71: delay(20);
+"71
+[e ( _delay -> 20 `i ]
+[; ;test.c: 72: RD4=0;
+"72
+[e = _RD4 -> -> 0 `i `b ]
+[; ;test.c: 73: delay(20);
+"73
+[e ( _delay -> 20 `i ]
+[; ;test.c: 75: }
+"75
+[e :UE 148 ]
+}
+"78
+[v _dat `(v 1 ef1`ui ]
+{
+[; ;test.c: 77: void dat(unsigned int Command)
+[; ;test.c: 78: {
+[e :U _dat ]
+[v _Command `ui 1 r1 ]
+[f ]
+[; ;test.c: 79: setLCD(Command);
+"79
+[e ( _setLCD (1 -> _Command `i ]
+[; ;test.c: 81: RD5=1;
+"81
+[e = _RD5 -> -> 1 `i `b ]
+[; ;test.c: 83: RD4=1;
+"83
+[e = _RD4 -> -> 1 `i `b ]
+[; ;test.c: 85: delay(20);
+"85
+[e ( _delay -> 20 `i ]
+[; ;test.c: 87: RD4=0;
+"87
+[e = _RD4 -> -> 0 `i `b ]
+[; ;test.c: 89: delay(20);
+"89
+[e ( _delay -> 20 `i ]
+[; ;test.c: 95: }
+"95
+[e :UE 149 ]
+}
+"97
+[v _setLCD `(v 1 ef1`i ]
+{
+[; ;test.c: 96: void setLCD(int number)
+[; ;test.c: 97: {
+[e :U _setLCD ]
+[v _number `i 1 r1 ]
+[f ]
+"98
+[v F1825 `Ci 1 s size ]
+[i F1825
+-> * -> -> 8 `i `ui -> # `i `ui `i
+]
+"99
+[v _vbool `i * -> -> 8 `i `ui -> # `i `ui a ]
+"100
+[v _i `i 1 a ]
+[; ;test.c: 98: const int size=8*sizeof(int);
+[; ;test.c: 99: int vbool[8*sizeof(int)];
+[; ;test.c: 100: int i;;
+[; ;test.c: 102: for (i = 0; i <size; i++)
+"102
+{
+[e = _i -> 0 `i ]
+[e $ < _i F1825 151  ]
+[e $U 152  ]
+"103
+[e :U 151 ]
+[; ;test.c: 103: {
+{
+[; ;test.c: 104: vbool[i] = number<<i < 0;
+"104
+[e = *U + &U _vbool * -> -> _i `ui `ux -> -> # *U &U _vbool `ui `ux -> < << _number _i -> 0 `i `i ]
+"105
+}
+"102
+[e ++ _i -> 1 `i ]
+[e $ < _i F1825 151  ]
+[e :U 152 ]
+"105
+}
+[; ;test.c: 105: }
+[; ;test.c: 107: RD3=vbool[size-1];
+"107
+[e = _RD3 -> *U + &U _vbool * -> -> - F1825 -> 1 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;test.c: 108: RD2=vbool[size-2];
+"108
+[e = _RD2 -> *U + &U _vbool * -> -> - F1825 -> 2 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;test.c: 109: RD1=vbool[size-3];
+"109
+[e = _RD1 -> *U + &U _vbool * -> -> - F1825 -> 3 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;test.c: 110: RD0=vbool[size-4];
+"110
+[e = _RD0 -> *U + &U _vbool * -> -> - F1825 -> 4 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;test.c: 111: RC3=vbool[size-5];
+"111
+[e = _RC3 -> *U + &U _vbool * -> -> - F1825 -> 5 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;test.c: 112: RC2=vbool[size-6];
+"112
+[e = _RC2 -> *U + &U _vbool * -> -> - F1825 -> 6 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;test.c: 113: RC1=vbool[size-7];
+"113
+[e = _RC1 -> *U + &U _vbool * -> -> - F1825 -> 7 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;test.c: 114: RC0=vbool[size-8];
+"114
+[e = _RC0 -> *U + &U _vbool * -> -> - F1825 -> 8 `i `ui `ux -> -> # *U &U _vbool `ui `ux `b ]
+[; ;test.c: 118: }
+"118
+[e :UE 150 ]
+}
+"120
+[v _write `(v 1 ef3`*uc`i`i ]
+{
+[; ;test.c: 119: void write(char * str,int line,int erase)
+[; ;test.c: 120: {
+[e :U _write ]
+[v _str `*uc 1 r1 ]
+[v _line `i 1 r2 ]
+[v _erase `i 1 r3 ]
+[f ]
+[; ;test.c: 121: if(erase==1)
+"121
+[e $ ! == _erase -> 1 `i 155  ]
+[; ;test.c: 122: clearlcd();
+"122
+[e ( _clearlcd ..  ]
+[e :U 155 ]
+[; ;test.c: 124: if(line==2)
+"124
+[e $ ! == _line -> 2 `i 156  ]
+[; ;test.c: 125: cmd(0xC0);
+"125
+[e ( _cmd (1 -> -> 192 `i `ui ]
+[e $U 157  ]
+"126
+[e :U 156 ]
+[; ;test.c: 126: else
+[; ;test.c: 127: cmd(0x2);
+"127
+[e ( _cmd (1 -> -> 2 `i `ui ]
+[e :U 157 ]
+"129
+[v _i `i 1 a ]
+[; ;test.c: 129: int i=0;
+[e = _i -> 0 `i ]
+[; ;test.c: 130: while(str[i]!='\0')
+"130
+[e $U 158  ]
+[e :U 159 ]
+[; ;test.c: 131: {
+"131
+{
+[; ;test.c: 132: dat(str[i]);
+"132
+[e ( _dat (1 -> *U + _str * -> _i `x -> -> # *U _str `i `x `ui ]
+[; ;test.c: 133: i++;
+"133
+[e ++ _i -> 1 `i ]
+"134
+}
+[e :U 158 ]
+"130
+[e $ != -> *U + _str * -> _i `x -> -> # *U _str `i `x `ui -> 0 `ui 159  ]
+[e :U 160 ]
+[; ;test.c: 134: }
+[; ;test.c: 137: }
+"137
+[e :UE 154 ]
+}
+"141
+[v _scroll `(v 1 ef2`*uc`i ]
+{
+[; ;test.c: 140: void scroll(char * str,int loops)
+[; ;test.c: 141: {
+[e :U _scroll ]
+[v _str `*uc 1 r1 ]
+[v _loops `i 1 r2 ]
+[f ]
+[; ;test.c: 143: write(str,1,0); ;
+"143
+[e ( _write (3 , , _str -> 1 `i -> 0 `i ]
+"144
+[v _loopn `i 1 a ]
+[; ;test.c: 144: int loopn=0;
+[e = _loopn -> 0 `i ]
+"145
+[v _i `i 1 a ]
+"146
+[v _len `i 1 a ]
+[; ;test.c: 145: int i;
+[; ;test.c: 146: int len=0;;
+[e = _len -> 0 `i ]
+"147
+[v _st `i 1 a ]
+[; ;test.c: 147: int st=0;
+[e = _st -> 0 `i ]
+"148
+[v _en `i 1 a ]
+[; ;test.c: 148: int en;
+[; ;test.c: 149: while(str[i]!='\0')
+"149
+[e $U 162  ]
+[e :U 163 ]
+[; ;test.c: 150: { i++;
+"150
+{
+[e ++ _i -> 1 `i ]
+[; ;test.c: 151: len++;
+"151
+[e ++ _len -> 1 `i ]
+"152
+}
+[e :U 162 ]
+"149
+[e $ != -> *U + _str * -> _i `x -> -> # *U _str `i `x `ui -> 0 `ui 163  ]
+[e :U 164 ]
+[; ;test.c: 152: }
+[; ;test.c: 153: en=len-1;
+"153
+[e = _en - _len -> 1 `i ]
+[; ;test.c: 155: if(len>32)
+"155
+[e $ ! > _len -> 32 `i 165  ]
+[; ;test.c: 156: {
+"156
+{
+"158
+[v _dest `uc -> 32 `i a ]
+"159
+[v _startat `i 1 a ]
+[; ;test.c: 158: char dest [32] ;
+[; ;test.c: 159: int startat=0;
+[e = _startat -> 0 `i ]
+"160
+[v _endat `i 1 a ]
+[; ;test.c: 160: int endat=31;
+[e = _endat -> 31 `i ]
+[; ;test.c: 161: START:
+"161
+[e :U 166 ]
+[; ;test.c: 162: i=0;
+"162
+[e = _i -> 0 `i ]
+[; ;test.c: 163: while(i++<32)
+"163
+[e $U 167  ]
+[e :U 168 ]
+[; ;test.c: 164: {
+"164
+{
+[; ;test.c: 166: delay(3000);
+"166
+[e ( _delay -> 3000 `i ]
+[; ;test.c: 167: cmd(0x1E);
+"167
+[e ( _cmd (1 -> -> 30 `i `ui ]
+"170
+}
+[e :U 167 ]
+"163
+[e $ < ++ _i -> 1 `i -> 32 `i 168  ]
+[e :U 169 ]
+[; ;test.c: 170: }
+[; ;test.c: 172: i=0;
+"172
+[e = _i -> 0 `i ]
+[; ;test.c: 173: while(i++<32)
+"173
+[e $U 170  ]
+[e :U 171 ]
+[; ;test.c: 174: {
+"174
+{
+[; ;test.c: 176: delay(3000);
+"176
+[e ( _delay -> 3000 `i ]
+[; ;test.c: 177: cmd(0x18);
+"177
+[e ( _cmd (1 -> -> 24 `i `ui ]
+"180
+}
+[e :U 170 ]
+"173
+[e $ < ++ _i -> 1 `i -> 32 `i 171  ]
+[e :U 172 ]
+[; ;test.c: 180: }
+[; ;test.c: 181: if(loopn++<loops)
+"181
+[e $ ! < ++ _loopn -> 1 `i _loops 173  ]
+[; ;test.c: 182: goto START;
+"182
+[e $U 166  ]
+[e :U 173 ]
+"183
+}
+[e :U 165 ]
+[; ;test.c: 183: }
+[; ;test.c: 188: }
+"188
+[e :UE 161 ]
 }

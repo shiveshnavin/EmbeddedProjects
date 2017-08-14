@@ -1687,9 +1687,9 @@ int itoaa(int value,char *ptr);
 
 # 87
 void initlcd();
-void cmd(unsigned int Command);
-void dat(unsigned int Command);
-void setLCD(int number);
+void cmd(unsigned char Command);
+void dat(unsigned char Command);
+void setLCD(unsigned char number);
 void write(char * str,int line,int erase);
 void scroll(char * str,int loops);
 void clearlcd();
@@ -1706,17 +1706,18 @@ TRISB = 0b00001111;
 
 initlcd();
 initkeypad();
-
-# 117
 while(1){
-
 getlogicseq();
 }
 
-# 126
+
+while(1);
+
+
+
 }
 
-# 135
+# 125
 char logic_d1[5]="100";
 char logic_d2[5]="010";
 char logic_d3[5]="010";
@@ -1768,12 +1769,13 @@ lo[2]='1';
 pdev=dev;
 dev=0b0000;
 write("Press 2 to REPRG",2,0);
+buzz(99);
 
 if(strcmp(lo,plo)!=0)
 {
 
 write(lo,1,1);
-
+buzz(7);
 
 
 if(check(lo,logic_d1))
@@ -1798,8 +1800,9 @@ dev=dev&0b0011;
 RC4=dev&0b0001;
 RC5=(dev>>1)&0b0001;
 RC6=(dev>>2)&0b0001;
+delay(200);
 }
-return;
+
 
 }
 
@@ -1809,8 +1812,12 @@ void getlogicseq()
 {
 
 
-scroll("WELCOME ! TO PROGRAMABLE HOME AUTMATN",0);
 
+write("Welcome to FPLA ",1,1);
+write("Home Autom.",2,0);
+
+
+delay(5000);
 
 
 int num ;
@@ -1829,9 +1836,10 @@ while(1)
 if(retm==1)
 {
 
-retm=0;
+
 f1=0; f2=0; f3=0;
-return;
+break;
+
 }
 num=scan();
 buzz(num);
@@ -1865,6 +1873,12 @@ else if(f3){ f1=0; f2=0; f3=0;
 retm=1;
 
 }
+}
+
+if(retm==1)
+{
+retm=0;
+return;
 }
 
 
@@ -1990,7 +2004,7 @@ nf=0;
 }
 }
 
-# 452
+# 455
 }
 
 
@@ -2105,54 +2119,66 @@ void clearlcd()
 {
 cmd(0x01);
 }
-void cmd(unsigned int Command)
+
+
+void latch()
 {
-
-setLCD(Command);
-RD5=0;
 RD4=1;
-delay(20);
+delay(250);
 RD4=0;
-delay(20);
-
+delay(300);
 }
 
-void dat(unsigned int Command)
-{
-setLCD(Command);
 
+void _dat()
+{
 RD5=1;
-
-RD4=1;
-
-delay(20);
-
-RD4=0;
-
-delay(20);
-
-# 596
-}
-void setLCD(int number)
-{
-const int size=8*sizeof(int);
-int vbool[8*sizeof(int)];
-int i;;
-
-for (i = 0; i <size; i++)
-{
-vbool[i] = number<<i < 0;
+latch();
 }
 
-RD3=vbool[size-1];
-RD2=vbool[size-2];
-RD1=vbool[size-3];
-RD0=vbool[size-4];
-RC3=vbool[size-5];
-RC2=vbool[size-6];
-RC1=vbool[size-7];
-RC0=vbool[size-8];
+void _cmd()
+{
+RD5=0;
+latch();
+}
 
+
+
+void cmd(unsigned char Command)
+{
+
+setLCD(Command);
+_cmd();
+
+}
+
+void dat(unsigned char Command)
+{
+setLCD(Command);
+_dat();
+
+# 611
+}
+
+
+unsigned char getn(unsigned char c, unsigned char n)
+{
+unsigned char tmp=1<<n;
+return (c & tmp)>>n;
+}
+
+void setLCD(unsigned char number)
+{
+
+
+RD3=getn(number,0);
+RD2=getn(number,1);
+RD1=getn(number,2);
+RD0=getn(number,3);
+RC3=getn(number,4);
+RC2=getn(number,5);
+RC1=getn(number,6);
+RC0=getn(number,7);
 
 
 }
@@ -2227,7 +2253,7 @@ goto START;
 
 }
 
-# 695
+# 710
 void initkeypad()
 {
 PORTB = 0;
@@ -2246,7 +2272,7 @@ return 1;
 else if(RB6==1)
 return 2;
 else if(RB7==1)
-return 3;
+return 0;
 
 actrow(2) ;
 
@@ -2257,7 +2283,7 @@ return 5;
 else if(RB6==1)
 return 6;
 else if(RB7==1)
-return 7;
+return 1;
 
 actrow(3) ;
 
@@ -2268,7 +2294,7 @@ return 9;
 else if(RB6==1)
 return 10;
 else if(RB7==1)
-return 11;
+return 2;
 
 
 actrow(4) ;
@@ -2280,7 +2306,7 @@ return 13;
 else if(RB6==1)
 return 14;
 else if(RB7==1)
-return 15;
+return 3;
 
 
 
@@ -2350,7 +2376,7 @@ return d;
 void write_log(int devno,char * logic)
 {
 
-# 821
+# 836
 }
 void write_eep(unsigned char a,unsigned char d)
 {

@@ -66,8 +66,8 @@ int itoaa(int value,char *ptr);
  
 
 /* LCD [ *********** */
-#define DEL1 20
-#define DEL2  20
+#define DEL1 250
+#define DEL2  300
 
 #define TRISLCD TRISD
 #define LCD PORTD
@@ -85,9 +85,9 @@ int itoaa(int value,char *ptr);
 #define LD7 RC0
 
 void initlcd();
-void cmd(unsigned int Command);
-void dat(unsigned int Command);
-void setLCD(int number);
+void cmd(unsigned char Command);
+void dat(unsigned char Command);
+void setLCD(unsigned char number);
 void write(char * str,int line,int erase);
 void scroll(char * str,int loops);
 void clearlcd();
@@ -103,23 +103,13 @@ int  main()
 	TRISKEY = 0b00001111;
  
 	initlcd();	
-	initkeypad();
- 	/*
- 	if(scan()==0)
-		write("WWW",1,1);
-	else
-		write("Ops",1,1);
-
-	if(RA0==1)
-		write("AA",1,1);
-	else
-		write("BB",1,1); */
- 	while(1){
-	 
+	initkeypad();  
+ 	while(1){ 
   getlogicseq();
 			}
 
- 
+  
+while(1);
  
 
 
@@ -183,12 +173,13 @@ void startswitch()
    pdev=dev;	
    dev=0b0000;	
 	write("Press 2 to REPRG",2,0);
+	buzz(99);
 	//if(strcmp(lo,"000")!=0)
 		if(strcmp(lo,plo)!=0)
 			{
 	 
 		 	write(lo,1,1);
-		
+			 buzz(7);
 			 
 
 				if(check(lo,logic_d1))
@@ -213,8 +204,9 @@ void startswitch()
 			 DV0=dev&0b0001;
 			 DV1=(dev>>1)&0b0001;
 			 DV2=(dev>>2)&0b0001;
+			delay(200);
 			}
-   return;
+  
 	 
 }
 
@@ -224,8 +216,12 @@ void getlogicseq()
 {
 
 		
-	    scroll("WELCOME ! TO PROGRAMABLE HOME AUTMATN",0);
-		
+	   // scroll("WELCOME ! TO PROGRAMABLE HOME AUTMATN",0);
+		write("Welcome to FPLA ",1,1);
+		write("Home Autom.",2,0);	
+	
+	
+		delay(5000);
 		 
 
 		int num   ;
@@ -244,9 +240,10 @@ void getlogicseq()
 				if(retm==1)
 					{
 						
-						retm=0;
+					 	
 						f1=0; f2=0; f3=0;
-						return;
+						break;
+					 
 					}
 		  num=scan();
 		  buzz(num);
@@ -281,6 +278,7 @@ void getlogicseq()
 	 
 }
 		}
+ 
 
 
 START_SEQ:
@@ -563,58 +561,70 @@ void clearlcd()
 {
 	cmd(0x01);
 }
-void cmd(unsigned int Command)
+
+
+void latch()
 {
-	
-	setLCD(Command);
-	RS=0;
-	EN=1; 
-	delay(DEL1);
-	EN=0;
-	delay(DEL2);
-
-}
-
-void dat(unsigned int Command)
-{
-	setLCD(Command);
-	
-	RS=1;
-
 	EN=1;
-
-	delay(DEL1);
-
+	delay(250);
 	EN=0;
+	delay(300);
+}
 
-	delay(DEL2);
+
+void _dat()
+{
+	RS=1;
+	latch();
+}
+
+void _cmd()
+{
+	RS=0;
+	latch();
+}
+
+
+
+void cmd(unsigned char Command)
+{
+	
+	setLCD(Command);
+	_cmd();
+
+}
+
+void dat(unsigned char Command)
+{
+	setLCD(Command);
+ 	_dat();
 
 
 
 
 
 }
-void setLCD(int number)
-{	  
-	const int size=8*sizeof(int);
-    int vbool[8*sizeof(int)];
-    int i;; 
- 
-        for (i = 0; i <size; i++)
-        {
-            vbool[i] = number<<i < 0;    
-        }  
-					  
-			LD0=vbool[size-1];
-			LD1=vbool[size-2];
-			LD2=vbool[size-3];
-			LD3=vbool[size-4];
-			LD4=vbool[size-5];
-			LD5=vbool[size-6];
-			LD6=vbool[size-7];
-			LD7=vbool[size-8];
 
-//	LCD=s;
+
+unsigned char getn(unsigned char c, unsigned char n)
+{
+  unsigned char tmp=1<<n;
+  return (c & tmp)>>n;
+}
+
+void setLCD(unsigned char number)
+{	   
+    
+					  
+			LD0=getn(number,0);
+			LD1=getn(number,1);
+			LD2=getn(number,2);
+			LD3=getn(number,3);
+			LD4=getn(number,4);
+			LD5=getn(number,5);
+			LD6=getn(number,6);
+			LD7=getn(number,7);
+ 
 
 }
 void write(char * str,int line,int erase)
@@ -710,7 +720,7 @@ int scan()
 			else if(KY6==1)
 				return 2;
 			else if(KY7==1)
-				return 3;
+				return 0;
 		
 	actrow(2) ;	 
  
@@ -721,7 +731,7 @@ int scan()
 			else if(KY6==1)
 				return 6;
 			else if(KY7==1)
-				return 7;
+				return 1;
 		
 	actrow(3) ;	
  
@@ -732,7 +742,7 @@ int scan()
 			else if(KY6==1)
 				return 10;
 			else if(KY7==1)
-				return 11;
+				return 2;
 		
 	
 	actrow(4) ;	 
@@ -744,7 +754,7 @@ int scan()
 			else if(KY6==1)
 				return 14;
 			else if(KY7==1)
-				return 15;
+				return 3;
 
 
 

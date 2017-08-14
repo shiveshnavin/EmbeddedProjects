@@ -1,0 +1,8 @@
+_delay: CODE, 1738 0 20
+_setlcd: CODE, 1882 0 166
+_dat: CODE, 1729 0 9
+_main: CODE, 1810 0 72
+_latch: CODE, 1758 0 25
+_cmd: CODE, 1720 0 9
+_getn: CODE, 1783 0 27
+Total: 328
