@@ -11,6 +11,8 @@ void startswitch();
 
 /******EEPROM********/
 
+void getlogic();
+void setlogic();
 #define EEPD 200
 const char adr[]={0x00,0x04,0x08,0x0C,0x0F};
 char * read_log(int devno); 
@@ -108,27 +110,7 @@ int  main()
  
 	initlcd();	
 	initkeypad();  
- /*
-	write_eep(adr[0],'A');
-	dat(read_eep(adr[0]));
-
-	delay(2000);
-
-	write_eep(adr[0]+1,'B');
-	dat(read_eep(adr[0]+1));
-	
-	write_log(0,"QBCD");
-	 
-	
-	write(read_log(0),1,1);
-	write_log(1,"CDEF");
-	 
-	
-	write(read_log(1),2,0);
-
-	while(1);*/
-  	
-	 	start();
+ 	start();
 		 
 
    
@@ -140,6 +122,7 @@ int  main()
 void start()
 {
 START:
+getlogic();
  done_init=0;
    // scroll("WELCOME ! TO PROGRAMABLE HOME AUTMATN",0);
 	 write("FP Home Atomn.",1,1);

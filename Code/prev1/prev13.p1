@@ -1301,74 +1301,76 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _EECON1bits `VS139 1 e@396 ]
 "1666 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\pic16f887.h
 [v _EECON2 `Vuc 1 e@397 ]
-"15 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"17 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _adr `Cuc -> 0 `x e ]
-"56 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"58 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _done_init `i 1 e ]
-"100 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"102 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _f1 `i 1 e ]
-"100 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"102 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _f2 `i 1 e ]
-"100 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"102 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _f3 `i 1 e ]
-"100 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"102 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _num `i 1 e ]
-"101 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"103 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _retm `i 1 e ]
 [p mainexit ]
-"90 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"92 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _initlcd `(v 0 ef ]
-"37 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
-[v _initkeypad `(v 0 ef ]
-"99 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
-[v _start `(v 0 ef ]
-"94 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
-[v _write `(v 0 ef3`*uc`i`i ]
 "39 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+[v _initkeypad `(v 0 ef ]
+"101 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+[v _start `(v 0 ef ]
+"14 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+[v _getlogic `(v 0 ef ]
+"96 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+[v _write `(v 0 ef3`*uc`i`i ]
+"41 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _scan `(i 0 ef ]
 "10 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _startswitch `(v 0 ef ]
 "9 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _getlogicseq `(v 0 ef ]
-"201 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
-[v _logic_d1 `uc -> 5 `i e ]
-"202 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
-[v _logic_d2 `uc -> 5 `i e ]
-"203 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
-[v _logic_d3 `uc -> 5 `i e ]
 "204 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
-[v _logic_d4 `uc -> 5 `i e ]
+[v _logic_d1 `uc -> 5 `i e ]
 "205 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
-[v _lo `uc -> 5 `i e ]
+[v _logic_d2 `uc -> 5 `i e ]
 "206 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
-[v _plo `uc -> 5 `i e ]
+[v _logic_d3 `uc -> 5 `i e ]
 "207 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
-[v _dev `i 1 e ]
+[v _logic_d4 `uc -> 5 `i e ]
 "208 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+[v _lo `uc -> 5 `i e ]
+"209 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+[v _plo `uc -> 5 `i e ]
+"210 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+[v _dev `i 1 e ]
+"211 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _pdev `i 1 e ]
-"21 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"23 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _write_log `(v 0 ef2`i`*uc ]
-"18 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"20 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _read_eep `(uc 0 ef1`ui ]
-"19 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"21 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _write_eep `(v 0 ef2`ui`uc ]
-"53 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"55 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _delay `(v 0 ef1`ui ]
 "36 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\string.h
 [v _strcpy `(*uc 0 ef2`*uc`*Cuc ]
-"16 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"18 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _read_log `(*uc 0 ef1`i ]
 "44 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\string.h
 [v _strcmp `(i 0 ef2`*Cuc`*Cuc ]
-"54 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"56 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _itoaa `(i 0 ef2`i`*uc ]
 "35 C:\Program Files (x86)\HI-TECH Software\PICC\9.81\include\string.h
 [v _strcat `(*uc 0 ef2`*uc`*Cuc ]
-"91 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
-[v _cmd `(v 0 ef1`uc ]
 "93 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+[v _cmd `(v 0 ef1`uc ]
+"95 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _setLCD `(v 0 ef1`uc ]
-"38 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+"40 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [v _actrow `(v 0 ef1`i ]
 [; ;pic16f887.h: 118: volatile unsigned char INDF @ 0x000;
 [; ;pic16f887.h: 122: volatile unsigned char TMR0 @ 0x001;
@@ -2662,7 +2664,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdlib.h: 148: extern char * ultoa(char * buf, unsigned long val, int base);
 [; ;prev13.c: 9: void getlogicseq();
 [; ;prev13.c: 10: void startswitch();
-"15 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
+[; ;prev13.c: 14: void getlogic();
+[; ;prev13.c: 15: void setlogic();
+"17 C:\PIC\PROJECTS\Training_Project\Code\prev1\prev13.c
 [i _adr
 :U ..
 -> -> 0 `i `uc
@@ -2672,58 +2676,58 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 15 `i `uc
 ..
 ]
-[; ;prev13.c: 15: const char adr[]={0x00,0x04,0x08,0x0C,0x0F};
-[; ;prev13.c: 16: char * read_log(int devno);
-[; ;prev13.c: 18: unsigned char read_eep(unsigned int a);
-[; ;prev13.c: 19: void write_eep (unsigned int x, unsigned char y);
-[; ;prev13.c: 21: void write_log(int devno,char * logic);
-[; ;prev13.c: 37: void initkeypad();
-[; ;prev13.c: 38: void actrow(int n);
-[; ;prev13.c: 39: int scan();
-[; ;prev13.c: 40: void resetout();
-"42
+[; ;prev13.c: 17: const char adr[]={0x00,0x04,0x08,0x0C,0x0F};
+[; ;prev13.c: 18: char * read_log(int devno);
+[; ;prev13.c: 20: unsigned char read_eep(unsigned int a);
+[; ;prev13.c: 21: void write_eep (unsigned int x, unsigned char y);
+[; ;prev13.c: 23: void write_log(int devno,char * logic);
+[; ;prev13.c: 39: void initkeypad();
+[; ;prev13.c: 40: void actrow(int n);
+[; ;prev13.c: 41: int scan();
+[; ;prev13.c: 42: void resetout();
+"44
 [v _buzz `(v 1 ef1`i ]
 {
-[; ;prev13.c: 41: void buzz(int val)
-[; ;prev13.c: 42: {
+[; ;prev13.c: 43: void buzz(int val)
+[; ;prev13.c: 44: {
 [e :U _buzz ]
 [v _val `i 1 r1 ]
 [f ]
-[; ;prev13.c: 43: if(val!=99)
-"43
+[; ;prev13.c: 45: if(val!=99)
+"45
 [e $ ! != _val -> 99 `i 146  ]
-[; ;prev13.c: 44: RB5=1;
-"44
+[; ;prev13.c: 46: RB5=1;
+"46
 [e = _RB5 -> -> 1 `i `b ]
 [e $U 147  ]
-"45
+"47
 [e :U 146 ]
-[; ;prev13.c: 45: else
-[; ;prev13.c: 46: RB5=0;
-"46
+[; ;prev13.c: 47: else
+[; ;prev13.c: 48: RB5=0;
+"48
 [e = _RB5 -> -> 0 `i `b ]
 [e :U 147 ]
-[; ;prev13.c: 47: }
-"47
+[; ;prev13.c: 49: }
+"49
 [e :UE 145 ]
 }
-[; ;prev13.c: 52: int parselogic(char * log);
-[; ;prev13.c: 53: void delay(unsigned int);
-[; ;prev13.c: 54: int itoaa(int value,char *ptr);
-"56
+[; ;prev13.c: 54: int parselogic(char * log);
+[; ;prev13.c: 55: void delay(unsigned int);
+[; ;prev13.c: 56: int itoaa(int value,char *ptr);
+"58
 [i _done_init
 -> 0 `i
 ]
-[; ;prev13.c: 56: int done_init=0;
-[; ;prev13.c: 90: void initlcd();
-[; ;prev13.c: 91: void cmd(unsigned char Command);
-[; ;prev13.c: 92: void dat(unsigned char Command);
-[; ;prev13.c: 93: void setLCD(unsigned char number);
-[; ;prev13.c: 94: void write(char * str,int line,int erase);
-[; ;prev13.c: 95: void scroll(char * str,int loops);
-[; ;prev13.c: 96: void clearlcd();
-[; ;prev13.c: 99: void start();
-"100
+[; ;prev13.c: 58: int done_init=0;
+[; ;prev13.c: 92: void initlcd();
+[; ;prev13.c: 93: void cmd(unsigned char Command);
+[; ;prev13.c: 94: void dat(unsigned char Command);
+[; ;prev13.c: 95: void setLCD(unsigned char number);
+[; ;prev13.c: 96: void write(char * str,int line,int erase);
+[; ;prev13.c: 97: void scroll(char * str,int loops);
+[; ;prev13.c: 98: void clearlcd();
+[; ;prev13.c: 101: void start();
+"102
 [i _f1
 -> 0 `i
 ]
@@ -2733,194 +2737,197 @@ Version 3.2 HI-TECH Software Intermediate Code
 [i _f3
 -> 0 `i
 ]
-[; ;prev13.c: 100: int f1=0, f2=0, f3=0,num;
-"101
+[; ;prev13.c: 102: int f1=0, f2=0, f3=0,num;
+"103
 [i _retm
 -> 0 `i
 ]
-[; ;prev13.c: 101: int retm=0;
-"103
+[; ;prev13.c: 103: int retm=0;
+"105
 [v _main `(i 1 ef ]
 {
-[; ;prev13.c: 102: int main()
-[; ;prev13.c: 103: {
+[; ;prev13.c: 104: int main()
+[; ;prev13.c: 105: {
 [e :U _main ]
 [f ]
-[; ;prev13.c: 107: TRISB = 0b00001111;
-"107
-[e = _TRISB -> -> 15 `i `uc ]
-[; ;prev13.c: 109: initlcd();
+[; ;prev13.c: 109: TRISB = 0b00001111;
 "109
+[e = _TRISB -> -> 15 `i `uc ]
+[; ;prev13.c: 111: initlcd();
+"111
 [e ( _initlcd ..  ]
-[; ;prev13.c: 110: initkeypad();
-"110
+[; ;prev13.c: 112: initkeypad();
+"112
 [e ( _initkeypad ..  ]
-[; ;prev13.c: 131: start();
-"131
+[; ;prev13.c: 133: start();
+"133
 [e ( _start ..  ]
-[; ;prev13.c: 138: }
-"138
+[; ;prev13.c: 140: }
+"140
 [e :UE 148 ]
 }
-"141
+"143
 [v _start `(v 1 ef ]
 {
-[; ;prev13.c: 140: void start()
-[; ;prev13.c: 141: {
+[; ;prev13.c: 142: void start()
+[; ;prev13.c: 143: {
 [e :U _start ]
 [f ]
-[; ;prev13.c: 142: START:
-"142
+[; ;prev13.c: 144: START:
+"144
 [e :U 150 ]
-[; ;prev13.c: 143: done_init=0;
-"143
-[e = _done_init -> 0 `i ]
-[; ;prev13.c: 145: write("FP Home Atomn.",1,1);
+[; ;prev13.c: 145: getlogic();
 "145
-[e ( _write (3 , , -> :s 1C `*uc -> 1 `i -> 1 `i ]
-[; ;prev13.c: 146: write("Press 0 to Cont.",2,0);
+[e ( _getlogic ..  ]
+[; ;prev13.c: 146: done_init=0;
 "146
-[e ( _write (3 , , -> :s 2C `*uc -> 2 `i -> 0 `i ]
-[; ;prev13.c: 149: while(scan()!=0);
+[e = _done_init -> 0 `i ]
+[; ;prev13.c: 148: write("FP Home Atomn.",1,1);
+"148
+[e ( _write (3 , , -> :s 1C `*uc -> 1 `i -> 1 `i ]
+[; ;prev13.c: 149: write("Press 0 to Cont.",2,0);
 "149
+[e ( _write (3 , , -> :s 2C `*uc -> 2 `i -> 0 `i ]
+[; ;prev13.c: 152: while(scan()!=0);
+"152
 [e $U 151  ]
 [e :U 152 ]
 [e :U 151 ]
 [e $ != ( _scan ..  -> 0 `i 152  ]
 [e :U 153 ]
-[; ;prev13.c: 152: write("1.SWT  2.REPRG",1,1);
-"152
-[e ( _write (3 , , -> :s 3C `*uc -> 1 `i -> 1 `i ]
-[; ;prev13.c: 153: write("3.RESET",2,0);
-"153
-[e ( _write (3 , , -> :s 4C `*uc -> 2 `i -> 0 `i ]
-[; ;prev13.c: 154: while(1)
-"154
-[e :U 155 ]
-[; ;prev13.c: 155: {
+[; ;prev13.c: 155: write("1.SWT  2.REPRG",1,1);
 "155
-{
-[; ;prev13.c: 157: num=scan();
+[e ( _write (3 , , -> :s 3C `*uc -> 1 `i -> 1 `i ]
+[; ;prev13.c: 156: write("3.RESET",2,0);
+"156
+[e ( _write (3 , , -> :s 4C `*uc -> 2 `i -> 0 `i ]
+[; ;prev13.c: 157: while(1)
 "157
-[e = _num ( _scan ..  ]
-[; ;prev13.c: 158: buzz(num);
+[e :U 155 ]
+[; ;prev13.c: 158: {
 "158
-[e ( _buzz (1 _num ]
-[; ;prev13.c: 159: if(num==1)
-"159
-[e $ ! == _num -> 1 `i 157  ]
-[; ;prev13.c: 160: {
-"160
 {
-[; ;prev13.c: 161: f1=1;
+[; ;prev13.c: 160: num=scan();
+"160
+[e = _num ( _scan ..  ]
+[; ;prev13.c: 161: buzz(num);
 "161
-[e = _f1 -> 1 `i ]
-[; ;prev13.c: 162: f2=0;
+[e ( _buzz (1 _num ]
+[; ;prev13.c: 162: if(num==1)
 "162
-[e = _f2 -> 0 `i ]
-[; ;prev13.c: 163: f3=0;
+[e $ ! == _num -> 1 `i 157  ]
+[; ;prev13.c: 163: {
 "163
-[e = _f3 -> 0 `i ]
+{
+[; ;prev13.c: 164: f1=1;
 "164
+[e = _f1 -> 1 `i ]
+[; ;prev13.c: 165: f2=0;
+"165
+[e = _f2 -> 0 `i ]
+[; ;prev13.c: 166: f3=0;
+"166
+[e = _f3 -> 0 `i ]
+"167
 }
 [e :U 157 ]
-[; ;prev13.c: 164: }
-[; ;prev13.c: 165: if(num==2)
-"165
-[e $ ! == _num -> 2 `i 158  ]
-[; ;prev13.c: 166: {
-"166
-{
-[; ;prev13.c: 167: f1=0;
-"167
-[e = _f1 -> 0 `i ]
-[; ;prev13.c: 168: f2=1;
+[; ;prev13.c: 167: }
+[; ;prev13.c: 168: if(num==2)
 "168
-[e = _f2 -> 1 `i ]
-[; ;prev13.c: 169: f3=0;
+[e $ ! == _num -> 2 `i 158  ]
+[; ;prev13.c: 169: {
 "169
-[e = _f3 -> 0 `i ]
+{
+[; ;prev13.c: 170: f1=0;
 "170
+[e = _f1 -> 0 `i ]
+[; ;prev13.c: 171: f2=1;
+"171
+[e = _f2 -> 1 `i ]
+[; ;prev13.c: 172: f3=0;
+"172
+[e = _f3 -> 0 `i ]
+"173
 }
 [e :U 158 ]
-[; ;prev13.c: 170: }
-[; ;prev13.c: 171: if(num==3)
-"171
-[e $ ! == _num -> 3 `i 159  ]
-[; ;prev13.c: 172: {
-"172
-{
-[; ;prev13.c: 173: f1=0;
-"173
-[e = _f1 -> 0 `i ]
-[; ;prev13.c: 174: f2=0;
+[; ;prev13.c: 173: }
+[; ;prev13.c: 174: if(num==3)
 "174
-[e = _f2 -> 0 `i ]
-[; ;prev13.c: 175: f3=1;
+[e $ ! == _num -> 3 `i 159  ]
+[; ;prev13.c: 175: {
 "175
-[e = _f3 -> 1 `i ]
-[; ;prev13.c: 176: retm=1;
+{
+[; ;prev13.c: 176: f1=0;
 "176
-[e = _retm -> 1 `i ]
+[e = _f1 -> 0 `i ]
+[; ;prev13.c: 177: f2=0;
 "177
+[e = _f2 -> 0 `i ]
+[; ;prev13.c: 178: f3=1;
+"178
+[e = _f3 -> 1 `i ]
+[; ;prev13.c: 179: retm=1;
+"179
+[e = _retm -> 1 `i ]
+"180
 }
 [e :U 159 ]
-[; ;prev13.c: 177: }
-[; ;prev13.c: 179: if(f1){
-"179
+[; ;prev13.c: 180: }
+[; ;prev13.c: 182: if(f1){
+"182
 [e $ ! != _f1 -> 0 `i 160  ]
 {
-[; ;prev13.c: 180: startswitch();
-"180
+[; ;prev13.c: 183: startswitch();
+"183
 [e ( _startswitch ..  ]
-"181
+"184
 }
-[; ;prev13.c: 181: }
+[; ;prev13.c: 184: }
 [e $U 161  ]
-"182
+"185
 [e :U 160 ]
-[; ;prev13.c: 182: else if(f2){ f1=0; f2=0; f3=0;
+[; ;prev13.c: 185: else if(f2){ f1=0; f2=0; f3=0;
 [e $ ! != _f2 -> 0 `i 162  ]
 {
 [e = _f1 -> 0 `i ]
 [e = _f2 -> 0 `i ]
 [e = _f3 -> 0 `i ]
-[; ;prev13.c: 183: getlogicseq();
-"183
+[; ;prev13.c: 186: getlogicseq();
+"186
 [e ( _getlogicseq ..  ]
-"184
+"187
 }
-[; ;prev13.c: 184: }
+[; ;prev13.c: 187: }
 [e $U 163  ]
-"185
+"188
 [e :U 162 ]
-[; ;prev13.c: 185: else if(f3){ f1=0; f2=0; f3=0;
+[; ;prev13.c: 188: else if(f3){ f1=0; f2=0; f3=0;
 [e $ ! != _f3 -> 0 `i 164  ]
 {
 [e = _f1 -> 0 `i ]
 [e = _f2 -> 0 `i ]
 [e = _f3 -> 0 `i ]
-[; ;prev13.c: 186: goto START;
-"186
+[; ;prev13.c: 189: goto START;
+"189
 [e $U 150  ]
-"188
+"191
 }
 [e :U 164 ]
-"189
+"192
 [e :U 163 ]
 [e :U 161 ]
 }
 [e :U 154 ]
-"154
+"157
 [e $U 155  ]
 [e :U 156 ]
-[; ;prev13.c: 188: }
-[; ;prev13.c: 189: }
+[; ;prev13.c: 191: }
 [; ;prev13.c: 192: }
-"192
+[; ;prev13.c: 195: }
+"195
 [e :UE 149 ]
 }
-"201
+"204
 [i _logic_d1
 :U ..
 -> 49 `c
@@ -2929,8 +2936,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;prev13.c: 201: char logic_d1[5]="100";
-"202
+[; ;prev13.c: 204: char logic_d1[5]="100";
+"205
 [i _logic_d2
 :U ..
 -> 48 `c
@@ -2939,8 +2946,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;prev13.c: 202: char logic_d2[5]="010";
-"203
+[; ;prev13.c: 205: char logic_d2[5]="010";
+"206
 [i _logic_d3
 :U ..
 -> 48 `c
@@ -2949,8 +2956,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;prev13.c: 203: char logic_d3[5]="001";
-"204
+[; ;prev13.c: 206: char logic_d3[5]="001";
+"207
 [i _logic_d4
 :U ..
 -> 49 `c
@@ -2959,8 +2966,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;prev13.c: 204: char logic_d4[5]="100";
-"205
+[; ;prev13.c: 207: char logic_d4[5]="100";
+"208
 [i _lo
 :U ..
 -> 48 `c
@@ -2970,8 +2977,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;prev13.c: 205: char lo[5]="0000";
-"206
+[; ;prev13.c: 208: char lo[5]="0000";
+"209
 [i _plo
 :U ..
 -> 48 `c
@@ -2981,306 +2988,306 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;prev13.c: 206: char plo[5]="0000";
-"207
+[; ;prev13.c: 209: char plo[5]="0000";
+"210
 [i _dev
 -> 0 `i
 ]
-[; ;prev13.c: 207: int dev=0b0000;
-"208
+[; ;prev13.c: 210: int dev=0b0000;
+"211
 [i _pdev
 -> 0 `i
 ]
-[; ;prev13.c: 208: int pdev=0b0000;
-"210
+[; ;prev13.c: 211: int pdev=0b0000;
+"213
 [v _setlogic `(v 1 ef ]
 {
-[; ;prev13.c: 210: void setlogic(){
+[; ;prev13.c: 213: void setlogic(){
 [e :U _setlogic ]
 [f ]
-[; ;prev13.c: 211: write_log(0,logic_d1);
-"211
-[e ( _write_log (2 , -> 0 `i &U _logic_d1 ]
-[; ;prev13.c: 212: write_log(1,logic_d2);
-"212
-[e ( _write_log (2 , -> 1 `i &U _logic_d2 ]
-[; ;prev13.c: 213: write_log(2,logic_d3);
-"213
-[e ( _write_log (2 , -> 2 `i &U _logic_d3 ]
-[; ;prev13.c: 214: write_log(3,logic_d4);
+[; ;prev13.c: 214: write_log(0,logic_d1);
 "214
-[e ( _write_log (2 , -> 3 `i &U _logic_d4 ]
-[; ;prev13.c: 215: }
+[e ( _write_log (2 , -> 0 `i &U _logic_d1 ]
+[; ;prev13.c: 215: write_log(1,logic_d2);
 "215
+[e ( _write_log (2 , -> 1 `i &U _logic_d2 ]
+[; ;prev13.c: 216: write_log(2,logic_d3);
+"216
+[e ( _write_log (2 , -> 2 `i &U _logic_d3 ]
+[; ;prev13.c: 217: write_log(3,logic_d4);
+"217
+[e ( _write_log (2 , -> 3 `i &U _logic_d4 ]
+[; ;prev13.c: 218: }
+"218
 [e :UE 165 ]
 }
-"217
+"220
 [v _getlogic `(v 1 ef ]
 {
-[; ;prev13.c: 217: void getlogic(){
+[; ;prev13.c: 220: void getlogic(){
 [e :U _getlogic ]
 [f ]
-[; ;prev13.c: 218: if(read_eep(0xF0)!='X')
-"218
-[e $ ! != -> ( _read_eep (1 -> -> 240 `i `ui `ui -> 88 `ui 167  ]
-[; ;prev13.c: 219: {
-"219
-{
-[; ;prev13.c: 220: write_eep(0xF0,'X');
-"220
-[e ( _write_eep (2 , -> -> 240 `i `ui -> -> 88 `ui `uc ]
-[; ;prev13.c: 221: write("CONFIGURED !",1,1);
+[; ;prev13.c: 221: if(read_eep(0xF0)!='X')
 "221
-[e ( _write (3 , , -> :s 5C `*uc -> 1 `i -> 1 `i ]
-[; ;prev13.c: 222: delay(2000);
+[e $ ! != -> ( _read_eep (1 -> -> 240 `i `ui `ui -> 88 `ui 167  ]
+[; ;prev13.c: 222: {
 "222
-[e ( _delay (1 -> -> 2000 `i `ui ]
-[; ;prev13.c: 223: return;
+{
+[; ;prev13.c: 223: write_eep(0xF0,'X');
 "223
-[e $UE 166  ]
+[e ( _write_eep (2 , -> -> 240 `i `ui -> -> 88 `ui `uc ]
+[; ;prev13.c: 224: write("CONFIGURED !",1,1);
+"224
+[e ( _write (3 , , -> :s 5C `*uc -> 1 `i -> 1 `i ]
+[; ;prev13.c: 225: delay(2000);
 "225
+[e ( _delay (1 -> -> 2000 `i `ui ]
+[; ;prev13.c: 226: return;
+"226
+[e $UE 166  ]
+"228
 }
 [e :U 167 ]
-[; ;prev13.c: 225: }
-[; ;prev13.c: 226: write("READING.. !",1,1);
-"226
-[e ( _write (3 , , -> :s 6C `*uc -> 1 `i -> 1 `i ]
-[; ;prev13.c: 227: delay(2000);
-"227
-[e ( _delay (1 -> -> 2000 `i `ui ]
-[; ;prev13.c: 228: strcpy(logic_d1,read_log(0));
-"228
-[e ( _strcpy (2 , &U _logic_d1 -> ( _read_log (1 -> 0 `i `*Cuc ]
-[; ;prev13.c: 229: strcpy(logic_d2,read_log(1));
+[; ;prev13.c: 228: }
+[; ;prev13.c: 229: write("READING.. !",1,1);
 "229
-[e ( _strcpy (2 , &U _logic_d2 -> ( _read_log (1 -> 1 `i `*Cuc ]
-[; ;prev13.c: 230: strcpy(logic_d3,read_log(2));
+[e ( _write (3 , , -> :s 6C `*uc -> 1 `i -> 1 `i ]
+[; ;prev13.c: 230: delay(2000);
 "230
-[e ( _strcpy (2 , &U _logic_d3 -> ( _read_log (1 -> 2 `i `*Cuc ]
-[; ;prev13.c: 231: strcpy(logic_d4,read_log(3));
+[e ( _delay (1 -> -> 2000 `i `ui ]
+[; ;prev13.c: 231: strcpy(logic_d1,read_log(0));
 "231
-[e ( _strcpy (2 , &U _logic_d4 -> ( _read_log (1 -> 3 `i `*Cuc ]
-[; ;prev13.c: 233: }
+[e ( _strcpy (2 , &U _logic_d1 -> ( _read_log (1 -> 0 `i `*Cuc ]
+[; ;prev13.c: 232: strcpy(logic_d2,read_log(1));
+"232
+[e ( _strcpy (2 , &U _logic_d2 -> ( _read_log (1 -> 1 `i `*Cuc ]
+[; ;prev13.c: 233: strcpy(logic_d3,read_log(2));
 "233
+[e ( _strcpy (2 , &U _logic_d3 -> ( _read_log (1 -> 2 `i `*Cuc ]
+[; ;prev13.c: 234: strcpy(logic_d4,read_log(3));
+"234
+[e ( _strcpy (2 , &U _logic_d4 -> ( _read_log (1 -> 3 `i `*Cuc ]
+[; ;prev13.c: 236: }
+"236
 [e :UE 166 ]
 }
-"237
+"240
 [v _check `(i 1 ef2`*uc`*uc ]
 {
-[; ;prev13.c: 236: int check(char * input,char * logic)
-[; ;prev13.c: 237: {
+[; ;prev13.c: 239: int check(char * input,char * logic)
+[; ;prev13.c: 240: {
 [e :U _check ]
 [v _input `*uc 1 r1 ]
 [v _logic `*uc 1 r2 ]
 [f ]
-"239
+"242
 [v _i `i 1 a ]
-[; ;prev13.c: 239: int i=0;
+[; ;prev13.c: 242: int i=0;
 [e = _i -> 0 `i ]
-[; ;prev13.c: 241: for(i=0;i<4;i++)
-"241
+[; ;prev13.c: 244: for(i=0;i<4;i++)
+"244
 {
 [e = _i -> 0 `i ]
 [e $ < _i -> 4 `i 169  ]
 [e $U 170  ]
-"242
+"245
 [e :U 169 ]
-[; ;prev13.c: 242: {
+[; ;prev13.c: 245: {
 {
-[; ;prev13.c: 243: if(input[i]=='0'&&logic[i]=='1')
-"243
+[; ;prev13.c: 246: if(input[i]=='0'&&logic[i]=='1')
+"246
 [e $ ! && == -> *U + _input * -> _i `x -> -> # *U _input `i `x `ui -> 48 `ui == -> *U + _logic * -> _i `x -> -> # *U _logic `i `x `ui -> 49 `ui 172  ]
-[; ;prev13.c: 244: return 0;
-"244
+[; ;prev13.c: 247: return 0;
+"247
 [e ) -> 0 `i ]
 [e $UE 168  ]
 [e :U 172 ]
-"245
+"248
 }
-"241
+"244
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 4 `i 169  ]
 [e :U 170 ]
-"245
+"248
 }
-[; ;prev13.c: 245: }
-[; ;prev13.c: 246: return 1;
-"246
+[; ;prev13.c: 248: }
+[; ;prev13.c: 249: return 1;
+"249
 [e ) -> 1 `i ]
 [e $UE 168  ]
-[; ;prev13.c: 247: }
-"247
+[; ;prev13.c: 250: }
+"250
 [e :UE 168 ]
 }
-"249
+"252
 [v _init_fun `(v 1 ef ]
 {
-[; ;prev13.c: 248: void init_fun()
-[; ;prev13.c: 249: {
+[; ;prev13.c: 251: void init_fun()
+[; ;prev13.c: 252: {
 [e :U _init_fun ]
 [f ]
-[; ;prev13.c: 250: if(done_init==0)
-"250
-[e $ ! == _done_init -> 0 `i 174  ]
-[; ;prev13.c: 251: {
-"251
-{
-[; ;prev13.c: 253: TRISA=0x0F;
+[; ;prev13.c: 253: if(done_init==0)
 "253
-[e = _TRISA -> -> 15 `i `uc ]
-[; ;prev13.c: 254: ANSEL=0x0;
+[e $ ! == _done_init -> 0 `i 174  ]
+[; ;prev13.c: 254: {
 "254
-[e = _ANSEL -> -> 0 `i `uc ]
-[; ;prev13.c: 255: done_init=1;
-"255
-[e = _done_init -> 1 `i ]
-[; ;prev13.c: 256: write("Sensing...",1,1);
+{
+[; ;prev13.c: 256: TRISA=0x0F;
 "256
-[e ( _write (3 , , -> :s 7C `*uc -> 1 `i -> 1 `i ]
+[e = _TRISA -> -> 15 `i `uc ]
+[; ;prev13.c: 257: ANSEL=0x0;
 "257
+[e = _ANSEL -> -> 0 `i `uc ]
+[; ;prev13.c: 258: done_init=1;
+"258
+[e = _done_init -> 1 `i ]
+[; ;prev13.c: 259: write("Sensing...",1,1);
+"259
+[e ( _write (3 , , -> :s 7C `*uc -> 1 `i -> 1 `i ]
+"260
 }
 [e :U 174 ]
-[; ;prev13.c: 257: }
-[; ;prev13.c: 258: }
-"258
+[; ;prev13.c: 260: }
+[; ;prev13.c: 261: }
+"261
 [e :UE 173 ]
 }
-"260
+"263
 [v _startswitch `(v 1 ef ]
 {
-[; ;prev13.c: 259: void startswitch()
-[; ;prev13.c: 260: {
+[; ;prev13.c: 262: void startswitch()
+[; ;prev13.c: 263: {
 [e :U _startswitch ]
 [f ]
-[; ;prev13.c: 261: init_fun();
-"261
-[e ( _init_fun ..  ]
-[; ;prev13.c: 264: strcpy(plo,lo);
+[; ;prev13.c: 264: init_fun();
 "264
-[e ( _strcpy (2 , &U _plo -> &U _lo `*Cuc ]
-[; ;prev13.c: 265: strcpy(lo,"000");;
-"265
-[e ( _strcpy (2 , &U _lo :s 8C ]
-[; ;prev13.c: 266: if(RA0==1)
-"266
-[e $ ! == -> _RA0 `i -> 1 `i 176  ]
-[; ;prev13.c: 267: lo[0]='1';
+[e ( _init_fun ..  ]
+[; ;prev13.c: 267: strcpy(plo,lo);
 "267
+[e ( _strcpy (2 , &U _plo -> &U _lo `*Cuc ]
+[; ;prev13.c: 268: strcpy(lo,"000");;
+"268
+[e ( _strcpy (2 , &U _lo :s 8C ]
+[; ;prev13.c: 269: if(RA0==1)
+"269
+[e $ ! == -> _RA0 `i -> 1 `i 176  ]
+[; ;prev13.c: 270: lo[0]='1';
+"270
 [e = *U + &U _lo * -> -> -> 0 `i `ui `ux -> -> # *U &U _lo `ui `ux -> -> 49 `ui `uc ]
 [e :U 176 ]
-[; ;prev13.c: 268: if(RA1==1)
-"268
+[; ;prev13.c: 271: if(RA1==1)
+"271
 [e $ ! == -> _RA1 `i -> 1 `i 177  ]
-[; ;prev13.c: 269: lo[1]='1';
-"269
+[; ;prev13.c: 272: lo[1]='1';
+"272
 [e = *U + &U _lo * -> -> -> 1 `i `ui `ux -> -> # *U &U _lo `ui `ux -> -> 49 `ui `uc ]
 [e :U 177 ]
-[; ;prev13.c: 270: if(RA2==1)
-"270
+[; ;prev13.c: 273: if(RA2==1)
+"273
 [e $ ! == -> _RA2 `i -> 1 `i 178  ]
-[; ;prev13.c: 271: lo[2]='1';
-"271
+[; ;prev13.c: 274: lo[2]='1';
+"274
 [e = *U + &U _lo * -> -> -> 2 `i `ui `ux -> -> # *U &U _lo `ui `ux -> -> 49 `ui `uc ]
 [e :U 178 ]
-[; ;prev13.c: 274: pdev=dev;
-"274
-[e = _pdev _dev ]
-[; ;prev13.c: 275: dev=0b0000;
-"275
-[e = _dev -> 0 `i ]
-[; ;prev13.c: 276: write("Press 2 to REPRG",2,0);
-"276
-[e ( _write (3 , , -> :s 9C `*uc -> 2 `i -> 0 `i ]
-[; ;prev13.c: 277: buzz(99);
+[; ;prev13.c: 277: pdev=dev;
 "277
-[e ( _buzz (1 -> 99 `i ]
-[; ;prev13.c: 279: if(strcmp(lo,plo)!=0)
+[e = _pdev _dev ]
+[; ;prev13.c: 278: dev=0b0000;
+"278
+[e = _dev -> 0 `i ]
+[; ;prev13.c: 279: write("Press 2 to REPRG",2,0);
 "279
-[e $ ! != ( _strcmp (2 , -> &U _lo `*Cuc -> &U _plo `*Cuc -> 0 `i 179  ]
-[; ;prev13.c: 280: {
+[e ( _write (3 , , -> :s 9C `*uc -> 2 `i -> 0 `i ]
+[; ;prev13.c: 280: buzz(99);
 "280
-{
-[; ;prev13.c: 282: write(lo,1,1);
+[e ( _buzz (1 -> 99 `i ]
+[; ;prev13.c: 282: if(strcmp(lo,plo)!=0)
 "282
-[e ( _write (3 , , &U _lo -> 1 `i -> 1 `i ]
-[; ;prev13.c: 283: buzz(7);
+[e $ ! != ( _strcmp (2 , -> &U _lo `*Cuc -> &U _plo `*Cuc -> 0 `i 179  ]
+[; ;prev13.c: 283: {
 "283
+{
+[; ;prev13.c: 285: write(lo,1,1);
+"285
+[e ( _write (3 , , &U _lo -> 1 `i -> 1 `i ]
+[; ;prev13.c: 286: buzz(7);
+"286
 [e ( _buzz (1 -> 7 `i ]
-[; ;prev13.c: 284: delay(3000);
-"284
-[e ( _delay (1 -> -> 3000 `i `ui ]
-[; ;prev13.c: 287: if(check(lo,logic_d1))
+[; ;prev13.c: 287: delay(3000);
 "287
+[e ( _delay (1 -> -> 3000 `i `ui ]
+[; ;prev13.c: 290: if(check(lo,logic_d1))
+"290
 [e $ ! != ( _check (2 , &U _lo &U _logic_d1 -> 0 `i 180  ]
-[; ;prev13.c: 288: dev=dev|0b0001;
-"288
+[; ;prev13.c: 291: dev=dev|0b0001;
+"291
 [e = _dev | _dev -> 1 `i ]
 [e $U 181  ]
-"289
+"292
 [e :U 180 ]
-[; ;prev13.c: 289: else
-[; ;prev13.c: 290: dev=dev&0b0110;
-"290
+[; ;prev13.c: 292: else
+[; ;prev13.c: 293: dev=dev&0b0110;
+"293
 [e = _dev & _dev -> 6 `i ]
 [e :U 181 ]
-[; ;prev13.c: 292: if(check(lo,logic_d2))
-"292
+[; ;prev13.c: 295: if(check(lo,logic_d2))
+"295
 [e $ ! != ( _check (2 , &U _lo &U _logic_d2 -> 0 `i 182  ]
-[; ;prev13.c: 293: dev=dev|0b0010;
-"293
+[; ;prev13.c: 296: dev=dev|0b0010;
+"296
 [e = _dev | _dev -> 2 `i ]
 [e $U 183  ]
-"294
+"297
 [e :U 182 ]
-[; ;prev13.c: 294: else
-[; ;prev13.c: 295: dev=dev&0b0101;
-"295
+[; ;prev13.c: 297: else
+[; ;prev13.c: 298: dev=dev&0b0101;
+"298
 [e = _dev & _dev -> 5 `i ]
 [e :U 183 ]
-[; ;prev13.c: 298: if(check(lo,logic_d3))
-"298
+[; ;prev13.c: 301: if(check(lo,logic_d3))
+"301
 [e $ ! != ( _check (2 , &U _lo &U _logic_d3 -> 0 `i 184  ]
-[; ;prev13.c: 299: dev=dev|0b0100;
-"299
+[; ;prev13.c: 302: dev=dev|0b0100;
+"302
 [e = _dev | _dev -> 4 `i ]
 [e $U 185  ]
-"300
+"303
 [e :U 184 ]
-[; ;prev13.c: 300: else
-[; ;prev13.c: 301: dev=dev&0b0011;
-"301
+[; ;prev13.c: 303: else
+[; ;prev13.c: 304: dev=dev&0b0011;
+"304
 [e = _dev & _dev -> 3 `i ]
 [e :U 185 ]
-[; ;prev13.c: 306: RC4=dev&0b0001;
-"306
-[e = _RC4 -> & _dev -> 1 `i `b ]
-[; ;prev13.c: 307: RC5=(dev>>1)&0b0001;
-"307
-[e = _RC5 -> & >> _dev -> 1 `i -> 1 `i `b ]
-[; ;prev13.c: 308: RC6=(dev>>2)&0b0001;
-"308
-[e = _RC6 -> & >> _dev -> 2 `i -> 1 `i `b ]
-[; ;prev13.c: 309: delay(200);
+[; ;prev13.c: 309: RC4=dev&0b0001;
 "309
-[e ( _delay (1 -> -> 200 `i `ui ]
+[e = _RC4 -> & _dev -> 1 `i `b ]
+[; ;prev13.c: 310: RC5=(dev>>1)&0b0001;
 "310
+[e = _RC5 -> & >> _dev -> 1 `i -> 1 `i `b ]
+[; ;prev13.c: 311: RC6=(dev>>2)&0b0001;
+"311
+[e = _RC6 -> & >> _dev -> 2 `i -> 1 `i `b ]
+[; ;prev13.c: 312: delay(200);
+"312
+[e ( _delay (1 -> -> 200 `i `ui ]
+"313
 }
 [e :U 179 ]
-[; ;prev13.c: 310: }
 [; ;prev13.c: 313: }
-"313
+[; ;prev13.c: 316: }
+"316
 [e :UE 175 ]
 }
-"317
+"320
 [v _getlogicseq `(v 1 ef ]
 {
-[; ;prev13.c: 316: void getlogicseq()
-[; ;prev13.c: 317: {
+[; ;prev13.c: 319: void getlogicseq()
+[; ;prev13.c: 320: {
 [e :U _getlogicseq ]
 [f ]
-"322
+"325
 [v _num `i 1 a ]
-"323
+"326
 [v F1874 `uc -> 16 `i s ]
 [i F1874
 :U ..
@@ -3288,582 +3295,582 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ]
 [v _snum `uc -> 16 `i a ]
-[; ;prev13.c: 322: int num ;
-[; ;prev13.c: 323: char snum[16]="";
+[; ;prev13.c: 325: int num ;
+[; ;prev13.c: 326: char snum[16]="";
 [e = _snum F1874 ]
-"324
-[v _wf `i 1 a ]
-[; ;prev13.c: 324: int wf=0;
-[e = _wf -> 0 `i ]
-"325
-[v _nf `i 1 a ]
-[; ;prev13.c: 325: int nf=0;
-[e = _nf -> 0 `i ]
-"326
-[v _bf `i 1 a ]
-[; ;prev13.c: 326: int bf=0;
-[e = _bf -> 0 `i ]
 "327
-[v _ccount `i 1 a ]
-[; ;prev13.c: 327: int ccount=0;
-[e = _ccount -> 0 `i ]
+[v _wf `i 1 a ]
+[; ;prev13.c: 327: int wf=0;
+[e = _wf -> 0 `i ]
 "328
-[v _str `uc -> 32 `i a ]
-[; ;prev13.c: 328: char str[32];
-[; ;prev13.c: 331: getlogic();
+[v _nf `i 1 a ]
+[; ;prev13.c: 328: int nf=0;
+[e = _nf -> 0 `i ]
+"329
+[v _bf `i 1 a ]
+[; ;prev13.c: 329: int bf=0;
+[e = _bf -> 0 `i ]
+"330
+[v _ccount `i 1 a ]
+[; ;prev13.c: 330: int ccount=0;
+[e = _ccount -> 0 `i ]
 "331
-[e ( _getlogic ..  ]
-[; ;prev13.c: 332: START_SEQ:
-"332
-[e :U 187 ]
-[; ;prev13.c: 333: write("Press 2. - Skip for Device",1,1);
-"333
-[e ( _write (3 , , -> :s 10C `*uc -> 1 `i -> 1 `i ]
-[; ;prev13.c: 334: delay(5000);
+[v _str `uc -> 32 `i a ]
+[; ;prev13.c: 331: char str[32];
+[; ;prev13.c: 334: getlogic();
 "334
-[e ( _delay (1 -> -> 5000 `i `ui ]
-[; ;prev13.c: 336: wf=0;ccount=0;
+[e ( _getlogic ..  ]
+[; ;prev13.c: 335: START_SEQ:
+"335
+[e :U 187 ]
+[; ;prev13.c: 336: write("Press 2. - Skip for Device",1,1);
 "336
+[e ( _write (3 , , -> :s 10C `*uc -> 1 `i -> 1 `i ]
+[; ;prev13.c: 337: delay(5000);
+"337
+[e ( _delay (1 -> -> 5000 `i `ui ]
+[; ;prev13.c: 339: wf=0;ccount=0;
+"339
 [e = _wf -> 0 `i ]
 [e = _ccount -> 0 `i ]
-[; ;prev13.c: 337: strcpy(str,"Enter Logic DEV1:  ");
-"337
+[; ;prev13.c: 340: strcpy(str,"Enter Logic DEV1:  ");
+"340
 [e ( _strcpy (2 , &U _str :s 11C ]
-[; ;prev13.c: 338: write(str,1,1);
-"338
-[e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
-[; ;prev13.c: 339: write(logic_d1,2,0);
-"339
-[e ( _write (3 , , &U _logic_d1 -> 2 `i -> 0 `i ]
-[; ;prev13.c: 341: while(1)
+[; ;prev13.c: 341: write(str,1,1);
 "341
-[e :U 189 ]
-[; ;prev13.c: 342: {
+[e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
+[; ;prev13.c: 342: write(logic_d1,2,0);
 "342
-{
-[; ;prev13.c: 343: num=scan();
-"343
-[e = _num ( _scan ..  ]
-[; ;prev13.c: 344: buzz(num);
+[e ( _write (3 , , &U _logic_d1 -> 2 `i -> 0 `i ]
+[; ;prev13.c: 344: while(1)
 "344
-[e ( _buzz (1 _num ]
-[; ;prev13.c: 345: if(num==1||num==0){
+[e :U 189 ]
+[; ;prev13.c: 345: {
 "345
+{
+[; ;prev13.c: 346: num=scan();
+"346
+[e = _num ( _scan ..  ]
+[; ;prev13.c: 347: buzz(num);
+"347
+[e ( _buzz (1 _num ]
+[; ;prev13.c: 348: if(num==1||num==0){
+"348
 [e $ ! || == _num -> 1 `i == _num -> 0 `i 191  ]
 {
-[; ;prev13.c: 346: if(wf==0)
-"346
-[e $ ! == _wf -> 0 `i 192  ]
-[; ;prev13.c: 347: {
-"347
-{
-[; ;prev13.c: 348: if(ccount==0)
-"348
-[e $ ! == _ccount -> 0 `i 193  ]
-[; ;prev13.c: 349: strcpy(logic_d1,"");
+[; ;prev13.c: 349: if(wf==0)
 "349
+[e $ ! == _wf -> 0 `i 192  ]
+[; ;prev13.c: 350: {
+"350
+{
+[; ;prev13.c: 351: if(ccount==0)
+"351
+[e $ ! == _ccount -> 0 `i 193  ]
+[; ;prev13.c: 352: strcpy(logic_d1,"");
+"352
 [e ( _strcpy (2 , &U _logic_d1 :s 12C ]
 [e :U 193 ]
-[; ;prev13.c: 350: write("---",2,0);
-"350
-[e ( _write (3 , , -> :s 13C `*uc -> 2 `i -> 0 `i ]
-[; ;prev13.c: 351: itoaa(num, snum);
-"351
-[e ( _itoaa (2 , _num &U _snum ]
-[; ;prev13.c: 352: strcat(logic_d1,snum);
-"352
-[e ( _strcat (2 , &U _logic_d1 -> &U _snum `*Cuc ]
-[; ;prev13.c: 353: write( logic_d1,2,0); ;
+[; ;prev13.c: 353: write("---",2,0);
 "353
-[e ( _write (3 , , &U _logic_d1 -> 2 `i -> 0 `i ]
-[; ;prev13.c: 354: wf=1;
+[e ( _write (3 , , -> :s 13C `*uc -> 2 `i -> 0 `i ]
+[; ;prev13.c: 354: itoaa(num, snum);
 "354
-[e = _wf -> 1 `i ]
-[; ;prev13.c: 355: ccount++;
+[e ( _itoaa (2 , _num &U _snum ]
+[; ;prev13.c: 355: strcat(logic_d1,snum);
 "355
-[e ++ _ccount -> 1 `i ]
+[e ( _strcat (2 , &U _logic_d1 -> &U _snum `*Cuc ]
+[; ;prev13.c: 356: write( logic_d1,2,0); ;
 "356
+[e ( _write (3 , , &U _logic_d1 -> 2 `i -> 0 `i ]
+[; ;prev13.c: 357: wf=1;
+"357
+[e = _wf -> 1 `i ]
+[; ;prev13.c: 358: ccount++;
+"358
+[e ++ _ccount -> 1 `i ]
+"359
 }
 [e :U 192 ]
-"357
-}
-[; ;prev13.c: 356: }
-[; ;prev13.c: 357: }
-[e $U 194  ]
-"358
-[e :U 191 ]
-[; ;prev13.c: 358: else{
-{
-[; ;prev13.c: 359: wf=0;
-"359
-[e = _wf -> 0 `i ]
 "360
 }
-[e :U 194 ]
+[; ;prev13.c: 359: }
 [; ;prev13.c: 360: }
-[; ;prev13.c: 361: if(ccount>=3)
+[e $U 194  ]
 "361
-[e $ ! >= _ccount -> 3 `i 195  ]
-[; ;prev13.c: 362: break;
+[e :U 191 ]
+[; ;prev13.c: 361: else{
+{
+[; ;prev13.c: 362: wf=0;
 "362
+[e = _wf -> 0 `i ]
+"363
+}
+[e :U 194 ]
+[; ;prev13.c: 363: }
+[; ;prev13.c: 364: if(ccount>=3)
+"364
+[e $ ! >= _ccount -> 3 `i 195  ]
+[; ;prev13.c: 365: break;
+"365
 [e $U 190  ]
 [e :U 195 ]
-[; ;prev13.c: 365: if(num==2)
-"365
+[; ;prev13.c: 368: if(num==2)
+"368
 [e $ ! == _num -> 2 `i 196  ]
-[; ;prev13.c: 366: {
-"366
+[; ;prev13.c: 369: {
+"369
 {
-[; ;prev13.c: 367: if(nf==0){
-"367
+[; ;prev13.c: 370: if(nf==0){
+"370
 [e $ ! == _nf -> 0 `i 197  ]
 {
-[; ;prev13.c: 368: nf=1;
-"368
+[; ;prev13.c: 371: nf=1;
+"371
 [e = _nf -> 1 `i ]
-[; ;prev13.c: 369: break;
-"369
+[; ;prev13.c: 372: break;
+"372
 [e $U 190  ]
-"370
+"373
 }
 [e :U 197 ]
-"371
-}
-[; ;prev13.c: 370: }
-[; ;prev13.c: 371: }
-[e $U 198  ]
-"372
-[e :U 196 ]
-[; ;prev13.c: 372: else if(num==99){
-[e $ ! == _num -> 99 `i 199  ]
-{
-[; ;prev13.c: 373: nf=0;
-"373
-[e = _nf -> 0 `i ]
 "374
 }
-[e :U 199 ]
+[; ;prev13.c: 373: }
+[; ;prev13.c: 374: }
+[e $U 198  ]
 "375
+[e :U 196 ]
+[; ;prev13.c: 375: else if(num==99){
+[e $ ! == _num -> 99 `i 199  ]
+{
+[; ;prev13.c: 376: nf=0;
+"376
+[e = _nf -> 0 `i ]
+"377
+}
+[e :U 199 ]
+"378
 [e :U 198 ]
 }
 [e :U 188 ]
-"341
+"344
 [e $U 189  ]
 [e :U 190 ]
-[; ;prev13.c: 374: }
-[; ;prev13.c: 375: }
-[; ;prev13.c: 378: wf=0;ccount=0;
-"378
+[; ;prev13.c: 377: }
+[; ;prev13.c: 378: }
+[; ;prev13.c: 381: wf=0;ccount=0;
+"381
 [e = _wf -> 0 `i ]
 [e = _ccount -> 0 `i ]
-[; ;prev13.c: 379: strcpy(str,"Enter Logic DEV2:  ");
-"379
+[; ;prev13.c: 382: strcpy(str,"Enter Logic DEV2:  ");
+"382
 [e ( _strcpy (2 , &U _str :s 14C ]
-[; ;prev13.c: 380: write(str,1,1);
-"380
-[e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
-[; ;prev13.c: 381: write(logic_d2,2,0);
-"381
-[e ( _write (3 , , &U _logic_d2 -> 2 `i -> 0 `i ]
-[; ;prev13.c: 383: while(1)
+[; ;prev13.c: 383: write(str,1,1);
 "383
-[e :U 201 ]
-[; ;prev13.c: 384: {
+[e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
+[; ;prev13.c: 384: write(logic_d2,2,0);
 "384
-{
-[; ;prev13.c: 385: num=scan();
-"385
-[e = _num ( _scan ..  ]
-[; ;prev13.c: 386: buzz(num);
+[e ( _write (3 , , &U _logic_d2 -> 2 `i -> 0 `i ]
+[; ;prev13.c: 386: while(1)
 "386
-[e ( _buzz (1 _num ]
-[; ;prev13.c: 387: if(num==1||num==0){
+[e :U 201 ]
+[; ;prev13.c: 387: {
 "387
+{
+[; ;prev13.c: 388: num=scan();
+"388
+[e = _num ( _scan ..  ]
+[; ;prev13.c: 389: buzz(num);
+"389
+[e ( _buzz (1 _num ]
+[; ;prev13.c: 390: if(num==1||num==0){
+"390
 [e $ ! || == _num -> 1 `i == _num -> 0 `i 203  ]
 {
-[; ;prev13.c: 388: if(wf==0)
-"388
+[; ;prev13.c: 391: if(wf==0)
+"391
 [e $ ! == _wf -> 0 `i 204  ]
-[; ;prev13.c: 389: { if(ccount==0)
-"389
+[; ;prev13.c: 392: { if(ccount==0)
+"392
 {
 [e $ ! == _ccount -> 0 `i 205  ]
-[; ;prev13.c: 390: strcpy(logic_d2,"");
-"390
+[; ;prev13.c: 393: strcpy(logic_d2,"");
+"393
 [e ( _strcpy (2 , &U _logic_d2 :s 15C ]
 [e :U 205 ]
-[; ;prev13.c: 391: write("---",2,0);
-"391
-[e ( _write (3 , , -> :s 16C `*uc -> 2 `i -> 0 `i ]
-[; ;prev13.c: 392: itoaa(num, snum);
-"392
-[e ( _itoaa (2 , _num &U _snum ]
-[; ;prev13.c: 393: strcat(logic_d2,snum);
-"393
-[e ( _strcat (2 , &U _logic_d2 -> &U _snum `*Cuc ]
-[; ;prev13.c: 394: write( logic_d2,2,0); ;
+[; ;prev13.c: 394: write("---",2,0);
 "394
-[e ( _write (3 , , &U _logic_d2 -> 2 `i -> 0 `i ]
-[; ;prev13.c: 395: wf=1;
+[e ( _write (3 , , -> :s 16C `*uc -> 2 `i -> 0 `i ]
+[; ;prev13.c: 395: itoaa(num, snum);
 "395
-[e = _wf -> 1 `i ]
-[; ;prev13.c: 396: ccount++;
+[e ( _itoaa (2 , _num &U _snum ]
+[; ;prev13.c: 396: strcat(logic_d2,snum);
 "396
-[e ++ _ccount -> 1 `i ]
+[e ( _strcat (2 , &U _logic_d2 -> &U _snum `*Cuc ]
+[; ;prev13.c: 397: write( logic_d2,2,0); ;
 "397
+[e ( _write (3 , , &U _logic_d2 -> 2 `i -> 0 `i ]
+[; ;prev13.c: 398: wf=1;
+"398
+[e = _wf -> 1 `i ]
+[; ;prev13.c: 399: ccount++;
+"399
+[e ++ _ccount -> 1 `i ]
+"400
 }
 [e :U 204 ]
-"398
-}
-[; ;prev13.c: 397: }
-[; ;prev13.c: 398: }
-[e $U 206  ]
-"399
-[e :U 203 ]
-[; ;prev13.c: 399: else{
-{
-[; ;prev13.c: 400: wf=0;
-"400
-[e = _wf -> 0 `i ]
 "401
 }
-[e :U 206 ]
+[; ;prev13.c: 400: }
 [; ;prev13.c: 401: }
-[; ;prev13.c: 402: if(ccount>=3)
+[e $U 206  ]
 "402
-[e $ ! >= _ccount -> 3 `i 207  ]
-[; ;prev13.c: 403: break;
+[e :U 203 ]
+[; ;prev13.c: 402: else{
+{
+[; ;prev13.c: 403: wf=0;
 "403
+[e = _wf -> 0 `i ]
+"404
+}
+[e :U 206 ]
+[; ;prev13.c: 404: }
+[; ;prev13.c: 405: if(ccount>=3)
+"405
+[e $ ! >= _ccount -> 3 `i 207  ]
+[; ;prev13.c: 406: break;
+"406
 [e $U 202  ]
 [e :U 207 ]
-[; ;prev13.c: 405: if(num==2)
-"405
+[; ;prev13.c: 408: if(num==2)
+"408
 [e $ ! == _num -> 2 `i 208  ]
-[; ;prev13.c: 406: {
-"406
+[; ;prev13.c: 409: {
+"409
 {
-[; ;prev13.c: 407: if(nf==0){
-"407
+[; ;prev13.c: 410: if(nf==0){
+"410
 [e $ ! == _nf -> 0 `i 209  ]
 {
-[; ;prev13.c: 408: nf=1;
-"408
+[; ;prev13.c: 411: nf=1;
+"411
 [e = _nf -> 1 `i ]
-[; ;prev13.c: 409: break;
-"409
+[; ;prev13.c: 412: break;
+"412
 [e $U 202  ]
-"410
+"413
 }
 [e :U 209 ]
-"411
-}
-[; ;prev13.c: 410: }
-[; ;prev13.c: 411: }
-[e $U 210  ]
-"412
-[e :U 208 ]
-[; ;prev13.c: 412: else if(num==99){
-[e $ ! == _num -> 99 `i 211  ]
-{
-[; ;prev13.c: 413: nf=0;
-"413
-[e = _nf -> 0 `i ]
 "414
 }
-[e :U 211 ]
+[; ;prev13.c: 413: }
+[; ;prev13.c: 414: }
+[e $U 210  ]
 "415
+[e :U 208 ]
+[; ;prev13.c: 415: else if(num==99){
+[e $ ! == _num -> 99 `i 211  ]
+{
+[; ;prev13.c: 416: nf=0;
+"416
+[e = _nf -> 0 `i ]
+"417
+}
+[e :U 211 ]
+"418
 [e :U 210 ]
 }
 [e :U 200 ]
-"383
+"386
 [e $U 201  ]
 [e :U 202 ]
-[; ;prev13.c: 414: }
-[; ;prev13.c: 415: }
-[; ;prev13.c: 418: wf=0;ccount=0;
-"418
+[; ;prev13.c: 417: }
+[; ;prev13.c: 418: }
+[; ;prev13.c: 421: wf=0;ccount=0;
+"421
 [e = _wf -> 0 `i ]
 [e = _ccount -> 0 `i ]
-[; ;prev13.c: 419: strcpy(str,"Enter Logic DEV3:  ");
-"419
+[; ;prev13.c: 422: strcpy(str,"Enter Logic DEV3:  ");
+"422
 [e ( _strcpy (2 , &U _str :s 17C ]
-[; ;prev13.c: 420: write(str,1,1);
-"420
-[e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
-[; ;prev13.c: 421: write(logic_d3,2,0);
-"421
-[e ( _write (3 , , &U _logic_d3 -> 2 `i -> 0 `i ]
-[; ;prev13.c: 423: while(1)
+[; ;prev13.c: 423: write(str,1,1);
 "423
-[e :U 213 ]
-[; ;prev13.c: 424: {
+[e ( _write (3 , , &U _str -> 1 `i -> 1 `i ]
+[; ;prev13.c: 424: write(logic_d3,2,0);
 "424
-{
-[; ;prev13.c: 425: num=scan();
-"425
-[e = _num ( _scan ..  ]
-[; ;prev13.c: 426: buzz(num);
+[e ( _write (3 , , &U _logic_d3 -> 2 `i -> 0 `i ]
+[; ;prev13.c: 426: while(1)
 "426
-[e ( _buzz (1 _num ]
-[; ;prev13.c: 427: if(num==1||num==0){
+[e :U 213 ]
+[; ;prev13.c: 427: {
 "427
+{
+[; ;prev13.c: 428: num=scan();
+"428
+[e = _num ( _scan ..  ]
+[; ;prev13.c: 429: buzz(num);
+"429
+[e ( _buzz (1 _num ]
+[; ;prev13.c: 430: if(num==1||num==0){
+"430
 [e $ ! || == _num -> 1 `i == _num -> 0 `i 215  ]
 {
-[; ;prev13.c: 428: if(wf==0)
-"428
+[; ;prev13.c: 431: if(wf==0)
+"431
 [e $ ! == _wf -> 0 `i 216  ]
-[; ;prev13.c: 429: { if(ccount==0)
-"429
+[; ;prev13.c: 432: { if(ccount==0)
+"432
 {
 [e $ ! == _ccount -> 0 `i 217  ]
-[; ;prev13.c: 430: strcpy(logic_d3,"");
-"430
+[; ;prev13.c: 433: strcpy(logic_d3,"");
+"433
 [e ( _strcpy (2 , &U _logic_d3 :s 18C ]
 [e :U 217 ]
-[; ;prev13.c: 431: write("---",2,0);
-"431
-[e ( _write (3 , , -> :s 19C `*uc -> 2 `i -> 0 `i ]
-[; ;prev13.c: 432: itoaa(num, snum);
-"432
-[e ( _itoaa (2 , _num &U _snum ]
-[; ;prev13.c: 433: strcat(logic_d3,snum);
-"433
-[e ( _strcat (2 , &U _logic_d3 -> &U _snum `*Cuc ]
-[; ;prev13.c: 434: write( logic_d3,2,0); ;
+[; ;prev13.c: 434: write("---",2,0);
 "434
-[e ( _write (3 , , &U _logic_d3 -> 2 `i -> 0 `i ]
-[; ;prev13.c: 435: wf=1;
+[e ( _write (3 , , -> :s 19C `*uc -> 2 `i -> 0 `i ]
+[; ;prev13.c: 435: itoaa(num, snum);
 "435
-[e = _wf -> 1 `i ]
-[; ;prev13.c: 436: ccount++;
+[e ( _itoaa (2 , _num &U _snum ]
+[; ;prev13.c: 436: strcat(logic_d3,snum);
 "436
-[e ++ _ccount -> 1 `i ]
+[e ( _strcat (2 , &U _logic_d3 -> &U _snum `*Cuc ]
+[; ;prev13.c: 437: write( logic_d3,2,0); ;
 "437
+[e ( _write (3 , , &U _logic_d3 -> 2 `i -> 0 `i ]
+[; ;prev13.c: 438: wf=1;
+"438
+[e = _wf -> 1 `i ]
+[; ;prev13.c: 439: ccount++;
+"439
+[e ++ _ccount -> 1 `i ]
+"440
 }
 [e :U 216 ]
-"438
-}
-[; ;prev13.c: 437: }
-[; ;prev13.c: 438: }
-[e $U 218  ]
-"439
-[e :U 215 ]
-[; ;prev13.c: 439: else{
-{
-[; ;prev13.c: 440: wf=0;
-"440
-[e = _wf -> 0 `i ]
 "441
 }
-[e :U 218 ]
+[; ;prev13.c: 440: }
 [; ;prev13.c: 441: }
-[; ;prev13.c: 442: if(ccount>=3)
+[e $U 218  ]
 "442
-[e $ ! >= _ccount -> 3 `i 219  ]
-[; ;prev13.c: 443: break;
+[e :U 215 ]
+[; ;prev13.c: 442: else{
+{
+[; ;prev13.c: 443: wf=0;
 "443
+[e = _wf -> 0 `i ]
+"444
+}
+[e :U 218 ]
+[; ;prev13.c: 444: }
+[; ;prev13.c: 445: if(ccount>=3)
+"445
+[e $ ! >= _ccount -> 3 `i 219  ]
+[; ;prev13.c: 446: break;
+"446
 [e $U 214  ]
 [e :U 219 ]
-[; ;prev13.c: 445: if(num==2)
-"445
+[; ;prev13.c: 448: if(num==2)
+"448
 [e $ ! == _num -> 2 `i 220  ]
-[; ;prev13.c: 446: {
-"446
+[; ;prev13.c: 449: {
+"449
 {
-[; ;prev13.c: 447: if(nf==0){
-"447
+[; ;prev13.c: 450: if(nf==0){
+"450
 [e $ ! == _nf -> 0 `i 221  ]
 {
-[; ;prev13.c: 448: nf=1;
-"448
+[; ;prev13.c: 451: nf=1;
+"451
 [e = _nf -> 1 `i ]
-[; ;prev13.c: 449: break;
-"449
+[; ;prev13.c: 452: break;
+"452
 [e $U 214  ]
-"450
+"453
 }
 [e :U 221 ]
-"451
-}
-[; ;prev13.c: 450: }
-[; ;prev13.c: 451: }
-[e $U 222  ]
-"452
-[e :U 220 ]
-[; ;prev13.c: 452: else if(num==99){
-[e $ ! == _num -> 99 `i 223  ]
-{
-[; ;prev13.c: 453: nf=0;
-"453
-[e = _nf -> 0 `i ]
 "454
 }
-[e :U 223 ]
+[; ;prev13.c: 453: }
+[; ;prev13.c: 454: }
+[e $U 222  ]
 "455
+[e :U 220 ]
+[; ;prev13.c: 455: else if(num==99){
+[e $ ! == _num -> 99 `i 223  ]
+{
+[; ;prev13.c: 456: nf=0;
+"456
+[e = _nf -> 0 `i ]
+"457
+}
+[e :U 223 ]
+"458
 [e :U 222 ]
 }
 [e :U 212 ]
-"423
+"426
 [e $U 213  ]
 [e :U 214 ]
-[; ;prev13.c: 454: }
-[; ;prev13.c: 455: }
-[; ;prev13.c: 457: setlogic();
-"457
+[; ;prev13.c: 457: }
+[; ;prev13.c: 458: }
+[; ;prev13.c: 460: setlogic();
+"460
 [e ( _setlogic ..  ]
-[; ;prev13.c: 499: f1=0;
-"499
+[; ;prev13.c: 502: f1=0;
+"502
 [e = _f1 -> 0 `i ]
-[; ;prev13.c: 500: f2=0;
-"500
-[e = _f2 -> 0 `i ]
-[; ;prev13.c: 501: f3=1;
-"501
-[e = _f3 -> 1 `i ]
-[; ;prev13.c: 503: }
+[; ;prev13.c: 503: f2=0;
 "503
+[e = _f2 -> 0 `i ]
+[; ;prev13.c: 504: f3=1;
+"504
+[e = _f3 -> 1 `i ]
+[; ;prev13.c: 506: }
+"506
 [e :UE 186 ]
 }
-"508
+"511
 [v _parselogic `(i 1 ef1`*uc ]
 {
-[; ;prev13.c: 507: int parselogic(char * log)
-[; ;prev13.c: 508: {
+[; ;prev13.c: 510: int parselogic(char * log)
+[; ;prev13.c: 511: {
 [e :U _parselogic ]
 [v _log `*uc 1 r1 ]
 [f ]
-"509
-[v _dat `i 1 a ]
-[; ;prev13.c: 509: int dat=0b0000;
-[e = _dat -> 0 `i ]
-[; ;prev13.c: 511: if(strcmp(log,"0000")==0)
-"511
-[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 20C -> 0 `i 225  ]
-[; ;prev13.c: 512: dat=0b0000;
 "512
+[v _dat `i 1 a ]
+[; ;prev13.c: 512: int dat=0b0000;
+[e = _dat -> 0 `i ]
+[; ;prev13.c: 514: if(strcmp(log,"0000")==0)
+"514
+[e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 20C -> 0 `i 225  ]
+[; ;prev13.c: 515: dat=0b0000;
+"515
 [e = _dat -> 0 `i ]
 [e $U 226  ]
-"513
+"516
 [e :U 225 ]
-[; ;prev13.c: 513: else if(strcmp(log,"0001")==0)
+[; ;prev13.c: 516: else if(strcmp(log,"0001")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 21C -> 0 `i 227  ]
-[; ;prev13.c: 514: dat=0b0001;
-"514
+[; ;prev13.c: 517: dat=0b0001;
+"517
 [e = _dat -> 1 `i ]
 [e $U 228  ]
-"515
+"518
 [e :U 227 ]
-[; ;prev13.c: 515: else if(strcmp(log,"0010")==0)
+[; ;prev13.c: 518: else if(strcmp(log,"0010")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 22C -> 0 `i 229  ]
-[; ;prev13.c: 516: dat=0b0010;
-"516
+[; ;prev13.c: 519: dat=0b0010;
+"519
 [e = _dat -> 2 `i ]
 [e $U 230  ]
-"518
+"521
 [e :U 229 ]
-[; ;prev13.c: 518: else if(strcmp(log,"0011")==0)
+[; ;prev13.c: 521: else if(strcmp(log,"0011")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 23C -> 0 `i 231  ]
-[; ;prev13.c: 519: dat=0b0011;
-"519
+[; ;prev13.c: 522: dat=0b0011;
+"522
 [e = _dat -> 3 `i ]
 [e $U 232  ]
-"521
+"524
 [e :U 231 ]
-[; ;prev13.c: 521: else if(strcmp(log,"0100")==0)
+[; ;prev13.c: 524: else if(strcmp(log,"0100")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 24C -> 0 `i 233  ]
-[; ;prev13.c: 522: dat=0b0100;
-"522
+[; ;prev13.c: 525: dat=0b0100;
+"525
 [e = _dat -> 4 `i ]
 [e $U 234  ]
-"524
+"527
 [e :U 233 ]
-[; ;prev13.c: 524: else if(strcmp(log,"0101")==0)
+[; ;prev13.c: 527: else if(strcmp(log,"0101")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 25C -> 0 `i 235  ]
-[; ;prev13.c: 525: dat=0b0101;
-"525
+[; ;prev13.c: 528: dat=0b0101;
+"528
 [e = _dat -> 5 `i ]
 [e $U 236  ]
-"527
+"530
 [e :U 235 ]
-[; ;prev13.c: 527: else if(strcmp(log,"0110")==0)
+[; ;prev13.c: 530: else if(strcmp(log,"0110")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 26C -> 0 `i 237  ]
-[; ;prev13.c: 528: dat=0b0110;
-"528
+[; ;prev13.c: 531: dat=0b0110;
+"531
 [e = _dat -> 6 `i ]
 [e $U 238  ]
-"530
+"533
 [e :U 237 ]
-[; ;prev13.c: 530: else if(strcmp(log,"0111")==0)
+[; ;prev13.c: 533: else if(strcmp(log,"0111")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 27C -> 0 `i 239  ]
-[; ;prev13.c: 531: dat=0b0111;
-"531
+[; ;prev13.c: 534: dat=0b0111;
+"534
 [e = _dat -> 7 `i ]
 [e $U 240  ]
-"533
+"536
 [e :U 239 ]
-[; ;prev13.c: 533: else if(strcmp(log,"1000")==0)
+[; ;prev13.c: 536: else if(strcmp(log,"1000")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 28C -> 0 `i 241  ]
-[; ;prev13.c: 534: dat=0b1000;
-"534
+[; ;prev13.c: 537: dat=0b1000;
+"537
 [e = _dat -> 8 `i ]
 [e $U 242  ]
-"536
+"539
 [e :U 241 ]
-[; ;prev13.c: 536: else if(strcmp(log,"1001")==0)
+[; ;prev13.c: 539: else if(strcmp(log,"1001")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 29C -> 0 `i 243  ]
-[; ;prev13.c: 537: dat=0b1001;
-"537
+[; ;prev13.c: 540: dat=0b1001;
+"540
 [e = _dat -> 9 `i ]
 [e $U 244  ]
-"539
+"542
 [e :U 243 ]
-[; ;prev13.c: 539: else if(strcmp(log,"1010")==0)
+[; ;prev13.c: 542: else if(strcmp(log,"1010")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 30C -> 0 `i 245  ]
-[; ;prev13.c: 540: dat=0b1010;
-"540
+[; ;prev13.c: 543: dat=0b1010;
+"543
 [e = _dat -> 10 `i ]
 [e $U 246  ]
-"542
+"545
 [e :U 245 ]
-[; ;prev13.c: 542: else if(strcmp(log,"1011")==0)
+[; ;prev13.c: 545: else if(strcmp(log,"1011")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 31C -> 0 `i 247  ]
-[; ;prev13.c: 543: dat=0b1011;
-"543
+[; ;prev13.c: 546: dat=0b1011;
+"546
 [e = _dat -> 11 `i ]
 [e $U 248  ]
-"545
+"548
 [e :U 247 ]
-[; ;prev13.c: 545: else if(strcmp(log,"1100")==0)
+[; ;prev13.c: 548: else if(strcmp(log,"1100")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 32C -> 0 `i 249  ]
-[; ;prev13.c: 546: dat=0b1101;
-"546
+[; ;prev13.c: 549: dat=0b1101;
+"549
 [e = _dat -> 13 `i ]
 [e $U 250  ]
-"548
+"551
 [e :U 249 ]
-[; ;prev13.c: 548: else if(strcmp(log,"1101")==0)
+[; ;prev13.c: 551: else if(strcmp(log,"1101")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 33C -> 0 `i 251  ]
-[; ;prev13.c: 549: dat=0b1000;
-"549
+[; ;prev13.c: 552: dat=0b1000;
+"552
 [e = _dat -> 8 `i ]
 [e $U 252  ]
-"551
+"554
 [e :U 251 ]
-[; ;prev13.c: 551: else if(strcmp(log,"1110")==0)
+[; ;prev13.c: 554: else if(strcmp(log,"1110")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 34C -> 0 `i 253  ]
-[; ;prev13.c: 552: dat=0b1110;
-"552
+[; ;prev13.c: 555: dat=0b1110;
+"555
 [e = _dat -> 14 `i ]
 [e $U 254  ]
-"554
+"557
 [e :U 253 ]
-[; ;prev13.c: 554: else if(strcmp(log,"1111")==0)
+[; ;prev13.c: 557: else if(strcmp(log,"1111")==0)
 [e $ ! == ( _strcmp (2 , -> _log `*Cuc :s 35C -> 0 `i 255  ]
-[; ;prev13.c: 555: dat=0b1111;
-"555
+[; ;prev13.c: 558: dat=0b1111;
+"558
 [e = _dat -> 15 `i ]
 [e :U 255 ]
-"558
+"561
 [e :U 254 ]
 [e :U 252 ]
 [e :U 250 ]
@@ -3879,92 +3886,92 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :U 230 ]
 [e :U 228 ]
 [e :U 226 ]
-[; ;prev13.c: 558: return dat;
+[; ;prev13.c: 561: return dat;
 [e ) _dat ]
 [e $UE 224  ]
-[; ;prev13.c: 561: }
-"561
+[; ;prev13.c: 564: }
+"564
 [e :UE 224 ]
 }
-"563
+"566
 [v _delay `(v 1 ef1`ui ]
 {
-[; ;prev13.c: 562: void delay(unsigned int x)
-[; ;prev13.c: 563: {
+[; ;prev13.c: 565: void delay(unsigned int x)
+[; ;prev13.c: 566: {
 [e :U _delay ]
 [v _x `ui 1 r1 ]
 [f ]
-[; ;prev13.c: 564: while(x-->0);
-"564
+[; ;prev13.c: 567: while(x-->0);
+"567
 [e $U 257  ]
 [e :U 258 ]
 [e :U 257 ]
 [e $ > -- _x -> -> 1 `i `ui -> -> 0 `i `ui 258  ]
 [e :U 259 ]
-[; ;prev13.c: 565: }
-"565
+[; ;prev13.c: 568: }
+"568
 [e :UE 256 ]
 }
-"569
+"572
 [v _itoaa `(i 1 ef2`i`*uc ]
 {
-[; ;prev13.c: 568: int itoaa(int value,char *ptr)
-[; ;prev13.c: 569: {
+[; ;prev13.c: 571: int itoaa(int value,char *ptr)
+[; ;prev13.c: 572: {
 [e :U _itoaa ]
 [v _value `i 1 r1 ]
 [v _ptr `*uc 1 r2 ]
 [f ]
-"570
+"573
 [v _count `i 1 a ]
-[; ;prev13.c: 570: int count=0,temp;
+[; ;prev13.c: 573: int count=0,temp;
 [e = _count -> 0 `i ]
 [v _temp `i 1 a ]
-[; ;prev13.c: 571: if(ptr==(0))
-"571
+[; ;prev13.c: 574: if(ptr==(0))
+"574
 [e $ ! == _ptr -> -> 0 `i `*uc 261  ]
-[; ;prev13.c: 572: return 0;
-"572
+[; ;prev13.c: 575: return 0;
+"575
 [e ) -> 0 `i ]
 [e $UE 260  ]
 [e :U 261 ]
-[; ;prev13.c: 573: if(value==0)
-"573
-[e $ ! == _value -> 0 `i 262  ]
-[; ;prev13.c: 574: {
-"574
-{
-[; ;prev13.c: 575: *ptr='0';
-"575
-[e = *U _ptr -> -> 48 `ui `uc ]
-[; ;prev13.c: 576: return 1;
+[; ;prev13.c: 576: if(value==0)
 "576
+[e $ ! == _value -> 0 `i 262  ]
+[; ;prev13.c: 577: {
+"577
+{
+[; ;prev13.c: 578: *ptr='0';
+"578
+[e = *U _ptr -> -> 48 `ui `uc ]
+[; ;prev13.c: 579: return 1;
+"579
 [e ) -> 1 `i ]
 [e $UE 260  ]
-"577
+"580
 }
 [e :U 262 ]
-[; ;prev13.c: 577: }
-[; ;prev13.c: 579: if(value<0)
-"579
-[e $ ! < _value -> 0 `i 263  ]
-[; ;prev13.c: 580: {
-"580
-{
-[; ;prev13.c: 581: value*=(-1);
-"581
-[e =* _value -U -> 1 `i ]
-[; ;prev13.c: 582: *ptr++='-';
+[; ;prev13.c: 580: }
+[; ;prev13.c: 582: if(value<0)
 "582
-[e = *U ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x -> -> 45 `ui `uc ]
-[; ;prev13.c: 583: count++;
+[e $ ! < _value -> 0 `i 263  ]
+[; ;prev13.c: 583: {
 "583
-[e ++ _count -> 1 `i ]
+{
+[; ;prev13.c: 584: value*=(-1);
 "584
+[e =* _value -U -> 1 `i ]
+[; ;prev13.c: 585: *ptr++='-';
+"585
+[e = *U ++ _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x -> -> 45 `ui `uc ]
+[; ;prev13.c: 586: count++;
+"586
+[e ++ _count -> 1 `i ]
+"587
 }
 [e :U 263 ]
-[; ;prev13.c: 584: }
-[; ;prev13.c: 585: for(temp=value;temp>0;temp/=10,ptr++);
-"585
+[; ;prev13.c: 587: }
+[; ;prev13.c: 588: for(temp=value;temp>0;temp/=10,ptr++);
+"588
 {
 [e = _temp _value ]
 [e $ > _temp -> 0 `i 264  ]
@@ -3974,724 +3981,724 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $ > _temp -> 0 `i 264  ]
 [e :U 265 ]
 }
-[; ;prev13.c: 586: *ptr='\0';
-"586
+[; ;prev13.c: 589: *ptr='\0';
+"589
 [e = *U _ptr -> -> 0 `ui `uc ]
-[; ;prev13.c: 587: for(temp=value;temp>0;temp/=10)
-"587
+[; ;prev13.c: 590: for(temp=value;temp>0;temp/=10)
+"590
 {
 [e = _temp _value ]
 [e $ > _temp -> 0 `i 267  ]
 [e $U 268  ]
-"588
-[e :U 267 ]
-[; ;prev13.c: 588: {
-{
-[; ;prev13.c: 589: *--ptr=temp%10+'0';
-"589
-[e = *U =- _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x -> + -> % _temp -> 10 `i `ui -> 48 `ui `uc ]
-[; ;prev13.c: 590: count++;
-"590
-[e ++ _count -> 1 `i ]
 "591
+[e :U 267 ]
+[; ;prev13.c: 591: {
+{
+[; ;prev13.c: 592: *--ptr=temp%10+'0';
+"592
+[e = *U =- _ptr * -> -> 1 `i `x -> -> # *U _ptr `i `x -> + -> % _temp -> 10 `i `ui -> 48 `ui `uc ]
+[; ;prev13.c: 593: count++;
+"593
+[e ++ _count -> 1 `i ]
+"594
 }
-"587
+"590
 [e =/ _temp -> -> 10 `uc `i ]
 [e $ > _temp -> 0 `i 267  ]
 [e :U 268 ]
-"591
+"594
 }
-[; ;prev13.c: 591: }
-[; ;prev13.c: 592: return count;
-"592
+[; ;prev13.c: 594: }
+[; ;prev13.c: 595: return count;
+"595
 [e ) _count ]
 [e $UE 260  ]
-[; ;prev13.c: 593: }
-"593
+[; ;prev13.c: 596: }
+"596
 [e :UE 260 ]
 }
-"596
+"599
 [v _initlcd `(v 1 ef ]
 {
-[; ;prev13.c: 595: void initlcd()
-[; ;prev13.c: 596: {
+[; ;prev13.c: 598: void initlcd()
+[; ;prev13.c: 599: {
 [e :U _initlcd ]
 [f ]
-[; ;prev13.c: 598: TRISC=0b0000000;
-"598
+[; ;prev13.c: 601: TRISC=0b0000000;
+"601
 [e = _TRISC -> -> 0 `i `uc ]
-[; ;prev13.c: 600: TRISD=0b11000000;
-"600
+[; ;prev13.c: 603: TRISD=0b11000000;
+"603
 [e = _TRISD -> -> 192 `i `uc ]
-[; ;prev13.c: 602: cmd(0x38);
-"602
+[; ;prev13.c: 605: cmd(0x38);
+"605
 [e ( _cmd (1 -> -> 56 `i `uc ]
-[; ;prev13.c: 604: cmd(0x0C);
-"604
+[; ;prev13.c: 607: cmd(0x0C);
+"607
 [e ( _cmd (1 -> -> 12 `i `uc ]
-[; ;prev13.c: 606: cmd(0x01);
-"606
+[; ;prev13.c: 609: cmd(0x01);
+"609
 [e ( _cmd (1 -> -> 1 `i `uc ]
-[; ;prev13.c: 608: cmd(0x80);
-"608
+[; ;prev13.c: 611: cmd(0x80);
+"611
 [e ( _cmd (1 -> -> 128 `i `uc ]
-[; ;prev13.c: 612: }
-"612
+[; ;prev13.c: 615: }
+"615
 [e :UE 270 ]
 }
-"614
+"617
 [v _clearlcd `(v 1 ef ]
 {
-[; ;prev13.c: 613: void clearlcd()
-[; ;prev13.c: 614: {
+[; ;prev13.c: 616: void clearlcd()
+[; ;prev13.c: 617: {
 [e :U _clearlcd ]
 [f ]
-[; ;prev13.c: 615: cmd(0x01);
-"615
+[; ;prev13.c: 618: cmd(0x01);
+"618
 [e ( _cmd (1 -> -> 1 `i `uc ]
-[; ;prev13.c: 616: }
-"616
+[; ;prev13.c: 619: }
+"619
 [e :UE 271 ]
 }
-"620
+"623
 [v _latch `(v 1 ef ]
 {
-[; ;prev13.c: 619: void latch()
-[; ;prev13.c: 620: {
+[; ;prev13.c: 622: void latch()
+[; ;prev13.c: 623: {
 [e :U _latch ]
 [f ]
-[; ;prev13.c: 621: RD4=1;
-"621
-[e = _RD4 -> -> 1 `i `b ]
-[; ;prev13.c: 622: delay(250);
-"622
-[e ( _delay (1 -> -> 250 `i `ui ]
-[; ;prev13.c: 623: RD4=0;
-"623
-[e = _RD4 -> -> 0 `i `b ]
-[; ;prev13.c: 624: delay(300);
+[; ;prev13.c: 624: RD4=1;
 "624
-[e ( _delay (1 -> -> 300 `i `ui ]
-[; ;prev13.c: 625: }
+[e = _RD4 -> -> 1 `i `b ]
+[; ;prev13.c: 625: delay(250);
 "625
+[e ( _delay (1 -> -> 250 `i `ui ]
+[; ;prev13.c: 626: RD4=0;
+"626
+[e = _RD4 -> -> 0 `i `b ]
+[; ;prev13.c: 627: delay(300);
+"627
+[e ( _delay (1 -> -> 300 `i `ui ]
+[; ;prev13.c: 628: }
+"628
 [e :UE 272 ]
 }
-"629
+"632
 [v __dat `(v 1 ef ]
 {
-[; ;prev13.c: 628: void _dat()
-[; ;prev13.c: 629: {
+[; ;prev13.c: 631: void _dat()
+[; ;prev13.c: 632: {
 [e :U __dat ]
 [f ]
-[; ;prev13.c: 630: RD5=1;
-"630
+[; ;prev13.c: 633: RD5=1;
+"633
 [e = _RD5 -> -> 1 `i `b ]
-[; ;prev13.c: 631: latch();
-"631
+[; ;prev13.c: 634: latch();
+"634
 [e ( _latch ..  ]
-[; ;prev13.c: 632: }
-"632
+[; ;prev13.c: 635: }
+"635
 [e :UE 273 ]
 }
-"635
+"638
 [v __cmd `(v 1 ef ]
 {
-[; ;prev13.c: 634: void _cmd()
-[; ;prev13.c: 635: {
+[; ;prev13.c: 637: void _cmd()
+[; ;prev13.c: 638: {
 [e :U __cmd ]
 [f ]
-[; ;prev13.c: 636: RD5=0;
-"636
+[; ;prev13.c: 639: RD5=0;
+"639
 [e = _RD5 -> -> 0 `i `b ]
-[; ;prev13.c: 637: latch();
-"637
+[; ;prev13.c: 640: latch();
+"640
 [e ( _latch ..  ]
-[; ;prev13.c: 638: }
-"638
+[; ;prev13.c: 641: }
+"641
 [e :UE 274 ]
 }
-"643
+"646
 [v _cmd `(v 1 ef1`uc ]
 {
-[; ;prev13.c: 642: void cmd(unsigned char Command)
-[; ;prev13.c: 643: {
+[; ;prev13.c: 645: void cmd(unsigned char Command)
+[; ;prev13.c: 646: {
 [e :U _cmd ]
 [v _Command `uc 1 r1 ]
 [f ]
-[; ;prev13.c: 645: setLCD(Command);
-"645
-[e ( _setLCD (1 _Command ]
-[; ;prev13.c: 646: _cmd();
-"646
-[e ( __cmd ..  ]
-[; ;prev13.c: 648: }
+[; ;prev13.c: 648: setLCD(Command);
 "648
+[e ( _setLCD (1 _Command ]
+[; ;prev13.c: 649: _cmd();
+"649
+[e ( __cmd ..  ]
+[; ;prev13.c: 651: }
+"651
 [e :UE 275 ]
 }
-"651
+"654
 [v _dat `(v 1 ef1`uc ]
 {
-[; ;prev13.c: 650: void dat(unsigned char Command)
-[; ;prev13.c: 651: {
+[; ;prev13.c: 653: void dat(unsigned char Command)
+[; ;prev13.c: 654: {
 [e :U _dat ]
 [v _Command `uc 1 r1 ]
 [f ]
-[; ;prev13.c: 652: setLCD(Command);
-"652
+[; ;prev13.c: 655: setLCD(Command);
+"655
 [e ( _setLCD (1 _Command ]
-[; ;prev13.c: 653: _dat();
-"653
+[; ;prev13.c: 656: _dat();
+"656
 [e ( __dat ..  ]
-[; ;prev13.c: 659: }
-"659
+[; ;prev13.c: 662: }
+"662
 [e :UE 276 ]
 }
-"663
+"666
 [v _getn `(uc 1 ef2`uc`uc ]
 {
-[; ;prev13.c: 662: unsigned char getn(unsigned char c, unsigned char n)
-[; ;prev13.c: 663: {
+[; ;prev13.c: 665: unsigned char getn(unsigned char c, unsigned char n)
+[; ;prev13.c: 666: {
 [e :U _getn ]
 [v _c `uc 1 r1 ]
 [v _n `uc 1 r2 ]
 [f ]
-"664
+"667
 [v _tmp `uc 1 a ]
-[; ;prev13.c: 664: unsigned char tmp=1<<n;
+[; ;prev13.c: 667: unsigned char tmp=1<<n;
 [e = _tmp -> << -> 1 `i _n `uc ]
-[; ;prev13.c: 665: return (c & tmp)>>n;
-"665
+[; ;prev13.c: 668: return (c & tmp)>>n;
+"668
 [e ) -> >> & -> _c `i -> _tmp `i _n `uc ]
 [e $UE 277  ]
-[; ;prev13.c: 666: }
-"666
+[; ;prev13.c: 669: }
+"669
 [e :UE 277 ]
 }
-"669
+"672
 [v _setLCD `(v 1 ef1`uc ]
 {
-[; ;prev13.c: 668: void setLCD(unsigned char number)
-[; ;prev13.c: 669: {
+[; ;prev13.c: 671: void setLCD(unsigned char number)
+[; ;prev13.c: 672: {
 [e :U _setLCD ]
 [v _number `uc 1 r1 ]
 [f ]
-[; ;prev13.c: 672: RD3=getn(number,0);
-"672
-[e = _RD3 -> ( _getn (2 , _number -> -> 0 `i `uc `b ]
-[; ;prev13.c: 673: RD2=getn(number,1);
-"673
-[e = _RD2 -> ( _getn (2 , _number -> -> 1 `i `uc `b ]
-[; ;prev13.c: 674: RD1=getn(number,2);
-"674
-[e = _RD1 -> ( _getn (2 , _number -> -> 2 `i `uc `b ]
-[; ;prev13.c: 675: RD0=getn(number,3);
+[; ;prev13.c: 675: RD3=getn(number,0);
 "675
-[e = _RD0 -> ( _getn (2 , _number -> -> 3 `i `uc `b ]
-[; ;prev13.c: 676: RC3=getn(number,4);
+[e = _RD3 -> ( _getn (2 , _number -> -> 0 `i `uc `b ]
+[; ;prev13.c: 676: RD2=getn(number,1);
 "676
-[e = _RC3 -> ( _getn (2 , _number -> -> 4 `i `uc `b ]
-[; ;prev13.c: 677: RC2=getn(number,5);
+[e = _RD2 -> ( _getn (2 , _number -> -> 1 `i `uc `b ]
+[; ;prev13.c: 677: RD1=getn(number,2);
 "677
-[e = _RC2 -> ( _getn (2 , _number -> -> 5 `i `uc `b ]
-[; ;prev13.c: 678: RC1=getn(number,6);
+[e = _RD1 -> ( _getn (2 , _number -> -> 2 `i `uc `b ]
+[; ;prev13.c: 678: RD0=getn(number,3);
 "678
-[e = _RC1 -> ( _getn (2 , _number -> -> 6 `i `uc `b ]
-[; ;prev13.c: 679: RC0=getn(number,7);
+[e = _RD0 -> ( _getn (2 , _number -> -> 3 `i `uc `b ]
+[; ;prev13.c: 679: RC3=getn(number,4);
 "679
-[e = _RC0 -> ( _getn (2 , _number -> -> 7 `i `uc `b ]
-[; ;prev13.c: 682: }
+[e = _RC3 -> ( _getn (2 , _number -> -> 4 `i `uc `b ]
+[; ;prev13.c: 680: RC2=getn(number,5);
+"680
+[e = _RC2 -> ( _getn (2 , _number -> -> 5 `i `uc `b ]
+[; ;prev13.c: 681: RC1=getn(number,6);
+"681
+[e = _RC1 -> ( _getn (2 , _number -> -> 6 `i `uc `b ]
+[; ;prev13.c: 682: RC0=getn(number,7);
 "682
+[e = _RC0 -> ( _getn (2 , _number -> -> 7 `i `uc `b ]
+[; ;prev13.c: 685: }
+"685
 [e :UE 278 ]
 }
-"684
+"687
 [v _write `(v 1 ef3`*uc`i`i ]
 {
-[; ;prev13.c: 683: void write(char * str,int line,int erase)
-[; ;prev13.c: 684: {
+[; ;prev13.c: 686: void write(char * str,int line,int erase)
+[; ;prev13.c: 687: {
 [e :U _write ]
 [v _str `*uc 1 r1 ]
 [v _line `i 1 r2 ]
 [v _erase `i 1 r3 ]
 [f ]
-[; ;prev13.c: 685: if(erase==1)
-"685
+[; ;prev13.c: 688: if(erase==1)
+"688
 [e $ ! == _erase -> 1 `i 280  ]
-[; ;prev13.c: 686: clearlcd();
-"686
+[; ;prev13.c: 689: clearlcd();
+"689
 [e ( _clearlcd ..  ]
 [e :U 280 ]
-[; ;prev13.c: 688: if(line==2)
-"688
+[; ;prev13.c: 691: if(line==2)
+"691
 [e $ ! == _line -> 2 `i 281  ]
-[; ;prev13.c: 689: cmd(0xC0);
-"689
+[; ;prev13.c: 692: cmd(0xC0);
+"692
 [e ( _cmd (1 -> -> 192 `i `uc ]
 [e $U 282  ]
-"690
+"693
 [e :U 281 ]
-[; ;prev13.c: 690: else
-[; ;prev13.c: 691: cmd(0x2);
-"691
+[; ;prev13.c: 693: else
+[; ;prev13.c: 694: cmd(0x2);
+"694
 [e ( _cmd (1 -> -> 2 `i `uc ]
 [e :U 282 ]
-"693
+"696
 [v _i `i 1 a ]
-[; ;prev13.c: 693: int i=0;
+[; ;prev13.c: 696: int i=0;
 [e = _i -> 0 `i ]
-[; ;prev13.c: 694: while(str[i]!='\0')
-"694
+[; ;prev13.c: 697: while(str[i]!='\0')
+"697
 [e $U 283  ]
 [e :U 284 ]
-[; ;prev13.c: 695: {
-"695
-{
-[; ;prev13.c: 696: dat(str[i]);
-"696
-[e ( _dat (1 *U + _str * -> _i `x -> -> # *U _str `i `x ]
-[; ;prev13.c: 697: i++;
-"697
-[e ++ _i -> 1 `i ]
+[; ;prev13.c: 698: {
 "698
+{
+[; ;prev13.c: 699: dat(str[i]);
+"699
+[e ( _dat (1 *U + _str * -> _i `x -> -> # *U _str `i `x ]
+[; ;prev13.c: 700: i++;
+"700
+[e ++ _i -> 1 `i ]
+"701
 }
 [e :U 283 ]
-"694
+"697
 [e $ != -> *U + _str * -> _i `x -> -> # *U _str `i `x `ui -> 0 `ui 284  ]
 [e :U 285 ]
-[; ;prev13.c: 698: }
 [; ;prev13.c: 701: }
-"701
+[; ;prev13.c: 704: }
+"704
 [e :UE 279 ]
 }
-"705
+"708
 [v _scroll `(v 1 ef2`*uc`i ]
 {
-[; ;prev13.c: 704: void scroll(char * str,int loops)
-[; ;prev13.c: 705: {
+[; ;prev13.c: 707: void scroll(char * str,int loops)
+[; ;prev13.c: 708: {
 [e :U _scroll ]
 [v _str `*uc 1 r1 ]
 [v _loops `i 1 r2 ]
 [f ]
-[; ;prev13.c: 707: write(str,1,0); ;
-"707
-[e ( _write (3 , , _str -> 1 `i -> 0 `i ]
-"708
-[v _loopn `i 1 a ]
-[; ;prev13.c: 708: int loopn=0;
-[e = _loopn -> 0 `i ]
-"709
-[v _i `i 1 a ]
+[; ;prev13.c: 710: write(str,1,0); ;
 "710
-[v _len `i 1 a ]
-[; ;prev13.c: 709: int i;
-[; ;prev13.c: 710: int len=0;;
-[e = _len -> 0 `i ]
+[e ( _write (3 , , _str -> 1 `i -> 0 `i ]
 "711
-[v _st `i 1 a ]
-[; ;prev13.c: 711: int st=0;
-[e = _st -> 0 `i ]
+[v _loopn `i 1 a ]
+[; ;prev13.c: 711: int loopn=0;
+[e = _loopn -> 0 `i ]
 "712
-[v _en `i 1 a ]
-[; ;prev13.c: 712: int en;
-[; ;prev13.c: 713: while(str[i]!='\0')
+[v _i `i 1 a ]
 "713
+[v _len `i 1 a ]
+[; ;prev13.c: 712: int i;
+[; ;prev13.c: 713: int len=0;;
+[e = _len -> 0 `i ]
+"714
+[v _st `i 1 a ]
+[; ;prev13.c: 714: int st=0;
+[e = _st -> 0 `i ]
+"715
+[v _en `i 1 a ]
+[; ;prev13.c: 715: int en;
+[; ;prev13.c: 716: while(str[i]!='\0')
+"716
 [e $U 287  ]
 [e :U 288 ]
-[; ;prev13.c: 714: { i++;
-"714
+[; ;prev13.c: 717: { i++;
+"717
 {
 [e ++ _i -> 1 `i ]
-[; ;prev13.c: 715: len++;
-"715
+[; ;prev13.c: 718: len++;
+"718
 [e ++ _len -> 1 `i ]
-"716
+"719
 }
 [e :U 287 ]
-"713
+"716
 [e $ != -> *U + _str * -> _i `x -> -> # *U _str `i `x `ui -> 0 `ui 288  ]
 [e :U 289 ]
-[; ;prev13.c: 716: }
-[; ;prev13.c: 717: en=len-1;
-"717
-[e = _en - _len -> 1 `i ]
-[; ;prev13.c: 719: if(len>32)
-"719
-[e $ ! > _len -> 32 `i 290  ]
-[; ;prev13.c: 720: {
+[; ;prev13.c: 719: }
+[; ;prev13.c: 720: en=len-1;
 "720
-{
+[e = _en - _len -> 1 `i ]
+[; ;prev13.c: 722: if(len>32)
 "722
-[v _dest `uc -> 32 `i a ]
+[e $ ! > _len -> 32 `i 290  ]
+[; ;prev13.c: 723: {
 "723
-[v _startat `i 1 a ]
-[; ;prev13.c: 722: char dest [32] ;
-[; ;prev13.c: 723: int startat=0;
-[e = _startat -> 0 `i ]
-"724
-[v _endat `i 1 a ]
-[; ;prev13.c: 724: int endat=31;
-[e = _endat -> 31 `i ]
-[; ;prev13.c: 725: START:
+{
 "725
-[e :U 291 ]
-[; ;prev13.c: 726: i=0;
+[v _dest `uc -> 32 `i a ]
 "726
-[e = _i -> 0 `i ]
-[; ;prev13.c: 727: while(i++<32)
+[v _startat `i 1 a ]
+[; ;prev13.c: 725: char dest [32] ;
+[; ;prev13.c: 726: int startat=0;
+[e = _startat -> 0 `i ]
 "727
+[v _endat `i 1 a ]
+[; ;prev13.c: 727: int endat=31;
+[e = _endat -> 31 `i ]
+[; ;prev13.c: 728: START:
+"728
+[e :U 291 ]
+[; ;prev13.c: 729: i=0;
+"729
+[e = _i -> 0 `i ]
+[; ;prev13.c: 730: while(i++<32)
+"730
 [e $U 292  ]
 [e :U 293 ]
-[; ;prev13.c: 728: {
-"728
-{
-[; ;prev13.c: 730: delay(3000);
-"730
-[e ( _delay (1 -> -> 3000 `i `ui ]
-[; ;prev13.c: 731: cmd(0x1E);
+[; ;prev13.c: 731: {
 "731
-[e ( _cmd (1 -> -> 30 `i `uc ]
+{
+[; ;prev13.c: 733: delay(3000);
+"733
+[e ( _delay (1 -> -> 3000 `i `ui ]
+[; ;prev13.c: 734: cmd(0x1E);
 "734
+[e ( _cmd (1 -> -> 30 `i `uc ]
+"737
 }
 [e :U 292 ]
-"727
+"730
 [e $ < ++ _i -> 1 `i -> 32 `i 293  ]
 [e :U 294 ]
-[; ;prev13.c: 734: }
-[; ;prev13.c: 736: i=0;
-"736
+[; ;prev13.c: 737: }
+[; ;prev13.c: 739: i=0;
+"739
 [e = _i -> 0 `i ]
-[; ;prev13.c: 737: while(i++<32)
-"737
+[; ;prev13.c: 740: while(i++<32)
+"740
 [e $U 295  ]
 [e :U 296 ]
-[; ;prev13.c: 738: {
-"738
-{
-[; ;prev13.c: 740: delay(3000);
-"740
-[e ( _delay (1 -> -> 3000 `i `ui ]
-[; ;prev13.c: 741: cmd(0x18);
+[; ;prev13.c: 741: {
 "741
-[e ( _cmd (1 -> -> 24 `i `uc ]
+{
+[; ;prev13.c: 743: delay(3000);
+"743
+[e ( _delay (1 -> -> 3000 `i `ui ]
+[; ;prev13.c: 744: cmd(0x18);
 "744
-}
-[e :U 295 ]
-"737
-[e $ < ++ _i -> 1 `i -> 32 `i 296  ]
-[e :U 297 ]
-[; ;prev13.c: 744: }
-[; ;prev13.c: 745: if(loopn++<loops)
-"745
-[e $ ! < ++ _loopn -> 1 `i _loops 298  ]
-[; ;prev13.c: 746: goto START;
-"746
-[e $U 291  ]
-[e :U 298 ]
+[e ( _cmd (1 -> -> 24 `i `uc ]
 "747
 }
-[e :U 290 ]
+[e :U 295 ]
+"740
+[e $ < ++ _i -> 1 `i -> 32 `i 296  ]
+[e :U 297 ]
 [; ;prev13.c: 747: }
-[; ;prev13.c: 752: }
-"752
+[; ;prev13.c: 748: if(loopn++<loops)
+"748
+[e $ ! < ++ _loopn -> 1 `i _loops 298  ]
+[; ;prev13.c: 749: goto START;
+"749
+[e $U 291  ]
+[e :U 298 ]
+"750
+}
+[e :U 290 ]
+[; ;prev13.c: 750: }
+[; ;prev13.c: 755: }
+"755
 [e :UE 286 ]
 }
-"759
+"762
 [v _initkeypad `(v 1 ef ]
 {
-[; ;prev13.c: 758: void initkeypad()
-[; ;prev13.c: 759: {
+[; ;prev13.c: 761: void initkeypad()
+[; ;prev13.c: 762: {
 [e :U _initkeypad ]
 [f ]
-[; ;prev13.c: 760: PORTB = 0;
-"760
-[e = _PORTB -> -> 0 `i `uc ]
-[; ;prev13.c: 761: TRISB = 0b11010000;
-"761
-[e = _TRISB -> -> 208 `i `uc ]
-[; ;prev13.c: 763: }
+[; ;prev13.c: 763: PORTB = 0;
 "763
+[e = _PORTB -> -> 0 `i `uc ]
+[; ;prev13.c: 764: TRISB = 0b11010000;
+"764
+[e = _TRISB -> -> 208 `i `uc ]
+[; ;prev13.c: 766: }
+"766
 [e :UE 299 ]
 }
-"766
+"769
 [v _scan `(i 1 ef ]
 {
-[; ;prev13.c: 765: int scan()
-[; ;prev13.c: 766: {
+[; ;prev13.c: 768: int scan()
+[; ;prev13.c: 769: {
 [e :U _scan ]
 [f ]
-[; ;prev13.c: 768: actrow(1) ;
-"768
+[; ;prev13.c: 771: actrow(1) ;
+"771
 [e ( _actrow (1 -> 1 `i ]
-[; ;prev13.c: 769: if( RD6==1)
-"769
+[; ;prev13.c: 772: if( RD6==1)
+"772
 [e $ ! == -> _RD6 `i -> 1 `i 301  ]
-[; ;prev13.c: 770: return 0;
-"770
+[; ;prev13.c: 773: return 0;
+"773
 [e ) -> 0 `i ]
 [e $UE 300  ]
 [e $U 302  ]
-"771
+"774
 [e :U 301 ]
-[; ;prev13.c: 771: else if(RD7==1)
+[; ;prev13.c: 774: else if(RD7==1)
 [e $ ! == -> _RD7 `i -> 1 `i 303  ]
-[; ;prev13.c: 772: return 1;
-"772
+[; ;prev13.c: 775: return 1;
+"775
 [e ) -> 1 `i ]
 [e $UE 300  ]
 [e $U 304  ]
-"773
+"776
 [e :U 303 ]
-[; ;prev13.c: 773: else if(RB6==1)
+[; ;prev13.c: 776: else if(RB6==1)
 [e $ ! == -> _RB6 `i -> 1 `i 305  ]
-[; ;prev13.c: 774: return 2;
-"774
+[; ;prev13.c: 777: return 2;
+"777
 [e ) -> 2 `i ]
 [e $UE 300  ]
 [e $U 306  ]
-"775
+"778
 [e :U 305 ]
-[; ;prev13.c: 775: else if(RB7==1)
+[; ;prev13.c: 778: else if(RB7==1)
 [e $ ! == -> _RB7 `i -> 1 `i 307  ]
-[; ;prev13.c: 776: return 0;
-"776
+[; ;prev13.c: 779: return 0;
+"779
 [e ) -> 0 `i ]
 [e $UE 300  ]
 [e :U 307 ]
-"778
+"781
 [e :U 306 ]
 [e :U 304 ]
 [e :U 302 ]
-[; ;prev13.c: 778: actrow(2) ;
+[; ;prev13.c: 781: actrow(2) ;
 [e ( _actrow (1 -> 2 `i ]
-[; ;prev13.c: 780: if( RD6==1)
-"780
+[; ;prev13.c: 783: if( RD6==1)
+"783
 [e $ ! == -> _RD6 `i -> 1 `i 308  ]
-[; ;prev13.c: 781: return 4;
-"781
+[; ;prev13.c: 784: return 4;
+"784
 [e ) -> 4 `i ]
 [e $UE 300  ]
 [e $U 309  ]
-"782
+"785
 [e :U 308 ]
-[; ;prev13.c: 782: else if(RD7==1)
+[; ;prev13.c: 785: else if(RD7==1)
 [e $ ! == -> _RD7 `i -> 1 `i 310  ]
-[; ;prev13.c: 783: return 5;
-"783
+[; ;prev13.c: 786: return 5;
+"786
 [e ) -> 5 `i ]
 [e $UE 300  ]
 [e $U 311  ]
-"784
+"787
 [e :U 310 ]
-[; ;prev13.c: 784: else if(RB6==1)
+[; ;prev13.c: 787: else if(RB6==1)
 [e $ ! == -> _RB6 `i -> 1 `i 312  ]
-[; ;prev13.c: 785: return 6;
-"785
+[; ;prev13.c: 788: return 6;
+"788
 [e ) -> 6 `i ]
 [e $UE 300  ]
 [e $U 313  ]
-"786
+"789
 [e :U 312 ]
-[; ;prev13.c: 786: else if(RB7==1)
+[; ;prev13.c: 789: else if(RB7==1)
 [e $ ! == -> _RB7 `i -> 1 `i 314  ]
-[; ;prev13.c: 787: return 1;
-"787
+[; ;prev13.c: 790: return 1;
+"790
 [e ) -> 1 `i ]
 [e $UE 300  ]
 [e :U 314 ]
-"789
+"792
 [e :U 313 ]
 [e :U 311 ]
 [e :U 309 ]
-[; ;prev13.c: 789: actrow(3) ;
+[; ;prev13.c: 792: actrow(3) ;
 [e ( _actrow (1 -> 3 `i ]
-[; ;prev13.c: 791: if( RD6==1)
-"791
+[; ;prev13.c: 794: if( RD6==1)
+"794
 [e $ ! == -> _RD6 `i -> 1 `i 315  ]
-[; ;prev13.c: 792: return 8;
-"792
+[; ;prev13.c: 795: return 8;
+"795
 [e ) -> 8 `i ]
 [e $UE 300  ]
 [e $U 316  ]
-"793
+"796
 [e :U 315 ]
-[; ;prev13.c: 793: else if(RD7==1)
+[; ;prev13.c: 796: else if(RD7==1)
 [e $ ! == -> _RD7 `i -> 1 `i 317  ]
-[; ;prev13.c: 794: return 9;
-"794
+[; ;prev13.c: 797: return 9;
+"797
 [e ) -> 9 `i ]
 [e $UE 300  ]
 [e $U 318  ]
-"795
+"798
 [e :U 317 ]
-[; ;prev13.c: 795: else if(RB6==1)
+[; ;prev13.c: 798: else if(RB6==1)
 [e $ ! == -> _RB6 `i -> 1 `i 319  ]
-[; ;prev13.c: 796: return 10;
-"796
+[; ;prev13.c: 799: return 10;
+"799
 [e ) -> 10 `i ]
 [e $UE 300  ]
 [e $U 320  ]
-"797
+"800
 [e :U 319 ]
-[; ;prev13.c: 797: else if(RB7==1)
+[; ;prev13.c: 800: else if(RB7==1)
 [e $ ! == -> _RB7 `i -> 1 `i 321  ]
-[; ;prev13.c: 798: return 2;
-"798
+[; ;prev13.c: 801: return 2;
+"801
 [e ) -> 2 `i ]
 [e $UE 300  ]
 [e :U 321 ]
-"801
+"804
 [e :U 320 ]
 [e :U 318 ]
 [e :U 316 ]
-[; ;prev13.c: 801: actrow(4) ;
+[; ;prev13.c: 804: actrow(4) ;
 [e ( _actrow (1 -> 4 `i ]
-[; ;prev13.c: 803: if( RD6==1)
-"803
+[; ;prev13.c: 806: if( RD6==1)
+"806
 [e $ ! == -> _RD6 `i -> 1 `i 322  ]
-[; ;prev13.c: 804: return 12;
-"804
+[; ;prev13.c: 807: return 12;
+"807
 [e ) -> 12 `i ]
 [e $UE 300  ]
 [e $U 323  ]
-"805
+"808
 [e :U 322 ]
-[; ;prev13.c: 805: else if(RD7==1)
+[; ;prev13.c: 808: else if(RD7==1)
 [e $ ! == -> _RD7 `i -> 1 `i 324  ]
-[; ;prev13.c: 806: return 13;
-"806
+[; ;prev13.c: 809: return 13;
+"809
 [e ) -> 13 `i ]
 [e $UE 300  ]
 [e $U 325  ]
-"807
+"810
 [e :U 324 ]
-[; ;prev13.c: 807: else if(RB6==1)
+[; ;prev13.c: 810: else if(RB6==1)
 [e $ ! == -> _RB6 `i -> 1 `i 326  ]
-[; ;prev13.c: 808: return 14;
-"808
+[; ;prev13.c: 811: return 14;
+"811
 [e ) -> 14 `i ]
 [e $UE 300  ]
 [e $U 327  ]
-"809
+"812
 [e :U 326 ]
-[; ;prev13.c: 809: else if(RB7==1)
+[; ;prev13.c: 812: else if(RB7==1)
 [e $ ! == -> _RB7 `i -> 1 `i 328  ]
-[; ;prev13.c: 810: return 3;
-"810
+[; ;prev13.c: 813: return 3;
+"813
 [e ) -> 3 `i ]
 [e $UE 300  ]
 [e :U 328 ]
-"814
+"817
 [e :U 327 ]
 [e :U 325 ]
 [e :U 323 ]
-[; ;prev13.c: 814: return 99;
+[; ;prev13.c: 817: return 99;
 [e ) -> 99 `i ]
 [e $UE 300  ]
-[; ;prev13.c: 818: }
-"818
+[; ;prev13.c: 821: }
+"821
 [e :UE 300 ]
 }
-"823
+"826
 [v _resetout `(v 1 ef ]
 {
-[; ;prev13.c: 822: void resetout()
-[; ;prev13.c: 823: {
+[; ;prev13.c: 825: void resetout()
+[; ;prev13.c: 826: {
 [e :U _resetout ]
 [f ]
-[; ;prev13.c: 824: RD6=0;RD7=0;RB6=0;RB7=0;
-"824
+[; ;prev13.c: 827: RD6=0;RD7=0;RB6=0;RB7=0;
+"827
 [e = _RD6 -> -> 0 `i `b ]
 [e = _RD7 -> -> 0 `i `b ]
 [e = _RB6 -> -> 0 `i `b ]
 [e = _RB7 -> -> 0 `i `b ]
-[; ;prev13.c: 825: }
-"825
+[; ;prev13.c: 828: }
+"828
 [e :UE 329 ]
 }
-"827
+"830
 [v _actrow `(v 1 ef1`i ]
 {
-[; ;prev13.c: 826: void actrow(int n)
-[; ;prev13.c: 827: {
+[; ;prev13.c: 829: void actrow(int n)
+[; ;prev13.c: 830: {
 [e :U _actrow ]
 [v _n `i 1 r1 ]
 [f ]
-[; ;prev13.c: 828: resetout();
-"828
-[e ( _resetout ..  ]
-[; ;prev13.c: 830: if(n==1)
-"830
-[e $ ! == _n -> 1 `i 331  ]
-[; ;prev13.c: 831: {
+[; ;prev13.c: 831: resetout();
 "831
-{
-[; ;prev13.c: 832: RB3=1;
-"832
-[e = _RB3 -> -> 1 `i `b ]
+[e ( _resetout ..  ]
+[; ;prev13.c: 833: if(n==1)
 "833
-}
-[; ;prev13.c: 833: }
-[e $U 332  ]
+[e $ ! == _n -> 1 `i 331  ]
+[; ;prev13.c: 834: {
 "834
-[e :U 331 ]
-[; ;prev13.c: 834: else if(n==2)
-[e $ ! == _n -> 2 `i 333  ]
-[; ;prev13.c: 835: {
+{
+[; ;prev13.c: 835: RB3=1;
 "835
-{
-[; ;prev13.c: 836: RB2=1;
+[e = _RB3 -> -> 1 `i `b ]
 "836
-[e = _RB2 -> -> 1 `i `b ]
+}
+[; ;prev13.c: 836: }
+[e $U 332  ]
 "837
-}
-[; ;prev13.c: 837: }
-[e $U 334  ]
+[e :U 331 ]
+[; ;prev13.c: 837: else if(n==2)
+[e $ ! == _n -> 2 `i 333  ]
+[; ;prev13.c: 838: {
 "838
-[e :U 333 ]
-[; ;prev13.c: 838: else if(n==3)
-[e $ ! == _n -> 3 `i 335  ]
-[; ;prev13.c: 839: {
+{
+[; ;prev13.c: 839: RB2=1;
 "839
-{
-[; ;prev13.c: 840: RB1=1;
+[e = _RB2 -> -> 1 `i `b ]
 "840
-[e = _RB1 -> -> 1 `i `b ]
-"841
 }
-[; ;prev13.c: 841: }
-[e $U 336  ]
+[; ;prev13.c: 840: }
+[e $U 334  ]
+"841
+[e :U 333 ]
+[; ;prev13.c: 841: else if(n==3)
+[e $ ! == _n -> 3 `i 335  ]
+[; ;prev13.c: 842: {
 "842
-[e :U 335 ]
-[; ;prev13.c: 842: else if(n==4)
-[e $ ! == _n -> 4 `i 337  ]
-[; ;prev13.c: 843: {
-"843
 {
-[; ;prev13.c: 844: RB0=1;
+[; ;prev13.c: 843: RB1=1;
+"843
+[e = _RB1 -> -> 1 `i `b ]
 "844
-[e = _RB0 -> -> 1 `i `b ]
+}
+[; ;prev13.c: 844: }
+[e $U 336  ]
 "845
+[e :U 335 ]
+[; ;prev13.c: 845: else if(n==4)
+[e $ ! == _n -> 4 `i 337  ]
+[; ;prev13.c: 846: {
+"846
+{
+[; ;prev13.c: 847: RB0=1;
+"847
+[e = _RB0 -> -> 1 `i `b ]
+"848
 }
 [e :U 337 ]
-"846
+"849
 [e :U 336 ]
 [e :U 334 ]
 [e :U 332 ]
-[; ;prev13.c: 845: }
-[; ;prev13.c: 846: delay(200);
+[; ;prev13.c: 848: }
+[; ;prev13.c: 849: delay(200);
 [e ( _delay (1 -> -> 200 `i `ui ]
-[; ;prev13.c: 849: }
-"849
+[; ;prev13.c: 852: }
+"852
 [e :UE 330 ]
 }
-"854
+"857
 [v _read_log `(*uc 1 ef1`i ]
 {
-[; ;prev13.c: 853: char * read_log(int devno)
-[; ;prev13.c: 854: {
+[; ;prev13.c: 856: char * read_log(int devno)
+[; ;prev13.c: 857: {
 [e :U _read_log ]
 [v _devno `i 1 r1 ]
 [f ]
-"855
+"858
 [v F1918 `uc -> 0 `x s ]
 [i F1918
 :U ..
@@ -4703,163 +4710,163 @@ Version 3.2 HI-TECH Software Intermediate Code
 ..
 ]
 [v _logic `uc 5  a ]
-[; ;prev13.c: 855: char logic[]="0000";
+[; ;prev13.c: 858: char logic[]="0000";
 [e = _logic F1918 ]
-"857
-[v _ads `uc 1 a ]
-[; ;prev13.c: 857: char ads=adr[devno];
-[e = _ads *U + &U _adr * -> -> _devno `ui `ux -> -> # *U &U _adr `ui `ux ]
-[; ;prev13.c: 859: logic[0]=read_eep(ads);
-"859
-[e = *U + &U _logic * -> -> -> 0 `i `ui `ux -> -> # *U &U _logic `ui `ux ( _read_eep (1 -> _ads `ui ]
-[; ;prev13.c: 860: logic[1]=read_eep(ads+1);
 "860
-[e = *U + &U _logic * -> -> -> 1 `i `ui `ux -> -> # *U &U _logic `ui `ux ( _read_eep (1 -> + -> _ads `i -> 1 `i `ui ]
-[; ;prev13.c: 861: logic[2]=read_eep(ads+2);
-"861
-[e = *U + &U _logic * -> -> -> 2 `i `ui `ux -> -> # *U &U _logic `ui `ux ( _read_eep (1 -> + -> _ads `i -> 2 `i `ui ]
-[; ;prev13.c: 862: logic[3]=read_eep(ads+3);
+[v _ads `uc 1 a ]
+[; ;prev13.c: 860: char ads=adr[devno];
+[e = _ads *U + &U _adr * -> -> _devno `ui `ux -> -> # *U &U _adr `ui `ux ]
+[; ;prev13.c: 862: logic[0]=read_eep(ads);
 "862
-[e = *U + &U _logic * -> -> -> 3 `i `ui `ux -> -> # *U &U _logic `ui `ux ( _read_eep (1 -> + -> _ads `i -> 3 `i `ui ]
-[; ;prev13.c: 864: return logic;
+[e = *U + &U _logic * -> -> -> 0 `i `ui `ux -> -> # *U &U _logic `ui `ux ( _read_eep (1 -> _ads `ui ]
+[; ;prev13.c: 863: logic[1]=read_eep(ads+1);
+"863
+[e = *U + &U _logic * -> -> -> 1 `i `ui `ux -> -> # *U &U _logic `ui `ux ( _read_eep (1 -> + -> _ads `i -> 1 `i `ui ]
+[; ;prev13.c: 864: logic[2]=read_eep(ads+2);
 "864
+[e = *U + &U _logic * -> -> -> 2 `i `ui `ux -> -> # *U &U _logic `ui `ux ( _read_eep (1 -> + -> _ads `i -> 2 `i `ui ]
+[; ;prev13.c: 865: logic[3]=read_eep(ads+3);
+"865
+[e = *U + &U _logic * -> -> -> 3 `i `ui `ux -> -> # *U &U _logic `ui `ux ( _read_eep (1 -> + -> _ads `i -> 3 `i `ui ]
+[; ;prev13.c: 867: return logic;
+"867
 [e ) &U _logic ]
 [e $UE 338  ]
-[; ;prev13.c: 865: }
-"865
+[; ;prev13.c: 868: }
+"868
 [e :UE 338 ]
 }
-"869
+"872
 [v _read_eep `(uc 1 ef1`ui ]
 {
-[; ;prev13.c: 868: unsigned char read_eep(unsigned int a)
-[; ;prev13.c: 869: {
+[; ;prev13.c: 871: unsigned char read_eep(unsigned int a)
+[; ;prev13.c: 872: {
 [e :U _read_eep ]
 [v _a `ui 1 r1 ]
 [f ]
-"870
-[v _d `i 1 a ]
-[; ;prev13.c: 870: int d;
-[; ;prev13.c: 871: EEADR=a;
-"871
-[e = _EEADR -> _a `uc ]
-[; ;prev13.c: 873: EEPGD=0;
 "873
-[e = _EEPGD -> -> 0 `i `b ]
-[; ;prev13.c: 874: EEIF=0;
+[v _d `i 1 a ]
+[; ;prev13.c: 873: int d;
+[; ;prev13.c: 874: EEADR=a;
 "874
-[e = _EEIF -> -> 0 `i `b ]
-[; ;prev13.c: 875: RD=1;
-"875
-[e = _RD -> -> 1 `i `b ]
-[; ;prev13.c: 876: WREN=0;
+[e = _EEADR -> _a `uc ]
+[; ;prev13.c: 876: EEPGD=0;
 "876
-[e = _WREN -> -> 0 `i `b ]
-[; ;prev13.c: 877: while(RD==1);
+[e = _EEPGD -> -> 0 `i `b ]
+[; ;prev13.c: 877: EEIF=0;
 "877
+[e = _EEIF -> -> 0 `i `b ]
+[; ;prev13.c: 878: RD=1;
+"878
+[e = _RD -> -> 1 `i `b ]
+[; ;prev13.c: 879: WREN=0;
+"879
+[e = _WREN -> -> 0 `i `b ]
+[; ;prev13.c: 880: while(RD==1);
+"880
 [e $U 340  ]
 [e :U 341 ]
 [e :U 340 ]
 [e $ == -> _RD `i -> 1 `i 341  ]
 [e :U 342 ]
-[; ;prev13.c: 878: d=EEDAT;
-"878
+[; ;prev13.c: 881: d=EEDAT;
+"881
 [e = _d -> _EEDAT `i ]
-[; ;prev13.c: 879: delay(200);
-"879
+[; ;prev13.c: 882: delay(200);
+"882
 [e ( _delay (1 -> -> 200 `i `ui ]
-[; ;prev13.c: 880: return d;
-"880
+[; ;prev13.c: 883: return d;
+"883
 [e ) -> _d `uc ]
 [e $UE 339  ]
-[; ;prev13.c: 881: }
-"881
+[; ;prev13.c: 884: }
+"884
 [e :UE 339 ]
 }
-"884
+"887
 [v _write_log `(v 1 ef2`i`*uc ]
 {
-[; ;prev13.c: 883: void write_log(int devno,char * logic)
-[; ;prev13.c: 884: {
+[; ;prev13.c: 886: void write_log(int devno,char * logic)
+[; ;prev13.c: 887: {
 [e :U _write_log ]
 [v _devno `i 1 r1 ]
 [v _logic `*uc 1 r2 ]
 [f ]
-"887
-[v _ads `uc 1 a ]
-[; ;prev13.c: 887: char ads=adr[devno];
-[e = _ads *U + &U _adr * -> -> _devno `ui `ux -> -> # *U &U _adr `ui `ux ]
-[; ;prev13.c: 889: write_eep(ads,logic[0]);
-"889
-[e ( _write_eep (2 , -> _ads `ui *U + _logic * -> -> 0 `i `x -> -> # *U _logic `i `x ]
-[; ;prev13.c: 890: write_eep(ads+1,logic[1]);
 "890
-[e ( _write_eep (2 , -> + -> _ads `i -> 1 `i `ui *U + _logic * -> -> 1 `i `x -> -> # *U _logic `i `x ]
-[; ;prev13.c: 891: write_eep(ads+2,logic[2]);
-"891
-[e ( _write_eep (2 , -> + -> _ads `i -> 2 `i `ui *U + _logic * -> -> 2 `i `x -> -> # *U _logic `i `x ]
-[; ;prev13.c: 892: write_eep(ads+3,logic[3]);
+[v _ads `uc 1 a ]
+[; ;prev13.c: 890: char ads=adr[devno];
+[e = _ads *U + &U _adr * -> -> _devno `ui `ux -> -> # *U &U _adr `ui `ux ]
+[; ;prev13.c: 892: write_eep(ads,logic[0]);
 "892
+[e ( _write_eep (2 , -> _ads `ui *U + _logic * -> -> 0 `i `x -> -> # *U _logic `i `x ]
+[; ;prev13.c: 893: write_eep(ads+1,logic[1]);
+"893
+[e ( _write_eep (2 , -> + -> _ads `i -> 1 `i `ui *U + _logic * -> -> 1 `i `x -> -> # *U _logic `i `x ]
+[; ;prev13.c: 894: write_eep(ads+2,logic[2]);
+"894
+[e ( _write_eep (2 , -> + -> _ads `i -> 2 `i `ui *U + _logic * -> -> 2 `i `x -> -> # *U _logic `i `x ]
+[; ;prev13.c: 895: write_eep(ads+3,logic[3]);
+"895
 [e ( _write_eep (2 , -> + -> _ads `i -> 3 `i `ui *U + _logic * -> -> 3 `i `x -> -> # *U _logic `i `x ]
-[; ;prev13.c: 898: }
-"898
+[; ;prev13.c: 901: }
+"901
 [e :UE 343 ]
 }
-"903
+"906
 [v _write_eep `(v 1 ef2`ui`uc ]
 {
-[; ;prev13.c: 902: void write_eep (unsigned int x, unsigned char y)
-[; ;prev13.c: 903: {
+[; ;prev13.c: 905: void write_eep (unsigned int x, unsigned char y)
+[; ;prev13.c: 906: {
 [e :U _write_eep ]
 [v _x `ui 1 r1 ]
 [v _y `uc 1 r2 ]
 [f ]
-[; ;prev13.c: 904: again:
-"904
-[e :U 345 ]
-[; ;prev13.c: 905: EEPGD=0;
-"905
-[e = _EEPGD -> -> 0 `i `b ]
-[; ;prev13.c: 906: EEADR=x;
-"906
-[e = _EEADR -> _x `uc ]
-[; ;prev13.c: 907: EEDAT=y;
+[; ;prev13.c: 907: again:
 "907
-[e = _EEDAT _y ]
-[; ;prev13.c: 908: WRERR=0;
+[e :U 345 ]
+[; ;prev13.c: 908: EEPGD=0;
 "908
-[e = _WRERR -> -> 0 `i `b ]
-[; ;prev13.c: 909: WREN=1;
+[e = _EEPGD -> -> 0 `i `b ]
+[; ;prev13.c: 909: EEADR=x;
 "909
-[e = _WREN -> -> 1 `i `b ]
-[; ;prev13.c: 910: EECON2=0x55;
+[e = _EEADR -> _x `uc ]
+[; ;prev13.c: 910: EEDAT=y;
 "910
-[e = _EECON2 -> -> 85 `i `uc ]
-[; ;prev13.c: 911: EECON2=0xAA;
+[e = _EEDAT _y ]
+[; ;prev13.c: 911: WRERR=0;
 "911
-[e = _EECON2 -> -> 170 `i `uc ]
-[; ;prev13.c: 912: WR=1;
+[e = _WRERR -> -> 0 `i `b ]
+[; ;prev13.c: 912: WREN=1;
 "912
-[e = _WR -> -> 1 `i `b ]
-[; ;prev13.c: 913: while(WR==1);
+[e = _WREN -> -> 1 `i `b ]
+[; ;prev13.c: 913: EECON2=0x55;
 "913
+[e = _EECON2 -> -> 85 `i `uc ]
+[; ;prev13.c: 914: EECON2=0xAA;
+"914
+[e = _EECON2 -> -> 170 `i `uc ]
+[; ;prev13.c: 915: WR=1;
+"915
+[e = _WR -> -> 1 `i `b ]
+[; ;prev13.c: 916: while(WR==1);
+"916
 [e $U 346  ]
 [e :U 347 ]
 [e :U 346 ]
 [e $ == -> _WR `i -> 1 `i 347  ]
 [e :U 348 ]
-[; ;prev13.c: 914: if(WRERR==1)
-"914
+[; ;prev13.c: 917: if(WRERR==1)
+"917
 [e $ ! == -> _WRERR `i -> 1 `i 349  ]
-[; ;prev13.c: 915: goto again;
-"915
+[; ;prev13.c: 918: goto again;
+"918
 [e $U 345  ]
 [e :U 349 ]
-[; ;prev13.c: 916: delay(200);
-"916
+[; ;prev13.c: 919: delay(200);
+"919
 [e ( _delay (1 -> -> 200 `i `ui ]
-[; ;prev13.c: 917: }
-"917
+[; ;prev13.c: 920: }
+"920
 [e :UE 344 ]
 }
 [a 10C 80 114 101 115 115 32 50 46 32 45 32 83 107 105 112 32 102 111 114 32 68 101 118 105 99 101 0 ]

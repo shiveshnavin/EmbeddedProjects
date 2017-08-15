@@ -1658,6 +1658,8 @@ void startswitch();
 
 
 
+void getlogic();
+void setlogic();
 
 const char adr[]={0x00,0x04,0x08,0x0C,0x0F};
 char * read_log(int devno);
@@ -1667,7 +1669,7 @@ void write_eep (unsigned int x, unsigned char y);
 
 void write_log(int devno,char * logic);
 
-# 37
+# 39
 void initkeypad();
 void actrow(int n);
 int scan();
@@ -1689,7 +1691,7 @@ int itoaa(int value,char *ptr);
 
 int done_init=0;
 
-# 90
+# 92
 void initlcd();
 void cmd(unsigned char Command);
 void dat(unsigned char Command);
@@ -1712,15 +1714,16 @@ TRISB = 0b00001111;
 initlcd();
 initkeypad();
 
-# 131
+# 133
 start();
 
-# 138
+# 140
 }
 
 void start()
 {
 START:
+getlogic();
 done_init=0;
 
 write("FP Home Atomn.",1,1);
@@ -1772,7 +1775,7 @@ goto START;
 
 }
 
-# 201
+# 204
 char logic_d1[5]="100";
 char logic_d2[5]="010";
 char logic_d3[5]="001";
@@ -2031,7 +2034,7 @@ nf=0;
 
 setlogic();
 
-# 499
+# 502
 f1=0;
 f2=0;
 f3=1;
@@ -2188,7 +2191,7 @@ void dat(unsigned char Command)
 setLCD(Command);
 _dat();
 
-# 659
+# 662
 }
 
 
@@ -2284,7 +2287,7 @@ goto START;
 
 }
 
-# 758
+# 761
 void initkeypad()
 {
 PORTB = 0;
@@ -2421,7 +2424,7 @@ write_eep(ads+1,logic[1]);
 write_eep(ads+2,logic[2]);
 write_eep(ads+3,logic[3]);
 
-# 898
+# 901
 }
 
 
