@@ -1713,11 +1713,9 @@ TRISB = 0b00001111;
 
 initlcd();
 initkeypad();
-
-# 133
 start();
 
-# 140
+# 120
 }
 
 void start()
@@ -1775,7 +1773,7 @@ goto START;
 
 }
 
-# 204
+# 184
 char logic_d1[5]="100";
 char logic_d2[5]="010";
 char logic_d3[5]="001";
@@ -2034,7 +2032,7 @@ nf=0;
 
 setlogic();
 
-# 502
+# 482
 f1=0;
 f2=0;
 f3=1;
@@ -2191,7 +2189,7 @@ void dat(unsigned char Command)
 setLCD(Command);
 _dat();
 
-# 662
+# 642
 }
 
 
@@ -2287,7 +2285,7 @@ goto START;
 
 }
 
-# 761
+# 741
 void initkeypad()
 {
 PORTB = 0;
@@ -2424,7 +2422,7 @@ write_eep(ads+1,logic[1]);
 write_eep(ads+2,logic[2]);
 write_eep(ads+3,logic[3]);
 
-# 901
+# 881
 }
 
 
